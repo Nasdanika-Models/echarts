@@ -15,19 +15,23 @@ import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderCap;
 import org.nasdanika.models.echarts.graph.BorderJoin;
 import org.nasdanika.models.echarts.graph.BorderType;
-import org.nasdanika.models.echarts.graph.Category;
 import org.nasdanika.models.echarts.graph.FontStyle;
 import org.nasdanika.models.echarts.graph.FontWeight;
 import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphFactory;
 import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Item;
+import org.nasdanika.models.echarts.graph.ItemState;
 import org.nasdanika.models.echarts.graph.ItemStyle;
 import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.LabelPosition;
+import org.nasdanika.models.echarts.graph.LineState;
+import org.nasdanika.models.echarts.graph.LineStyle;
 import org.nasdanika.models.echarts.graph.Link;
 import org.nasdanika.models.echarts.graph.Node;
 import org.nasdanika.models.echarts.graph.Overflow;
 import org.nasdanika.models.echarts.graph.State;
+import org.nasdanika.models.echarts.graph.Style;
 import org.nasdanika.models.echarts.graph.TextStyle;
 import org.nasdanika.models.echarts.graph.Tooltip;
 import org.nasdanika.models.echarts.graph.VerticalAlign;
@@ -51,13 +55,21 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass itemStyleEClass = null;
+	private EClass styleEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass categoryEClass = null;
+	private EClass lineStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemStyleEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,6 +82,13 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	private EClass graphEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,6 +122,20 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	private EClass stateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemStateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lineStateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -248,7 +281,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNode_Name() {
+	public EAttribute getNode_X() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -258,7 +291,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNode_X() {
+	public EAttribute getNode_Y() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -268,18 +301,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNode_Y() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getNode_OutgoingLinks() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
+		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -289,7 +312,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getNode_IncomingLinks() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(4);
+		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -299,7 +322,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getNode_Category() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(5);
+		return (EReference)nodeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -309,7 +332,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getNode_Fixed() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -319,107 +342,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getNode_Value() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNode_Symbol() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNode_SymbolSize() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNode_SymbolRotate() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNode_SymbolOffset() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNode_SymbolKeepAspect() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_ItemStyle() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_Label() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_Emphasis() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_Blur() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_Select() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(17);
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -429,7 +352,157 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getNode_Tooltip() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(18);
+		return (EReference)nodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStyle() {
+		return styleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStyle_Color() {
+		return (EAttribute)styleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStyle_ShadowBlur() {
+		return (EAttribute)styleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStyle_ShadowColor() {
+		return (EAttribute)styleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStyle_ShadowOffsetX() {
+		return (EAttribute)styleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStyle_ShadowOffsetY() {
+		return (EAttribute)styleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getStyle_Opacity() {
+		return (EAttribute)styleEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLineStyle() {
+		return lineStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_Width() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_Type() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_DashOffset() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_Cap() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_Join() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_MiterLimit() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLineStyle_Curveness() {
+		return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -448,138 +521,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getItemStyle_Color() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderColor() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderWidth() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderType() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderDashOffset() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderCap() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderJoin() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_BorderMiterLimit() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_ShadowBlur() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_ShadowColor() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_ShadowOffsetX() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_ShadowOffsetY() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getItemStyle_Opacity() {
-		return (EAttribute)itemStyleEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getCategory() {
-		return categoryEClass;
+	public EReference getItemStyle_BorderStyle() {
+		return (EReference)itemStyleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -618,6 +561,96 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getLink_Value() {
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLink_LineStyle() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLink_Label() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLink_Emphasis() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLink_Blur() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLink_Select() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLink_Symbol() {
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLink_SymbolSize() {
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLink_IgnoreForceLayout() {
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getGraph() {
 		return graphEClass;
 	}
@@ -640,6 +673,126 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	@Override
 	public EReference getGraph_Categories() {
 		return (EReference)graphEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getItem() {
+		return itemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_Name() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_Symbol() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_SymbolSize() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_SymbolRotate() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_SymbolOffset() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_SymbolKeepAspect() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getItem_ItemStyle() {
+		return (EReference)itemEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getItem_Label() {
+		return (EReference)itemEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getItem_Emphasis() {
+		return (EReference)itemEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getItem_Blur() {
+		return (EReference)itemEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getItem_Select() {
+		return (EReference)itemEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1118,7 +1271,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getState_ItemStyle() {
+	public EReference getState_Label() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1128,8 +1281,38 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getState_Label() {
-		return (EReference)stateEClass.getEStructuralFeatures().get(2);
+	public EClass getItemState() {
+		return itemStateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getItemState_ItemStyle() {
+		return (EReference)itemStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLineState() {
+		return lineStateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLineState_LineStyle() {
+		return (EReference)lineStateEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1351,8 +1534,24 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		graphEClass = createEClass(GRAPH);
+		createEReference(graphEClass, GRAPH__NODES);
+		createEReference(graphEClass, GRAPH__CATEGORIES);
+
+		itemEClass = createEClass(ITEM);
+		createEAttribute(itemEClass, ITEM__NAME);
+		createEAttribute(itemEClass, ITEM__SYMBOL);
+		createEAttribute(itemEClass, ITEM__SYMBOL_SIZE);
+		createEAttribute(itemEClass, ITEM__SYMBOL_ROTATE);
+		createEAttribute(itemEClass, ITEM__SYMBOL_OFFSET);
+		createEAttribute(itemEClass, ITEM__SYMBOL_KEEP_ASPECT);
+		createEReference(itemEClass, ITEM__ITEM_STYLE);
+		createEReference(itemEClass, ITEM__LABEL);
+		createEReference(itemEClass, ITEM__EMPHASIS);
+		createEReference(itemEClass, ITEM__BLUR);
+		createEReference(itemEClass, ITEM__SELECT);
+
 		nodeEClass = createEClass(NODE);
-		createEAttribute(nodeEClass, NODE__NAME);
 		createEAttribute(nodeEClass, NODE__X);
 		createEAttribute(nodeEClass, NODE__Y);
 		createEReference(nodeEClass, NODE__OUTGOING_LINKS);
@@ -1360,42 +1559,40 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(nodeEClass, NODE__CATEGORY);
 		createEAttribute(nodeEClass, NODE__FIXED);
 		createEAttribute(nodeEClass, NODE__VALUE);
-		createEAttribute(nodeEClass, NODE__SYMBOL);
-		createEAttribute(nodeEClass, NODE__SYMBOL_SIZE);
-		createEAttribute(nodeEClass, NODE__SYMBOL_ROTATE);
-		createEAttribute(nodeEClass, NODE__SYMBOL_OFFSET);
-		createEAttribute(nodeEClass, NODE__SYMBOL_KEEP_ASPECT);
-		createEReference(nodeEClass, NODE__ITEM_STYLE);
-		createEReference(nodeEClass, NODE__LABEL);
-		createEReference(nodeEClass, NODE__EMPHASIS);
-		createEReference(nodeEClass, NODE__BLUR);
-		createEReference(nodeEClass, NODE__SELECT);
 		createEReference(nodeEClass, NODE__TOOLTIP);
 
-		itemStyleEClass = createEClass(ITEM_STYLE);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__COLOR);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_COLOR);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_WIDTH);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_TYPE);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_DASH_OFFSET);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_CAP);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_JOIN);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__BORDER_MITER_LIMIT);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__SHADOW_BLUR);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__SHADOW_COLOR);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__SHADOW_OFFSET_X);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__SHADOW_OFFSET_Y);
-		createEAttribute(itemStyleEClass, ITEM_STYLE__OPACITY);
+		styleEClass = createEClass(STYLE);
+		createEAttribute(styleEClass, STYLE__COLOR);
+		createEAttribute(styleEClass, STYLE__SHADOW_BLUR);
+		createEAttribute(styleEClass, STYLE__SHADOW_COLOR);
+		createEAttribute(styleEClass, STYLE__SHADOW_OFFSET_X);
+		createEAttribute(styleEClass, STYLE__SHADOW_OFFSET_Y);
+		createEAttribute(styleEClass, STYLE__OPACITY);
 
-		categoryEClass = createEClass(CATEGORY);
+		lineStyleEClass = createEClass(LINE_STYLE);
+		createEAttribute(lineStyleEClass, LINE_STYLE__WIDTH);
+		createEAttribute(lineStyleEClass, LINE_STYLE__TYPE);
+		createEAttribute(lineStyleEClass, LINE_STYLE__DASH_OFFSET);
+		createEAttribute(lineStyleEClass, LINE_STYLE__CAP);
+		createEAttribute(lineStyleEClass, LINE_STYLE__JOIN);
+		createEAttribute(lineStyleEClass, LINE_STYLE__MITER_LIMIT);
+		createEAttribute(lineStyleEClass, LINE_STYLE__CURVENESS);
+
+		itemStyleEClass = createEClass(ITEM_STYLE);
+		createEReference(itemStyleEClass, ITEM_STYLE__BORDER_STYLE);
 
 		linkEClass = createEClass(LINK);
 		createEReference(linkEClass, LINK__SOURCE);
 		createEReference(linkEClass, LINK__TARGET);
-
-		graphEClass = createEClass(GRAPH);
-		createEReference(graphEClass, GRAPH__NODES);
-		createEReference(graphEClass, GRAPH__CATEGORIES);
+		createEAttribute(linkEClass, LINK__VALUE);
+		createEReference(linkEClass, LINK__LINE_STYLE);
+		createEReference(linkEClass, LINK__LABEL);
+		createEReference(linkEClass, LINK__EMPHASIS);
+		createEReference(linkEClass, LINK__BLUR);
+		createEReference(linkEClass, LINK__SELECT);
+		createEAttribute(linkEClass, LINK__SYMBOL);
+		createEAttribute(linkEClass, LINK__SYMBOL_SIZE);
+		createEAttribute(linkEClass, LINK__IGNORE_FORCE_LAYOUT);
 
 		textStyleEClass = createEClass(TEXT_STYLE);
 		createEAttribute(textStyleEClass, TEXT_STYLE__COLOR);
@@ -1448,8 +1645,13 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__DISABLED);
-		createEReference(stateEClass, STATE__ITEM_STYLE);
 		createEReference(stateEClass, STATE__LABEL);
+
+		itemStateEClass = createEClass(ITEM_STATE);
+		createEReference(itemStateEClass, ITEM_STATE__ITEM_STYLE);
+
+		lineStateEClass = createEClass(LINE_STATE);
+		createEReference(lineStateEClass, LINE_STATE__LINE_STYLE);
 
 		tooltipEClass = createEClass(TOOLTIP);
 		createEAttribute(tooltipEClass, TOOLTIP__POSITION);
@@ -1502,54 +1704,73 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		nodeEClass.getESuperTypes().add(this.getItem());
+		lineStyleEClass.getESuperTypes().add(this.getStyle());
+		itemStyleEClass.getESuperTypes().add(this.getStyle());
 		labelEClass.getESuperTypes().add(this.getTextStyle());
+		itemStateEClass.getESuperTypes().add(this.getState());
+		lineStateEClass.getESuperTypes().add(this.getState());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(graphEClass, Graph.class, "Graph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGraph_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGraph_Categories(), this.getItem(), null, "categories", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_SymbolSize(), ecorePackage.getEDouble(), "symbolSize", null, 0, 2, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_SymbolRotate(), ecorePackage.getEDoubleObject(), "symbolRotate", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_SymbolOffset(), ecorePackage.getEString(), "symbolOffset", null, 0, 2, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_SymbolKeepAspect(), ecorePackage.getEBoolean(), "symbolKeepAspect", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_Label(), this.getLabel(), null, "label", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_Emphasis(), this.getItemState(), null, "emphasis", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_Blur(), this.getItemState(), null, "blur", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_Select(), this.getItemState(), null, "select", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_X(), ecorePackage.getEDoubleObject(), "x", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Y(), ecorePackage.getEDoubleObject(), "y", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_OutgoingLinks(), this.getLink(), this.getLink_Source(), "outgoingLinks", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_IncomingLinks(), this.getLink(), this.getLink_Target(), "incomingLinks", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Category(), this.getCategory(), null, "category", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Category(), this.getItem(), null, "category", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Fixed(), ecorePackage.getEBoolean(), "fixed", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_Value(), ecorePackage.getEDouble(), "value", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_SymbolSize(), ecorePackage.getEDouble(), "symbolSize", null, 0, 2, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_SymbolRotate(), ecorePackage.getEDoubleObject(), "symbolRotate", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_SymbolOffset(), ecorePackage.getEString(), "symbolOffset", null, 0, 2, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_SymbolKeepAspect(), ecorePackage.getEBoolean(), "symbolKeepAspect", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Label(), this.getLabel(), null, "label", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Emphasis(), this.getState(), null, "emphasis", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Blur(), this.getState(), null, "blur", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Select(), this.getState(), null, "select", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Tooltip(), this.getTooltip(), null, "tooltip", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(itemStyleEClass, ItemStyle.class, "ItemStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getItemStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderColor(), ecorePackage.getEString(), "borderColor", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderWidth(), ecorePackage.getEInt(), "borderWidth", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderType(), this.getBorderType(), "borderType", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderDashOffset(), ecorePackage.getEInt(), "borderDashOffset", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderCap(), this.getBorderCap(), "borderCap", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderJoin(), this.getBorderJoin(), "borderJoin", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_BorderMiterLimit(), ecorePackage.getEInt(), "borderMiterLimit", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_ShadowBlur(), ecorePackage.getEInt(), "shadowBlur", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_ShadowColor(), ecorePackage.getEString(), "shadowColor", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_ShadowOffsetX(), ecorePackage.getEDoubleObject(), "shadowOffsetX", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_ShadowOffsetY(), ecorePackage.getEDoubleObject(), "shadowOffsetY", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItemStyle_Opacity(), ecorePackage.getEDouble(), "opacity", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStyle_ShadowBlur(), ecorePackage.getEInt(), "shadowBlur", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStyle_ShadowColor(), ecorePackage.getEString(), "shadowColor", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStyle_ShadowOffsetX(), ecorePackage.getEDoubleObject(), "shadowOffsetX", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStyle_ShadowOffsetY(), ecorePackage.getEDoubleObject(), "shadowOffsetY", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStyle_Opacity(), ecorePackage.getEDouble(), "opacity", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(categoryEClass, Category.class, "Category", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(lineStyleEClass, LineStyle.class, "LineStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLineStyle_Width(), ecorePackage.getEInt(), "width", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLineStyle_Type(), this.getBorderType(), "type", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLineStyle_DashOffset(), ecorePackage.getEInt(), "dashOffset", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLineStyle_Cap(), this.getBorderCap(), "cap", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLineStyle_Join(), this.getBorderJoin(), "join", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLineStyle_MiterLimit(), ecorePackage.getEInt(), "miterLimit", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLineStyle_Curveness(), ecorePackage.getEDoubleObject(), "curveness", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(itemStyleEClass, ItemStyle.class, "ItemStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getItemStyle_BorderStyle(), this.getLineStyle(), null, "borderStyle", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLink_Source(), this.getNode(), this.getNode_OutgoingLinks(), "source", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Target(), this.getNode(), this.getNode_IncomingLinks(), "target", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(graphEClass, Graph.class, "Graph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGraph_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGraph_Categories(), this.getCategory(), null, "categories", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_LineStyle(), this.getLineStyle(), null, "lineStyle", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Label(), this.getLabel(), null, "label", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Emphasis(), this.getLineState(), null, "emphasis", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Blur(), this.getLineState(), null, "blur", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Select(), this.getLineState(), null, "select", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 2, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_SymbolSize(), ecorePackage.getEString(), "symbolSize", null, 0, 2, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_IgnoreForceLayout(), ecorePackage.getEBoolean(), "ignoreForceLayout", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textStyleEClass, TextStyle.class, "TextStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1600,10 +1821,15 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEAttribute(getStringEntry_Key(), ecorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStringEntry_Value(), ecorePackage.getEString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(stateEClass, State.class, "State", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Disabled(), ecorePackage.getEBooleanObject(), "disabled", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getState_Label(), this.getLabel(), null, "label", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(itemStateEClass, ItemState.class, "ItemState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getItemState_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, ItemState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(lineStateEClass, LineState.class, "LineState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLineState_LineStyle(), this.getLineStyle(), null, "lineStyle", null, 0, 1, LineState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tooltipEClass, Tooltip.class, "Tooltip", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTooltip_Position(), ecorePackage.getEString(), "position", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1690,19 +1916,19 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
-		  (getNode_Emphasis(),
+		  (getItem_Emphasis(),
 		   source,
 		   new String[] {
 			   "documentation", "Emphasis state of specified node."
 		   });
 		addAnnotation
-		  (getNode_Blur(),
+		  (getItem_Blur(),
 		   source,
 		   new String[] {
 			   "documentation", "Blur state of specified node."
 		   });
 		addAnnotation
-		  (getNode_Select(),
+		  (getItem_Select(),
 		   source,
 		   new String[] {
 			   "documentation", "Select state of specified node."
@@ -1712,6 +1938,42 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		   source,
 		   new String[] {
 			   "documentation", "Emphasis state of specified node."
+		   });
+		addAnnotation
+		  (getLink_Emphasis(),
+		   source,
+		   new String[] {
+			   "documentation", "Emphasis state of specified node."
+		   });
+		addAnnotation
+		  (getLink_Blur(),
+		   source,
+		   new String[] {
+			   "documentation", "Blur state of specified node."
+		   });
+		addAnnotation
+		  (getLink_Select(),
+		   source,
+		   new String[] {
+			   "documentation", "Select state of specified node."
+		   });
+		addAnnotation
+		  (getLink_Symbol(),
+		   source,
+		   new String[] {
+			   "documentation", "Symbol of edge ends. Can be an array with two item to specify two ends, or a string specifies both ends."
+		   });
+		addAnnotation
+		  (getLink_SymbolSize(),
+		   source,
+		   new String[] {
+			   "documentation", "Symbol size of edge ends. Can be an array with two item to specify two ends, or a string specifies both ends."
+		   });
+		addAnnotation
+		  (getLink_IgnoreForceLayout(),
+		   source,
+		   new String[] {
+			   "documentation", "Prevent this edge from force layout calculating."
 		   });
 		addAnnotation
 		  (getTextStyle_Color(),

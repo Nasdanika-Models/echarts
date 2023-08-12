@@ -31,6 +31,24 @@ public interface GraphFactory extends EFactory {
 	Node createNode();
 
 	/**
+	 * Returns a new object of class '<em>Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Style</em>'.
+	 * @generated
+	 */
+	Style createStyle();
+
+	/**
+	 * Returns a new object of class '<em>Line Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Line Style</em>'.
+	 * @generated
+	 */
+	LineStyle createLineStyle();
+
+	/**
 	 * Returns a new object of class '<em>Item Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,15 +56,6 @@ public interface GraphFactory extends EFactory {
 	 * @generated
 	 */
 	ItemStyle createItemStyle();
-
-	/**
-	 * Returns a new object of class '<em>Category</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Category</em>'.
-	 * @generated
-	 */
-	Category createCategory();
 
 	/**
 	 * Returns a new object of class '<em>Link</em>'.
@@ -67,6 +76,15 @@ public interface GraphFactory extends EFactory {
 	Graph createGraph();
 
 	/**
+	 * Returns a new object of class '<em>Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Item</em>'.
+	 * @generated
+	 */
+	Item createItem();
+
+	/**
 	 * Returns a new object of class '<em>Text Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,13 +103,22 @@ public interface GraphFactory extends EFactory {
 	Label createLabel();
 
 	/**
-	 * Returns a new object of class '<em>State</em>'.
+	 * Returns a new object of class '<em>Item State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>State</em>'.
+	 * @return a new object of class '<em>Item State</em>'.
 	 * @generated
 	 */
-	State createState();
+	ItemState createItemState();
+
+	/**
+	 * Returns a new object of class '<em>Line State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Line State</em>'.
+	 * @generated
+	 */
+	LineState createLineState();
 
 	/**
 	 * Returns a new object of class '<em>Tooltip</em>'.

@@ -38,7 +38,7 @@ public interface Graph extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Categories</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.models.echarts.graph.Category}.
+	 * The list contents are of type {@link org.nasdanika.models.echarts.graph.Item}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Categories</em>' containment reference list.
@@ -46,6 +46,6 @@ public interface Graph extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Category> getCategories();
+	EList<Item> getCategories();
 
 } // Graph

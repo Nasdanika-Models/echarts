@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.nasdanika.models.echarts.graph.GraphPackage;
-import org.nasdanika.models.echarts.graph.ItemStyle;
 import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.State;
 
@@ -23,13 +22,12 @@ import org.nasdanika.models.echarts.graph.State;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.StateImpl#getDisabled <em>Disabled</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.StateImpl#getItemStyle <em>Item Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.StateImpl#getLabel <em>Label</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StateImpl extends MinimalEObjectImpl.Container implements State {
+public abstract class StateImpl extends MinimalEObjectImpl.Container implements State {
 	/**
 	 * The default value of the '{@link #getDisabled() <em>Disabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -95,36 +93,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * @generated
 	 */
 	@Override
-	public ItemStyle getItemStyle() {
-		return (ItemStyle)eDynamicGet(GraphPackage.STATE__ITEM_STYLE, GraphPackage.Literals.STATE__ITEM_STYLE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetItemStyle(ItemStyle newItemStyle, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newItemStyle, GraphPackage.STATE__ITEM_STYLE, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setItemStyle(ItemStyle newItemStyle) {
-		eDynamicSet(GraphPackage.STATE__ITEM_STYLE, GraphPackage.Literals.STATE__ITEM_STYLE, newItemStyle);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Label getLabel() {
 		return (Label)eDynamicGet(GraphPackage.STATE__LABEL, GraphPackage.Literals.STATE__LABEL, true, true);
 	}
@@ -157,8 +125,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphPackage.STATE__ITEM_STYLE:
-				return basicSetItemStyle(null, msgs);
 			case GraphPackage.STATE__LABEL:
 				return basicSetLabel(null, msgs);
 		}
@@ -175,8 +141,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		switch (featureID) {
 			case GraphPackage.STATE__DISABLED:
 				return getDisabled();
-			case GraphPackage.STATE__ITEM_STYLE:
-				return getItemStyle();
 			case GraphPackage.STATE__LABEL:
 				return getLabel();
 		}
@@ -193,9 +157,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		switch (featureID) {
 			case GraphPackage.STATE__DISABLED:
 				setDisabled((Boolean)newValue);
-				return;
-			case GraphPackage.STATE__ITEM_STYLE:
-				setItemStyle((ItemStyle)newValue);
 				return;
 			case GraphPackage.STATE__LABEL:
 				setLabel((Label)newValue);
@@ -215,9 +176,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			case GraphPackage.STATE__DISABLED:
 				setDisabled(DISABLED_EDEFAULT);
 				return;
-			case GraphPackage.STATE__ITEM_STYLE:
-				setItemStyle((ItemStyle)null);
-				return;
 			case GraphPackage.STATE__LABEL:
 				setLabel((Label)null);
 				return;
@@ -235,8 +193,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		switch (featureID) {
 			case GraphPackage.STATE__DISABLED:
 				return DISABLED_EDEFAULT == null ? getDisabled() != null : !DISABLED_EDEFAULT.equals(getDisabled());
-			case GraphPackage.STATE__ITEM_STYLE:
-				return getItemStyle() != null;
 			case GraphPackage.STATE__LABEL:
 				return getLabel() != null;
 		}

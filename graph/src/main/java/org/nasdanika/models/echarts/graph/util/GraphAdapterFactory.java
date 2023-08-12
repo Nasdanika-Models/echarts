@@ -70,24 +70,32 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	protected GraphSwitch<Adapter> modelSwitch =
 		new GraphSwitch<Adapter>() {
 			@Override
+			public Adapter caseGraph(Graph object) {
+				return createGraphAdapter();
+			}
+			@Override
+			public Adapter caseItem(Item object) {
+				return createItemAdapter();
+			}
+			@Override
 			public Adapter caseNode(Node object) {
 				return createNodeAdapter();
+			}
+			@Override
+			public Adapter caseStyle(Style object) {
+				return createStyleAdapter();
+			}
+			@Override
+			public Adapter caseLineStyle(LineStyle object) {
+				return createLineStyleAdapter();
 			}
 			@Override
 			public Adapter caseItemStyle(ItemStyle object) {
 				return createItemStyleAdapter();
 			}
 			@Override
-			public Adapter caseCategory(Category object) {
-				return createCategoryAdapter();
-			}
-			@Override
 			public Adapter caseLink(Link object) {
 				return createLinkAdapter();
-			}
-			@Override
-			public Adapter caseGraph(Graph object) {
-				return createGraphAdapter();
 			}
 			@Override
 			public Adapter caseTextStyle(TextStyle object) {
@@ -108,6 +116,14 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseState(State object) {
 				return createStateAdapter();
+			}
+			@Override
+			public Adapter caseItemState(ItemState object) {
+				return createItemStateAdapter();
+			}
+			@Override
+			public Adapter caseLineState(LineState object) {
+				return createLineStateAdapter();
 			}
 			@Override
 			public Adapter caseTooltip(Tooltip object) {
@@ -148,6 +164,34 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.Style <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.echarts.graph.Style
+	 * @generated
+	 */
+	public Adapter createStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.LineStyle <em>Line Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.echarts.graph.LineStyle
+	 * @generated
+	 */
+	public Adapter createLineStyleAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.ItemStyle <em>Item Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -158,20 +202,6 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createItemStyleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.Category <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.echarts.graph.Category
-	 * @generated
-	 */
-	public Adapter createCategoryAdapter() {
 		return null;
 	}
 
@@ -200,6 +230,20 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGraphAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.Item <em>Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.echarts.graph.Item
+	 * @generated
+	 */
+	public Adapter createItemAdapter() {
 		return null;
 	}
 
@@ -270,6 +314,34 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.ItemState <em>Item State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.echarts.graph.ItemState
+	 * @generated
+	 */
+	public Adapter createItemStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.LineState <em>Line State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.echarts.graph.LineState
+	 * @generated
+	 */
+	public Adapter createLineStateAdapter() {
 		return null;
 	}
 

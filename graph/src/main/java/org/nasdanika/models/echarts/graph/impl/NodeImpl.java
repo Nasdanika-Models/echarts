@@ -8,16 +8,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.nasdanika.models.echarts.graph.Category;
 import org.nasdanika.models.echarts.graph.GraphPackage;
-import org.nasdanika.models.echarts.graph.ItemStyle;
-import org.nasdanika.models.echarts.graph.Label;
+import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Link;
 import org.nasdanika.models.echarts.graph.Node;
-import org.nasdanika.models.echarts.graph.State;
 import org.nasdanika.models.echarts.graph.Tooltip;
 
 /**
@@ -28,7 +23,6 @@ import org.nasdanika.models.echarts.graph.Tooltip;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getX <em>X</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getOutgoingLinks <em>Outgoing Links</em>}</li>
@@ -36,31 +30,12 @@ import org.nasdanika.models.echarts.graph.Tooltip;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#isFixed <em>Fixed</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getSymbol <em>Symbol</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getSymbolSize <em>Symbol Size</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getSymbolRotate <em>Symbol Rotate</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getSymbolOffset <em>Symbol Offset</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getItemStyle <em>Item Style</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getEmphasis <em>Emphasis</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getBlur <em>Blur</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getSelect <em>Select</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getTooltip <em>Tooltip</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+public class NodeImpl extends ItemImpl implements Node {
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,34 +64,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 */
 	protected static final boolean FIXED_EDEFAULT = false;
 	/**
-	 * The default value of the '{@link #getSymbol() <em>Symbol</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSymbol()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SYMBOL_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getSymbolRotate() <em>Symbol Rotate</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSymbolRotate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Double SYMBOL_ROTATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #isSymbolKeepAspect() <em>Symbol Keep Aspect</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSymbolKeepAspect()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean SYMBOL_KEEP_ASPECT_EDEFAULT = false;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,36 +80,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.NODE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getName() {
-		return (String)eDynamicGet(GraphPackage.NODE__NAME, GraphPackage.Literals.NODE__NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		eDynamicSet(GraphPackage.NODE__NAME, GraphPackage.Literals.NODE__NAME, newName);
 	}
 
 	/**
@@ -233,8 +150,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public Category getCategory() {
-		return (Category)eDynamicGet(GraphPackage.NODE__CATEGORY, GraphPackage.Literals.NODE__CATEGORY, true, true);
+	public Item getCategory() {
+		return (Item)eDynamicGet(GraphPackage.NODE__CATEGORY, GraphPackage.Literals.NODE__CATEGORY, true, true);
 	}
 
 	/**
@@ -242,8 +159,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Category basicGetCategory() {
-		return (Category)eDynamicGet(GraphPackage.NODE__CATEGORY, GraphPackage.Literals.NODE__CATEGORY, false, true);
+	public Item basicGetCategory() {
+		return (Item)eDynamicGet(GraphPackage.NODE__CATEGORY, GraphPackage.Literals.NODE__CATEGORY, false, true);
 	}
 
 	/**
@@ -252,7 +169,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public void setCategory(Category newCategory) {
+	public void setCategory(Item newCategory) {
 		eDynamicSet(GraphPackage.NODE__CATEGORY, GraphPackage.Literals.NODE__CATEGORY, newCategory);
 	}
 
@@ -285,238 +202,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public EList<Double> getValue() {
 		return (EList<Double>)eDynamicGet(GraphPackage.NODE__VALUE, GraphPackage.Literals.NODE__VALUE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getSymbol() {
-		return (String)eDynamicGet(GraphPackage.NODE__SYMBOL, GraphPackage.Literals.NODE__SYMBOL, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSymbol(String newSymbol) {
-		eDynamicSet(GraphPackage.NODE__SYMBOL, GraphPackage.Literals.NODE__SYMBOL, newSymbol);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<Double> getSymbolSize() {
-		return (EList<Double>)eDynamicGet(GraphPackage.NODE__SYMBOL_SIZE, GraphPackage.Literals.NODE__SYMBOL_SIZE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Double getSymbolRotate() {
-		return (Double)eDynamicGet(GraphPackage.NODE__SYMBOL_ROTATE, GraphPackage.Literals.NODE__SYMBOL_ROTATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSymbolRotate(Double newSymbolRotate) {
-		eDynamicSet(GraphPackage.NODE__SYMBOL_ROTATE, GraphPackage.Literals.NODE__SYMBOL_ROTATE, newSymbolRotate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<String> getSymbolOffset() {
-		return (EList<String>)eDynamicGet(GraphPackage.NODE__SYMBOL_OFFSET, GraphPackage.Literals.NODE__SYMBOL_OFFSET, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isSymbolKeepAspect() {
-		return (Boolean)eDynamicGet(GraphPackage.NODE__SYMBOL_KEEP_ASPECT, GraphPackage.Literals.NODE__SYMBOL_KEEP_ASPECT, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSymbolKeepAspect(boolean newSymbolKeepAspect) {
-		eDynamicSet(GraphPackage.NODE__SYMBOL_KEEP_ASPECT, GraphPackage.Literals.NODE__SYMBOL_KEEP_ASPECT, newSymbolKeepAspect);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ItemStyle getItemStyle() {
-		return (ItemStyle)eDynamicGet(GraphPackage.NODE__ITEM_STYLE, GraphPackage.Literals.NODE__ITEM_STYLE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetItemStyle(ItemStyle newItemStyle, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newItemStyle, GraphPackage.NODE__ITEM_STYLE, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setItemStyle(ItemStyle newItemStyle) {
-		eDynamicSet(GraphPackage.NODE__ITEM_STYLE, GraphPackage.Literals.NODE__ITEM_STYLE, newItemStyle);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Label getLabel() {
-		return (Label)eDynamicGet(GraphPackage.NODE__LABEL, GraphPackage.Literals.NODE__LABEL, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLabel(Label newLabel, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newLabel, GraphPackage.NODE__LABEL, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLabel(Label newLabel) {
-		eDynamicSet(GraphPackage.NODE__LABEL, GraphPackage.Literals.NODE__LABEL, newLabel);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public State getEmphasis() {
-		return (State)eDynamicGet(GraphPackage.NODE__EMPHASIS, GraphPackage.Literals.NODE__EMPHASIS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEmphasis(State newEmphasis, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newEmphasis, GraphPackage.NODE__EMPHASIS, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEmphasis(State newEmphasis) {
-		eDynamicSet(GraphPackage.NODE__EMPHASIS, GraphPackage.Literals.NODE__EMPHASIS, newEmphasis);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public State getBlur() {
-		return (State)eDynamicGet(GraphPackage.NODE__BLUR, GraphPackage.Literals.NODE__BLUR, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetBlur(State newBlur, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newBlur, GraphPackage.NODE__BLUR, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setBlur(State newBlur) {
-		eDynamicSet(GraphPackage.NODE__BLUR, GraphPackage.Literals.NODE__BLUR, newBlur);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public State getSelect() {
-		return (State)eDynamicGet(GraphPackage.NODE__SELECT, GraphPackage.Literals.NODE__SELECT, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSelect(State newSelect, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newSelect, GraphPackage.NODE__SELECT, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSelect(State newSelect) {
-		eDynamicSet(GraphPackage.NODE__SELECT, GraphPackage.Literals.NODE__SELECT, newSelect);
 	}
 
 	/**
@@ -578,16 +263,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return ((InternalEList<?>)getOutgoingLinks()).basicRemove(otherEnd, msgs);
 			case GraphPackage.NODE__INCOMING_LINKS:
 				return ((InternalEList<?>)getIncomingLinks()).basicRemove(otherEnd, msgs);
-			case GraphPackage.NODE__ITEM_STYLE:
-				return basicSetItemStyle(null, msgs);
-			case GraphPackage.NODE__LABEL:
-				return basicSetLabel(null, msgs);
-			case GraphPackage.NODE__EMPHASIS:
-				return basicSetEmphasis(null, msgs);
-			case GraphPackage.NODE__BLUR:
-				return basicSetBlur(null, msgs);
-			case GraphPackage.NODE__SELECT:
-				return basicSetSelect(null, msgs);
 			case GraphPackage.NODE__TOOLTIP:
 				return basicSetTooltip(null, msgs);
 		}
@@ -602,8 +277,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphPackage.NODE__NAME:
-				return getName();
 			case GraphPackage.NODE__X:
 				return getX();
 			case GraphPackage.NODE__Y:
@@ -619,26 +292,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return isFixed();
 			case GraphPackage.NODE__VALUE:
 				return getValue();
-			case GraphPackage.NODE__SYMBOL:
-				return getSymbol();
-			case GraphPackage.NODE__SYMBOL_SIZE:
-				return getSymbolSize();
-			case GraphPackage.NODE__SYMBOL_ROTATE:
-				return getSymbolRotate();
-			case GraphPackage.NODE__SYMBOL_OFFSET:
-				return getSymbolOffset();
-			case GraphPackage.NODE__SYMBOL_KEEP_ASPECT:
-				return isSymbolKeepAspect();
-			case GraphPackage.NODE__ITEM_STYLE:
-				return getItemStyle();
-			case GraphPackage.NODE__LABEL:
-				return getLabel();
-			case GraphPackage.NODE__EMPHASIS:
-				return getEmphasis();
-			case GraphPackage.NODE__BLUR:
-				return getBlur();
-			case GraphPackage.NODE__SELECT:
-				return getSelect();
 			case GraphPackage.NODE__TOOLTIP:
 				return getTooltip();
 		}
@@ -654,9 +307,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphPackage.NODE__NAME:
-				setName((String)newValue);
-				return;
 			case GraphPackage.NODE__X:
 				setX((Double)newValue);
 				return;
@@ -672,7 +322,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				getIncomingLinks().addAll((Collection<? extends Link>)newValue);
 				return;
 			case GraphPackage.NODE__CATEGORY:
-				setCategory((Category)newValue);
+				setCategory((Item)newValue);
 				return;
 			case GraphPackage.NODE__FIXED:
 				setFixed((Boolean)newValue);
@@ -680,38 +330,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case GraphPackage.NODE__VALUE:
 				getValue().clear();
 				getValue().addAll((Collection<? extends Double>)newValue);
-				return;
-			case GraphPackage.NODE__SYMBOL:
-				setSymbol((String)newValue);
-				return;
-			case GraphPackage.NODE__SYMBOL_SIZE:
-				getSymbolSize().clear();
-				getSymbolSize().addAll((Collection<? extends Double>)newValue);
-				return;
-			case GraphPackage.NODE__SYMBOL_ROTATE:
-				setSymbolRotate((Double)newValue);
-				return;
-			case GraphPackage.NODE__SYMBOL_OFFSET:
-				getSymbolOffset().clear();
-				getSymbolOffset().addAll((Collection<? extends String>)newValue);
-				return;
-			case GraphPackage.NODE__SYMBOL_KEEP_ASPECT:
-				setSymbolKeepAspect((Boolean)newValue);
-				return;
-			case GraphPackage.NODE__ITEM_STYLE:
-				setItemStyle((ItemStyle)newValue);
-				return;
-			case GraphPackage.NODE__LABEL:
-				setLabel((Label)newValue);
-				return;
-			case GraphPackage.NODE__EMPHASIS:
-				setEmphasis((State)newValue);
-				return;
-			case GraphPackage.NODE__BLUR:
-				setBlur((State)newValue);
-				return;
-			case GraphPackage.NODE__SELECT:
-				setSelect((State)newValue);
 				return;
 			case GraphPackage.NODE__TOOLTIP:
 				setTooltip((Tooltip)newValue);
@@ -728,9 +346,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphPackage.NODE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case GraphPackage.NODE__X:
 				setX(X_EDEFAULT);
 				return;
@@ -744,43 +359,13 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				getIncomingLinks().clear();
 				return;
 			case GraphPackage.NODE__CATEGORY:
-				setCategory((Category)null);
+				setCategory((Item)null);
 				return;
 			case GraphPackage.NODE__FIXED:
 				setFixed(FIXED_EDEFAULT);
 				return;
 			case GraphPackage.NODE__VALUE:
 				getValue().clear();
-				return;
-			case GraphPackage.NODE__SYMBOL:
-				setSymbol(SYMBOL_EDEFAULT);
-				return;
-			case GraphPackage.NODE__SYMBOL_SIZE:
-				getSymbolSize().clear();
-				return;
-			case GraphPackage.NODE__SYMBOL_ROTATE:
-				setSymbolRotate(SYMBOL_ROTATE_EDEFAULT);
-				return;
-			case GraphPackage.NODE__SYMBOL_OFFSET:
-				getSymbolOffset().clear();
-				return;
-			case GraphPackage.NODE__SYMBOL_KEEP_ASPECT:
-				setSymbolKeepAspect(SYMBOL_KEEP_ASPECT_EDEFAULT);
-				return;
-			case GraphPackage.NODE__ITEM_STYLE:
-				setItemStyle((ItemStyle)null);
-				return;
-			case GraphPackage.NODE__LABEL:
-				setLabel((Label)null);
-				return;
-			case GraphPackage.NODE__EMPHASIS:
-				setEmphasis((State)null);
-				return;
-			case GraphPackage.NODE__BLUR:
-				setBlur((State)null);
-				return;
-			case GraphPackage.NODE__SELECT:
-				setSelect((State)null);
 				return;
 			case GraphPackage.NODE__TOOLTIP:
 				setTooltip((Tooltip)null);
@@ -797,8 +382,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphPackage.NODE__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case GraphPackage.NODE__X:
 				return X_EDEFAULT == null ? getX() != null : !X_EDEFAULT.equals(getX());
 			case GraphPackage.NODE__Y:
@@ -813,26 +396,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return isFixed() != FIXED_EDEFAULT;
 			case GraphPackage.NODE__VALUE:
 				return !getValue().isEmpty();
-			case GraphPackage.NODE__SYMBOL:
-				return SYMBOL_EDEFAULT == null ? getSymbol() != null : !SYMBOL_EDEFAULT.equals(getSymbol());
-			case GraphPackage.NODE__SYMBOL_SIZE:
-				return !getSymbolSize().isEmpty();
-			case GraphPackage.NODE__SYMBOL_ROTATE:
-				return SYMBOL_ROTATE_EDEFAULT == null ? getSymbolRotate() != null : !SYMBOL_ROTATE_EDEFAULT.equals(getSymbolRotate());
-			case GraphPackage.NODE__SYMBOL_OFFSET:
-				return !getSymbolOffset().isEmpty();
-			case GraphPackage.NODE__SYMBOL_KEEP_ASPECT:
-				return isSymbolKeepAspect() != SYMBOL_KEEP_ASPECT_EDEFAULT;
-			case GraphPackage.NODE__ITEM_STYLE:
-				return getItemStyle() != null;
-			case GraphPackage.NODE__LABEL:
-				return getLabel() != null;
-			case GraphPackage.NODE__EMPHASIS:
-				return getEmphasis() != null;
-			case GraphPackage.NODE__BLUR:
-				return getBlur() != null;
-			case GraphPackage.NODE__SELECT:
-				return getSelect() != null;
 			case GraphPackage.NODE__TOOLTIP:
 				return getTooltip() != null;
 		}

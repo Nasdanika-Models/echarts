@@ -14,10 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.nasdanika.models.echarts.graph.Category;
 import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Node;
 
 /**
@@ -82,8 +81,8 @@ public class GraphImpl extends MinimalEObjectImpl.Container implements Graph {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Category> getCategories() {
-		return (EList<Category>)eDynamicGet(GraphPackage.GRAPH__CATEGORIES, GraphPackage.Literals.GRAPH__CATEGORIES, true, true);
+	public EList<Item> getCategories() {
+		return (EList<Item>)eDynamicGet(GraphPackage.GRAPH__CATEGORIES, GraphPackage.Literals.GRAPH__CATEGORIES, true, true);
 	}
 
 	/**
@@ -133,7 +132,7 @@ public class GraphImpl extends MinimalEObjectImpl.Container implements Graph {
 				return;
 			case GraphPackage.GRAPH__CATEGORIES:
 				getCategories().clear();
-				getCategories().addAll((Collection<? extends Category>)newValue);
+				getCategories().addAll((Collection<? extends Item>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

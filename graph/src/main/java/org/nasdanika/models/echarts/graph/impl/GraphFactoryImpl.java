@@ -59,16 +59,19 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GraphPackage.NODE: return createNode();
-			case GraphPackage.ITEM_STYLE: return createItemStyle();
-			case GraphPackage.CATEGORY: return createCategory();
-			case GraphPackage.LINK: return createLink();
 			case GraphPackage.GRAPH: return createGraph();
+			case GraphPackage.ITEM: return createItem();
+			case GraphPackage.NODE: return createNode();
+			case GraphPackage.STYLE: return createStyle();
+			case GraphPackage.LINE_STYLE: return createLineStyle();
+			case GraphPackage.ITEM_STYLE: return createItemStyle();
+			case GraphPackage.LINK: return createLink();
 			case GraphPackage.TEXT_STYLE: return createTextStyle();
 			case GraphPackage.LABEL: return createLabel();
 			case GraphPackage.STYLE_ENTRY: return (EObject)createStyleEntry();
 			case GraphPackage.STRING_ENTRY: return (EObject)createStringEntry();
-			case GraphPackage.STATE: return createState();
+			case GraphPackage.ITEM_STATE: return createItemState();
+			case GraphPackage.LINE_STATE: return createLineState();
 			case GraphPackage.TOOLTIP: return createTooltip();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -154,9 +157,9 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	@Override
-	public ItemStyle createItemStyle() {
-		ItemStyleImpl itemStyle = new ItemStyleImpl();
-		return itemStyle;
+	public Style createStyle() {
+		StyleImpl style = new StyleImpl();
+		return style;
 	}
 
 	/**
@@ -165,9 +168,20 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	@Override
-	public Category createCategory() {
-		CategoryImpl category = new CategoryImpl();
-		return category;
+	public LineStyle createLineStyle() {
+		LineStyleImpl lineStyle = new LineStyleImpl();
+		return lineStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ItemStyle createItemStyle() {
+		ItemStyleImpl itemStyle = new ItemStyleImpl();
+		return itemStyle;
 	}
 
 	/**
@@ -190,6 +204,17 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	public Graph createGraph() {
 		GraphImpl graph = new GraphImpl();
 		return graph;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Item createItem() {
+		ItemImpl item = new ItemImpl();
+		return item;
 	}
 
 	/**
@@ -240,9 +265,20 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	@Override
-	public State createState() {
-		StateImpl state = new StateImpl();
-		return state;
+	public ItemState createItemState() {
+		ItemStateImpl itemState = new ItemStateImpl();
+		return itemState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LineState createLineState() {
+		LineStateImpl lineState = new LineStateImpl();
+		return lineState;
 	}
 
 	/**

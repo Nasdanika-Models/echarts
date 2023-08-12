@@ -68,33 +68,48 @@ public class GraphSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case GraphPackage.GRAPH: {
+				Graph graph = (Graph)theEObject;
+				T result = caseGraph(graph);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphPackage.ITEM: {
+				Item item = (Item)theEObject;
+				T result = caseItem(item);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GraphPackage.NODE: {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
+				if (result == null) result = caseItem(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphPackage.STYLE: {
+				Style style = (Style)theEObject;
+				T result = caseStyle(style);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphPackage.LINE_STYLE: {
+				LineStyle lineStyle = (LineStyle)theEObject;
+				T result = caseLineStyle(lineStyle);
+				if (result == null) result = caseStyle(lineStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.ITEM_STYLE: {
 				ItemStyle itemStyle = (ItemStyle)theEObject;
 				T result = caseItemStyle(itemStyle);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphPackage.CATEGORY: {
-				Category category = (Category)theEObject;
-				T result = caseCategory(category);
+				if (result == null) result = caseStyle(itemStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.LINK: {
 				Link link = (Link)theEObject;
 				T result = caseLink(link);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphPackage.GRAPH: {
-				Graph graph = (Graph)theEObject;
-				T result = caseGraph(graph);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,6 +144,20 @@ public class GraphSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GraphPackage.ITEM_STATE: {
+				ItemState itemState = (ItemState)theEObject;
+				T result = caseItemState(itemState);
+				if (result == null) result = caseState(itemState);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphPackage.LINE_STATE: {
+				LineState lineState = (LineState)theEObject;
+				T result = caseLineState(lineState);
+				if (result == null) result = caseState(lineState);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GraphPackage.TOOLTIP: {
 				Tooltip tooltip = (Tooltip)theEObject;
 				T result = caseTooltip(tooltip);
@@ -155,6 +184,36 @@ public class GraphSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStyle(Style object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Line Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Line Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLineStyle(LineStyle object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Item Style</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -166,21 +225,6 @@ public class GraphSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseItemStyle(ItemStyle object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Category</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Category</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCategory(Category object) {
 		return null;
 	}
 
@@ -211,6 +255,21 @@ public class GraphSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGraph(Graph object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItem(Item object) {
 		return null;
 	}
 
@@ -286,6 +345,36 @@ public class GraphSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseState(State object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Item State</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Item State</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItemState(ItemState object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Line State</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Line State</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLineState(LineState object) {
 		return null;
 	}
 
