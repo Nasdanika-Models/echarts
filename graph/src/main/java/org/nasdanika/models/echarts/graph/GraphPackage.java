@@ -203,13 +203,49 @@ public interface GraphPackage extends EPackage {
 	int NODE__LABEL = 14;
 
 	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__EMPHASIS = 15;
+
+	/**
+	 * The feature id for the '<em><b>Blur</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__BLUR = 16;
+
+	/**
+	 * The feature id for the '<em><b>Select</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__SELECT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Tooltip</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__TOOLTIP = 18;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 15;
+	int NODE_FEATURE_COUNT = 19;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -487,59 +523,14 @@ public interface GraphPackage extends EPackage {
 	int GRAPH_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.LabelImpl <em>Label</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl <em>Text Style</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.echarts.graph.impl.LabelImpl
-	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLabel()
+	 * @see org.nasdanika.models.echarts.graph.impl.TextStyleImpl
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getTextStyle()
 	 * @generated
 	 */
-	int LABEL = 5;
-
-	/**
-	 * The feature id for the '<em><b>Show</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__SHOW = 0;
-
-	/**
-	 * The feature id for the '<em><b>Position</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__POSITION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Distance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__DISTANCE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__ROTATE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Offset</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__OFFSET = 4;
+	int TEXT_STYLE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -548,7 +539,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__COLOR = 5;
+	int TEXT_STYLE__COLOR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Font Style</b></em>' attribute.
@@ -557,7 +548,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__FONT_STYLE = 6;
+	int TEXT_STYLE__FONT_STYLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Font Weight</b></em>' attribute.
@@ -566,7 +557,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__FONT_WEIGHT = 7;
+	int TEXT_STYLE__FONT_WEIGHT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Font Family</b></em>' attribute.
@@ -575,7 +566,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__FONT_FAMILY = 8;
+	int TEXT_STYLE__FONT_FAMILY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
@@ -584,25 +575,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__FONT_SIZE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Align</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__ALIGN = 10;
-
-	/**
-	 * The feature id for the '<em><b>Vertical Align</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__VERTICAL_ALIGN = 11;
+	int TEXT_STYLE__FONT_SIZE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Line Height</b></em>' attribute.
@@ -611,106 +584,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__LINE_HEIGHT = 12;
-
-	/**
-	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__BACKGROUND_COLOR = 13;
-
-	/**
-	 * The feature id for the '<em><b>Border Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__BORDER_COLOR = 14;
-
-	/**
-	 * The feature id for the '<em><b>Border Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__BORDER_WIDTH = 15;
-
-	/**
-	 * The feature id for the '<em><b>Border Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__BORDER_TYPE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Border Dash Offset</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__BORDER_DASH_OFFSET = 17;
-
-	/**
-	 * The feature id for the '<em><b>Border Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__BORDER_RADIUS = 18;
-
-	/**
-	 * The feature id for the '<em><b>Padding</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__PADDING = 19;
-
-	/**
-	 * The feature id for the '<em><b>Shadow Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__SHADOW_COLOR = 20;
-
-	/**
-	 * The feature id for the '<em><b>Shadow Blur</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__SHADOW_BLUR = 21;
-
-	/**
-	 * The feature id for the '<em><b>Shadow Offset X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__SHADOW_OFFSET_X = 22;
-
-	/**
-	 * The feature id for the '<em><b>Shadow Offset Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__SHADOW_OFFSET_Y = 23;
+	int TEXT_STYLE__LINE_HEIGHT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -719,7 +593,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__WIDTH = 24;
+	int TEXT_STYLE__WIDTH = 6;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -728,7 +602,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__HEIGHT = 25;
+	int TEXT_STYLE__HEIGHT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Color</b></em>' attribute.
@@ -737,7 +611,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_BORDER_COLOR = 26;
+	int TEXT_STYLE__TEXT_BORDER_COLOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Width</b></em>' attribute.
@@ -746,7 +620,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_BORDER_WIDTH = 27;
+	int TEXT_STYLE__TEXT_BORDER_WIDTH = 9;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Type</b></em>' attribute.
@@ -755,7 +629,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_BORDER_TYPE = 28;
+	int TEXT_STYLE__TEXT_BORDER_TYPE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Dash Offset</b></em>' attribute.
@@ -764,7 +638,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_BORDER_DASH_OFFSET = 29;
+	int TEXT_STYLE__TEXT_BORDER_DASH_OFFSET = 11;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Color</b></em>' attribute.
@@ -773,7 +647,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_SHADOW_COLOR = 30;
+	int TEXT_STYLE__TEXT_SHADOW_COLOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Blur</b></em>' attribute.
@@ -782,7 +656,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_SHADOW_BLUR = 31;
+	int TEXT_STYLE__TEXT_SHADOW_BLUR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Offset X</b></em>' attribute.
@@ -791,7 +665,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_SHADOW_OFFSET_X = 32;
+	int TEXT_STYLE__TEXT_SHADOW_OFFSET_X = 14;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Offset Y</b></em>' attribute.
@@ -800,7 +674,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__TEXT_SHADOW_OFFSET_Y = 33;
+	int TEXT_STYLE__TEXT_SHADOW_OFFSET_Y = 15;
 
 	/**
 	 * The feature id for the '<em><b>Overflow</b></em>' attribute.
@@ -809,7 +683,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__OVERFLOW = 34;
+	int TEXT_STYLE__OVERFLOW = 16;
 
 	/**
 	 * The feature id for the '<em><b>Ellipsis</b></em>' attribute.
@@ -818,7 +692,359 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__ELLIPSIS = 35;
+	int TEXT_STYLE__ELLIPSIS = 17;
+
+	/**
+	 * The number of structural features of the '<em>Text Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_STYLE_FEATURE_COUNT = 18;
+
+	/**
+	 * The number of operations of the '<em>Text Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_STYLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.LabelImpl <em>Label</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.echarts.graph.impl.LabelImpl
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLabel()
+	 * @generated
+	 */
+	int LABEL = 6;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__COLOR = TEXT_STYLE__COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Font Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__FONT_STYLE = TEXT_STYLE__FONT_STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Font Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__FONT_WEIGHT = TEXT_STYLE__FONT_WEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Font Family</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__FONT_FAMILY = TEXT_STYLE__FONT_FAMILY;
+
+	/**
+	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__FONT_SIZE = TEXT_STYLE__FONT_SIZE;
+
+	/**
+	 * The feature id for the '<em><b>Line Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__LINE_HEIGHT = TEXT_STYLE__LINE_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__WIDTH = TEXT_STYLE__WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__HEIGHT = TEXT_STYLE__HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Text Border Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_BORDER_COLOR = TEXT_STYLE__TEXT_BORDER_COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Text Border Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_BORDER_WIDTH = TEXT_STYLE__TEXT_BORDER_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Text Border Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_BORDER_TYPE = TEXT_STYLE__TEXT_BORDER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Text Border Dash Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_BORDER_DASH_OFFSET = TEXT_STYLE__TEXT_BORDER_DASH_OFFSET;
+
+	/**
+	 * The feature id for the '<em><b>Text Shadow Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_SHADOW_COLOR = TEXT_STYLE__TEXT_SHADOW_COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Text Shadow Blur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_SHADOW_BLUR = TEXT_STYLE__TEXT_SHADOW_BLUR;
+
+	/**
+	 * The feature id for the '<em><b>Text Shadow Offset X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_SHADOW_OFFSET_X = TEXT_STYLE__TEXT_SHADOW_OFFSET_X;
+
+	/**
+	 * The feature id for the '<em><b>Text Shadow Offset Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__TEXT_SHADOW_OFFSET_Y = TEXT_STYLE__TEXT_SHADOW_OFFSET_Y;
+
+	/**
+	 * The feature id for the '<em><b>Overflow</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__OVERFLOW = TEXT_STYLE__OVERFLOW;
+
+	/**
+	 * The feature id for the '<em><b>Ellipsis</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__ELLIPSIS = TEXT_STYLE__ELLIPSIS;
+
+	/**
+	 * The feature id for the '<em><b>Show</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__SHOW = TEXT_STYLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__POSITION = TEXT_STYLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Distance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__DISTANCE = TEXT_STYLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__ROTATE = TEXT_STYLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__OFFSET = TEXT_STYLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__ALIGN = TEXT_STYLE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Vertical Align</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__VERTICAL_ALIGN = TEXT_STYLE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__BACKGROUND_COLOR = TEXT_STYLE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Border Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__BORDER_COLOR = TEXT_STYLE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Border Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__BORDER_WIDTH = TEXT_STYLE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Border Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__BORDER_TYPE = TEXT_STYLE_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Border Dash Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__BORDER_DASH_OFFSET = TEXT_STYLE_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Border Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__BORDER_RADIUS = TEXT_STYLE_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__PADDING = TEXT_STYLE_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Shadow Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__SHADOW_COLOR = TEXT_STYLE_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Shadow Blur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__SHADOW_BLUR = TEXT_STYLE_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Shadow Offset X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__SHADOW_OFFSET_X = TEXT_STYLE_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Shadow Offset Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__SHADOW_OFFSET_Y = TEXT_STYLE_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Rich</b></em>' map.
@@ -827,7 +1053,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__RICH = 36;
+	int LABEL__RICH = TEXT_STYLE_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Label</em>' class.
@@ -836,7 +1062,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = 37;
+	int LABEL_FEATURE_COUNT = TEXT_STYLE_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Label</em>' class.
@@ -845,7 +1071,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_OPERATION_COUNT = 0;
+	int LABEL_OPERATION_COUNT = TEXT_STYLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.StyleEntryImpl <em>Style Entry</em>}' class.
@@ -855,7 +1081,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getStyleEntry()
 	 * @generated
 	 */
-	int STYLE_ENTRY = 6;
+	int STYLE_ENTRY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -901,7 +1127,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getStringEntry()
 	 * @generated
 	 */
-	int STRING_ENTRY = 7;
+	int STRING_ENTRY = 8;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -940,6 +1166,170 @@ public interface GraphPackage extends EPackage {
 	int STRING_ENTRY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.StateImpl <em>State</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.echarts.graph.impl.StateImpl
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getState()
+	 * @generated
+	 */
+	int STATE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Disabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__DISABLED = 0;
+
+	/**
+	 * The feature id for the '<em><b>Item Style</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__ITEM_STYLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__LABEL = 2;
+
+	/**
+	 * The number of structural features of the '<em>State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>State</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.TooltipImpl <em>Tooltip</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.echarts.graph.impl.TooltipImpl
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getTooltip()
+	 * @generated
+	 */
+	int TOOLTIP = 10;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__POSITION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Formatter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__FORMATTER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value Formatter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__VALUE_FORMATTER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__BACKGROUND_COLOR = 3;
+
+	/**
+	 * The feature id for the '<em><b>Border Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__BORDER_COLOR = 4;
+
+	/**
+	 * The feature id for the '<em><b>Border Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__BORDER_WIDTH = 5;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__PADDING = 6;
+
+	/**
+	 * The feature id for the '<em><b>Text Style</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__TEXT_STYLE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Extra Css Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP__EXTRA_CSS_TEXT = 8;
+
+	/**
+	 * The number of structural features of the '<em>Tooltip</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP_FEATURE_COUNT = 9;
+
+	/**
+	 * The number of operations of the '<em>Tooltip</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOLTIP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.BorderType <em>Border Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -947,7 +1337,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBorderType()
 	 * @generated
 	 */
-	int BORDER_TYPE = 8;
+	int BORDER_TYPE = 11;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.BorderCap <em>Border Cap</em>}' enum.
@@ -957,7 +1347,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBorderCap()
 	 * @generated
 	 */
-	int BORDER_CAP = 9;
+	int BORDER_CAP = 12;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.BorderJoin <em>Border Join</em>}' enum.
@@ -967,7 +1357,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBorderJoin()
 	 * @generated
 	 */
-	int BORDER_JOIN = 10;
+	int BORDER_JOIN = 13;
 
 
 	/**
@@ -978,7 +1368,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLabelPosition()
 	 * @generated
 	 */
-	int LABEL_POSITION = 11;
+	int LABEL_POSITION = 14;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.FontStyle <em>Font Style</em>}' enum.
@@ -988,7 +1378,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getFontStyle()
 	 * @generated
 	 */
-	int FONT_STYLE = 12;
+	int FONT_STYLE = 15;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.FontWeight <em>Font Weight</em>}' enum.
@@ -998,7 +1388,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getFontWeight()
 	 * @generated
 	 */
-	int FONT_WEIGHT = 13;
+	int FONT_WEIGHT = 16;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.Align <em>Align</em>}' enum.
@@ -1008,7 +1398,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getAlign()
 	 * @generated
 	 */
-	int ALIGN = 14;
+	int ALIGN = 17;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.VerticalAlign <em>Vertical Align</em>}' enum.
@@ -1018,7 +1408,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getVerticalAlign()
 	 * @generated
 	 */
-	int VERTICAL_ALIGN = 15;
+	int VERTICAL_ALIGN = 18;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.Overflow <em>Overflow</em>}' enum.
@@ -1028,7 +1418,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getOverflow()
 	 * @generated
 	 */
-	int OVERFLOW = 16;
+	int OVERFLOW = 19;
 
 
 	/**
@@ -1205,6 +1595,50 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getNode_Label();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Node#getEmphasis <em>Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Emphasis</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getEmphasis()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Emphasis();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Node#getBlur <em>Blur</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Blur</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getBlur()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Blur();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Node#getSelect <em>Select</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Select</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getSelect()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Select();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Node#getTooltip <em>Tooltip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tooltip</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getTooltip()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Tooltip();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.ItemStyle <em>Item Style</em>}'.
@@ -1434,6 +1868,214 @@ public interface GraphPackage extends EPackage {
 	EReference getGraph_Categories();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.TextStyle <em>Text Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Style</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle
+	 * @generated
+	 */
+	EClass getTextStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getColor()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_Color();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getFontStyle <em>Font Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Font Style</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getFontStyle()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_FontStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getFontWeight <em>Font Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Font Weight</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getFontWeight()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_FontWeight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getFontFamily <em>Font Family</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Font Family</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getFontFamily()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_FontFamily();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getFontSize <em>Font Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Font Size</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getFontSize()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_FontSize();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getLineHeight <em>Line Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Line Height</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getLineHeight()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_LineHeight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getWidth <em>Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Width</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getWidth()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_Width();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getHeight <em>Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Height</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getHeight()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_Height();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextBorderColor <em>Text Border Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Border Color</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextBorderColor()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextBorderColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextBorderWidth <em>Text Border Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Border Width</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextBorderWidth()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextBorderWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextBorderType <em>Text Border Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Border Type</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextBorderType()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextBorderType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextBorderDashOffset <em>Text Border Dash Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Border Dash Offset</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextBorderDashOffset()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextBorderDashOffset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowColor <em>Text Shadow Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Shadow Color</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextShadowColor()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextShadowColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowBlur <em>Text Shadow Blur</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Shadow Blur</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextShadowBlur()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextShadowBlur();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowOffsetX <em>Text Shadow Offset X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Shadow Offset X</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextShadowOffsetX()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextShadowOffsetX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowOffsetY <em>Text Shadow Offset Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Shadow Offset Y</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getTextShadowOffsetY()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_TextShadowOffsetY();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getOverflow <em>Overflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Overflow</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getOverflow()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_Overflow();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.TextStyle#getEllipsis <em>Ellipsis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ellipsis</em>'.
+	 * @see org.nasdanika.models.echarts.graph.TextStyle#getEllipsis()
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	EAttribute getTextStyle_Ellipsis();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Label <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1499,61 +2141,6 @@ public interface GraphPackage extends EPackage {
 	EAttribute getLabel_Offset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getColor <em>Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Color</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getColor()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Color();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getFontStyle <em>Font Style</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Style</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getFontStyle()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_FontStyle();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getFontWeight <em>Font Weight</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Weight</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getFontWeight()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_FontWeight();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getFontFamily <em>Font Family</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Family</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getFontFamily()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_FontFamily();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getFontSize <em>Font Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Font Size</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getFontSize()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_FontSize();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getAlign <em>Align</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1574,17 +2161,6 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLabel_VerticalAlign();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getLineHeight <em>Line Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line Height</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getLineHeight()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_LineHeight();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getBackgroundColor <em>Background Color</em>}'.
@@ -1708,138 +2284,6 @@ public interface GraphPackage extends EPackage {
 	EAttribute getLabel_ShadowOffsetY();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getWidth <em>Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Width</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getWidth()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Width();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getHeight <em>Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Height</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getHeight()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Height();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextBorderColor <em>Text Border Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Border Color</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextBorderColor()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextBorderColor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextBorderWidth <em>Text Border Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Border Width</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextBorderWidth()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextBorderWidth();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextBorderType <em>Text Border Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Border Type</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextBorderType()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextBorderType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextBorderDashOffset <em>Text Border Dash Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Border Dash Offset</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextBorderDashOffset()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextBorderDashOffset();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextShadowColor <em>Text Shadow Color</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Shadow Color</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextShadowColor()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextShadowColor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextShadowBlur <em>Text Shadow Blur</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Shadow Blur</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextShadowBlur()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextShadowBlur();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextShadowOffsetX <em>Text Shadow Offset X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Shadow Offset X</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextShadowOffsetX()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextShadowOffsetX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getTextShadowOffsetY <em>Text Shadow Offset Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Shadow Offset Y</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getTextShadowOffsetY()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_TextShadowOffsetY();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getOverflow <em>Overflow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Overflow</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getOverflow()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Overflow();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Label#getEllipsis <em>Ellipsis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ellipsis</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Label#getEllipsis()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Ellipsis();
-
-	/**
 	 * Returns the meta object for the map '{@link org.nasdanika.models.echarts.graph.Label#getRich <em>Rich</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1917,6 +2361,158 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getStringEntry_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.State <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>State</em>'.
+	 * @see org.nasdanika.models.echarts.graph.State
+	 * @generated
+	 */
+	EClass getState();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.State#getDisabled <em>Disabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Disabled</em>'.
+	 * @see org.nasdanika.models.echarts.graph.State#getDisabled()
+	 * @see #getState()
+	 * @generated
+	 */
+	EAttribute getState_Disabled();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.State#getItemStyle <em>Item Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Item Style</em>'.
+	 * @see org.nasdanika.models.echarts.graph.State#getItemStyle()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_ItemStyle();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.State#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Label</em>'.
+	 * @see org.nasdanika.models.echarts.graph.State#getLabel()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_Label();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Tooltip <em>Tooltip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tooltip</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip
+	 * @generated
+	 */
+	EClass getTooltip();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getPosition()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_Position();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getFormatter <em>Formatter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Formatter</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getFormatter()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_Formatter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getValueFormatter <em>Value Formatter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value Formatter</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getValueFormatter()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_ValueFormatter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getBackgroundColor <em>Background Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Background Color</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getBackgroundColor()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_BackgroundColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getBorderColor <em>Border Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Border Color</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getBorderColor()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_BorderColor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getBorderWidth <em>Border Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Border Width</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getBorderWidth()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_BorderWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getPadding <em>Padding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Padding</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getPadding()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_Padding();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Tooltip#getTextStyle <em>Text Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Text Style</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getTextStyle()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EReference getTooltip_TextStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Tooltip#getExtraCssText <em>Extra Css Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Extra Css Text</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Tooltip#getExtraCssText()
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	EAttribute getTooltip_ExtraCssText();
 
 	/**
 	 * Returns the meta object for enum '{@link org.nasdanika.models.echarts.graph.BorderType <em>Border Type</em>}'.
@@ -2146,6 +2742,34 @@ public interface GraphPackage extends EPackage {
 		 */
 		EReference NODE__LABEL = eINSTANCE.getNode_Label();
 		/**
+		 * The meta object literal for the '<em><b>Emphasis</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__EMPHASIS = eINSTANCE.getNode_Emphasis();
+		/**
+		 * The meta object literal for the '<em><b>Blur</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__BLUR = eINSTANCE.getNode_Blur();
+		/**
+		 * The meta object literal for the '<em><b>Select</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__SELECT = eINSTANCE.getNode_Select();
+		/**
+		 * The meta object literal for the '<em><b>Tooltip</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__TOOLTIP = eINSTANCE.getNode_Tooltip();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.ItemStyleImpl <em>Item Style</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2301,6 +2925,141 @@ public interface GraphPackage extends EPackage {
 		 */
 		EReference GRAPH__CATEGORIES = eINSTANCE.getGraph_Categories();
 		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl <em>Text Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.echarts.graph.impl.TextStyleImpl
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getTextStyle()
+		 * @generated
+		 */
+		EClass TEXT_STYLE = eINSTANCE.getTextStyle();
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__COLOR = eINSTANCE.getTextStyle_Color();
+		/**
+		 * The meta object literal for the '<em><b>Font Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__FONT_STYLE = eINSTANCE.getTextStyle_FontStyle();
+		/**
+		 * The meta object literal for the '<em><b>Font Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__FONT_WEIGHT = eINSTANCE.getTextStyle_FontWeight();
+		/**
+		 * The meta object literal for the '<em><b>Font Family</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__FONT_FAMILY = eINSTANCE.getTextStyle_FontFamily();
+		/**
+		 * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__FONT_SIZE = eINSTANCE.getTextStyle_FontSize();
+		/**
+		 * The meta object literal for the '<em><b>Line Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__LINE_HEIGHT = eINSTANCE.getTextStyle_LineHeight();
+		/**
+		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__WIDTH = eINSTANCE.getTextStyle_Width();
+		/**
+		 * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__HEIGHT = eINSTANCE.getTextStyle_Height();
+		/**
+		 * The meta object literal for the '<em><b>Text Border Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_BORDER_COLOR = eINSTANCE.getTextStyle_TextBorderColor();
+		/**
+		 * The meta object literal for the '<em><b>Text Border Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_BORDER_WIDTH = eINSTANCE.getTextStyle_TextBorderWidth();
+		/**
+		 * The meta object literal for the '<em><b>Text Border Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_BORDER_TYPE = eINSTANCE.getTextStyle_TextBorderType();
+		/**
+		 * The meta object literal for the '<em><b>Text Border Dash Offset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_BORDER_DASH_OFFSET = eINSTANCE.getTextStyle_TextBorderDashOffset();
+		/**
+		 * The meta object literal for the '<em><b>Text Shadow Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_SHADOW_COLOR = eINSTANCE.getTextStyle_TextShadowColor();
+		/**
+		 * The meta object literal for the '<em><b>Text Shadow Blur</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_SHADOW_BLUR = eINSTANCE.getTextStyle_TextShadowBlur();
+		/**
+		 * The meta object literal for the '<em><b>Text Shadow Offset X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_SHADOW_OFFSET_X = eINSTANCE.getTextStyle_TextShadowOffsetX();
+		/**
+		 * The meta object literal for the '<em><b>Text Shadow Offset Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__TEXT_SHADOW_OFFSET_Y = eINSTANCE.getTextStyle_TextShadowOffsetY();
+		/**
+		 * The meta object literal for the '<em><b>Overflow</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__OVERFLOW = eINSTANCE.getTextStyle_Overflow();
+		/**
+		 * The meta object literal for the '<em><b>Ellipsis</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_STYLE__ELLIPSIS = eINSTANCE.getTextStyle_Ellipsis();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.LabelImpl <em>Label</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2345,41 +3104,6 @@ public interface GraphPackage extends EPackage {
 		 */
 		EAttribute LABEL__OFFSET = eINSTANCE.getLabel_Offset();
 		/**
-		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__COLOR = eINSTANCE.getLabel_Color();
-		/**
-		 * The meta object literal for the '<em><b>Font Style</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__FONT_STYLE = eINSTANCE.getLabel_FontStyle();
-		/**
-		 * The meta object literal for the '<em><b>Font Weight</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__FONT_WEIGHT = eINSTANCE.getLabel_FontWeight();
-		/**
-		 * The meta object literal for the '<em><b>Font Family</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__FONT_FAMILY = eINSTANCE.getLabel_FontFamily();
-		/**
-		 * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__FONT_SIZE = eINSTANCE.getLabel_FontSize();
-		/**
 		 * The meta object literal for the '<em><b>Align</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2393,13 +3117,6 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LABEL__VERTICAL_ALIGN = eINSTANCE.getLabel_VerticalAlign();
-		/**
-		 * The meta object literal for the '<em><b>Line Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__LINE_HEIGHT = eINSTANCE.getLabel_LineHeight();
 		/**
 		 * The meta object literal for the '<em><b>Background Color</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2478,90 +3195,6 @@ public interface GraphPackage extends EPackage {
 		 */
 		EAttribute LABEL__SHADOW_OFFSET_Y = eINSTANCE.getLabel_ShadowOffsetY();
 		/**
-		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__WIDTH = eINSTANCE.getLabel_Width();
-		/**
-		 * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__HEIGHT = eINSTANCE.getLabel_Height();
-		/**
-		 * The meta object literal for the '<em><b>Text Border Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_BORDER_COLOR = eINSTANCE.getLabel_TextBorderColor();
-		/**
-		 * The meta object literal for the '<em><b>Text Border Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_BORDER_WIDTH = eINSTANCE.getLabel_TextBorderWidth();
-		/**
-		 * The meta object literal for the '<em><b>Text Border Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_BORDER_TYPE = eINSTANCE.getLabel_TextBorderType();
-		/**
-		 * The meta object literal for the '<em><b>Text Border Dash Offset</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_BORDER_DASH_OFFSET = eINSTANCE.getLabel_TextBorderDashOffset();
-		/**
-		 * The meta object literal for the '<em><b>Text Shadow Color</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_SHADOW_COLOR = eINSTANCE.getLabel_TextShadowColor();
-		/**
-		 * The meta object literal for the '<em><b>Text Shadow Blur</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_SHADOW_BLUR = eINSTANCE.getLabel_TextShadowBlur();
-		/**
-		 * The meta object literal for the '<em><b>Text Shadow Offset X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_SHADOW_OFFSET_X = eINSTANCE.getLabel_TextShadowOffsetX();
-		/**
-		 * The meta object literal for the '<em><b>Text Shadow Offset Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__TEXT_SHADOW_OFFSET_Y = eINSTANCE.getLabel_TextShadowOffsetY();
-		/**
-		 * The meta object literal for the '<em><b>Overflow</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__OVERFLOW = eINSTANCE.getLabel_Overflow();
-		/**
-		 * The meta object literal for the '<em><b>Ellipsis</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__ELLIPSIS = eINSTANCE.getLabel_Ellipsis();
-		/**
 		 * The meta object literal for the '<em><b>Rich</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2614,6 +3247,108 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute STRING_ENTRY__VALUE = eINSTANCE.getStringEntry_Value();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.StateImpl <em>State</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.echarts.graph.impl.StateImpl
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getState()
+		 * @generated
+		 */
+		EClass STATE = eINSTANCE.getState();
+		/**
+		 * The meta object literal for the '<em><b>Disabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATE__DISABLED = eINSTANCE.getState_Disabled();
+		/**
+		 * The meta object literal for the '<em><b>Item Style</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__ITEM_STYLE = eINSTANCE.getState_ItemStyle();
+		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__LABEL = eINSTANCE.getState_Label();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.TooltipImpl <em>Tooltip</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.echarts.graph.impl.TooltipImpl
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getTooltip()
+		 * @generated
+		 */
+		EClass TOOLTIP = eINSTANCE.getTooltip();
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__POSITION = eINSTANCE.getTooltip_Position();
+		/**
+		 * The meta object literal for the '<em><b>Formatter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__FORMATTER = eINSTANCE.getTooltip_Formatter();
+		/**
+		 * The meta object literal for the '<em><b>Value Formatter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__VALUE_FORMATTER = eINSTANCE.getTooltip_ValueFormatter();
+		/**
+		 * The meta object literal for the '<em><b>Background Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__BACKGROUND_COLOR = eINSTANCE.getTooltip_BackgroundColor();
+		/**
+		 * The meta object literal for the '<em><b>Border Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__BORDER_COLOR = eINSTANCE.getTooltip_BorderColor();
+		/**
+		 * The meta object literal for the '<em><b>Border Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__BORDER_WIDTH = eINSTANCE.getTooltip_BorderWidth();
+		/**
+		 * The meta object literal for the '<em><b>Padding</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__PADDING = eINSTANCE.getTooltip_Padding();
+		/**
+		 * The meta object literal for the '<em><b>Text Style</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TOOLTIP__TEXT_STYLE = eINSTANCE.getTooltip_TextStyle();
+		/**
+		 * The meta object literal for the '<em><b>Extra Css Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOOLTIP__EXTRA_CSS_TEXT = eINSTANCE.getTooltip_ExtraCssText();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.BorderType <em>Border Type</em>}' enum.
 		 * <!-- begin-user-doc -->

@@ -67,6 +67,15 @@ public interface GraphFactory extends EFactory {
 	Graph createGraph();
 
 	/**
+	 * Returns a new object of class '<em>Text Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Style</em>'.
+	 * @generated
+	 */
+	TextStyle createTextStyle();
+
+	/**
 	 * Returns a new object of class '<em>Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +83,24 @@ public interface GraphFactory extends EFactory {
 	 * @generated
 	 */
 	Label createLabel();
+
+	/**
+	 * Returns a new object of class '<em>State</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>State</em>'.
+	 * @generated
+	 */
+	State createState();
+
+	/**
+	 * Returns a new object of class '<em>Tooltip</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tooltip</em>'.
+	 * @generated
+	 */
+	Tooltip createTooltip();
 
 	/**
 	 * Returns the package supported by this factory.

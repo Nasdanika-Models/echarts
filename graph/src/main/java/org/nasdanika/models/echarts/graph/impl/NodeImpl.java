@@ -17,6 +17,8 @@ import org.nasdanika.models.echarts.graph.ItemStyle;
 import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.Link;
 import org.nasdanika.models.echarts.graph.Node;
+import org.nasdanika.models.echarts.graph.State;
+import org.nasdanika.models.echarts.graph.Tooltip;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,6 +43,10 @@ import org.nasdanika.models.echarts.graph.Node;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getItemStyle <em>Item Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getEmphasis <em>Emphasis</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getBlur <em>Blur</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getSelect <em>Select</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getTooltip <em>Tooltip</em>}</li>
  * </ul>
  *
  * @generated
@@ -428,6 +434,126 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public State getEmphasis() {
+		return (State)eDynamicGet(GraphPackage.NODE__EMPHASIS, GraphPackage.Literals.NODE__EMPHASIS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEmphasis(State newEmphasis, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newEmphasis, GraphPackage.NODE__EMPHASIS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEmphasis(State newEmphasis) {
+		eDynamicSet(GraphPackage.NODE__EMPHASIS, GraphPackage.Literals.NODE__EMPHASIS, newEmphasis);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public State getBlur() {
+		return (State)eDynamicGet(GraphPackage.NODE__BLUR, GraphPackage.Literals.NODE__BLUR, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBlur(State newBlur, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newBlur, GraphPackage.NODE__BLUR, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBlur(State newBlur) {
+		eDynamicSet(GraphPackage.NODE__BLUR, GraphPackage.Literals.NODE__BLUR, newBlur);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public State getSelect() {
+		return (State)eDynamicGet(GraphPackage.NODE__SELECT, GraphPackage.Literals.NODE__SELECT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSelect(State newSelect, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newSelect, GraphPackage.NODE__SELECT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSelect(State newSelect) {
+		eDynamicSet(GraphPackage.NODE__SELECT, GraphPackage.Literals.NODE__SELECT, newSelect);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Tooltip getTooltip() {
+		return (Tooltip)eDynamicGet(GraphPackage.NODE__TOOLTIP, GraphPackage.Literals.NODE__TOOLTIP, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTooltip(Tooltip newTooltip, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newTooltip, GraphPackage.NODE__TOOLTIP, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTooltip(Tooltip newTooltip) {
+		eDynamicSet(GraphPackage.NODE__TOOLTIP, GraphPackage.Literals.NODE__TOOLTIP, newTooltip);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -456,6 +582,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return basicSetItemStyle(null, msgs);
 			case GraphPackage.NODE__LABEL:
 				return basicSetLabel(null, msgs);
+			case GraphPackage.NODE__EMPHASIS:
+				return basicSetEmphasis(null, msgs);
+			case GraphPackage.NODE__BLUR:
+				return basicSetBlur(null, msgs);
+			case GraphPackage.NODE__SELECT:
+				return basicSetSelect(null, msgs);
+			case GraphPackage.NODE__TOOLTIP:
+				return basicSetTooltip(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -499,6 +633,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return getItemStyle();
 			case GraphPackage.NODE__LABEL:
 				return getLabel();
+			case GraphPackage.NODE__EMPHASIS:
+				return getEmphasis();
+			case GraphPackage.NODE__BLUR:
+				return getBlur();
+			case GraphPackage.NODE__SELECT:
+				return getSelect();
+			case GraphPackage.NODE__TOOLTIP:
+				return getTooltip();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -562,6 +704,18 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case GraphPackage.NODE__LABEL:
 				setLabel((Label)newValue);
 				return;
+			case GraphPackage.NODE__EMPHASIS:
+				setEmphasis((State)newValue);
+				return;
+			case GraphPackage.NODE__BLUR:
+				setBlur((State)newValue);
+				return;
+			case GraphPackage.NODE__SELECT:
+				setSelect((State)newValue);
+				return;
+			case GraphPackage.NODE__TOOLTIP:
+				setTooltip((Tooltip)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -619,6 +773,18 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case GraphPackage.NODE__LABEL:
 				setLabel((Label)null);
 				return;
+			case GraphPackage.NODE__EMPHASIS:
+				setEmphasis((State)null);
+				return;
+			case GraphPackage.NODE__BLUR:
+				setBlur((State)null);
+				return;
+			case GraphPackage.NODE__SELECT:
+				setSelect((State)null);
+				return;
+			case GraphPackage.NODE__TOOLTIP:
+				setTooltip((Tooltip)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -661,6 +827,14 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return getItemStyle() != null;
 			case GraphPackage.NODE__LABEL:
 				return getLabel() != null;
+			case GraphPackage.NODE__EMPHASIS:
+				return getEmphasis() != null;
+			case GraphPackage.NODE__BLUR:
+				return getBlur() != null;
+			case GraphPackage.NODE__SELECT:
+				return getSelect() != null;
+			case GraphPackage.NODE__TOOLTIP:
+				return getTooltip() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -64,9 +64,12 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 			case GraphPackage.CATEGORY: return createCategory();
 			case GraphPackage.LINK: return createLink();
 			case GraphPackage.GRAPH: return createGraph();
+			case GraphPackage.TEXT_STYLE: return createTextStyle();
 			case GraphPackage.LABEL: return createLabel();
 			case GraphPackage.STYLE_ENTRY: return (EObject)createStyleEntry();
 			case GraphPackage.STRING_ENTRY: return (EObject)createStringEntry();
+			case GraphPackage.STATE: return createState();
+			case GraphPackage.TOOLTIP: return createTooltip();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -195,6 +198,17 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	@Override
+	public TextStyle createTextStyle() {
+		TextStyleImpl textStyle = new TextStyleImpl();
+		return textStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Label createLabel() {
 		LabelImpl label = new LabelImpl();
 		return label;
@@ -218,6 +232,28 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	public Map.Entry<String, String> createStringEntry() {
 		StringEntryImpl stringEntry = new StringEntryImpl();
 		return stringEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public State createState() {
+		StateImpl state = new StateImpl();
+		return state;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Tooltip createTooltip() {
+		TooltipImpl tooltip = new TooltipImpl();
+		return tooltip;
 	}
 
 	/**

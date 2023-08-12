@@ -29,6 +29,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getItemStyle <em>Item Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getEmphasis <em>Emphasis</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getBlur <em>Blur</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getSelect <em>Select</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getTooltip <em>Tooltip</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode()
@@ -320,4 +324,104 @@ public interface Node extends EObject {
 	 * @generated
 	 */
 	void setLabel(Label value);
+
+	/**
+	 * Returns the value of the '<em><b>Emphasis</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Emphasis state of specified node.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Emphasis</em>' containment reference.
+	 * @see #setEmphasis(State)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Emphasis()
+	 * @model containment="true"
+	 * @generated
+	 */
+	State getEmphasis();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getEmphasis <em>Emphasis</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Emphasis</em>' containment reference.
+	 * @see #getEmphasis()
+	 * @generated
+	 */
+	void setEmphasis(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Blur</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Blur state of specified node.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Blur</em>' containment reference.
+	 * @see #setBlur(State)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Blur()
+	 * @model containment="true"
+	 * @generated
+	 */
+	State getBlur();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getBlur <em>Blur</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Blur</em>' containment reference.
+	 * @see #getBlur()
+	 * @generated
+	 */
+	void setBlur(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Select</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Select state of specified node.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Select</em>' containment reference.
+	 * @see #setSelect(State)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Select()
+	 * @model containment="true"
+	 * @generated
+	 */
+	State getSelect();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getSelect <em>Select</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Select</em>' containment reference.
+	 * @see #getSelect()
+	 * @generated
+	 */
+	void setSelect(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Tooltip</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Emphasis state of specified node.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Tooltip</em>' containment reference.
+	 * @see #setTooltip(Tooltip)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Tooltip()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Tooltip getTooltip();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getTooltip <em>Tooltip</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tooltip</em>' containment reference.
+	 * @see #getTooltip()
+	 * @generated
+	 */
+	void setTooltip(Tooltip value);
 } // Node

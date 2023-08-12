@@ -98,9 +98,16 @@ public class GraphSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GraphPackage.TEXT_STYLE: {
+				TextStyle textStyle = (TextStyle)theEObject;
+				T result = caseTextStyle(textStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case GraphPackage.LABEL: {
 				Label label = (Label)theEObject;
 				T result = caseLabel(label);
+				if (result == null) result = caseTextStyle(label);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,6 +120,18 @@ public class GraphSwitch<T> extends Switch<T> {
 			case GraphPackage.STRING_ENTRY: {
 				@SuppressWarnings("unchecked") Map.Entry<String, String> stringEntry = (Map.Entry<String, String>)theEObject;
 				T result = caseStringEntry(stringEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphPackage.STATE: {
+				State state = (State)theEObject;
+				T result = caseState(state);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphPackage.TOOLTIP: {
+				Tooltip tooltip = (Tooltip)theEObject;
+				T result = caseTooltip(tooltip);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,6 +215,21 @@ public class GraphSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextStyle(TextStyle object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -237,6 +271,36 @@ public class GraphSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStringEntry(Map.Entry<String, String> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>State</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>State</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseState(State object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tooltip</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tooltip</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTooltip(Tooltip object) {
 		return null;
 	}
 

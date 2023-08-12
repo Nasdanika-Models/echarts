@@ -27,6 +27,9 @@ import org.nasdanika.models.echarts.graph.LabelPosition;
 import org.nasdanika.models.echarts.graph.Link;
 import org.nasdanika.models.echarts.graph.Node;
 import org.nasdanika.models.echarts.graph.Overflow;
+import org.nasdanika.models.echarts.graph.State;
+import org.nasdanika.models.echarts.graph.TextStyle;
+import org.nasdanika.models.echarts.graph.Tooltip;
 import org.nasdanika.models.echarts.graph.VerticalAlign;
 
 /**
@@ -72,6 +75,13 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass textStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass labelEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,6 +96,20 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	private EClass stringEntryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tooltipEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -374,6 +398,46 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getNode_Emphasis() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Blur() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Select() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Tooltip() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getItemStyle() {
 		return itemStyleEClass;
 	}
@@ -584,6 +648,196 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getTextStyle() {
+		return textStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_Color() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_FontStyle() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_FontWeight() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_FontFamily() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_FontSize() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_LineHeight() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_Width() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_Height() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextBorderColor() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextBorderWidth() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextBorderType() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextBorderDashOffset() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextShadowColor() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextShadowBlur() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextShadowOffsetX() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_TextShadowOffsetY() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_Overflow() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTextStyle_Ellipsis() {
+		return (EAttribute)textStyleEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLabel() {
 		return labelEClass;
 	}
@@ -644,7 +898,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Color() {
+	public EAttribute getLabel_Align() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -654,7 +908,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_FontStyle() {
+	public EAttribute getLabel_VerticalAlign() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -664,7 +918,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_FontWeight() {
+	public EAttribute getLabel_BackgroundColor() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -674,7 +928,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_FontFamily() {
+	public EAttribute getLabel_BorderColor() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -684,7 +938,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_FontSize() {
+	public EAttribute getLabel_BorderWidth() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -694,7 +948,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_Align() {
+	public EAttribute getLabel_BorderType() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -704,7 +958,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_VerticalAlign() {
+	public EAttribute getLabel_BorderDashOffset() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -714,7 +968,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_LineHeight() {
+	public EAttribute getLabel_BorderRadius() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -724,7 +978,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_BackgroundColor() {
+	public EAttribute getLabel_Padding() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -734,7 +988,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_BorderColor() {
+	public EAttribute getLabel_ShadowColor() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -744,7 +998,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_BorderWidth() {
+	public EAttribute getLabel_ShadowBlur() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -754,7 +1008,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_BorderType() {
+	public EAttribute getLabel_ShadowOffsetX() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -764,7 +1018,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_BorderDashOffset() {
+	public EAttribute getLabel_ShadowOffsetY() {
 		return (EAttribute)labelEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -774,188 +1028,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLabel_BorderRadius() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Padding() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_ShadowColor() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_ShadowBlur() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_ShadowOffsetX() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_ShadowOffsetY() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Width() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Height() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextBorderColor() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextBorderWidth() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextBorderType() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextBorderDashOffset() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(29);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextShadowColor() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(30);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextShadowBlur() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(31);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextShadowOffsetX() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(32);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_TextShadowOffsetY() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(33);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Overflow() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(34);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLabel_Ellipsis() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(35);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getLabel_Rich() {
-		return (EReference)labelEClass.getEStructuralFeatures().get(36);
+		return (EReference)labelEClass.getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -1016,6 +1090,146 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	@Override
 	public EAttribute getStringEntry_Value() {
 		return (EAttribute)stringEntryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getState() {
+		return stateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getState_Disabled() {
+		return (EAttribute)stateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getState_ItemStyle() {
+		return (EReference)stateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getState_Label() {
+		return (EReference)stateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTooltip() {
+		return tooltipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_Position() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_Formatter() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_ValueFormatter() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_BackgroundColor() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_BorderColor() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_BorderWidth() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_Padding() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTooltip_TextStyle() {
+		return (EReference)tooltipEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getTooltip_ExtraCssText() {
+		return (EAttribute)tooltipEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1153,6 +1367,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEAttribute(nodeEClass, NODE__SYMBOL_KEEP_ASPECT);
 		createEReference(nodeEClass, NODE__ITEM_STYLE);
 		createEReference(nodeEClass, NODE__LABEL);
+		createEReference(nodeEClass, NODE__EMPHASIS);
+		createEReference(nodeEClass, NODE__BLUR);
+		createEReference(nodeEClass, NODE__SELECT);
+		createEReference(nodeEClass, NODE__TOOLTIP);
 
 		itemStyleEClass = createEClass(ITEM_STYLE);
 		createEAttribute(itemStyleEClass, ITEM_STYLE__COLOR);
@@ -1179,20 +1397,34 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(graphEClass, GRAPH__NODES);
 		createEReference(graphEClass, GRAPH__CATEGORIES);
 
+		textStyleEClass = createEClass(TEXT_STYLE);
+		createEAttribute(textStyleEClass, TEXT_STYLE__COLOR);
+		createEAttribute(textStyleEClass, TEXT_STYLE__FONT_STYLE);
+		createEAttribute(textStyleEClass, TEXT_STYLE__FONT_WEIGHT);
+		createEAttribute(textStyleEClass, TEXT_STYLE__FONT_FAMILY);
+		createEAttribute(textStyleEClass, TEXT_STYLE__FONT_SIZE);
+		createEAttribute(textStyleEClass, TEXT_STYLE__LINE_HEIGHT);
+		createEAttribute(textStyleEClass, TEXT_STYLE__WIDTH);
+		createEAttribute(textStyleEClass, TEXT_STYLE__HEIGHT);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_BORDER_COLOR);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_BORDER_WIDTH);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_BORDER_TYPE);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_BORDER_DASH_OFFSET);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_SHADOW_COLOR);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_SHADOW_BLUR);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_SHADOW_OFFSET_X);
+		createEAttribute(textStyleEClass, TEXT_STYLE__TEXT_SHADOW_OFFSET_Y);
+		createEAttribute(textStyleEClass, TEXT_STYLE__OVERFLOW);
+		createEAttribute(textStyleEClass, TEXT_STYLE__ELLIPSIS);
+
 		labelEClass = createEClass(LABEL);
 		createEAttribute(labelEClass, LABEL__SHOW);
 		createEAttribute(labelEClass, LABEL__POSITION);
 		createEAttribute(labelEClass, LABEL__DISTANCE);
 		createEAttribute(labelEClass, LABEL__ROTATE);
 		createEAttribute(labelEClass, LABEL__OFFSET);
-		createEAttribute(labelEClass, LABEL__COLOR);
-		createEAttribute(labelEClass, LABEL__FONT_STYLE);
-		createEAttribute(labelEClass, LABEL__FONT_WEIGHT);
-		createEAttribute(labelEClass, LABEL__FONT_FAMILY);
-		createEAttribute(labelEClass, LABEL__FONT_SIZE);
 		createEAttribute(labelEClass, LABEL__ALIGN);
 		createEAttribute(labelEClass, LABEL__VERTICAL_ALIGN);
-		createEAttribute(labelEClass, LABEL__LINE_HEIGHT);
 		createEAttribute(labelEClass, LABEL__BACKGROUND_COLOR);
 		createEAttribute(labelEClass, LABEL__BORDER_COLOR);
 		createEAttribute(labelEClass, LABEL__BORDER_WIDTH);
@@ -1204,18 +1436,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEAttribute(labelEClass, LABEL__SHADOW_BLUR);
 		createEAttribute(labelEClass, LABEL__SHADOW_OFFSET_X);
 		createEAttribute(labelEClass, LABEL__SHADOW_OFFSET_Y);
-		createEAttribute(labelEClass, LABEL__WIDTH);
-		createEAttribute(labelEClass, LABEL__HEIGHT);
-		createEAttribute(labelEClass, LABEL__TEXT_BORDER_COLOR);
-		createEAttribute(labelEClass, LABEL__TEXT_BORDER_WIDTH);
-		createEAttribute(labelEClass, LABEL__TEXT_BORDER_TYPE);
-		createEAttribute(labelEClass, LABEL__TEXT_BORDER_DASH_OFFSET);
-		createEAttribute(labelEClass, LABEL__TEXT_SHADOW_COLOR);
-		createEAttribute(labelEClass, LABEL__TEXT_SHADOW_BLUR);
-		createEAttribute(labelEClass, LABEL__TEXT_SHADOW_OFFSET_X);
-		createEAttribute(labelEClass, LABEL__TEXT_SHADOW_OFFSET_Y);
-		createEAttribute(labelEClass, LABEL__OVERFLOW);
-		createEAttribute(labelEClass, LABEL__ELLIPSIS);
 		createEReference(labelEClass, LABEL__RICH);
 
 		styleEntryEClass = createEClass(STYLE_ENTRY);
@@ -1225,6 +1445,22 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		stringEntryEClass = createEClass(STRING_ENTRY);
 		createEAttribute(stringEntryEClass, STRING_ENTRY__KEY);
 		createEAttribute(stringEntryEClass, STRING_ENTRY__VALUE);
+
+		stateEClass = createEClass(STATE);
+		createEAttribute(stateEClass, STATE__DISABLED);
+		createEReference(stateEClass, STATE__ITEM_STYLE);
+		createEReference(stateEClass, STATE__LABEL);
+
+		tooltipEClass = createEClass(TOOLTIP);
+		createEAttribute(tooltipEClass, TOOLTIP__POSITION);
+		createEAttribute(tooltipEClass, TOOLTIP__FORMATTER);
+		createEAttribute(tooltipEClass, TOOLTIP__VALUE_FORMATTER);
+		createEAttribute(tooltipEClass, TOOLTIP__BACKGROUND_COLOR);
+		createEAttribute(tooltipEClass, TOOLTIP__BORDER_COLOR);
+		createEAttribute(tooltipEClass, TOOLTIP__BORDER_WIDTH);
+		createEAttribute(tooltipEClass, TOOLTIP__PADDING);
+		createEReference(tooltipEClass, TOOLTIP__TEXT_STYLE);
+		createEAttribute(tooltipEClass, TOOLTIP__EXTRA_CSS_TEXT);
 
 		// Create enums
 		borderTypeEEnum = createEEnum(BORDER_TYPE);
@@ -1266,6 +1502,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		labelEClass.getESuperTypes().add(this.getTextStyle());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1284,6 +1521,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEAttribute(getNode_SymbolKeepAspect(), ecorePackage.getEBoolean(), "symbolKeepAspect", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Label(), this.getLabel(), null, "label", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Emphasis(), this.getState(), null, "emphasis", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Blur(), this.getState(), null, "blur", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Select(), this.getState(), null, "select", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Tooltip(), this.getTooltip(), null, "tooltip", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(itemStyleEClass, ItemStyle.class, "ItemStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getItemStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1310,20 +1551,34 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getGraph_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraph_Categories(), this.getCategory(), null, "categories", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(textStyleEClass, TextStyle.class, "TextStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_FontStyle(), this.getFontStyle(), "fontStyle", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_FontWeight(), this.getFontWeight(), "fontWeight", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_FontFamily(), ecorePackage.getEString(), "fontFamily", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_FontSize(), ecorePackage.getEIntegerObject(), "fontSize", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_LineHeight(), ecorePackage.getEIntegerObject(), "lineHeight", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_Width(), ecorePackage.getEIntegerObject(), "width", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_Height(), ecorePackage.getEIntegerObject(), "height", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextBorderColor(), ecorePackage.getEString(), "textBorderColor", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextBorderWidth(), ecorePackage.getEIntegerObject(), "textBorderWidth", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextBorderType(), this.getBorderType(), "textBorderType", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextBorderDashOffset(), ecorePackage.getEIntegerObject(), "textBorderDashOffset", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextShadowColor(), ecorePackage.getEString(), "textShadowColor", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextShadowBlur(), ecorePackage.getEBigDecimal(), "textShadowBlur", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextShadowOffsetX(), ecorePackage.getEIntegerObject(), "textShadowOffsetX", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_TextShadowOffsetY(), ecorePackage.getEIntegerObject(), "textShadowOffsetY", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_Overflow(), this.getOverflow(), "overflow", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextStyle_Ellipsis(), ecorePackage.getEString(), "ellipsis", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLabel_Show(), ecorePackage.getEBoolean(), "show", "true", 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Position(), this.getLabelPosition(), "position", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Distance(), ecorePackage.getEIntegerObject(), "distance", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Rotate(), ecorePackage.getEDoubleObject(), "rotate", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Offset(), ecorePackage.getEInt(), "offset", null, 0, 2, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Color(), ecorePackage.getEString(), "color", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_FontStyle(), this.getFontStyle(), "fontStyle", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_FontWeight(), this.getFontWeight(), "fontWeight", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_FontFamily(), ecorePackage.getEString(), "fontFamily", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_FontSize(), ecorePackage.getEIntegerObject(), "fontSize", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Align(), this.getAlign(), "align", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_VerticalAlign(), this.getVerticalAlign(), "verticalAlign", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_LineHeight(), ecorePackage.getEIntegerObject(), "lineHeight", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_BackgroundColor(), ecorePackage.getEString(), "backgroundColor", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_BorderColor(), ecorePackage.getEString(), "borderColor", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_BorderWidth(), ecorePackage.getEIntegerObject(), "borderWidth", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1335,18 +1590,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEAttribute(getLabel_ShadowBlur(), ecorePackage.getEBigDecimal(), "shadowBlur", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_ShadowOffsetX(), ecorePackage.getEIntegerObject(), "shadowOffsetX", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_ShadowOffsetY(), ecorePackage.getEIntegerObject(), "shadowOffsetY", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Width(), ecorePackage.getEIntegerObject(), "width", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Height(), ecorePackage.getEIntegerObject(), "height", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextBorderColor(), ecorePackage.getEString(), "textBorderColor", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextBorderWidth(), ecorePackage.getEIntegerObject(), "textBorderWidth", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextBorderType(), this.getBorderType(), "textBorderType", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextBorderDashOffset(), ecorePackage.getEIntegerObject(), "textBorderDashOffset", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextShadowColor(), ecorePackage.getEString(), "textShadowColor", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextShadowBlur(), ecorePackage.getEBigDecimal(), "textShadowBlur", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextShadowOffsetX(), ecorePackage.getEIntegerObject(), "textShadowOffsetX", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_TextShadowOffsetY(), ecorePackage.getEIntegerObject(), "textShadowOffsetY", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Overflow(), this.getOverflow(), "overflow", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLabel_Ellipsis(), ecorePackage.getEString(), "ellipsis", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLabel_Rich(), this.getStyleEntry(), null, "rich", null, 0, -1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(styleEntryEClass, Map.Entry.class, "StyleEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1356,6 +1599,22 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEClass(stringEntryEClass, Map.Entry.class, "StringEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringEntry_Key(), ecorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStringEntry_Value(), ecorePackage.getEString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getState_Disabled(), ecorePackage.getEBooleanObject(), "disabled", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_Label(), this.getLabel(), null, "label", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tooltipEClass, Tooltip.class, "Tooltip", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTooltip_Position(), ecorePackage.getEString(), "position", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_Formatter(), ecorePackage.getEString(), "formatter", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_ValueFormatter(), ecorePackage.getEString(), "valueFormatter", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_BackgroundColor(), ecorePackage.getEString(), "backgroundColor", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_BorderColor(), ecorePackage.getEString(), "borderColor", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_BorderWidth(), ecorePackage.getEIntegerObject(), "borderWidth", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_Padding(), ecorePackage.getEIntegerObject(), "padding", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTooltip_TextStyle(), this.getTextStyle(), null, "textStyle", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTooltip_ExtraCssText(), ecorePackage.getEString(), "extraCssText", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(borderTypeEEnum, BorderType.class, "BorderType");
@@ -1431,6 +1690,138 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
+		  (getNode_Emphasis(),
+		   source,
+		   new String[] {
+			   "documentation", "Emphasis state of specified node."
+		   });
+		addAnnotation
+		  (getNode_Blur(),
+		   source,
+		   new String[] {
+			   "documentation", "Blur state of specified node."
+		   });
+		addAnnotation
+		  (getNode_Select(),
+		   source,
+		   new String[] {
+			   "documentation", "Select state of specified node."
+		   });
+		addAnnotation
+		  (getNode_Tooltip(),
+		   source,
+		   new String[] {
+			   "documentation", "Emphasis state of specified node."
+		   });
+		addAnnotation
+		  (getTextStyle_Color(),
+		   source,
+		   new String[] {
+			   "documentation", "Text color. If set as \'inherit\', the color will assigned as visual color, such as series color."
+		   });
+		addAnnotation
+		  (getTextStyle_FontStyle(),
+		   source,
+		   new String[] {
+			   "documentation", "Font style"
+		   });
+		addAnnotation
+		  (getTextStyle_FontWeight(),
+		   source,
+		   new String[] {
+			   "documentation", "Font weight"
+		   });
+		addAnnotation
+		  (getTextStyle_FontFamily(),
+		   source,
+		   new String[] {
+			   "documentation", "Whether to show label"
+		   });
+		addAnnotation
+		  (getTextStyle_FontSize(),
+		   source,
+		   new String[] {
+			   "documentation", "Font size"
+		   });
+		addAnnotation
+		  (getTextStyle_LineHeight(),
+		   source,
+		   new String[] {
+			   "documentation", "Line height of the text fragment."
+		   });
+		addAnnotation
+		  (getTextStyle_Width(),
+		   source,
+		   new String[] {
+			   "documentation", "Width of text block."
+		   });
+		addAnnotation
+		  (getTextStyle_Height(),
+		   source,
+		   new String[] {
+			   "documentation", "Height of text block."
+		   });
+		addAnnotation
+		  (getTextStyle_TextBorderColor(),
+		   source,
+		   new String[] {
+			   "documentation", "Stroke color of the text."
+		   });
+		addAnnotation
+		  (getTextStyle_TextBorderWidth(),
+		   source,
+		   new String[] {
+			   "documentation", "Stroke line width of the text."
+		   });
+		addAnnotation
+		  (getTextStyle_TextBorderType(),
+		   source,
+		   new String[] {
+			   "documentation", "Stroke line type of the text."
+		   });
+		addAnnotation
+		  (getTextStyle_TextBorderDashOffset(),
+		   source,
+		   new String[] {
+			   "documentation", "To set the line dash offset."
+		   });
+		addAnnotation
+		  (getTextStyle_TextShadowColor(),
+		   source,
+		   new String[] {
+			   "documentation", "Shadow color of the text itself."
+		   });
+		addAnnotation
+		  (getTextStyle_TextShadowBlur(),
+		   source,
+		   new String[] {
+			   "documentation", "Shadow blue of the text itself."
+		   });
+		addAnnotation
+		  (getTextStyle_TextShadowOffsetX(),
+		   source,
+		   new String[] {
+			   "documentation", "Shadow X offset of the text itself."
+		   });
+		addAnnotation
+		  (getTextStyle_TextShadowOffsetY(),
+		   source,
+		   new String[] {
+			   "documentation", "Shadow Y offset of the text itself."
+		   });
+		addAnnotation
+		  (getTextStyle_Overflow(),
+		   source,
+		   new String[] {
+			   "documentation", "Determine how to display the text when it\'s overflow. "
+		   });
+		addAnnotation
+		  (getTextStyle_Ellipsis(),
+		   source,
+		   new String[] {
+			   "documentation", "Ellipsis to be displayed when overflow is set to truncate."
+		   });
+		addAnnotation
 		  (getLabel_Show(),
 		   source,
 		   new String[] {
@@ -1461,36 +1852,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 			   "documentation", "Whether to move text slightly. For example: [30, 40] means move 30 horizontally and move 40 vertically."
 		   });
 		addAnnotation
-		  (getLabel_Color(),
-		   source,
-		   new String[] {
-			   "documentation", "Text color. If set as \'inherit\', the color will assigned as visual color, such as series color."
-		   });
-		addAnnotation
-		  (getLabel_FontStyle(),
-		   source,
-		   new String[] {
-			   "documentation", "Font style"
-		   });
-		addAnnotation
-		  (getLabel_FontWeight(),
-		   source,
-		   new String[] {
-			   "documentation", "Font weight"
-		   });
-		addAnnotation
-		  (getLabel_FontFamily(),
-		   source,
-		   new String[] {
-			   "documentation", "Whether to show label"
-		   });
-		addAnnotation
-		  (getLabel_FontSize(),
-		   source,
-		   new String[] {
-			   "documentation", "Font size"
-		   });
-		addAnnotation
 		  (getLabel_Align(),
 		   source,
 		   new String[] {
@@ -1501,12 +1862,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		   source,
 		   new String[] {
 			   "documentation", "Vertical alignment of text, automatic by default."
-		   });
-		addAnnotation
-		  (getLabel_LineHeight(),
-		   source,
-		   new String[] {
-			   "documentation", "Line height of the text fragment."
 		   });
 		addAnnotation
 		  (getLabel_BackgroundColor(),
@@ -1575,82 +1930,70 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 			   "documentation", "Shadow Y offset of the text block."
 		   });
 		addAnnotation
-		  (getLabel_Width(),
-		   source,
-		   new String[] {
-			   "documentation", "Width of text block."
-		   });
-		addAnnotation
-		  (getLabel_Height(),
-		   source,
-		   new String[] {
-			   "documentation", "Height of text block."
-		   });
-		addAnnotation
-		  (getLabel_TextBorderColor(),
-		   source,
-		   new String[] {
-			   "documentation", "Stroke color of the text."
-		   });
-		addAnnotation
-		  (getLabel_TextBorderWidth(),
-		   source,
-		   new String[] {
-			   "documentation", "Stroke line width of the text."
-		   });
-		addAnnotation
-		  (getLabel_TextBorderType(),
-		   source,
-		   new String[] {
-			   "documentation", "Stroke line type of the text."
-		   });
-		addAnnotation
-		  (getLabel_TextBorderDashOffset(),
-		   source,
-		   new String[] {
-			   "documentation", "To set the line dash offset."
-		   });
-		addAnnotation
-		  (getLabel_TextShadowColor(),
-		   source,
-		   new String[] {
-			   "documentation", "Shadow color of the text itself."
-		   });
-		addAnnotation
-		  (getLabel_TextShadowBlur(),
-		   source,
-		   new String[] {
-			   "documentation", "Shadow blue of the text itself."
-		   });
-		addAnnotation
-		  (getLabel_TextShadowOffsetX(),
-		   source,
-		   new String[] {
-			   "documentation", "Shadow X offset of the text itself."
-		   });
-		addAnnotation
-		  (getLabel_TextShadowOffsetY(),
-		   source,
-		   new String[] {
-			   "documentation", "Shadow Y offset of the text itself."
-		   });
-		addAnnotation
-		  (getLabel_Overflow(),
-		   source,
-		   new String[] {
-			   "documentation", "Determine how to display the text when it\'s overflow. "
-		   });
-		addAnnotation
-		  (getLabel_Ellipsis(),
-		   source,
-		   new String[] {
-			   "documentation", "Ellipsis to be displayed when overflow is set to truncate."
-		   });
-		addAnnotation
 		  (getLabel_Rich(),
 		   source,
 		   new String[] {
 			   "documentation", "Whether to show label"
+		   });
+		addAnnotation
+		  (getState_Disabled(),
+		   source,
+		   new String[] {
+			   "documentation", "Whether to disable the state."
+		   });
+		addAnnotation
+		  (getTooltip_Position(),
+		   source,
+		   new String[] {
+			   "documentation", "The position of the tooltip\'s floating layer, which would follow the position of mouse by default."
+		   });
+		addAnnotation
+		  (getTooltip_Formatter(),
+		   source,
+		   new String[] {
+			   "documentation", "The content formatter of tooltip\'s floating layer which supports string template and callback function."
+		   });
+		addAnnotation
+		  (getTooltip_ValueFormatter(),
+		   source,
+		   new String[] {
+			   "documentation", "Callback function for formatting the value section in tooltip."
+		   });
+		addAnnotation
+		  (getTooltip_BackgroundColor(),
+		   source,
+		   new String[] {
+			   "documentation", "The background color of tooltip\'s floating layer."
+		   });
+		addAnnotation
+		  (getTooltip_BorderColor(),
+		   source,
+		   new String[] {
+			   "documentation", "The border color of tooltip\'s floating layer."
+		   });
+		addAnnotation
+		  (getTooltip_BorderWidth(),
+		   source,
+		   new String[] {
+			   "documentation", "The border width of tooltip\'s floating layer."
+		   });
+		addAnnotation
+		  (getTooltip_Padding(),
+		   source,
+		   new String[] {
+			   "documentation", "The floating layer of tooltip space around content. The unit is px. Default values for each position are 5. And they can be set to different values with left, right, top, and bottom."
+		   });
+		addAnnotation
+		  (getTooltip_TextStyle(),
+		   source,
+		   new String[] {
+			   "documentation", "The text style of tooltip\'s floating layer."
+		   });
+		addAnnotation
+		  (getTooltip_ExtraCssText(),
+		   source,
+		   new String[] {
+			   "documentation", "Extra CSS style for floating layer."
 		   });
 	}
 
