@@ -65,6 +65,17 @@
       <genEnumLiterals ecoreEnumLiteral="graph.ecore#//Overflow/BREAK"/>
       <genEnumLiterals ecoreEnumLiteral="graph.ecore#//Overflow/BREAK_ALL"/>
     </genEnums>
+    <genDataTypes ecoreDataType="graph.ecore#//JSONObject"/>
+    <genDataTypes ecoreDataType="graph.ecore#//BiFunction">
+      <genTypeParameters ecoreTypeParameter="graph.ecore#//BiFunction/T"/>
+      <genTypeParameters ecoreTypeParameter="graph.ecore#//BiFunction/U"/>
+      <genTypeParameters ecoreTypeParameter="graph.ecore#//BiFunction/R"/>
+    </genDataTypes>
+    <genClasses ecoreClass="graph.ecore#//GraphElement">
+      <genOperations ecoreOperation="graph.ecore#//GraphElement/toJSONObject">
+        <genParameters ecoreParameter="graph.ecore#//GraphElement/toJSONObject/customizer"/>
+      </genOperations>
+    </genClasses>
     <genClasses ecoreClass="graph.ecore#//Graph">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/categories"/>

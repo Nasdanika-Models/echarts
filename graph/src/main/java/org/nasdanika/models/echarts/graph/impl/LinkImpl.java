@@ -8,9 +8,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.LineState;
@@ -41,7 +38,7 @@ import org.nasdanika.models.echarts.graph.Node;
  *
  * @generated
  */
-public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
+public class LinkImpl extends GraphElementImpl implements Link {
 	/**
 	 * The default value of the '{@link #isIgnoreForceLayout() <em>Ignore Force Layout</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,16 +66,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.LINK;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

@@ -10,9 +10,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.ItemState;
@@ -42,7 +39,7 @@ import org.nasdanika.models.echarts.graph.Label;
  *
  * @generated
  */
-public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
+public class ItemImpl extends GraphElementImpl implements Item {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,16 +97,6 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.ITEM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

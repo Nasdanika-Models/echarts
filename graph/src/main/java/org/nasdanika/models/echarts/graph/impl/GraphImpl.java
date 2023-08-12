@@ -10,9 +10,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphPackage;
@@ -33,7 +30,7 @@ import org.nasdanika.models.echarts.graph.Node;
  *
  * @generated
  */
-public class GraphImpl extends MinimalEObjectImpl.Container implements Graph {
+public class GraphImpl extends GraphElementImpl implements Graph {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -51,16 +48,6 @@ public class GraphImpl extends MinimalEObjectImpl.Container implements Graph {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.GRAPH;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

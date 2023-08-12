@@ -3,6 +3,7 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.util.Map;
+import java.util.function.BiFunction;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -13,6 +14,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.json.JSONObject;
 import org.nasdanika.models.echarts.graph.*;
 
 /**
@@ -59,6 +61,7 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case GraphPackage.GRAPH_ELEMENT: return createGraphElement();
 			case GraphPackage.GRAPH: return createGraph();
 			case GraphPackage.ITEM: return createItem();
 			case GraphPackage.NODE: return createNode();
@@ -104,6 +107,10 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return createVerticalAlignFromString(eDataType, initialValue);
 			case GraphPackage.OVERFLOW:
 				return createOverflowFromString(eDataType, initialValue);
+			case GraphPackage.JSON_OBJECT:
+				return createJSONObjectFromString(eDataType, initialValue);
+			case GraphPackage.BI_FUNCTION:
+				return createBiFunctionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -135,9 +142,24 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return convertVerticalAlignToString(eDataType, instanceValue);
 			case GraphPackage.OVERFLOW:
 				return convertOverflowToString(eDataType, instanceValue);
+			case GraphPackage.JSON_OBJECT:
+				return convertJSONObjectToString(eDataType, instanceValue);
+			case GraphPackage.BI_FUNCTION:
+				return convertBiFunctionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GraphElement createGraphElement() {
+		GraphElementImpl graphElement = new GraphElementImpl();
+		return graphElement;
 	}
 
 	/**
@@ -470,6 +492,42 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 */
 	public String convertOverflowToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JSONObject createJSONObjectFromString(EDataType eDataType, String initialValue) {
+		return (JSONObject)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertJSONObjectToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BiFunction<?, ?, ?> createBiFunctionFromString(EDataType eDataType, String initialValue) {
+		return (BiFunction<?, ?, ?>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBiFunctionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 	/**

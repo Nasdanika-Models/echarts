@@ -3,14 +3,19 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.util.Map;
+import java.util.function.BiFunction;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.json.JSONObject;
 import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderCap;
 import org.nasdanika.models.echarts.graph.BorderJoin;
@@ -18,6 +23,7 @@ import org.nasdanika.models.echarts.graph.BorderType;
 import org.nasdanika.models.echarts.graph.FontStyle;
 import org.nasdanika.models.echarts.graph.FontWeight;
 import org.nasdanika.models.echarts.graph.Graph;
+import org.nasdanika.models.echarts.graph.GraphElement;
 import org.nasdanika.models.echarts.graph.GraphFactory;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
@@ -43,6 +49,13 @@ import org.nasdanika.models.echarts.graph.VerticalAlign;
  * @generated
  */
 public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass graphElementEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,6 +219,20 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	private EEnum overflowEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType jsonObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType biFunctionEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -263,6 +290,26 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(GraphPackage.eNS_URI, theGraphPackage);
 		return theGraphPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getGraphElement() {
+		return graphElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getGraphElement__ToJSONObject__BiFunction() {
+		return graphElementEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1511,6 +1558,26 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getJSONObject() {
+		return jsonObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getBiFunction() {
+		return biFunctionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public GraphFactory getGraphFactory() {
 		return (GraphFactory)getEFactoryInstance();
 	}
@@ -1534,6 +1601,9 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		graphElementEClass = createEClass(GRAPH_ELEMENT);
+		createEOperation(graphElementEClass, GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION);
+
 		graphEClass = createEClass(GRAPH);
 		createEReference(graphEClass, GRAPH__NODES);
 		createEReference(graphEClass, GRAPH__CATEGORIES);
@@ -1674,6 +1744,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		alignEEnum = createEEnum(ALIGN);
 		verticalAlignEEnum = createEEnum(VERTICAL_ALIGN);
 		overflowEEnum = createEEnum(OVERFLOW);
+
+		// Create data types
+		jsonObjectEDataType = createEDataType(JSON_OBJECT);
+		biFunctionEDataType = createEDataType(BI_FUNCTION);
 	}
 
 	/**
@@ -1700,18 +1774,40 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		setNsURI(eNS_URI);
 
 		// Create type parameters
+		addETypeParameter(biFunctionEDataType, "T");
+		addETypeParameter(biFunctionEDataType, "U");
+		addETypeParameter(biFunctionEDataType, "R");
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		graphEClass.getESuperTypes().add(this.getGraphElement());
+		itemEClass.getESuperTypes().add(this.getGraphElement());
 		nodeEClass.getESuperTypes().add(this.getItem());
+		styleEClass.getESuperTypes().add(this.getGraphElement());
 		lineStyleEClass.getESuperTypes().add(this.getStyle());
 		itemStyleEClass.getESuperTypes().add(this.getStyle());
+		linkEClass.getESuperTypes().add(this.getGraphElement());
+		textStyleEClass.getESuperTypes().add(this.getGraphElement());
 		labelEClass.getESuperTypes().add(this.getTextStyle());
+		stateEClass.getESuperTypes().add(this.getGraphElement());
 		itemStateEClass.getESuperTypes().add(this.getState());
 		lineStateEClass.getESuperTypes().add(this.getState());
+		tooltipEClass.getESuperTypes().add(this.getGraphElement());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(graphElementEClass, GraphElement.class, "GraphElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getGraphElement__ToJSONObject__BiFunction(), this.getJSONObject(), "toJSONObject", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(this.getBiFunction());
+		EGenericType g2 = createEGenericType(this.getGraphElement());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(this.getJSONObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(this.getJSONObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "customizer", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(graphEClass, Graph.class, "Graph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGraph_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraph_Categories(), this.getItem(), null, "categories", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1898,6 +1994,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		addEEnumLiteral(overflowEEnum, Overflow.TRUNCATE);
 		addEEnumLiteral(overflowEEnum, Overflow.BREAK);
 		addEEnumLiteral(overflowEEnum, Overflow.BREAK_ALL);
+
+		// Initialize data types
+		initEDataType(jsonObjectEDataType, JSONObject.class, "JSONObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(biFunctionEDataType, BiFunction.class, "BiFunction", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

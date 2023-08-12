@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.echarts.graph;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Tooltip</b></em>'.
@@ -28,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Tooltip extends EObject {
+public interface Tooltip extends GraphElement {
 	/**
 	 * Returns the value of the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->

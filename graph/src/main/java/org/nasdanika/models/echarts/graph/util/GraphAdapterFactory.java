@@ -70,6 +70,10 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	protected GraphSwitch<Adapter> modelSwitch =
 		new GraphSwitch<Adapter>() {
 			@Override
+			public Adapter caseGraphElement(GraphElement object) {
+				return createGraphElementAdapter();
+			}
+			@Override
 			public Adapter caseGraph(Graph object) {
 				return createGraphAdapter();
 			}
@@ -148,6 +152,20 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.GraphElement <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.echarts.graph.GraphElement
+	 * @generated
+	 */
+	public Adapter createGraphElementAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.Node <em>Node</em>}'.

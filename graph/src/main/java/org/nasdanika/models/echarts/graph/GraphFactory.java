@@ -22,6 +22,15 @@ public interface GraphFactory extends EFactory {
 	GraphFactory eINSTANCE = org.nasdanika.models.echarts.graph.impl.GraphFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element</em>'.
+	 * @generated
+	 */
+	GraphElement createGraphElement();
+
+	/**
 	 * Returns a new object of class '<em>Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
