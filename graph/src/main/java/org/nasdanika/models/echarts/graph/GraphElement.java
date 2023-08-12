@@ -15,7 +15,7 @@ import org.json.JSONObject;
  *
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getGraphElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface GraphElement extends EObject {

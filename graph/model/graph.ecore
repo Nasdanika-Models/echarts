@@ -7,7 +7,7 @@
     <eTypeParameters name="U"/>
     <eTypeParameters name="R"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GraphElement">
+  <eClassifiers xsi:type="ecore:EClass" name="GraphElement" abstract="true">
     <eOperations name="toJSONObject" eType="#//JSONObject">
       <eParameters name="customizer">
         <eGenericType eClassifier="#//BiFunction">

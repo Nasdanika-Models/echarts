@@ -61,7 +61,6 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GraphPackage.GRAPH_ELEMENT: return createGraphElement();
 			case GraphPackage.GRAPH: return createGraph();
 			case GraphPackage.ITEM: return createItem();
 			case GraphPackage.NODE: return createNode();
@@ -149,17 +148,6 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public GraphElement createGraphElement() {
-		GraphElementImpl graphElement = new GraphElementImpl();
-		return graphElement;
 	}
 
 	/**

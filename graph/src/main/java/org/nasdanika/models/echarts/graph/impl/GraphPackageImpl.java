@@ -1796,7 +1796,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		tooltipEClass.getESuperTypes().add(this.getGraphElement());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(graphElementEClass, GraphElement.class, "GraphElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(graphElementEClass, GraphElement.class, "GraphElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getGraphElement__ToJSONObject__BiFunction(), this.getJSONObject(), "toJSONObject", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getBiFunction());

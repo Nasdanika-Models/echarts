@@ -24,7 +24,7 @@ import org.nasdanika.models.echarts.graph.GraphPackage;
  *
  * @generated
  */
-public class GraphElementImpl extends MinimalEObjectImpl.Container implements GraphElement {
+public abstract class GraphElementImpl extends MinimalEObjectImpl.Container implements GraphElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,13 +57,11 @@ public class GraphElementImpl extends MinimalEObjectImpl.Container implements Gr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public JSONObject toJSONObject(BiFunction<GraphElement, JSONObject, JSONObject> customizer) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return new JSONObject();
 	}
 
 	/**
