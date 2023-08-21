@@ -2,11 +2,14 @@ package org.nasdanika.models.echarts.generator.tests;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.module.ModuleDescriptor;
+import java.lang.module.ModuleDescriptor.Requires;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Map.Entry;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -20,6 +23,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.Diagnostic;
@@ -44,7 +48,10 @@ import org.nasdanika.html.model.app.Link;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.html.model.app.graph.WidgetFactory;
 import org.nasdanika.html.model.app.graph.emf.EObjectReflectiveProcessorFactoryProvider;
+import org.nasdanika.models.echarts.graph.Graph;
+import org.nasdanika.models.echarts.graph.GraphFactory;
 import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Node;
 import org.nasdanika.models.echarts.graph.processors.EcoreGenEchartsGraphProcessorsFactory;
 import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
@@ -195,5 +202,47 @@ public class TestEchartsModelDocGen {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
 	}
+	
+	/**
+	 * Generates Graph JSON from a model
+	 */
+	@Test
+	public void testGraph() {
+		Module thisModule = getClass().getModule();
+		ModuleLayer moduleLayer = thisModule.getLayer();
+		
+		Graph graph = GraphFactory.eINSTANCE.createGraph();
+		moduleToNode(thisModule, moduleLayer, graph);		
+		JSONObject json = graph.toJSONObject(null);
+		System.out.println(json.toString(2));		
+	}
+	
+	private Node moduleToNode(Module module, ModuleLayer layer, Graph graph) {
+		ModuleDescriptor moduleDescriptor = module.getDescriptor();		
+		Node moduleNode = getModuleNode(module, layer, graph);
+		for (Requires req: moduleDescriptor.requires()) {
+			Optional<Module> rmo = layer.findModule(req.name());
+			if (rmo.isPresent()) {
+				Node reqNode = moduleToNode(rmo.get(), layer, graph);
+				org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();
+				reqLink.setTarget(reqNode);
+				reqLink.setSource(moduleNode);
+			}
+		}		
+		return moduleNode;
+	}
+	
+	private Node getModuleNode(Module module, ModuleLayer layer, Graph graph) {
+		for (Node n: graph.getNodes()) {
+			if (n.getName().equals(module.getName())) {
+				return n;
+			}
+		}
+		Node ret = GraphFactory.eINSTANCE.createNode();
+		ret.setName(module.getName());
+		graph.getNodes().add(ret);
+		return ret;
+	}
+	
 	
 }
