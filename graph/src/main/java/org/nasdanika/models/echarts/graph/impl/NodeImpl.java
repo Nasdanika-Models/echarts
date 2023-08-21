@@ -3,12 +3,16 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.util.Collection;
+import java.util.function.BiFunction;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.json.JSONObject;
+import org.nasdanika.models.echarts.graph.GraphElement;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Link;
@@ -400,6 +404,12 @@ public class NodeImpl extends ItemImpl implements Node {
 				return getTooltip() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public JSONObject toJSONObject(BiFunction<GraphElement, JSONObject, JSONObject> customizer) {
+		// TODO Auto-generated method stub
+		return super.toJSONObject(customizer);
 	}
 
 } //NodeImpl

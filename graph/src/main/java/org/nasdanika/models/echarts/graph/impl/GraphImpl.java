@@ -191,8 +191,7 @@ public class GraphImpl extends GraphElementImpl implements Graph {
 		
 		if (categories.length() > 0) {
 			ret.put("categories", categories);
-		}
-		
+		}		
 		
 		return customizer == null ? ret : customizer.apply(this, ret);				
 	}
