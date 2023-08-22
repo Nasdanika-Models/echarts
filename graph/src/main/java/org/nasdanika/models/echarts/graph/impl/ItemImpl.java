@@ -33,7 +33,7 @@ import org.nasdanika.models.echarts.graph.Label;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getSymbolSize <em>Symbol Size</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getSymbolRotate <em>Symbol Rotate</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getSymbolOffset <em>Symbol Offset</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getItemStyle <em>Item Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getEmphasis <em>Emphasis</em>}</li>
@@ -76,14 +76,14 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	protected static final Double SYMBOL_ROTATE_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #isSymbolKeepAspect() <em>Symbol Keep Aspect</em>}' attribute.
+	 * The default value of the '{@link #getSymbolKeepAspect() <em>Symbol Keep Aspect</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSymbolKeepAspect()
+	 * @see #getSymbolKeepAspect()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean SYMBOL_KEEP_ASPECT_EDEFAULT = false;
+	protected static final Boolean SYMBOL_KEEP_ASPECT_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,7 +202,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 */
 	@Override
-	public boolean isSymbolKeepAspect() {
+	public Boolean getSymbolKeepAspect() {
 		return (Boolean)eDynamicGet(GraphPackage.ITEM__SYMBOL_KEEP_ASPECT, GraphPackage.Literals.ITEM__SYMBOL_KEEP_ASPECT, true, true);
 	}
 
@@ -212,7 +212,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 */
 	@Override
-	public void setSymbolKeepAspect(boolean newSymbolKeepAspect) {
+	public void setSymbolKeepAspect(Boolean newSymbolKeepAspect) {
 		eDynamicSet(GraphPackage.ITEM__SYMBOL_KEEP_ASPECT, GraphPackage.Literals.ITEM__SYMBOL_KEEP_ASPECT, newSymbolKeepAspect);
 	}
 
@@ -402,40 +402,42 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	}
 	
 	protected void configureSymbolOptionMixin(SymbolOptionMixin symbolOptionMixin) {
-//	    SymbolOptionMixin setSymbol(String symbol);
-//
-//	    SymbolOptionMixin setSymbolSize(Number symbolSize);
-//
-//	    SymbolOptionMixin setSymbolSize(Number[] symbolSize);
-//
-//	    SymbolOptionMixin setSymbolRotate(Number symbolRotate);
-//
-//	    SymbolOptionMixin setSymbolKeepAspect(Boolean symbolKeepAspect);
-//
-//	    SymbolOptionMixin setSymbolOffset(Number symbolOffset);
-//
-//	    SymbolOptionMixin setSymbolOffset(Number[] symbolOffset);
-//
-//	    SymbolOptionMixin setSymbolOffset(String symbolOffset);
-//
-//	    SymbolOptionMixin setSymbolOffset(String[] symbolOffset);
-	
+		if (getSymbol() != null) {
+			symbolOptionMixin.setSymbol(getSymbol());
+		}
+		
+		EList<Double> symbolSize = getSymbolSize();
+		if (symbolSize.size() == 1) {
+			symbolOptionMixin.setSymbolSize(symbolSize.get(0));			
+		} else if (!symbolSize.isEmpty()) {			
+			symbolOptionMixin.setSymbolSize(symbolSize.toArray(new Number[symbolSize.size()]));			
+		}
+		
+		if (getSymbolRotate() != null) {
+			symbolOptionMixin.setSymbolRotate(getSymbolRotate());			
+		}
+		
+		EList<String> symbolOffset = getSymbolOffset();
+		if (symbolOffset.size() == 1) {
+			symbolOptionMixin.setSymbolOffset(symbolOffset.get(0));			
+		} else if (!symbolOffset.isEmpty()) {			
+			symbolOptionMixin.setSymbolOffset(symbolOffset.toArray(new Number[symbolSize.size()]));			
+		}
+		
+		if (getSymbolKeepAspect() != null) {
+			symbolOptionMixin.setSymbolKeepAspect(getSymbolKeepAspect());
+		}		
 	}
 		
 	protected void configureGraphNodeStateOption(GraphNodeStateOption graphNodeStateOption) {
 //	    GraphNodeStateOption setItemStyle(ItemStyleOption itemStyle);
-//
-//	    GraphNodeStateOption setLabel(SeriesLabelOption label);
-		
+//	    GraphNodeStateOption setLabel(SeriesLabelOption label);		
 	}
 		
 	protected void configureStatesOptionMixin(StatesOptionMixin statesOptionMixin) {
 //	    StatesOptionMixin setEmphasis(Object emphasis);
-//
 //	    StatesOptionMixin setSelect(Object select);
-//
-//	    StatesOptionMixin setBlur(Object blur);
-		
+//	    StatesOptionMixin setBlur(Object blur);		
 	}
 
 	/**
@@ -479,7 +481,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case GraphPackage.ITEM__SYMBOL_OFFSET:
 				return getSymbolOffset();
 			case GraphPackage.ITEM__SYMBOL_KEEP_ASPECT:
-				return isSymbolKeepAspect();
+				return getSymbolKeepAspect();
 			case GraphPackage.ITEM__ITEM_STYLE:
 				return getItemStyle();
 			case GraphPackage.ITEM__LABEL:
@@ -615,7 +617,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case GraphPackage.ITEM__SYMBOL_OFFSET:
 				return !getSymbolOffset().isEmpty();
 			case GraphPackage.ITEM__SYMBOL_KEEP_ASPECT:
-				return isSymbolKeepAspect() != SYMBOL_KEEP_ASPECT_EDEFAULT;
+				return SYMBOL_KEEP_ASPECT_EDEFAULT == null ? getSymbolKeepAspect() != null : !SYMBOL_KEEP_ASPECT_EDEFAULT.equals(getSymbolKeepAspect());
 			case GraphPackage.ITEM__ITEM_STYLE:
 				return getItemStyle() != null;
 			case GraphPackage.ITEM__LABEL:

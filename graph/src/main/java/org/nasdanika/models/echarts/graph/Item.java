@@ -20,7 +20,7 @@ import org.icepear.echarts.charts.graph.GraphCategoryItem;
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getSymbolSize <em>Symbol Size</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getSymbolRotate <em>Symbol Rotate</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getSymbolOffset <em>Symbol Offset</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Item#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Item#getSymbolKeepAspect <em>Symbol Keep Aspect</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getItemStyle <em>Item Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getLabel <em>Label</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getEmphasis <em>Emphasis</em>}</li>
@@ -129,22 +129,22 @@ public interface Item extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symbol Keep Aspect</em>' attribute.
-	 * @see #setSymbolKeepAspect(boolean)
+	 * @see #setSymbolKeepAspect(Boolean)
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getItem_SymbolKeepAspect()
 	 * @model
 	 * @generated
 	 */
-	boolean isSymbolKeepAspect();
+	Boolean getSymbolKeepAspect();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Item#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Item#getSymbolKeepAspect <em>Symbol Keep Aspect</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Symbol Keep Aspect</em>' attribute.
-	 * @see #isSymbolKeepAspect()
+	 * @see #getSymbolKeepAspect()
 	 * @generated
 	 */
-	void setSymbolKeepAspect(boolean value);
+	void setSymbolKeepAspect(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Item Style</b></em>' containment reference.

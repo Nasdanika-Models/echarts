@@ -78,7 +78,7 @@ import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
 public class TestEchartsModelDocGen {
 	
 	@Test
-	public void testGenerateTogafModelDoc() throws IOException, DiagnosticException {
+	public void testGenerateEchartsModelDoc() throws IOException, DiagnosticException {
 		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, GraphPackage.eINSTANCE);
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();
 		Transformer<EObject,Element> graphFactory = new Transformer<>(new EcoreGraphFactory());
@@ -275,21 +275,12 @@ public class TestEchartsModelDocGen {
 			Item javaCategory,
 			Item otherCategory) {
 		ModuleDescriptor moduleDescriptor = module.getDescriptor();		
-		Node moduleNode = getModuleNode(module, layer, graph);
+		Node moduleNode = getModuleNode(module, layer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
 		for (Requires req: moduleDescriptor.requires()) {
 			Optional<Module> rmo = layer.findModule(req.name());
 			if (rmo.isPresent()) {
 				Node reqNode = moduleToNode(rmo.get(), layer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
-				if (reqNode.getName().startsWith("org.nasdanika.")) {
-					reqNode.setCategory(nsdCategory);
-				} else if (reqNode.getName().startsWith("org.eclipse.")) {
-					reqNode.setCategory(eclipseCategory);
-				} else if (reqNode.getName().startsWith("java.")) {
-					reqNode.setCategory(javaCategory);
-				} else {
-					reqNode.setCategory(otherCategory);
-				}
-				org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();
+				org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();				
 				reqLink.setTarget(reqNode);
 				moduleNode.getOutgoingLinks().add(reqLink);
 			}
@@ -297,7 +288,14 @@ public class TestEchartsModelDocGen {
 		return moduleNode;
 	}
 	
-	private Node getModuleNode(Module module, ModuleLayer layer, Graph graph) {
+	private Node getModuleNode(
+			Module module, 
+			ModuleLayer layer, 
+			Graph graph, 
+			Item nsdCategory,
+			Item eclipseCategory,
+			Item javaCategory,
+			Item otherCategory) {
 		for (Node n: graph.getNodes()) {
 			if (n.getName().equals(module.getName())) {
 				return n;
@@ -305,6 +303,19 @@ public class TestEchartsModelDocGen {
 		}
 		Node ret = GraphFactory.eINSTANCE.createNode();
 		ret.setName(module.getName());
+		
+		if (ret.getName().startsWith("org.nasdanika.")) {
+			ret.setCategory(nsdCategory);
+		} else if (ret.getName().startsWith("org.eclipse.")) {
+			ret.setCategory(eclipseCategory);
+		} else if (ret.getName().startsWith("java.")) {
+			ret.setCategory(javaCategory);
+		} else {
+			ret.setCategory(otherCategory);
+		}
+		
+		ret.getSymbolSize().add(10.0 + module.getDescriptor().exports().size());
+		
 		graph.getNodes().add(ret);
 		return ret;
 	}

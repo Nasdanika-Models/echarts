@@ -24,7 +24,7 @@ import org.icepear.echarts.charts.graph.GraphEdgeItem;
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getSelect <em>Select</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getSymbolSize <em>Symbol Size</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Link#isIgnoreForceLayout <em>Ignore Force Layout</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Link#getIgnoreForceLayout <em>Ignore Force Layout</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getLink()
@@ -188,23 +188,33 @@ public interface Link extends EObject {
 	void setSelect(LineState value);
 
 	/**
-	 * Returns the value of the '<em><b>Symbol</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Symbol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Symbol of edge ends. Can be an array with two item to specify two ends, or a string specifies both ends.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Symbol</em>' attribute list.
+	 * @return the value of the '<em>Symbol</em>' attribute.
+	 * @see #setSymbol(String)
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLink_Symbol()
-	 * @model upper="2"
+	 * @model
 	 * @generated
 	 */
-	EList<String> getSymbol();
+	String getSymbol();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Link#getSymbol <em>Symbol</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Symbol</em>' attribute.
+	 * @see #getSymbol()
+	 * @generated
+	 */
+	void setSymbol(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Symbol Size</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link java.lang.Double}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -215,7 +225,7 @@ public interface Link extends EObject {
 	 * @model upper="2"
 	 * @generated
 	 */
-	EList<String> getSymbolSize();
+	EList<Double> getSymbolSize();
 
 	/**
 	 * Returns the value of the '<em><b>Ignore Force Layout</b></em>' attribute.
@@ -225,22 +235,22 @@ public interface Link extends EObject {
 	 * Prevent this edge from force layout calculating.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ignore Force Layout</em>' attribute.
-	 * @see #setIgnoreForceLayout(boolean)
+	 * @see #setIgnoreForceLayout(Boolean)
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLink_IgnoreForceLayout()
 	 * @model
 	 * @generated
 	 */
-	boolean isIgnoreForceLayout();
+	Boolean getIgnoreForceLayout();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Link#isIgnoreForceLayout <em>Ignore Force Layout</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Link#getIgnoreForceLayout <em>Ignore Force Layout</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ignore Force Layout</em>' attribute.
-	 * @see #isIgnoreForceLayout()
+	 * @see #getIgnoreForceLayout()
 	 * @generated
 	 */
-	void setIgnoreForceLayout(boolean value);
+	void setIgnoreForceLayout(Boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->

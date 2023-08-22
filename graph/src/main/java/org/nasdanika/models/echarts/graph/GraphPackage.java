@@ -877,7 +877,7 @@ public interface GraphPackage extends EPackage {
 	int LINK__SELECT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Symbol</b></em>' attribute list.
+	 * The feature id for the '<em><b>Symbol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2350,10 +2350,10 @@ public interface GraphPackage extends EPackage {
 	EReference getLink_Select();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.echarts.graph.Link#getSymbol <em>Symbol</em>}'.
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Link#getSymbol <em>Symbol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Symbol</em>'.
+	 * @return the meta object for the attribute '<em>Symbol</em>'.
 	 * @see org.nasdanika.models.echarts.graph.Link#getSymbol()
 	 * @see #getLink()
 	 * @generated
@@ -2372,11 +2372,11 @@ public interface GraphPackage extends EPackage {
 	EAttribute getLink_SymbolSize();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Link#isIgnoreForceLayout <em>Ignore Force Layout</em>}'.
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Link#getIgnoreForceLayout <em>Ignore Force Layout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ignore Force Layout</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Link#isIgnoreForceLayout()
+	 * @see org.nasdanika.models.echarts.graph.Link#getIgnoreForceLayout()
 	 * @see #getLink()
 	 * @generated
 	 */
@@ -2500,11 +2500,11 @@ public interface GraphPackage extends EPackage {
 	EAttribute getItem_SymbolOffset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Item#isSymbolKeepAspect <em>Symbol Keep Aspect</em>}'.
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Item#getSymbolKeepAspect <em>Symbol Keep Aspect</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Symbol Keep Aspect</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Item#isSymbolKeepAspect()
+	 * @see org.nasdanika.models.echarts.graph.Item#getSymbolKeepAspect()
 	 * @see #getItem()
 	 * @generated
 	 */
@@ -3677,7 +3677,7 @@ public interface GraphPackage extends EPackage {
 		 */
 		EReference LINK__SELECT = eINSTANCE.getLink_Select();
 		/**
-		 * The meta object literal for the '<em><b>Symbol</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Symbol</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -36,21 +36,30 @@ import org.nasdanika.models.echarts.graph.Node;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getSelect <em>Select</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getSymbolSize <em>Symbol Size</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#isIgnoreForceLayout <em>Ignore Force Layout</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getIgnoreForceLayout <em>Ignore Force Layout</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	/**
-	 * The default value of the '{@link #isIgnoreForceLayout() <em>Ignore Force Layout</em>}' attribute.
+	 * The default value of the '{@link #getSymbol() <em>Symbol</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIgnoreForceLayout()
+	 * @see #getSymbol()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IGNORE_FORCE_LAYOUT_EDEFAULT = false;
+	protected static final String SYMBOL_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getIgnoreForceLayout() <em>Ignore Force Layout</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIgnoreForceLayout()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IGNORE_FORCE_LAYOUT_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -288,8 +297,18 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<String> getSymbol() {
-		return (EList<String>)eDynamicGet(GraphPackage.LINK__SYMBOL, GraphPackage.Literals.LINK__SYMBOL, true, true);
+	public String getSymbol() {
+		return (String)eDynamicGet(GraphPackage.LINK__SYMBOL, GraphPackage.Literals.LINK__SYMBOL, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSymbol(String newSymbol) {
+		eDynamicSet(GraphPackage.LINK__SYMBOL, GraphPackage.Literals.LINK__SYMBOL, newSymbol);
 	}
 
 	/**
@@ -299,8 +318,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<String> getSymbolSize() {
-		return (EList<String>)eDynamicGet(GraphPackage.LINK__SYMBOL_SIZE, GraphPackage.Literals.LINK__SYMBOL_SIZE, true, true);
+	public EList<Double> getSymbolSize() {
+		return (EList<Double>)eDynamicGet(GraphPackage.LINK__SYMBOL_SIZE, GraphPackage.Literals.LINK__SYMBOL_SIZE, true, true);
 	}
 
 	/**
@@ -309,7 +328,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public boolean isIgnoreForceLayout() {
+	public Boolean getIgnoreForceLayout() {
 		return (Boolean)eDynamicGet(GraphPackage.LINK__IGNORE_FORCE_LAYOUT, GraphPackage.Literals.LINK__IGNORE_FORCE_LAYOUT, true, true);
 	}
 
@@ -319,7 +338,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public void setIgnoreForceLayout(boolean newIgnoreForceLayout) {
+	public void setIgnoreForceLayout(Boolean newIgnoreForceLayout) {
 		eDynamicSet(GraphPackage.LINK__IGNORE_FORCE_LAYOUT, GraphPackage.Literals.LINK__IGNORE_FORCE_LAYOUT, newIgnoreForceLayout);
 	}
 
@@ -332,31 +351,33 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public GraphEdgeItem createGraphEdgeItem() {
 		GraphEdgeItem ret = new GraphEdgeItem();
 		
-
-//	    GraphEdgeItemOption setValue(Number value);
-//
-//	    GraphEdgeItemOption setSymbol(String symbol);
-//
-//	    GraphEdgeItemOption setSymbol(String[] symbol);
-//
-//	    GraphEdgeItemOption setSymbolSize(Number symbolSize);
-//
-//	    GraphEdgeItemOption setSymbolSize(Number[] symbolSize);
-//
-//	    GraphEdgeItemOption setIgnoreForceLayout(Boolean ignoreForceLayout);
+		EList<Double> value = getValue();
+		if (value.size() == 1) {
+			ret.setValue(value.get(0));			
+		} else if (!value.isEmpty()) {			
+			ret.setValue(value.toArray(new Number[value.size()]));			
+		}
 		
+		if (getSymbol() != null) {
+			ret.setSymbol(getSymbol());
+		}
+		
+		EList<Double> symbolSize = getSymbolSize();
+		if (symbolSize.size() == 1) {
+			ret.setSymbolSize(symbolSize.get(0));			
+		} else if (!symbolSize.isEmpty()) {			
+			ret.setSymbolSize(symbolSize.toArray(new Number[symbolSize.size()]));			
+		}
+				
+		if (getIgnoreForceLayout() != null) {
+			ret.setIgnoreForceLayout(getIgnoreForceLayout());
+		}			
 
 //	    GraphEdgeStateOption setLineStyle(GraphEdgeLineStyleOption lineStyle);
-//
 //	    GraphEdgeStateOption setLabel(SeriesLineLabelOption label);
-
-		
 //	    StatesOptionMixin setEmphasis(Object emphasis);
-//
 //	    StatesOptionMixin setSelect(Object select);
-//
 //	    StatesOptionMixin setBlur(Object blur);
-		
 		
 		EList<Node> graphNodes = ((Graph) eContainer().eContainer()).getNodes();
 		ret.setSource(graphNodes.indexOf(eContainer()));
@@ -433,7 +454,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			case GraphPackage.LINK__SYMBOL_SIZE:
 				return getSymbolSize();
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
-				return isIgnoreForceLayout();
+				return getIgnoreForceLayout();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -470,12 +491,11 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 				setSelect((LineState)newValue);
 				return;
 			case GraphPackage.LINK__SYMBOL:
-				getSymbol().clear();
-				getSymbol().addAll((Collection<? extends String>)newValue);
+				setSymbol((String)newValue);
 				return;
 			case GraphPackage.LINK__SYMBOL_SIZE:
 				getSymbolSize().clear();
-				getSymbolSize().addAll((Collection<? extends String>)newValue);
+				getSymbolSize().addAll((Collection<? extends Double>)newValue);
 				return;
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
 				setIgnoreForceLayout((Boolean)newValue);
@@ -514,7 +534,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 				setSelect((LineState)null);
 				return;
 			case GraphPackage.LINK__SYMBOL:
-				getSymbol().clear();
+				setSymbol(SYMBOL_EDEFAULT);
 				return;
 			case GraphPackage.LINK__SYMBOL_SIZE:
 				getSymbolSize().clear();
@@ -549,11 +569,11 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			case GraphPackage.LINK__SELECT:
 				return getSelect() != null;
 			case GraphPackage.LINK__SYMBOL:
-				return !getSymbol().isEmpty();
+				return SYMBOL_EDEFAULT == null ? getSymbol() != null : !SYMBOL_EDEFAULT.equals(getSymbol());
 			case GraphPackage.LINK__SYMBOL_SIZE:
 				return !getSymbolSize().isEmpty();
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
-				return isIgnoreForceLayout() != IGNORE_FORCE_LAYOUT_EDEFAULT;
+				return IGNORE_FORCE_LAYOUT_EDEFAULT == null ? getIgnoreForceLayout() != null : !IGNORE_FORCE_LAYOUT_EDEFAULT.equals(getIgnoreForceLayout());
 		}
 		return super.eIsSet(featureID);
 	}
