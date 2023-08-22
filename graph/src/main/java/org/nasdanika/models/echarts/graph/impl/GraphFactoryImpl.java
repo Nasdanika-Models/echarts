@@ -3,19 +3,41 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.util.Map;
-import java.util.function.BiFunction;
+
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.json.JSONObject;
-import org.nasdanika.models.echarts.graph.*;
+import org.icepear.echarts.charts.graph.GraphCategoryItem;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
+import org.icepear.echarts.charts.graph.GraphNodeItem;
+import org.icepear.echarts.charts.graph.GraphSeries;
+import org.nasdanika.models.echarts.graph.Align;
+import org.nasdanika.models.echarts.graph.BorderCap;
+import org.nasdanika.models.echarts.graph.BorderJoin;
+import org.nasdanika.models.echarts.graph.BorderType;
+import org.nasdanika.models.echarts.graph.FontStyle;
+import org.nasdanika.models.echarts.graph.FontWeight;
+import org.nasdanika.models.echarts.graph.Graph;
+import org.nasdanika.models.echarts.graph.GraphFactory;
+import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Item;
+import org.nasdanika.models.echarts.graph.ItemState;
+import org.nasdanika.models.echarts.graph.ItemStyle;
+import org.nasdanika.models.echarts.graph.Label;
+import org.nasdanika.models.echarts.graph.LabelPosition;
+import org.nasdanika.models.echarts.graph.LineState;
+import org.nasdanika.models.echarts.graph.LineStyle;
+import org.nasdanika.models.echarts.graph.Link;
+import org.nasdanika.models.echarts.graph.Node;
+import org.nasdanika.models.echarts.graph.Overflow;
+import org.nasdanika.models.echarts.graph.Style;
+import org.nasdanika.models.echarts.graph.TextStyle;
+import org.nasdanika.models.echarts.graph.Tooltip;
+import org.nasdanika.models.echarts.graph.VerticalAlign;
 
 /**
  * <!-- begin-user-doc -->
@@ -106,10 +128,14 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return createVerticalAlignFromString(eDataType, initialValue);
 			case GraphPackage.OVERFLOW:
 				return createOverflowFromString(eDataType, initialValue);
-			case GraphPackage.JSON_OBJECT:
-				return createJSONObjectFromString(eDataType, initialValue);
-			case GraphPackage.BI_FUNCTION:
-				return createBiFunctionFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_SERIES:
+				return createGraphSeriesFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_NODE_ITEM:
+				return createGraphNodeItemFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_EDGE_ITEM:
+				return createGraphEdgeItemFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_CATEGORY_ITEM:
+				return createGraphCategoryItemFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -141,10 +167,14 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return convertVerticalAlignToString(eDataType, instanceValue);
 			case GraphPackage.OVERFLOW:
 				return convertOverflowToString(eDataType, instanceValue);
-			case GraphPackage.JSON_OBJECT:
-				return convertJSONObjectToString(eDataType, instanceValue);
-			case GraphPackage.BI_FUNCTION:
-				return convertBiFunctionToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_SERIES:
+				return convertGraphSeriesToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_NODE_ITEM:
+				return convertGraphNodeItemToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_EDGE_ITEM:
+				return convertGraphEdgeItemToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_CATEGORY_ITEM:
+				return convertGraphCategoryItemToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -487,8 +517,8 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JSONObject createJSONObjectFromString(EDataType eDataType, String initialValue) {
-		return (JSONObject)super.createFromString(eDataType, initialValue);
+	public GraphSeries createGraphSeriesFromString(EDataType eDataType, String initialValue) {
+		return (GraphSeries)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -496,7 +526,7 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertJSONObjectToString(EDataType eDataType, Object instanceValue) {
+	public String convertGraphSeriesToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -505,8 +535,8 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BiFunction<?, ?, ?> createBiFunctionFromString(EDataType eDataType, String initialValue) {
-		return (BiFunction<?, ?, ?>)super.createFromString(initialValue);
+	public GraphNodeItem createGraphNodeItemFromString(EDataType eDataType, String initialValue) {
+		return (GraphNodeItem)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -514,8 +544,44 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertBiFunctionToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
+	public String convertGraphNodeItemToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GraphEdgeItem createGraphEdgeItemFromString(EDataType eDataType, String initialValue) {
+		return (GraphEdgeItem)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGraphEdgeItemToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GraphCategoryItem createGraphCategoryItemFromString(EDataType eDataType, String initialValue) {
+		return (GraphCategoryItem)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGraphCategoryItemToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

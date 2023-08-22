@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.echarts.graph;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>State</b></em>'.
@@ -19,7 +21,7 @@ package org.nasdanika.models.echarts.graph;
  * @model abstract="true"
  * @generated
  */
-public interface State extends GraphElement {
+public interface State extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Disabled</b></em>' attribute.
 	 * <!-- begin-user-doc -->

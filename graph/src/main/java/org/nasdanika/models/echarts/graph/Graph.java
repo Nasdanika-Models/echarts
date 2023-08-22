@@ -3,6 +3,8 @@
 package org.nasdanika.models.echarts.graph;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.icepear.echarts.charts.graph.GraphSeries;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Graph extends GraphElement {
+public interface Graph extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.echarts.graph.Node}.
@@ -45,5 +47,16 @@ public interface Graph extends GraphElement {
 	 * @generated
 	 */
 	EList<Item> getCategories();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Sets data, links, and categories
+	 * <!-- end-model-doc -->
+	 * @model graphSeriesDataType="org.nasdanika.models.echarts.graph.GraphSeries"
+	 * @generated
+	 */
+	void configureGraphSeries(GraphSeries graphSeries);
 
 } // Graph

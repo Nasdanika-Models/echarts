@@ -3,7 +3,6 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.nasdanika.models.echarts.graph.BorderCap;
 import org.nasdanika.models.echarts.graph.BorderJoin;
 import org.nasdanika.models.echarts.graph.BorderType;

@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.echarts.graph;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Style</b></em>'.
@@ -23,7 +25,7 @@ package org.nasdanika.models.echarts.graph;
  * @model
  * @generated
  */
-public interface Style extends GraphElement {
+public interface Style extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->

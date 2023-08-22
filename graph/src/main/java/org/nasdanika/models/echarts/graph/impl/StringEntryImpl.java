@@ -4,12 +4,9 @@ package org.nasdanika.models.echarts.graph.impl;
 
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.echarts.graph.GraphPackage;
 
 /**

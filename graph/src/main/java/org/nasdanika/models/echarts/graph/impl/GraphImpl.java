@@ -2,18 +2,22 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.function.BiFunction;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
+import org.icepear.echarts.charts.graph.GraphNodeItem;
+import org.icepear.echarts.charts.graph.GraphSeries;
+import org.icepear.echarts.origin.chart.graph.GraphCategoryItemOption;
 import org.nasdanika.models.echarts.graph.Graph;
-import org.nasdanika.models.echarts.graph.GraphElement;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Link;
@@ -33,7 +37,7 @@ import org.nasdanika.models.echarts.graph.Node;
  *
  * @generated
  */
-public class GraphImpl extends GraphElementImpl implements Graph {
+public class GraphImpl extends MinimalEObjectImpl.Container implements Graph {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,6 +62,16 @@ public class GraphImpl extends GraphElementImpl implements Graph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<Node> getNodes() {
@@ -73,6 +87,40 @@ public class GraphImpl extends GraphElementImpl implements Graph {
 	@Override
 	public EList<Item> getCategories() {
 		return (EList<Item>)eDynamicGet(GraphPackage.GRAPH__CATEGORIES, GraphPackage.Literals.GRAPH__CATEGORIES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public void configureGraphSeries(GraphSeries graphSeries) {
+		EList<Node> nodes = getNodes();
+		List<GraphEdgeItem> links = new ArrayList<>();
+		if (!nodes.isEmpty()) {
+			GraphNodeItem[] nodeItems = new GraphNodeItem[nodes.size()];
+			int idx = 0;
+			for (Node node: nodes) {
+				nodeItems[idx++] = node.createGraphNodeItem();
+				for (Link link: node.getOutgoingLinks()) {
+					links.add(link.createGraphEdgeItem());
+				}				
+			}
+			graphSeries.setData(nodeItems);
+		}
+		if (!links.isEmpty()) {
+			graphSeries.setLinks(links.toArray(new GraphEdgeItem[links.size()]));
+		}
+		EList<Item> categories = getCategories();
+		if (!categories.isEmpty()) {
+			GraphCategoryItemOption[] gcio = new GraphCategoryItemOption[categories.size()];
+			int idx = 0;
+			for (Item category: categories) {
+				gcio[idx++] = category.createGraphCategoryItem();				
+			}
+			graphSeries.setCategories(gcio);
+		}
 	}
 
 	/**
@@ -162,38 +210,19 @@ public class GraphImpl extends GraphElementImpl implements Graph {
 		return super.eIsSet(featureID);
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
-	public JSONObject toJSONObject(BiFunction<GraphElement, JSONObject, JSONObject> customizer) {
-		JSONObject ret = new JSONObject();
-		JSONArray data = new JSONArray();
-		JSONArray links = new JSONArray();
-		JSONArray categories = new JSONArray();
-
-		for (Node node: getNodes()) {
-			data.put(node.toJSONObject(customizer));
-			for (Link ol: node.getOutgoingLinks()) {
-				links.put(ol.toJSONObject(customizer));
-			}
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.GRAPH___CONFIGURE_GRAPH_SERIES__GRAPHSERIES:
+				configureGraphSeries((GraphSeries)arguments.get(0));
+				return null;
 		}
-		
-		if (data.length() > 0) {
-			ret.put("data", data);
-		}
-		
-		if (links.length() > 0) {
-			ret.put("links", links);
-		}
-		
-		for (Item category: getCategories()) {
-			JSONObject cjo = category.toJSONObject(customizer);
-			categories.put(customizer == null ? cjo : customizer.apply(category, cjo)); // Item class does not apply cutomizer because it is an intermediary class, a superclass of Node
-		}
-		
-		if (categories.length() > 0) {
-			ret.put("categories", categories);
-		}		
-		
-		return customizer == null ? ret : customizer.apply(this, ret);				
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //GraphImpl

@@ -3,6 +3,7 @@
 package org.nasdanika.models.echarts.graph;
 
 import java.math.BigDecimal;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 

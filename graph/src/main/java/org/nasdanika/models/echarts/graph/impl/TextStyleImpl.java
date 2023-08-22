@@ -5,6 +5,7 @@ package org.nasdanika.models.echarts.graph.impl;
 import java.math.BigDecimal;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.nasdanika.models.echarts.graph.BorderType;
 import org.nasdanika.models.echarts.graph.FontStyle;
 import org.nasdanika.models.echarts.graph.FontWeight;
@@ -42,7 +43,7 @@ import org.nasdanika.models.echarts.graph.TextStyle;
  *
  * @generated
  */
-public class TextStyleImpl extends GraphElementImpl implements TextStyle {
+public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextStyle {
 	/**
 	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -240,6 +241,16 @@ public class TextStyleImpl extends GraphElementImpl implements TextStyle {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.TEXT_STYLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**

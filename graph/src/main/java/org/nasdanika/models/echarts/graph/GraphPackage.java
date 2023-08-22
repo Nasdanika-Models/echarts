@@ -60,43 +60,6 @@ public interface GraphPackage extends EPackage {
 	GraphPackage eINSTANCE = org.nasdanika.models.echarts.graph.impl.GraphPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.GraphElementImpl <em>Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.echarts.graph.impl.GraphElementImpl
-	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphElement()
-	 * @generated
-	 */
-	int GRAPH_ELEMENT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRAPH_ELEMENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION = 0;
-
-	/**
-	 * The number of operations of the '<em>Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRAPH_ELEMENT_OPERATION_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,7 +67,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 3;
+	int NODE = 2;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.StyleImpl <em>Style</em>}' class.
@@ -114,7 +77,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getStyle()
 	 * @generated
 	 */
-	int STYLE = 4;
+	int STYLE = 3;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.LineStyleImpl <em>Line Style</em>}' class.
@@ -124,7 +87,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLineStyle()
 	 * @generated
 	 */
-	int LINE_STYLE = 5;
+	int LINE_STYLE = 4;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.ItemStyleImpl <em>Item Style</em>}' class.
@@ -134,7 +97,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getItemStyle()
 	 * @generated
 	 */
-	int ITEM_STYLE = 6;
+	int ITEM_STYLE = 5;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.LinkImpl <em>Link</em>}' class.
@@ -144,7 +107,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLink()
 	 * @generated
 	 */
-	int LINK = 7;
+	int LINK = 6;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.GraphImpl <em>Graph</em>}' class.
@@ -154,7 +117,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraph()
 	 * @generated
 	 */
-	int GRAPH = 1;
+	int GRAPH = 0;
 
 	/**
 	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
@@ -163,7 +126,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH__NODES = GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int GRAPH__NODES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
@@ -172,7 +135,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH__CATEGORIES = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int GRAPH__CATEGORIES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Graph</em>' class.
@@ -181,16 +144,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int GRAPH_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
+	 * The operation id for the '<em>Configure Graph Series</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int GRAPH___CONFIGURE_GRAPH_SERIES__GRAPHSERIES = 0;
 
 	/**
 	 * The number of operations of the '<em>Graph</em>' class.
@@ -199,7 +162,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int GRAPH_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.ItemImpl <em>Item</em>}' class.
@@ -209,7 +172,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getItem()
 	 * @generated
 	 */
-	int ITEM = 2;
+	int ITEM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -218,7 +181,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__NAME = GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int ITEM__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Symbol</b></em>' attribute.
@@ -227,7 +190,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SYMBOL = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int ITEM__SYMBOL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Symbol Size</b></em>' attribute list.
@@ -236,7 +199,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SYMBOL_SIZE = GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int ITEM__SYMBOL_SIZE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Symbol Rotate</b></em>' attribute.
@@ -245,7 +208,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SYMBOL_ROTATE = GRAPH_ELEMENT_FEATURE_COUNT + 3;
+	int ITEM__SYMBOL_ROTATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Symbol Offset</b></em>' attribute list.
@@ -254,7 +217,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SYMBOL_OFFSET = GRAPH_ELEMENT_FEATURE_COUNT + 4;
+	int ITEM__SYMBOL_OFFSET = 4;
 
 	/**
 	 * The feature id for the '<em><b>Symbol Keep Aspect</b></em>' attribute.
@@ -263,7 +226,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SYMBOL_KEEP_ASPECT = GRAPH_ELEMENT_FEATURE_COUNT + 5;
+	int ITEM__SYMBOL_KEEP_ASPECT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Item Style</b></em>' containment reference.
@@ -272,7 +235,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__ITEM_STYLE = GRAPH_ELEMENT_FEATURE_COUNT + 6;
+	int ITEM__ITEM_STYLE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -281,7 +244,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__LABEL = GRAPH_ELEMENT_FEATURE_COUNT + 7;
+	int ITEM__LABEL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference.
@@ -290,7 +253,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__EMPHASIS = GRAPH_ELEMENT_FEATURE_COUNT + 8;
+	int ITEM__EMPHASIS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Blur</b></em>' containment reference.
@@ -299,7 +262,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__BLUR = GRAPH_ELEMENT_FEATURE_COUNT + 9;
+	int ITEM__BLUR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -308,7 +271,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SELECT = GRAPH_ELEMENT_FEATURE_COUNT + 10;
+	int ITEM__SELECT = 10;
 
 	/**
 	 * The number of structural features of the '<em>Item</em>' class.
@@ -317,16 +280,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 11;
+	int ITEM_FEATURE_COUNT = 11;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
+	 * The operation id for the '<em>Create Graph Category Item</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int ITEM___CREATE_GRAPH_CATEGORY_ITEM = 0;
 
 	/**
 	 * The number of operations of the '<em>Item</em>' class.
@@ -335,7 +298,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int ITEM_OPERATION_COUNT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -437,13 +400,22 @@ public interface GraphPackage extends EPackage {
 	int NODE__SELECT = ITEM__SELECT;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ID = ITEM_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__X = ITEM_FEATURE_COUNT + 0;
+	int NODE__X = ITEM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -452,7 +424,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__Y = ITEM_FEATURE_COUNT + 1;
+	int NODE__Y = ITEM_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Links</b></em>' containment reference list.
@@ -461,7 +433,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__OUTGOING_LINKS = ITEM_FEATURE_COUNT + 2;
+	int NODE__OUTGOING_LINKS = ITEM_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Links</b></em>' reference list.
@@ -470,7 +442,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__INCOMING_LINKS = ITEM_FEATURE_COUNT + 3;
+	int NODE__INCOMING_LINKS = ITEM_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference.
@@ -479,7 +451,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__CATEGORY = ITEM_FEATURE_COUNT + 4;
+	int NODE__CATEGORY = ITEM_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Fixed</b></em>' attribute.
@@ -488,7 +460,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__FIXED = ITEM_FEATURE_COUNT + 5;
+	int NODE__FIXED = ITEM_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute list.
@@ -497,16 +469,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__VALUE = ITEM_FEATURE_COUNT + 6;
+	int NODE__VALUE = ITEM_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Tooltip</b></em>' containment reference.
+	 * The feature id for the '<em><b>Draggable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__TOOLTIP = ITEM_FEATURE_COUNT + 7;
+	int NODE__DRAGGABLE = ITEM_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -515,16 +487,25 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = ITEM_FEATURE_COUNT + 8;
+	int NODE_FEATURE_COUNT = ITEM_FEATURE_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
+	 * The operation id for the '<em>Create Graph Category Item</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE___TO_JSON_OBJECT__BIFUNCTION = ITEM___TO_JSON_OBJECT__BIFUNCTION;
+	int NODE___CREATE_GRAPH_CATEGORY_ITEM = ITEM___CREATE_GRAPH_CATEGORY_ITEM;
+
+	/**
+	 * The operation id for the '<em>Create Graph Node Item</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE___CREATE_GRAPH_NODE_ITEM = ITEM_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -533,7 +514,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = ITEM_OPERATION_COUNT + 0;
+	int NODE_OPERATION_COUNT = ITEM_OPERATION_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -542,7 +523,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE__COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int STYLE__COLOR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Blur</b></em>' attribute.
@@ -551,7 +532,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE__SHADOW_BLUR = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int STYLE__SHADOW_BLUR = 1;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Color</b></em>' attribute.
@@ -560,7 +541,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE__SHADOW_COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int STYLE__SHADOW_COLOR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Offset X</b></em>' attribute.
@@ -569,7 +550,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE__SHADOW_OFFSET_X = GRAPH_ELEMENT_FEATURE_COUNT + 3;
+	int STYLE__SHADOW_OFFSET_X = 3;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Offset Y</b></em>' attribute.
@@ -578,7 +559,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE__SHADOW_OFFSET_Y = GRAPH_ELEMENT_FEATURE_COUNT + 4;
+	int STYLE__SHADOW_OFFSET_Y = 4;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -587,7 +568,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE__OPACITY = GRAPH_ELEMENT_FEATURE_COUNT + 5;
+	int STYLE__OPACITY = 5;
 
 	/**
 	 * The number of structural features of the '<em>Style</em>' class.
@@ -596,16 +577,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STYLE___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int STYLE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Style</em>' class.
@@ -614,7 +586,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STYLE_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int STYLE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -743,15 +715,6 @@ public interface GraphPackage extends EPackage {
 	int LINE_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 7;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_STYLE___TO_JSON_OBJECT__BIFUNCTION = STYLE___TO_JSON_OBJECT__BIFUNCTION;
-
-	/**
 	 * The number of operations of the '<em>Line Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -833,15 +796,6 @@ public interface GraphPackage extends EPackage {
 	int ITEM_STYLE_FEATURE_COUNT = STYLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_STYLE___TO_JSON_OBJECT__BIFUNCTION = STYLE___TO_JSON_OBJECT__BIFUNCTION;
-
-	/**
 	 * The number of operations of the '<em>Item Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -851,22 +805,13 @@ public interface GraphPackage extends EPackage {
 	int ITEM_STYLE_OPERATION_COUNT = STYLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__SOURCE = GRAPH_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__TARGET = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int LINK__TARGET = 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute list.
@@ -875,7 +820,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__VALUE = GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int LINK__VALUE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Line Style</b></em>' containment reference.
@@ -884,7 +829,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__LINE_STYLE = GRAPH_ELEMENT_FEATURE_COUNT + 3;
+	int LINK__LINE_STYLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -893,7 +838,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__LABEL = GRAPH_ELEMENT_FEATURE_COUNT + 4;
+	int LINK__LABEL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference.
@@ -902,7 +847,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__EMPHASIS = GRAPH_ELEMENT_FEATURE_COUNT + 5;
+	int LINK__EMPHASIS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Blur</b></em>' containment reference.
@@ -911,7 +856,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__BLUR = GRAPH_ELEMENT_FEATURE_COUNT + 6;
+	int LINK__BLUR = 5;
 
 	/**
 	 * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -920,7 +865,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__SELECT = GRAPH_ELEMENT_FEATURE_COUNT + 7;
+	int LINK__SELECT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Symbol</b></em>' attribute list.
@@ -929,7 +874,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__SYMBOL = GRAPH_ELEMENT_FEATURE_COUNT + 8;
+	int LINK__SYMBOL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Symbol Size</b></em>' attribute list.
@@ -938,7 +883,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__SYMBOL_SIZE = GRAPH_ELEMENT_FEATURE_COUNT + 9;
+	int LINK__SYMBOL_SIZE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Ignore Force Layout</b></em>' attribute.
@@ -947,7 +892,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__IGNORE_FORCE_LAYOUT = GRAPH_ELEMENT_FEATURE_COUNT + 10;
+	int LINK__IGNORE_FORCE_LAYOUT = 9;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -956,16 +901,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 11;
+	int LINK_FEATURE_COUNT = 10;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
+	 * The operation id for the '<em>Create Graph Edge Item</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int LINK___CREATE_GRAPH_EDGE_ITEM = 0;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -974,7 +919,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int LINK_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl <em>Text Style</em>}' class.
@@ -984,7 +929,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getTextStyle()
 	 * @generated
 	 */
-	int TEXT_STYLE = 8;
+	int TEXT_STYLE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -993,7 +938,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int TEXT_STYLE__COLOR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Font Style</b></em>' attribute.
@@ -1002,7 +947,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__FONT_STYLE = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int TEXT_STYLE__FONT_STYLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Font Weight</b></em>' attribute.
@@ -1011,7 +956,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__FONT_WEIGHT = GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int TEXT_STYLE__FONT_WEIGHT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Font Family</b></em>' attribute.
@@ -1020,7 +965,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__FONT_FAMILY = GRAPH_ELEMENT_FEATURE_COUNT + 3;
+	int TEXT_STYLE__FONT_FAMILY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
@@ -1029,7 +974,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__FONT_SIZE = GRAPH_ELEMENT_FEATURE_COUNT + 4;
+	int TEXT_STYLE__FONT_SIZE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Line Height</b></em>' attribute.
@@ -1038,7 +983,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__LINE_HEIGHT = GRAPH_ELEMENT_FEATURE_COUNT + 5;
+	int TEXT_STYLE__LINE_HEIGHT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1047,7 +992,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__WIDTH = GRAPH_ELEMENT_FEATURE_COUNT + 6;
+	int TEXT_STYLE__WIDTH = 6;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1056,7 +1001,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__HEIGHT = GRAPH_ELEMENT_FEATURE_COUNT + 7;
+	int TEXT_STYLE__HEIGHT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Color</b></em>' attribute.
@@ -1065,7 +1010,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_BORDER_COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 8;
+	int TEXT_STYLE__TEXT_BORDER_COLOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Width</b></em>' attribute.
@@ -1074,7 +1019,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_BORDER_WIDTH = GRAPH_ELEMENT_FEATURE_COUNT + 9;
+	int TEXT_STYLE__TEXT_BORDER_WIDTH = 9;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Type</b></em>' attribute.
@@ -1083,7 +1028,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_BORDER_TYPE = GRAPH_ELEMENT_FEATURE_COUNT + 10;
+	int TEXT_STYLE__TEXT_BORDER_TYPE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Text Border Dash Offset</b></em>' attribute.
@@ -1092,7 +1037,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_BORDER_DASH_OFFSET = GRAPH_ELEMENT_FEATURE_COUNT + 11;
+	int TEXT_STYLE__TEXT_BORDER_DASH_OFFSET = 11;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Color</b></em>' attribute.
@@ -1101,7 +1046,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_SHADOW_COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 12;
+	int TEXT_STYLE__TEXT_SHADOW_COLOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Blur</b></em>' attribute.
@@ -1110,7 +1055,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_SHADOW_BLUR = GRAPH_ELEMENT_FEATURE_COUNT + 13;
+	int TEXT_STYLE__TEXT_SHADOW_BLUR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Offset X</b></em>' attribute.
@@ -1119,7 +1064,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_SHADOW_OFFSET_X = GRAPH_ELEMENT_FEATURE_COUNT + 14;
+	int TEXT_STYLE__TEXT_SHADOW_OFFSET_X = 14;
 
 	/**
 	 * The feature id for the '<em><b>Text Shadow Offset Y</b></em>' attribute.
@@ -1128,7 +1073,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__TEXT_SHADOW_OFFSET_Y = GRAPH_ELEMENT_FEATURE_COUNT + 15;
+	int TEXT_STYLE__TEXT_SHADOW_OFFSET_Y = 15;
 
 	/**
 	 * The feature id for the '<em><b>Overflow</b></em>' attribute.
@@ -1137,7 +1082,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__OVERFLOW = GRAPH_ELEMENT_FEATURE_COUNT + 16;
+	int TEXT_STYLE__OVERFLOW = 16;
 
 	/**
 	 * The feature id for the '<em><b>Ellipsis</b></em>' attribute.
@@ -1146,7 +1091,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE__ELLIPSIS = GRAPH_ELEMENT_FEATURE_COUNT + 17;
+	int TEXT_STYLE__ELLIPSIS = 17;
 
 	/**
 	 * The number of structural features of the '<em>Text Style</em>' class.
@@ -1155,16 +1100,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 18;
-
-	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_STYLE___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int TEXT_STYLE_FEATURE_COUNT = 18;
 
 	/**
 	 * The number of operations of the '<em>Text Style</em>' class.
@@ -1173,7 +1109,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_STYLE_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int TEXT_STYLE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.LabelImpl <em>Label</em>}' class.
@@ -1183,7 +1119,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLabel()
 	 * @generated
 	 */
-	int LABEL = 9;
+	int LABEL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1528,15 +1464,6 @@ public interface GraphPackage extends EPackage {
 	int LABEL_FEATURE_COUNT = TEXT_STYLE_FEATURE_COUNT + 19;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL___TO_JSON_OBJECT__BIFUNCTION = TEXT_STYLE___TO_JSON_OBJECT__BIFUNCTION;
-
-	/**
 	 * The number of operations of the '<em>Label</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1553,7 +1480,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getStyleEntry()
 	 * @generated
 	 */
-	int STYLE_ENTRY = 10;
+	int STYLE_ENTRY = 9;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1599,7 +1526,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getStringEntry()
 	 * @generated
 	 */
-	int STRING_ENTRY = 11;
+	int STRING_ENTRY = 10;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1645,7 +1572,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getState()
 	 * @generated
 	 */
-	int STATE = 12;
+	int STATE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Disabled</b></em>' attribute.
@@ -1654,7 +1581,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__DISABLED = GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int STATE__DISABLED = 0;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -1663,7 +1590,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__LABEL = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int STATE__LABEL = 1;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -1672,16 +1599,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int STATE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -1690,7 +1608,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int STATE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.ItemStateImpl <em>Item State</em>}' class.
@@ -1700,7 +1618,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getItemState()
 	 * @generated
 	 */
-	int ITEM_STATE = 13;
+	int ITEM_STATE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Disabled</b></em>' attribute.
@@ -1739,15 +1657,6 @@ public interface GraphPackage extends EPackage {
 	int ITEM_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM_STATE___TO_JSON_OBJECT__BIFUNCTION = STATE___TO_JSON_OBJECT__BIFUNCTION;
-
-	/**
 	 * The number of operations of the '<em>Item State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1764,7 +1673,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLineState()
 	 * @generated
 	 */
-	int LINE_STATE = 14;
+	int LINE_STATE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Disabled</b></em>' attribute.
@@ -1803,15 +1712,6 @@ public interface GraphPackage extends EPackage {
 	int LINE_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_STATE___TO_JSON_OBJECT__BIFUNCTION = STATE___TO_JSON_OBJECT__BIFUNCTION;
-
-	/**
 	 * The number of operations of the '<em>Line State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1828,7 +1728,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getTooltip()
 	 * @generated
 	 */
-	int TOOLTIP = 15;
+	int TOOLTIP = 14;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' attribute.
@@ -1837,7 +1737,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__POSITION = GRAPH_ELEMENT_FEATURE_COUNT + 0;
+	int TOOLTIP__POSITION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Formatter</b></em>' attribute.
@@ -1846,7 +1746,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__FORMATTER = GRAPH_ELEMENT_FEATURE_COUNT + 1;
+	int TOOLTIP__FORMATTER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Value Formatter</b></em>' attribute.
@@ -1855,7 +1755,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__VALUE_FORMATTER = GRAPH_ELEMENT_FEATURE_COUNT + 2;
+	int TOOLTIP__VALUE_FORMATTER = 2;
 
 	/**
 	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
@@ -1864,7 +1764,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__BACKGROUND_COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 3;
+	int TOOLTIP__BACKGROUND_COLOR = 3;
 
 	/**
 	 * The feature id for the '<em><b>Border Color</b></em>' attribute.
@@ -1873,7 +1773,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__BORDER_COLOR = GRAPH_ELEMENT_FEATURE_COUNT + 4;
+	int TOOLTIP__BORDER_COLOR = 4;
 
 	/**
 	 * The feature id for the '<em><b>Border Width</b></em>' attribute.
@@ -1882,7 +1782,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__BORDER_WIDTH = GRAPH_ELEMENT_FEATURE_COUNT + 5;
+	int TOOLTIP__BORDER_WIDTH = 5;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' attribute.
@@ -1891,7 +1791,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__PADDING = GRAPH_ELEMENT_FEATURE_COUNT + 6;
+	int TOOLTIP__PADDING = 6;
 
 	/**
 	 * The feature id for the '<em><b>Text Style</b></em>' containment reference.
@@ -1900,7 +1800,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__TEXT_STYLE = GRAPH_ELEMENT_FEATURE_COUNT + 7;
+	int TOOLTIP__TEXT_STYLE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Extra Css Text</b></em>' attribute.
@@ -1909,7 +1809,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP__EXTRA_CSS_TEXT = GRAPH_ELEMENT_FEATURE_COUNT + 8;
+	int TOOLTIP__EXTRA_CSS_TEXT = 8;
 
 	/**
 	 * The number of structural features of the '<em>Tooltip</em>' class.
@@ -1918,16 +1818,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP_FEATURE_COUNT = GRAPH_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>To JSON Object</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOOLTIP___TO_JSON_OBJECT__BIFUNCTION = GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION;
+	int TOOLTIP_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Tooltip</em>' class.
@@ -1936,7 +1827,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOOLTIP_OPERATION_COUNT = GRAPH_ELEMENT_OPERATION_COUNT + 0;
+	int TOOLTIP_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.BorderType <em>Border Type</em>}' enum.
@@ -1946,7 +1837,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBorderType()
 	 * @generated
 	 */
-	int BORDER_TYPE = 16;
+	int BORDER_TYPE = 15;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.BorderCap <em>Border Cap</em>}' enum.
@@ -1956,7 +1847,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBorderCap()
 	 * @generated
 	 */
-	int BORDER_CAP = 17;
+	int BORDER_CAP = 16;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.BorderJoin <em>Border Join</em>}' enum.
@@ -1966,7 +1857,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBorderJoin()
 	 * @generated
 	 */
-	int BORDER_JOIN = 18;
+	int BORDER_JOIN = 17;
 
 
 	/**
@@ -1977,7 +1868,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getLabelPosition()
 	 * @generated
 	 */
-	int LABEL_POSITION = 19;
+	int LABEL_POSITION = 18;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.FontStyle <em>Font Style</em>}' enum.
@@ -1987,7 +1878,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getFontStyle()
 	 * @generated
 	 */
-	int FONT_STYLE = 20;
+	int FONT_STYLE = 19;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.FontWeight <em>Font Weight</em>}' enum.
@@ -1997,7 +1888,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getFontWeight()
 	 * @generated
 	 */
-	int FONT_WEIGHT = 21;
+	int FONT_WEIGHT = 20;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.Align <em>Align</em>}' enum.
@@ -2007,7 +1898,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getAlign()
 	 * @generated
 	 */
-	int ALIGN = 22;
+	int ALIGN = 21;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.VerticalAlign <em>Vertical Align</em>}' enum.
@@ -2017,7 +1908,7 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getVerticalAlign()
 	 * @generated
 	 */
-	int VERTICAL_ALIGN = 23;
+	int VERTICAL_ALIGN = 22;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.Overflow <em>Overflow</em>}' enum.
@@ -2027,49 +1918,48 @@ public interface GraphPackage extends EPackage {
 	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getOverflow()
 	 * @generated
 	 */
-	int OVERFLOW = 24;
+	int OVERFLOW = 23;
 
 
 	/**
-	 * The meta object id for the '<em>JSON Object</em>' data type.
+	 * The meta object id for the '<em>Series</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.json.JSONObject
-	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getJSONObject()
+	 * @see org.icepear.echarts.charts.graph.GraphSeries
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphSeries()
 	 * @generated
 	 */
-	int JSON_OBJECT = 25;
+	int GRAPH_SERIES = 24;
 
 	/**
-	 * The meta object id for the '<em>Bi Function</em>' data type.
+	 * The meta object id for the '<em>Node Item</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.util.function.BiFunction
-	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBiFunction()
+	 * @see org.icepear.echarts.charts.graph.GraphNodeItem
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphNodeItem()
 	 * @generated
 	 */
-	int BI_FUNCTION = 26;
-
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.GraphElement <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element</em>'.
-	 * @see org.nasdanika.models.echarts.graph.GraphElement
-	 * @generated
-	 */
-	EClass getGraphElement();
+	int GRAPH_NODE_ITEM = 25;
 
 	/**
-	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.GraphElement#toJSONObject(java.util.function.BiFunction) <em>To JSON Object</em>}' operation.
+	 * The meta object id for the '<em>Edge Item</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>To JSON Object</em>' operation.
-	 * @see org.nasdanika.models.echarts.graph.GraphElement#toJSONObject(java.util.function.BiFunction)
+	 * @see org.icepear.echarts.charts.graph.GraphEdgeItem
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphEdgeItem()
 	 * @generated
 	 */
-	EOperation getGraphElement__ToJSONObject__BiFunction();
+	int GRAPH_EDGE_ITEM = 26;
+
+	/**
+	 * The meta object id for the '<em>Category Item</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.icepear.echarts.charts.graph.GraphCategoryItem
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphCategoryItem()
+	 * @generated
+	 */
+	int GRAPH_CATEGORY_ITEM = 27;
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Node <em>Node</em>}'.
@@ -2159,15 +2049,36 @@ public interface GraphPackage extends EPackage {
 	EAttribute getNode_Value();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Node#getTooltip <em>Tooltip</em>}'.
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Node#getDraggable <em>Draggable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Tooltip</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Node#getTooltip()
+	 * @return the meta object for the attribute '<em>Draggable</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getDraggable()
 	 * @see #getNode()
 	 * @generated
 	 */
-	EReference getNode_Tooltip();
+	EAttribute getNode_Draggable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Node#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getId()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_Id();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Node#createGraphNodeItem() <em>Create Graph Node Item</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Graph Node Item</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.Node#createGraphNodeItem()
+	 * @generated
+	 */
+	EOperation getNode__CreateGraphNodeItem();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Style <em>Style</em>}'.
@@ -2364,17 +2275,6 @@ public interface GraphPackage extends EPackage {
 	EClass getLink();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.nasdanika.models.echarts.graph.Link#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Source</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Link#getSource()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EReference getLink_Source();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.nasdanika.models.echarts.graph.Link#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2485,6 +2385,16 @@ public interface GraphPackage extends EPackage {
 	EAttribute getLink_IgnoreForceLayout();
 
 	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Link#createGraphEdgeItem() <em>Create Graph Edge Item</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Graph Edge Item</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.Link#createGraphEdgeItem()
+	 * @generated
+	 */
+	EOperation getLink__CreateGraphEdgeItem();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Graph <em>Graph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2515,6 +2425,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGraph_Categories();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Graph#configureGraphSeries(org.icepear.echarts.charts.graph.GraphSeries) <em>Configure Graph Series</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Configure Graph Series</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.Graph#configureGraphSeries(org.icepear.echarts.charts.graph.GraphSeries)
+	 * @generated
+	 */
+	EOperation getGraph__ConfigureGraphSeries__GraphSeries();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Item <em>Item</em>}'.
@@ -2646,6 +2566,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getItem_Select();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Item#createGraphCategoryItem() <em>Create Graph Category Item</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Graph Category Item</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.Item#createGraphCategoryItem()
+	 * @generated
+	 */
+	EOperation getItem__CreateGraphCategoryItem();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.TextStyle <em>Text Style</em>}'.
@@ -3416,26 +3346,48 @@ public interface GraphPackage extends EPackage {
 	EEnum getOverflow();
 
 	/**
-	 * Returns the meta object for data type '{@link org.json.JSONObject <em>JSON Object</em>}'.
+	 * Returns the meta object for data type '{@link org.icepear.echarts.charts.graph.GraphSeries <em>Series</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>JSON Object</em>'.
-	 * @see org.json.JSONObject
-	 * @model instanceClass="org.json.JSONObject"
+	 * @return the meta object for data type '<em>Series</em>'.
+	 * @see org.icepear.echarts.charts.graph.GraphSeries
+	 * @model instanceClass="org.icepear.echarts.charts.graph.GraphSeries"
 	 * @generated
 	 */
-	EDataType getJSONObject();
+	EDataType getGraphSeries();
 
 	/**
-	 * Returns the meta object for data type '{@link java.util.function.BiFunction <em>Bi Function</em>}'.
+	 * Returns the meta object for data type '{@link org.icepear.echarts.charts.graph.GraphNodeItem <em>Node Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Bi Function</em>'.
-	 * @see java.util.function.BiFunction
-	 * @model instanceClass="java.util.function.BiFunction" typeParameters="T U R"
+	 * @return the meta object for data type '<em>Node Item</em>'.
+	 * @see org.icepear.echarts.charts.graph.GraphNodeItem
+	 * @model instanceClass="org.icepear.echarts.charts.graph.GraphNodeItem"
 	 * @generated
 	 */
-	EDataType getBiFunction();
+	EDataType getGraphNodeItem();
+
+	/**
+	 * Returns the meta object for data type '{@link org.icepear.echarts.charts.graph.GraphEdgeItem <em>Edge Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Edge Item</em>'.
+	 * @see org.icepear.echarts.charts.graph.GraphEdgeItem
+	 * @model instanceClass="org.icepear.echarts.charts.graph.GraphEdgeItem"
+	 * @generated
+	 */
+	EDataType getGraphEdgeItem();
+
+	/**
+	 * Returns the meta object for data type '{@link org.icepear.echarts.charts.graph.GraphCategoryItem <em>Category Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Category Item</em>'.
+	 * @see org.icepear.echarts.charts.graph.GraphCategoryItem
+	 * @model instanceClass="org.icepear.echarts.charts.graph.GraphCategoryItem"
+	 * @generated
+	 */
+	EDataType getGraphCategoryItem();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3460,22 +3412,6 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.GraphElementImpl <em>Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.echarts.graph.impl.GraphElementImpl
-		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphElement()
-		 * @generated
-		 */
-		EClass GRAPH_ELEMENT = eINSTANCE.getGraphElement();
-		/**
-		 * The meta object literal for the '<em><b>To JSON Object</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION = eINSTANCE.getGraphElement__ToJSONObject__BiFunction();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3535,12 +3471,26 @@ public interface GraphPackage extends EPackage {
 		 */
 		EAttribute NODE__VALUE = eINSTANCE.getNode_Value();
 		/**
-		 * The meta object literal for the '<em><b>Tooltip</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Draggable</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__TOOLTIP = eINSTANCE.getNode_Tooltip();
+		EAttribute NODE__DRAGGABLE = eINSTANCE.getNode_Draggable();
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__ID = eINSTANCE.getNode_Id();
+		/**
+		 * The meta object literal for the '<em><b>Create Graph Node Item</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NODE___CREATE_GRAPH_NODE_ITEM = eINSTANCE.getNode__CreateGraphNodeItem();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.StyleImpl <em>Style</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3676,13 +3626,6 @@ public interface GraphPackage extends EPackage {
 		 */
 		EClass LINK = eINSTANCE.getLink();
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LINK__SOURCE = eINSTANCE.getLink_Source();
-		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3753,6 +3696,13 @@ public interface GraphPackage extends EPackage {
 		 */
 		EAttribute LINK__IGNORE_FORCE_LAYOUT = eINSTANCE.getLink_IgnoreForceLayout();
 		/**
+		 * The meta object literal for the '<em><b>Create Graph Edge Item</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINK___CREATE_GRAPH_EDGE_ITEM = eINSTANCE.getLink__CreateGraphEdgeItem();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.GraphImpl <em>Graph</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3775,6 +3725,13 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GRAPH__CATEGORIES = eINSTANCE.getGraph_Categories();
+		/**
+		 * The meta object literal for the '<em><b>Configure Graph Series</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GRAPH___CONFIGURE_GRAPH_SERIES__GRAPHSERIES = eINSTANCE.getGraph__ConfigureGraphSeries__GraphSeries();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.ItemImpl <em>Item</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3861,6 +3818,13 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ITEM__SELECT = eINSTANCE.getItem_Select();
+		/**
+		 * The meta object literal for the '<em><b>Create Graph Category Item</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ITEM___CREATE_GRAPH_CATEGORY_ITEM = eINSTANCE.getItem__CreateGraphCategoryItem();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl <em>Text Style</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -4393,23 +4357,41 @@ public interface GraphPackage extends EPackage {
 		 */
 		EEnum OVERFLOW = eINSTANCE.getOverflow();
 		/**
-		 * The meta object literal for the '<em>JSON Object</em>' data type.
+		 * The meta object literal for the '<em>Series</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.json.JSONObject
-		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getJSONObject()
+		 * @see org.icepear.echarts.charts.graph.GraphSeries
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphSeries()
 		 * @generated
 		 */
-		EDataType JSON_OBJECT = eINSTANCE.getJSONObject();
+		EDataType GRAPH_SERIES = eINSTANCE.getGraphSeries();
 		/**
-		 * The meta object literal for the '<em>Bi Function</em>' data type.
+		 * The meta object literal for the '<em>Node Item</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.util.function.BiFunction
-		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getBiFunction()
+		 * @see org.icepear.echarts.charts.graph.GraphNodeItem
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphNodeItem()
 		 * @generated
 		 */
-		EDataType BI_FUNCTION = eINSTANCE.getBiFunction();
+		EDataType GRAPH_NODE_ITEM = eINSTANCE.getGraphNodeItem();
+		/**
+		 * The meta object literal for the '<em>Edge Item</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.icepear.echarts.charts.graph.GraphEdgeItem
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphEdgeItem()
+		 * @generated
+		 */
+		EDataType GRAPH_EDGE_ITEM = eINSTANCE.getGraphEdgeItem();
+		/**
+		 * The meta object literal for the '<em>Category Item</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.icepear.echarts.charts.graph.GraphCategoryItem
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphCategoryItem()
+		 * @generated
+		 */
+		EDataType GRAPH_CATEGORY_ITEM = eINSTANCE.getGraphCategoryItem();
 
 	}
 

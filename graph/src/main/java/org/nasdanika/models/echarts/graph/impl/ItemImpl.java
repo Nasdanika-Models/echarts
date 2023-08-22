@@ -2,14 +2,18 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.icepear.echarts.charts.graph.GraphCategoryItem;
+import org.icepear.echarts.origin.chart.graph.GraphNodeStateOption;
+import org.icepear.echarts.origin.util.StatesOptionMixin;
+import org.icepear.echarts.origin.util.SymbolOptionMixin;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.ItemState;
@@ -39,7 +43,7 @@ import org.nasdanika.models.echarts.graph.Label;
  *
  * @generated
  */
-public class ItemImpl extends GraphElementImpl implements Item {
+public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -97,6 +101,16 @@ public class ItemImpl extends GraphElementImpl implements Item {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.ITEM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -354,6 +368,71 @@ public class ItemImpl extends GraphElementImpl implements Item {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public GraphCategoryItem createGraphCategoryItem() {
+		throw new UnsupportedOperationException(); 
+//        .setCategories(new GraphCategoryItemOption[] {
+//        		new GraphCategoryItem().setName("Cat 1"),
+//        		new GraphCategoryItem().setName("Cat 2"),                        		
+//        })
+		
+
+//	    GraphCategoryItemOption setName(String name);
+//
+//	    GraphCategoryItemOption setValue(Number value);
+//
+//	    GraphCategoryItemOption setValue(Object value);
+//
+//	    GraphCategoryItemOption setValue(String value);
+		
+//		configureGraphNodeStateOption(null);
+//		configureStatesOptionMixin(null);
+//		configureSymbolOptionMixin(null);
+		
+	}
+	
+	protected void configureSymbolOptionMixin(SymbolOptionMixin symbolOptionMixin) {
+//	    SymbolOptionMixin setSymbol(String symbol);
+//
+//	    SymbolOptionMixin setSymbolSize(Number symbolSize);
+//
+//	    SymbolOptionMixin setSymbolSize(Number[] symbolSize);
+//
+//	    SymbolOptionMixin setSymbolRotate(Number symbolRotate);
+//
+//	    SymbolOptionMixin setSymbolKeepAspect(Boolean symbolKeepAspect);
+//
+//	    SymbolOptionMixin setSymbolOffset(Number symbolOffset);
+//
+//	    SymbolOptionMixin setSymbolOffset(Number[] symbolOffset);
+//
+//	    SymbolOptionMixin setSymbolOffset(String symbolOffset);
+//
+//	    SymbolOptionMixin setSymbolOffset(String[] symbolOffset);
+	
+	}
+		
+	protected void configureGraphNodeStateOption(GraphNodeStateOption graphNodeStateOption) {
+//	    GraphNodeStateOption setItemStyle(ItemStyleOption itemStyle);
+//
+//	    GraphNodeStateOption setLabel(SeriesLabelOption label);
+		
+	}
+		
+	protected void configureStatesOptionMixin(StatesOptionMixin statesOptionMixin) {
+//	    StatesOptionMixin setEmphasis(Object emphasis);
+//
+//	    StatesOptionMixin setSelect(Object select);
+//
+//	    StatesOptionMixin setBlur(Object blur);
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -532,6 +611,20 @@ public class ItemImpl extends GraphElementImpl implements Item {
 				return getSelect() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.ITEM___CREATE_GRAPH_CATEGORY_ITEM:
+				return createGraphCategoryItem();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ItemImpl

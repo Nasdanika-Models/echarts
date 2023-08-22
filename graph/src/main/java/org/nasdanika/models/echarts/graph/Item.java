@@ -3,6 +3,8 @@
 package org.nasdanika.models.echarts.graph;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.icepear.echarts.charts.graph.GraphCategoryItem;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Item extends GraphElement {
+public interface Item extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -261,5 +263,13 @@ public interface Item extends GraphElement {
 	 * @generated
 	 */
 	void setSelect(ItemState value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.GraphCategoryItem"
+	 * @generated
+	 */
+	GraphCategoryItem createGraphCategoryItem();
 
 } // Item

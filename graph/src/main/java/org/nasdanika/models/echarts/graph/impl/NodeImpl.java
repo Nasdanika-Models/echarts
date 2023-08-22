@@ -2,22 +2,20 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-import java.util.function.BiFunction;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.json.JSONObject;
-import org.nasdanika.models.echarts.graph.GraphElement;
+import org.icepear.echarts.charts.graph.GraphNodeItem;
+import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Link;
 import org.nasdanika.models.echarts.graph.Node;
-import org.nasdanika.models.echarts.graph.Tooltip;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +25,7 @@ import org.nasdanika.models.echarts.graph.Tooltip;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getX <em>X</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getOutgoingLinks <em>Outgoing Links</em>}</li>
@@ -34,12 +33,21 @@ import org.nasdanika.models.echarts.graph.Tooltip;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#isFixed <em>Fixed</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getTooltip <em>Tooltip</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getDraggable <em>Draggable</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class NodeImpl extends ItemImpl implements Node {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,6 +75,15 @@ public class NodeImpl extends ItemImpl implements Node {
 	 * @ordered
 	 */
 	protected static final boolean FIXED_EDEFAULT = false;
+	/**
+	 * The default value of the '{@link #getDraggable() <em>Draggable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDraggable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean DRAGGABLE_EDEFAULT = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,18 +231,8 @@ public class NodeImpl extends ItemImpl implements Node {
 	 * @generated
 	 */
 	@Override
-	public Tooltip getTooltip() {
-		return (Tooltip)eDynamicGet(GraphPackage.NODE__TOOLTIP, GraphPackage.Literals.NODE__TOOLTIP, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTooltip(Tooltip newTooltip, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newTooltip, GraphPackage.NODE__TOOLTIP, msgs);
-		return msgs;
+	public Boolean getDraggable() {
+		return (Boolean)eDynamicGet(GraphPackage.NODE__DRAGGABLE, GraphPackage.Literals.NODE__DRAGGABLE, true, true);
 	}
 
 	/**
@@ -234,8 +241,72 @@ public class NodeImpl extends ItemImpl implements Node {
 	 * @generated
 	 */
 	@Override
-	public void setTooltip(Tooltip newTooltip) {
-		eDynamicSet(GraphPackage.NODE__TOOLTIP, GraphPackage.Literals.NODE__TOOLTIP, newTooltip);
+	public void setDraggable(Boolean newDraggable) {
+		eDynamicSet(GraphPackage.NODE__DRAGGABLE, GraphPackage.Literals.NODE__DRAGGABLE, newDraggable);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return (String)eDynamicGet(GraphPackage.NODE__ID, GraphPackage.Literals.NODE__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		eDynamicSet(GraphPackage.NODE__ID, GraphPackage.Literals.NODE__ID, newId);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public GraphNodeItem createGraphNodeItem() {
+		GraphNodeItem ret = new GraphNodeItem();
+		if (getId() != null) {
+			ret.setId(getId());
+		}
+		if (getName() != null) {
+			ret.setName(getName());
+		}		
+		EList<Double> value = getValue();
+		if (value.size() == 1) {
+			ret.setValue(value.get(0));			
+		} else if (!value.isEmpty()) {			
+			ret.setValue(value.toArray(new Number[value.size()]));			
+		}
+		if (ret.getX() != null) {
+			ret.setX(getX());
+		}
+		if (ret.getY() != null) {
+			ret.setY(getY());
+		}
+		if (isFixed()) {
+			ret.setFixed(true);
+		}
+		Item category = getCategory();
+		if (category != null) {
+			ret.setCategory(((Graph) category.eContainer()).getCategories().indexOf(category));
+		}
+		if (getDraggable() != null) {
+			ret.setDraggable(getDraggable());
+		}
+		
+		configureGraphNodeStateOption(ret);
+		configureStatesOptionMixin(ret);
+		configureSymbolOptionMixin(ret);
+		
+		return ret;		
 	}
 
 	/**
@@ -247,8 +318,6 @@ public class NodeImpl extends ItemImpl implements Node {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphPackage.NODE__OUTGOING_LINKS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingLinks()).basicAdd(otherEnd, msgs);
 			case GraphPackage.NODE__INCOMING_LINKS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingLinks()).basicAdd(otherEnd, msgs);
 		}
@@ -267,8 +336,6 @@ public class NodeImpl extends ItemImpl implements Node {
 				return ((InternalEList<?>)getOutgoingLinks()).basicRemove(otherEnd, msgs);
 			case GraphPackage.NODE__INCOMING_LINKS:
 				return ((InternalEList<?>)getIncomingLinks()).basicRemove(otherEnd, msgs);
-			case GraphPackage.NODE__TOOLTIP:
-				return basicSetTooltip(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -281,6 +348,8 @@ public class NodeImpl extends ItemImpl implements Node {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GraphPackage.NODE__ID:
+				return getId();
 			case GraphPackage.NODE__X:
 				return getX();
 			case GraphPackage.NODE__Y:
@@ -296,8 +365,8 @@ public class NodeImpl extends ItemImpl implements Node {
 				return isFixed();
 			case GraphPackage.NODE__VALUE:
 				return getValue();
-			case GraphPackage.NODE__TOOLTIP:
-				return getTooltip();
+			case GraphPackage.NODE__DRAGGABLE:
+				return getDraggable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -311,6 +380,9 @@ public class NodeImpl extends ItemImpl implements Node {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GraphPackage.NODE__ID:
+				setId((String)newValue);
+				return;
 			case GraphPackage.NODE__X:
 				setX((Double)newValue);
 				return;
@@ -335,8 +407,8 @@ public class NodeImpl extends ItemImpl implements Node {
 				getValue().clear();
 				getValue().addAll((Collection<? extends Double>)newValue);
 				return;
-			case GraphPackage.NODE__TOOLTIP:
-				setTooltip((Tooltip)newValue);
+			case GraphPackage.NODE__DRAGGABLE:
+				setDraggable((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -350,6 +422,9 @@ public class NodeImpl extends ItemImpl implements Node {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GraphPackage.NODE__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case GraphPackage.NODE__X:
 				setX(X_EDEFAULT);
 				return;
@@ -371,8 +446,8 @@ public class NodeImpl extends ItemImpl implements Node {
 			case GraphPackage.NODE__VALUE:
 				getValue().clear();
 				return;
-			case GraphPackage.NODE__TOOLTIP:
-				setTooltip((Tooltip)null);
+			case GraphPackage.NODE__DRAGGABLE:
+				setDraggable(DRAGGABLE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -386,6 +461,8 @@ public class NodeImpl extends ItemImpl implements Node {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GraphPackage.NODE__ID:
+				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 			case GraphPackage.NODE__X:
 				return X_EDEFAULT == null ? getX() != null : !X_EDEFAULT.equals(getX());
 			case GraphPackage.NODE__Y:
@@ -400,16 +477,24 @@ public class NodeImpl extends ItemImpl implements Node {
 				return isFixed() != FIXED_EDEFAULT;
 			case GraphPackage.NODE__VALUE:
 				return !getValue().isEmpty();
-			case GraphPackage.NODE__TOOLTIP:
-				return getTooltip() != null;
+			case GraphPackage.NODE__DRAGGABLE:
+				return DRAGGABLE_EDEFAULT == null ? getDraggable() != null : !DRAGGABLE_EDEFAULT.equals(getDraggable());
 		}
 		return super.eIsSet(featureID);
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
-	public JSONObject toJSONObject(BiFunction<GraphElement, JSONObject, JSONObject> customizer) {
-		// TODO Auto-generated method stub
-		return super.toJSONObject(customizer);
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.NODE___CREATE_GRAPH_NODE_ITEM:
+				return createGraphNodeItem();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //NodeImpl

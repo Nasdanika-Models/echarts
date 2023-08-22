@@ -3,6 +3,7 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Style;
 
@@ -24,7 +25,7 @@ import org.nasdanika.models.echarts.graph.Style;
  *
  * @generated
  */
-public class StyleImpl extends GraphElementImpl implements Style {
+public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	/**
 	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,6 +103,16 @@ public class StyleImpl extends GraphElementImpl implements Style {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.STYLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**

@@ -3,19 +3,19 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.util.Map;
-import java.util.function.BiFunction;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.json.JSONObject;
+import org.icepear.echarts.charts.graph.GraphCategoryItem;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
+import org.icepear.echarts.charts.graph.GraphNodeItem;
+import org.icepear.echarts.charts.graph.GraphSeries;
 import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderCap;
 import org.nasdanika.models.echarts.graph.BorderJoin;
@@ -23,7 +23,6 @@ import org.nasdanika.models.echarts.graph.BorderType;
 import org.nasdanika.models.echarts.graph.FontStyle;
 import org.nasdanika.models.echarts.graph.FontWeight;
 import org.nasdanika.models.echarts.graph.Graph;
-import org.nasdanika.models.echarts.graph.GraphElement;
 import org.nasdanika.models.echarts.graph.GraphFactory;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
@@ -49,13 +48,6 @@ import org.nasdanika.models.echarts.graph.VerticalAlign;
  * @generated
  */
 public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass graphElementEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -223,14 +215,28 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType jsonObjectEDataType = null;
+	private EDataType graphSeriesEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType biFunctionEDataType = null;
+	private EDataType graphNodeItemEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType graphEdgeItemEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType graphCategoryItemEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -298,26 +304,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getGraphElement() {
-		return graphElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getGraphElement__ToJSONObject__BiFunction() {
-		return graphElementEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -329,16 +315,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getNode_X() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getNode_Y() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -348,8 +324,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getNode_OutgoingLinks() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
+	public EAttribute getNode_Y() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -358,7 +334,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getNode_IncomingLinks() {
+	public EReference getNode_OutgoingLinks() {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -368,7 +344,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getNode_Category() {
+	public EReference getNode_IncomingLinks() {
 		return (EReference)nodeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -378,8 +354,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNode_Fixed() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(5);
+	public EReference getNode_Category() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -388,7 +364,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNode_Value() {
+	public EAttribute getNode_Fixed() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -398,8 +374,38 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getNode_Tooltip() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(7);
+	public EAttribute getNode_Value() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNode_Draggable() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNode_Id() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getNode__CreateGraphNodeItem() {
+		return nodeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -588,7 +594,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLink_Source() {
+	public EReference getLink_Target() {
 		return (EReference)linkEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -598,18 +604,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLink_Target() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getLink_Value() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -619,7 +615,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_LineStyle() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(3);
+		return (EReference)linkEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -629,7 +625,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Label() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(4);
+		return (EReference)linkEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -639,7 +635,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Emphasis() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(5);
+		return (EReference)linkEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -649,7 +645,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Blur() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(6);
+		return (EReference)linkEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -659,7 +655,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Select() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(7);
+		return (EReference)linkEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -669,7 +665,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getLink_Symbol() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -679,7 +675,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getLink_SymbolSize() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -689,7 +685,17 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getLink_IgnoreForceLayout() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(10);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getLink__CreateGraphEdgeItem() {
+		return linkEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -720,6 +726,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	@Override
 	public EReference getGraph_Categories() {
 		return (EReference)graphEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getGraph__ConfigureGraphSeries__GraphSeries() {
+		return graphEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -840,6 +856,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	@Override
 	public EReference getItem_Select() {
 		return (EReference)itemEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getItem__CreateGraphCategoryItem() {
+		return itemEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1558,8 +1584,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EDataType getJSONObject() {
-		return jsonObjectEDataType;
+	public EDataType getGraphSeries() {
+		return graphSeriesEDataType;
 	}
 
 	/**
@@ -1568,8 +1594,28 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EDataType getBiFunction() {
-		return biFunctionEDataType;
+	public EDataType getGraphNodeItem() {
+		return graphNodeItemEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getGraphEdgeItem() {
+		return graphEdgeItemEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getGraphCategoryItem() {
+		return graphCategoryItemEDataType;
 	}
 
 	/**
@@ -1601,12 +1647,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		graphElementEClass = createEClass(GRAPH_ELEMENT);
-		createEOperation(graphElementEClass, GRAPH_ELEMENT___TO_JSON_OBJECT__BIFUNCTION);
-
 		graphEClass = createEClass(GRAPH);
 		createEReference(graphEClass, GRAPH__NODES);
 		createEReference(graphEClass, GRAPH__CATEGORIES);
+		createEOperation(graphEClass, GRAPH___CONFIGURE_GRAPH_SERIES__GRAPHSERIES);
 
 		itemEClass = createEClass(ITEM);
 		createEAttribute(itemEClass, ITEM__NAME);
@@ -1620,8 +1664,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(itemEClass, ITEM__EMPHASIS);
 		createEReference(itemEClass, ITEM__BLUR);
 		createEReference(itemEClass, ITEM__SELECT);
+		createEOperation(itemEClass, ITEM___CREATE_GRAPH_CATEGORY_ITEM);
 
 		nodeEClass = createEClass(NODE);
+		createEAttribute(nodeEClass, NODE__ID);
 		createEAttribute(nodeEClass, NODE__X);
 		createEAttribute(nodeEClass, NODE__Y);
 		createEReference(nodeEClass, NODE__OUTGOING_LINKS);
@@ -1629,7 +1675,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(nodeEClass, NODE__CATEGORY);
 		createEAttribute(nodeEClass, NODE__FIXED);
 		createEAttribute(nodeEClass, NODE__VALUE);
-		createEReference(nodeEClass, NODE__TOOLTIP);
+		createEAttribute(nodeEClass, NODE__DRAGGABLE);
+		createEOperation(nodeEClass, NODE___CREATE_GRAPH_NODE_ITEM);
 
 		styleEClass = createEClass(STYLE);
 		createEAttribute(styleEClass, STYLE__COLOR);
@@ -1652,7 +1699,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(itemStyleEClass, ITEM_STYLE__BORDER_STYLE);
 
 		linkEClass = createEClass(LINK);
-		createEReference(linkEClass, LINK__SOURCE);
 		createEReference(linkEClass, LINK__TARGET);
 		createEAttribute(linkEClass, LINK__VALUE);
 		createEReference(linkEClass, LINK__LINE_STYLE);
@@ -1663,6 +1709,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEAttribute(linkEClass, LINK__SYMBOL);
 		createEAttribute(linkEClass, LINK__SYMBOL_SIZE);
 		createEAttribute(linkEClass, LINK__IGNORE_FORCE_LAYOUT);
+		createEOperation(linkEClass, LINK___CREATE_GRAPH_EDGE_ITEM);
 
 		textStyleEClass = createEClass(TEXT_STYLE);
 		createEAttribute(textStyleEClass, TEXT_STYLE__COLOR);
@@ -1746,8 +1793,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		overflowEEnum = createEEnum(OVERFLOW);
 
 		// Create data types
-		jsonObjectEDataType = createEDataType(JSON_OBJECT);
-		biFunctionEDataType = createEDataType(BI_FUNCTION);
+		graphSeriesEDataType = createEDataType(GRAPH_SERIES);
+		graphNodeItemEDataType = createEDataType(GRAPH_NODE_ITEM);
+		graphEdgeItemEDataType = createEDataType(GRAPH_EDGE_ITEM);
+		graphCategoryItemEDataType = createEDataType(GRAPH_CATEGORY_ITEM);
 	}
 
 	/**
@@ -1774,43 +1823,24 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		setNsURI(eNS_URI);
 
 		// Create type parameters
-		addETypeParameter(biFunctionEDataType, "T");
-		addETypeParameter(biFunctionEDataType, "U");
-		addETypeParameter(biFunctionEDataType, "R");
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		graphEClass.getESuperTypes().add(this.getGraphElement());
-		itemEClass.getESuperTypes().add(this.getGraphElement());
 		nodeEClass.getESuperTypes().add(this.getItem());
-		styleEClass.getESuperTypes().add(this.getGraphElement());
 		lineStyleEClass.getESuperTypes().add(this.getStyle());
 		itemStyleEClass.getESuperTypes().add(this.getStyle());
-		linkEClass.getESuperTypes().add(this.getGraphElement());
-		textStyleEClass.getESuperTypes().add(this.getGraphElement());
 		labelEClass.getESuperTypes().add(this.getTextStyle());
-		stateEClass.getESuperTypes().add(this.getGraphElement());
 		itemStateEClass.getESuperTypes().add(this.getState());
 		lineStateEClass.getESuperTypes().add(this.getState());
-		tooltipEClass.getESuperTypes().add(this.getGraphElement());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(graphElementEClass, GraphElement.class, "GraphElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		EOperation op = initEOperation(getGraphElement__ToJSONObject__BiFunction(), this.getJSONObject(), "toJSONObject", 0, 1, IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(this.getBiFunction());
-		EGenericType g2 = createEGenericType(this.getGraphElement());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(this.getJSONObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(this.getJSONObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "customizer", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(graphEClass, Graph.class, "Graph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGraph_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraph_Categories(), this.getItem(), null, "categories", null, 0, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getGraph__ConfigureGraphSeries__GraphSeries(), null, "configureGraphSeries", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getGraphSeries(), "graphSeries", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1825,15 +1855,20 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getItem_Blur(), this.getItemState(), null, "blur", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getItem_Select(), this.getItemState(), null, "select", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getItem__CreateGraphCategoryItem(), this.getGraphCategoryItem(), "createGraphCategoryItem", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNode_Id(), ecorePackage.getEString(), "id", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_X(), ecorePackage.getEDoubleObject(), "x", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Y(), ecorePackage.getEDoubleObject(), "y", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_OutgoingLinks(), this.getLink(), this.getLink_Source(), "outgoingLinks", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_OutgoingLinks(), this.getLink(), null, "outgoingLinks", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_IncomingLinks(), this.getLink(), this.getLink_Target(), "incomingLinks", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Category(), this.getItem(), null, "category", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Fixed(), ecorePackage.getEBoolean(), "fixed", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Tooltip(), this.getTooltip(), null, "tooltip", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Draggable(), ecorePackage.getEBooleanObject(), "draggable", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getNode__CreateGraphNodeItem(), this.getGraphNodeItem(), "createGraphNodeItem", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1856,7 +1891,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getItemStyle_BorderStyle(), this.getLineStyle(), null, "borderStyle", null, 0, 1, ItemStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLink_Source(), this.getNode(), this.getNode_OutgoingLinks(), "source", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Target(), this.getNode(), this.getNode_IncomingLinks(), "target", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_LineStyle(), this.getLineStyle(), null, "lineStyle", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1867,6 +1901,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEAttribute(getLink_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 2, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_SymbolSize(), ecorePackage.getEString(), "symbolSize", null, 0, 2, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_IgnoreForceLayout(), ecorePackage.getEBoolean(), "ignoreForceLayout", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getLink__CreateGraphEdgeItem(), this.getGraphEdgeItem(), "createGraphEdgeItem", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(textStyleEClass, TextStyle.class, "TextStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextStyle_Color(), ecorePackage.getEString(), "color", null, 0, 1, TextStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1996,8 +2032,10 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		addEEnumLiteral(overflowEEnum, Overflow.BREAK_ALL);
 
 		// Initialize data types
-		initEDataType(jsonObjectEDataType, JSONObject.class, "JSONObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(biFunctionEDataType, BiFunction.class, "BiFunction", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(graphSeriesEDataType, GraphSeries.class, "GraphSeries", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(graphNodeItemEDataType, GraphNodeItem.class, "GraphNodeItem", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(graphEdgeItemEDataType, GraphEdgeItem.class, "GraphEdgeItem", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(graphCategoryItemEDataType, GraphCategoryItem.class, "GraphCategoryItem", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -2016,6 +2054,12 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
+		  (getGraph__ConfigureGraphSeries__GraphSeries(),
+		   source,
+		   new String[] {
+			   "documentation", "Sets data, links, and categories"
+		   });
+		addAnnotation
 		  (getItem_Emphasis(),
 		   source,
 		   new String[] {
@@ -2032,12 +2076,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		   source,
 		   new String[] {
 			   "documentation", "Select state of specified node."
-		   });
-		addAnnotation
-		  (getNode_Tooltip(),
-		   source,
-		   new String[] {
-			   "documentation", "Emphasis state of specified node."
 		   });
 		addAnnotation
 		  (getLink_Emphasis(),

@@ -3,6 +3,7 @@
 package org.nasdanika.models.echarts.graph;
 
 import org.eclipse.emf.common.util.EList;
+import org.icepear.echarts.charts.graph.GraphNodeItem;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getId <em>Id</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getX <em>X</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getY <em>Y</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getOutgoingLinks <em>Outgoing Links</em>}</li>
@@ -20,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#isFixed <em>Fixed</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getValue <em>Value</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Node#getTooltip <em>Tooltip</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getDraggable <em>Draggable</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode()
@@ -76,13 +78,11 @@ public interface Node extends Item {
 	/**
 	 * Returns the value of the '<em><b>Outgoing Links</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.echarts.graph.Link}.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.echarts.graph.Link#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Outgoing Links</em>' containment reference list.
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_OutgoingLinks()
-	 * @see org.nasdanika.models.echarts.graph.Link#getSource
-	 * @model opposite="source" containment="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Link> getOutgoingLinks();
@@ -158,27 +158,54 @@ public interface Node extends Item {
 	EList<Double> getValue();
 
 	/**
-	 * Returns the value of the '<em><b>Tooltip</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Draggable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Emphasis state of specified node.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Tooltip</em>' containment reference.
-	 * @see #setTooltip(Tooltip)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Tooltip()
-	 * @model containment="true"
+	 * @return the value of the '<em>Draggable</em>' attribute.
+	 * @see #setDraggable(Boolean)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Draggable()
+	 * @model
 	 * @generated
 	 */
-	Tooltip getTooltip();
+	Boolean getDraggable();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getTooltip <em>Tooltip</em>}' containment reference.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getDraggable <em>Draggable</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tooltip</em>' containment reference.
-	 * @see #getTooltip()
+	 * @param value the new value of the '<em>Draggable</em>' attribute.
+	 * @see #getDraggable()
 	 * @generated
 	 */
-	void setTooltip(Tooltip value);
+	void setDraggable(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.GraphNodeItem"
+	 * @generated
+	 */
+	GraphNodeItem createGraphNodeItem();
 } // Node

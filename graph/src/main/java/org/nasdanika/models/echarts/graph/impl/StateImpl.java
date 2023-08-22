@@ -3,9 +3,9 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.State;
@@ -24,7 +24,7 @@ import org.nasdanika.models.echarts.graph.State;
  *
  * @generated
  */
-public abstract class StateImpl extends GraphElementImpl implements State {
+public abstract class StateImpl extends MinimalEObjectImpl.Container implements State {
 	/**
 	 * The default value of the '{@link #getDisabled() <em>Disabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,6 +52,16 @@ public abstract class StateImpl extends GraphElementImpl implements State {
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.STATE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**

@@ -4,6 +4,8 @@ package org.nasdanika.models.echarts.graph;
 
 import java.math.BigDecimal;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Text Style</b></em>'.
@@ -37,7 +39,7 @@ import java.math.BigDecimal;
  * @model
  * @generated
  */
-public interface TextStyle extends GraphElement {
+public interface TextStyle extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->

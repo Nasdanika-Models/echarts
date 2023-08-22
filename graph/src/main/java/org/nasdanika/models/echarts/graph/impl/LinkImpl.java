@@ -2,12 +2,16 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
+import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.LineState;
@@ -23,7 +27,6 @@ import org.nasdanika.models.echarts.graph.Node;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getLineStyle <em>Line Style</em>}</li>
@@ -38,7 +41,7 @@ import org.nasdanika.models.echarts.graph.Node;
  *
  * @generated
  */
-public class LinkImpl extends GraphElementImpl implements Link {
+public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	/**
 	 * The default value of the '{@link #isIgnoreForceLayout() <em>Ignore Force Layout</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,28 +77,8 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	 * @generated
 	 */
 	@Override
-	public Node getSource() {
-		return (Node)eDynamicGet(GraphPackage.LINK__SOURCE, GraphPackage.Literals.LINK__SOURCE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSource(Node newSource, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newSource, GraphPackage.LINK__SOURCE, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSource(Node newSource) {
-		eDynamicSet(GraphPackage.LINK__SOURCE, GraphPackage.Literals.LINK__SOURCE, newSource);
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -343,15 +326,52 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public GraphEdgeItem createGraphEdgeItem() {
+		GraphEdgeItem ret = new GraphEdgeItem();
+		
+
+//	    GraphEdgeItemOption setValue(Number value);
+//
+//	    GraphEdgeItemOption setSymbol(String symbol);
+//
+//	    GraphEdgeItemOption setSymbol(String[] symbol);
+//
+//	    GraphEdgeItemOption setSymbolSize(Number symbolSize);
+//
+//	    GraphEdgeItemOption setSymbolSize(Number[] symbolSize);
+//
+//	    GraphEdgeItemOption setIgnoreForceLayout(Boolean ignoreForceLayout);
+		
+
+//	    GraphEdgeStateOption setLineStyle(GraphEdgeLineStyleOption lineStyle);
+//
+//	    GraphEdgeStateOption setLabel(SeriesLineLabelOption label);
+
+		
+//	    StatesOptionMixin setEmphasis(Object emphasis);
+//
+//	    StatesOptionMixin setSelect(Object select);
+//
+//	    StatesOptionMixin setBlur(Object blur);
+		
+		
+		EList<Node> graphNodes = ((Graph) eContainer().eContainer()).getNodes();
+		ret.setSource(graphNodes.indexOf(eContainer()));
+		ret.setTarget(graphNodes.indexOf(getTarget()));
+		return ret;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphPackage.LINK__SOURCE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSource((Node)otherEnd, msgs);
 			case GraphPackage.LINK__TARGET:
 				Node target = basicGetTarget();
 				if (target != null)
@@ -369,8 +389,6 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphPackage.LINK__SOURCE:
-				return basicSetSource(null, msgs);
 			case GraphPackage.LINK__TARGET:
 				return basicSetTarget(null, msgs);
 			case GraphPackage.LINK__LINE_STYLE:
@@ -393,24 +411,8 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case GraphPackage.LINK__SOURCE:
-				return eInternalContainer().eInverseRemove(this, GraphPackage.NODE__OUTGOING_LINKS, Node.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphPackage.LINK__SOURCE:
-				return getSource();
 			case GraphPackage.LINK__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -445,9 +447,6 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphPackage.LINK__SOURCE:
-				setSource((Node)newValue);
-				return;
 			case GraphPackage.LINK__TARGET:
 				setTarget((Node)newValue);
 				return;
@@ -493,9 +492,6 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphPackage.LINK__SOURCE:
-				setSource((Node)null);
-				return;
 			case GraphPackage.LINK__TARGET:
 				setTarget((Node)null);
 				return;
@@ -538,8 +534,6 @@ public class LinkImpl extends GraphElementImpl implements Link {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphPackage.LINK__SOURCE:
-				return getSource() != null;
 			case GraphPackage.LINK__TARGET:
 				return basicGetTarget() != null;
 			case GraphPackage.LINK__VALUE:
@@ -562,6 +556,20 @@ public class LinkImpl extends GraphElementImpl implements Link {
 				return isIgnoreForceLayout() != IGNORE_FORCE_LAYOUT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.LINK___CREATE_GRAPH_EDGE_ITEM:
+				return createGraphEdgeItem();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //LinkImpl

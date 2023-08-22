@@ -5,6 +5,6 @@ module org.nasdanika.models.echarts.graph {
 	
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
-	requires transitive org.json;
+	requires transitive echarts.java;
 	
 }

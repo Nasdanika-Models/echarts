@@ -9,8 +9,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -23,7 +23,20 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.json.JSONObject;
+import org.icepear.echarts.Bar;
+import org.icepear.echarts.Sunburst;
+import org.icepear.echarts.charts.graph.GraphCategoryItem;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
+import org.icepear.echarts.charts.graph.GraphEdgeLineStyle;
+import org.icepear.echarts.charts.graph.GraphForce;
+import org.icepear.echarts.charts.graph.GraphNodeItem;
+import org.icepear.echarts.charts.graph.GraphSeries;
+import org.icepear.echarts.charts.sunburst.SunburstLabel;
+import org.icepear.echarts.charts.sunburst.SunburstNodeItem;
+import org.icepear.echarts.charts.sunburst.SunburstSeries;
+import org.icepear.echarts.components.series.SeriesLabel;
+import org.icepear.echarts.origin.chart.graph.GraphCategoryItemOption;
+import org.icepear.echarts.render.Engine;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.Diagnostic;
@@ -207,14 +220,31 @@ public class TestEchartsModelDocGen {
 	 * Generates Graph JSON from a model
 	 */
 	@Test
-	public void testGraph() {
+	public void testModuleGraph() {
 		Module thisModule = getClass().getModule();
 		ModuleLayer moduleLayer = thisModule.getLayer();
 		
 		Graph graph = GraphFactory.eINSTANCE.createGraph();
-		moduleToNode(thisModule, moduleLayer, graph);		
-		JSONObject json = graph.toJSONObject(null);
-		System.out.println(json.toString(2));		
+		moduleToNode(thisModule, moduleLayer, graph);
+		
+		GraphSeries graphSeries = new org.icepear.echarts.charts.graph.GraphSeries().setSymbolSize(50)
+				.setLayout("force")
+				.setForce(new GraphForce().setRepulsion(1000));
+//                .setLabel(new SeriesLabel().setShow(true))
+//                .setEdgeSymbol(new String[] { "circle", "arrow" })
+//                .setLineStyle(new GraphEdgeLineStyle().setOpacity(0.9).setWidth(2).setCurveness(0));
+		
+		graph.configureGraphSeries(graphSeries);
+		
+    	org.icepear.echarts.Graph echartsGraph = new org.icepear.echarts.Graph()
+                .setTitle("Module Dependencies")
+//                .setTooltip("item")
+                .setLegend()
+                .addSeries(graphSeries);
+    	
+	    Engine engine = new Engine();
+	    new File("target/charts").mkdirs();
+	    engine.render("target/charts/module-graph.html", echartsGraph, "90%", "2000px", false);		
 	}
 	
 	private Node moduleToNode(Module module, ModuleLayer layer, Graph graph) {
@@ -226,7 +256,7 @@ public class TestEchartsModelDocGen {
 				Node reqNode = moduleToNode(rmo.get(), layer, graph);
 				org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();
 				reqLink.setTarget(reqNode);
-				reqLink.setSource(moduleNode);
+				moduleNode.getOutgoingLinks().add(reqLink);
 			}
 		}		
 		return moduleNode;
@@ -244,5 +274,97 @@ public class TestEchartsModelDocGen {
 		return ret;
 	}
 	
+	@Test
+	public void testBarChart() {
+	    Bar bar = new Bar()
+	              .setLegend()
+	              .setTooltip("item")
+	              .addXAxis(new String[] { "Matcha Latte", "Milk Tea", "Cheese Cocoa", "Walnut Brownie" })
+	              .addYAxis()
+	              .addSeries("2015", new Number[] { 43.3, 83.1, 86.4, 72.4 })
+	              .addSeries("2016", new Number[] { 85.8, 73.4, 65.2, 53.9 })
+	              .addSeries("2017", new Number[] { 93.7, 55.1, 82.5, 39.1 });
+	    Engine engine = new Engine();
+	    new File("target/charts").mkdirs();
+	    engine.render("target/charts/bar.html", bar);		
+	}
+	
+	@Test
+	public void testGraphChart() {
+    	org.icepear.echarts.Graph graph = new org.icepear.echarts.Graph()
+                .addSeries(new org.icepear.echarts.charts.graph.GraphSeries().setSymbolSize(50)
+                        .setLabel(new SeriesLabel().setShow(true))
+                        .setEdgeSymbol(new String[] { "circle", "arrow" })
+                        .setData(new GraphNodeItem[] {
+                                new GraphNodeItem().setName("Node 1").setX(300).setY(300).setCategory(0),
+                                new GraphNodeItem().setName("Node 2").setX(800).setY(300).setCategory("Cat 1"),
+                                new GraphNodeItem().setName("Node 3").setX(550).setY(100).setCategory("Cat 1"),
+                                new GraphNodeItem().setName("Node 4").setX(550).setY(500).setCategory(1)
+                        })
+                        .setLinks(new GraphEdgeItem[] {
+                                new GraphEdgeItem().setSource("Node 1").setTarget("Node 2")
+                                        .setLineStyle(new GraphEdgeLineStyle().setCurveness(0.2)),
+                                new GraphEdgeItem().setSource("Node 2").setTarget("Node 1")
+                                        .setLineStyle(new GraphEdgeLineStyle().setCurveness(0.2)),
+                                new GraphEdgeItem().setSource("Node 1").setTarget("Node 3"),
+                                new GraphEdgeItem().setSource("Node 2").setTarget("Node 3"),
+                                new GraphEdgeItem().setSource("Node 2").setTarget("Node 4"),
+                                new GraphEdgeItem().setSource("Node 1").setTarget("Node 4")
+                        })
+                        .setCategories(new GraphCategoryItemOption[] {
+                        		new GraphCategoryItem().setName("Cat 1"),
+                        		new GraphCategoryItem().setName("Cat 2"),                        		
+                        })
+                        .setLineStyle(new GraphEdgeLineStyle().setOpacity(0.9).setWidth(2).setCurveness(0)));
+	    Engine engine = new Engine();
+	    new File("target/charts").mkdirs();
+	    engine.render("target/charts/graph.html", graph);		
+	}
+	
+    @Test
+    public void testBasicSunburst() {
+        Sunburst sunburst = new Sunburst()
+                .addSeries(new SunburstSeries()
+                        .setRadius(new String[] { "0", "90%" })
+                        .setLabel(new SunburstLabel().setRotate("radial"))
+                        .setData(new SunburstNodeItem[] {
+                                new SunburstNodeItem().setName("Grandpa")
+                                        .setChildren(new SunburstNodeItem[] {
+                                                new SunburstNodeItem().setName("Uncle Leo").setValue(15)
+                                                        .setChildren(new SunburstNodeItem[] {
+                                                                new SunburstNodeItem().setName("Cousin Jack")
+                                                                        .setValue(2),
+                                                                new SunburstNodeItem().setName("Cousin Mary")
+                                                                        .setValue(5)
+                                                                        .setChildren(new SunburstNodeItem[] {
+                                                                                new SunburstNodeItem()
+                                                                                        .setName("Jackson").setValue(2)
+                                                                        }),
+                                                                new SunburstNodeItem().setName("Cousin Ben")
+                                                                        .setValue(4)
+                                                        }),
+                                                new SunburstNodeItem().setName("Father").setValue(10)
+                                                        .setChildren(new SunburstNodeItem[] {
+                                                                new SunburstNodeItem().setName("Me").setValue(5),
+                                                                new SunburstNodeItem().setName("Brother Peter")
+                                                                        .setValue(1)
+                                                        })
+                                        }),
+                                new SunburstNodeItem().setName("Nancy")
+                                        .setChildren(new SunburstNodeItem[] {
+                                                new SunburstNodeItem().setName("Uncle Nike")
+                                                        .setChildren(new SunburstNodeItem[] {
+                                                                new SunburstNodeItem().setName("Cousin Betty")
+                                                                        .setValue(1),
+                                                                new SunburstNodeItem().setName("Cousin Jenny")
+                                                                        .setValue(2)
+                                                        })
+                                        })
+
+                        }));
+	    Engine engine = new Engine();
+	    new File("target/charts").mkdirs();
+	    engine.render("target/charts/sunburst.html", sunburst);		
+    }	
 	
 }

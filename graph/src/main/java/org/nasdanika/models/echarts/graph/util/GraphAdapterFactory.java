@@ -3,15 +3,26 @@
 package org.nasdanika.models.echarts.graph.util;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
-
-import org.nasdanika.models.echarts.graph.*;
+import org.nasdanika.models.echarts.graph.Graph;
+import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Item;
+import org.nasdanika.models.echarts.graph.ItemState;
+import org.nasdanika.models.echarts.graph.ItemStyle;
+import org.nasdanika.models.echarts.graph.Label;
+import org.nasdanika.models.echarts.graph.LineState;
+import org.nasdanika.models.echarts.graph.LineStyle;
+import org.nasdanika.models.echarts.graph.Link;
+import org.nasdanika.models.echarts.graph.Node;
+import org.nasdanika.models.echarts.graph.State;
+import org.nasdanika.models.echarts.graph.Style;
+import org.nasdanika.models.echarts.graph.TextStyle;
+import org.nasdanika.models.echarts.graph.Tooltip;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,10 +80,6 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected GraphSwitch<Adapter> modelSwitch =
 		new GraphSwitch<Adapter>() {
-			@Override
-			public Adapter caseGraphElement(GraphElement object) {
-				return createGraphElementAdapter();
-			}
 			@Override
 			public Adapter caseGraph(Graph object) {
 				return createGraphAdapter();
@@ -152,20 +159,6 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.GraphElement <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.echarts.graph.GraphElement
-	 * @generated
-	 */
-	public Adapter createGraphElementAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.echarts.graph.Node <em>Node</em>}'.

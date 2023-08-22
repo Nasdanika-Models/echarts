@@ -3,13 +3,25 @@
 package org.nasdanika.models.echarts.graph.util;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
-import org.nasdanika.models.echarts.graph.*;
+import org.nasdanika.models.echarts.graph.Graph;
+import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Item;
+import org.nasdanika.models.echarts.graph.ItemState;
+import org.nasdanika.models.echarts.graph.ItemStyle;
+import org.nasdanika.models.echarts.graph.Label;
+import org.nasdanika.models.echarts.graph.LineState;
+import org.nasdanika.models.echarts.graph.LineStyle;
+import org.nasdanika.models.echarts.graph.Link;
+import org.nasdanika.models.echarts.graph.Node;
+import org.nasdanika.models.echarts.graph.State;
+import org.nasdanika.models.echarts.graph.Style;
+import org.nasdanika.models.echarts.graph.TextStyle;
+import org.nasdanika.models.echarts.graph.Tooltip;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,23 +80,15 @@ public class GraphSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case GraphPackage.GRAPH_ELEMENT: {
-				GraphElement graphElement = (GraphElement)theEObject;
-				T result = caseGraphElement(graphElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GraphPackage.GRAPH: {
 				Graph graph = (Graph)theEObject;
 				T result = caseGraph(graph);
-				if (result == null) result = caseGraphElement(graph);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.ITEM: {
 				Item item = (Item)theEObject;
 				T result = caseItem(item);
-				if (result == null) result = caseGraphElement(item);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -92,14 +96,12 @@ public class GraphSwitch<T> extends Switch<T> {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
 				if (result == null) result = caseItem(node);
-				if (result == null) result = caseGraphElement(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.STYLE: {
 				Style style = (Style)theEObject;
 				T result = caseStyle(style);
-				if (result == null) result = caseGraphElement(style);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,7 +109,6 @@ public class GraphSwitch<T> extends Switch<T> {
 				LineStyle lineStyle = (LineStyle)theEObject;
 				T result = caseLineStyle(lineStyle);
 				if (result == null) result = caseStyle(lineStyle);
-				if (result == null) result = caseGraphElement(lineStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -115,21 +116,18 @@ public class GraphSwitch<T> extends Switch<T> {
 				ItemStyle itemStyle = (ItemStyle)theEObject;
 				T result = caseItemStyle(itemStyle);
 				if (result == null) result = caseStyle(itemStyle);
-				if (result == null) result = caseGraphElement(itemStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.LINK: {
 				Link link = (Link)theEObject;
 				T result = caseLink(link);
-				if (result == null) result = caseGraphElement(link);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.TEXT_STYLE: {
 				TextStyle textStyle = (TextStyle)theEObject;
 				T result = caseTextStyle(textStyle);
-				if (result == null) result = caseGraphElement(textStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -137,7 +135,6 @@ public class GraphSwitch<T> extends Switch<T> {
 				Label label = (Label)theEObject;
 				T result = caseLabel(label);
 				if (result == null) result = caseTextStyle(label);
-				if (result == null) result = caseGraphElement(label);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -156,7 +153,6 @@ public class GraphSwitch<T> extends Switch<T> {
 			case GraphPackage.STATE: {
 				State state = (State)theEObject;
 				T result = caseState(state);
-				if (result == null) result = caseGraphElement(state);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,7 +160,6 @@ public class GraphSwitch<T> extends Switch<T> {
 				ItemState itemState = (ItemState)theEObject;
 				T result = caseItemState(itemState);
 				if (result == null) result = caseState(itemState);
-				if (result == null) result = caseGraphElement(itemState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -172,34 +167,17 @@ public class GraphSwitch<T> extends Switch<T> {
 				LineState lineState = (LineState)theEObject;
 				T result = caseLineState(lineState);
 				if (result == null) result = caseState(lineState);
-				if (result == null) result = caseGraphElement(lineState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GraphPackage.TOOLTIP: {
 				Tooltip tooltip = (Tooltip)theEObject;
 				T result = caseTooltip(tooltip);
-				if (result == null) result = caseGraphElement(tooltip);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGraphElement(GraphElement object) {
-		return null;
 	}
 
 	/**

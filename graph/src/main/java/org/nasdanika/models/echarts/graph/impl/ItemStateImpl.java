@@ -3,7 +3,6 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.nasdanika.models.echarts.graph.GraphPackage;

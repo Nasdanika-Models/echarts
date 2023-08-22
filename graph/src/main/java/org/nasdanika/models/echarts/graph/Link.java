@@ -3,6 +3,8 @@
 package org.nasdanika.models.echarts.graph;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.echarts.graph.Link#getSource <em>Source</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getTarget <em>Target</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getValue <em>Value</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getLineStyle <em>Line Style</em>}</li>
@@ -30,31 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Link extends GraphElement {
-	/**
-	 * Returns the value of the '<em><b>Source</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.echarts.graph.Node#getOutgoingLinks <em>Outgoing Links</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' container reference.
-	 * @see #setSource(Node)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLink_Source()
-	 * @see org.nasdanika.models.echarts.graph.Node#getOutgoingLinks
-	 * @model opposite="outgoingLinks" transient="false"
-	 * @generated
-	 */
-	Node getSource();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Link#getSource <em>Source</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source</em>' container reference.
-	 * @see #getSource()
-	 * @generated
-	 */
-	void setSource(Node value);
-
+public interface Link extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.echarts.graph.Node#getIncomingLinks <em>Incoming Links</em>}'.
@@ -264,5 +241,13 @@ public interface Link extends GraphElement {
 	 * @generated
 	 */
 	void setIgnoreForceLayout(boolean value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.GraphEdgeItem"
+	 * @generated
+	 */
+	GraphEdgeItem createGraphEdgeItem();
 
 } // Link
