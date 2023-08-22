@@ -32,7 +32,6 @@ import org.nasdanika.models.echarts.graph.Node;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getIncomingLinks <em>Incoming Links</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#isFixed <em>Fixed</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getDraggable <em>Draggable</em>}</li>
  * </ul>
  *
@@ -219,17 +218,6 @@ public class NodeImpl extends ItemImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public EList<Double> getValue() {
-		return (EList<Double>)eDynamicGet(GraphPackage.NODE__VALUE, GraphPackage.Literals.NODE__VALUE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Boolean getDraggable() {
 		return (Boolean)eDynamicGet(GraphPackage.NODE__DRAGGABLE, GraphPackage.Literals.NODE__DRAGGABLE, true, true);
@@ -363,8 +351,6 @@ public class NodeImpl extends ItemImpl implements Node {
 				return basicGetCategory();
 			case GraphPackage.NODE__FIXED:
 				return isFixed();
-			case GraphPackage.NODE__VALUE:
-				return getValue();
 			case GraphPackage.NODE__DRAGGABLE:
 				return getDraggable();
 		}
@@ -403,10 +389,6 @@ public class NodeImpl extends ItemImpl implements Node {
 			case GraphPackage.NODE__FIXED:
 				setFixed((Boolean)newValue);
 				return;
-			case GraphPackage.NODE__VALUE:
-				getValue().clear();
-				getValue().addAll((Collection<? extends Double>)newValue);
-				return;
 			case GraphPackage.NODE__DRAGGABLE:
 				setDraggable((Boolean)newValue);
 				return;
@@ -443,9 +425,6 @@ public class NodeImpl extends ItemImpl implements Node {
 			case GraphPackage.NODE__FIXED:
 				setFixed(FIXED_EDEFAULT);
 				return;
-			case GraphPackage.NODE__VALUE:
-				getValue().clear();
-				return;
 			case GraphPackage.NODE__DRAGGABLE:
 				setDraggable(DRAGGABLE_EDEFAULT);
 				return;
@@ -475,8 +454,6 @@ public class NodeImpl extends ItemImpl implements Node {
 				return basicGetCategory() != null;
 			case GraphPackage.NODE__FIXED:
 				return isFixed() != FIXED_EDEFAULT;
-			case GraphPackage.NODE__VALUE:
-				return !getValue().isEmpty();
 			case GraphPackage.NODE__DRAGGABLE:
 				return DRAGGABLE_EDEFAULT == null ? getDraggable() != null : !DRAGGABLE_EDEFAULT.equals(getDraggable());
 		}

@@ -21,7 +21,6 @@ import org.icepear.echarts.charts.graph.GraphNodeItem;
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getIncomingLinks <em>Incoming Links</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#isFixed <em>Fixed</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Node#getValue <em>Value</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getDraggable <em>Draggable</em>}</li>
  * </ul>
  *
@@ -144,18 +143,6 @@ public interface Node extends Item {
 	 * @generated
 	 */
 	void setFixed(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Double}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute list.
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Value()
-	 * @model
-	 * @generated
-	 */
-	EList<Double> getValue();
 
 	/**
 	 * Returns the value of the '<em><b>Draggable</b></em>' attribute.

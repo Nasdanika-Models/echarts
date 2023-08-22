@@ -39,6 +39,7 @@ import org.nasdanika.models.echarts.graph.Label;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getEmphasis <em>Emphasis</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getBlur <em>Blur</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getSelect <em>Select</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.ItemImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -368,29 +369,36 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Double> getValue() {
+		return (EList<Double>)eDynamicGet(GraphPackage.ITEM__VALUE, GraphPackage.Literals.ITEM__VALUE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
 	public GraphCategoryItem createGraphCategoryItem() {
-		throw new UnsupportedOperationException(); 
-//        .setCategories(new GraphCategoryItemOption[] {
-//        		new GraphCategoryItem().setName("Cat 1"),
-//        		new GraphCategoryItem().setName("Cat 2"),                        		
-//        })
+		GraphCategoryItem ret = new GraphCategoryItem();
+		if (getName() != null) {
+			ret.setName(getName());
+		}		
+		EList<Double> value = getValue();
+		if (value.size() == 1) {
+			ret.setValue(value.get(0));			
+		} else if (!value.isEmpty()) {			
+			ret.setValue(value.toArray(new Number[value.size()]));			
+		}
 		
-
-//	    GraphCategoryItemOption setName(String name);
-//
-//	    GraphCategoryItemOption setValue(Number value);
-//
-//	    GraphCategoryItemOption setValue(Object value);
-//
-//	    GraphCategoryItemOption setValue(String value);
-		
-//		configureGraphNodeStateOption(null);
-//		configureStatesOptionMixin(null);
-//		configureSymbolOptionMixin(null);
-		
+		configureGraphNodeStateOption(ret);
+		configureStatesOptionMixin(ret);
+		configureSymbolOptionMixin(ret);
+		return ret;
 	}
 	
 	protected void configureSymbolOptionMixin(SymbolOptionMixin symbolOptionMixin) {
@@ -482,6 +490,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 				return getBlur();
 			case GraphPackage.ITEM__SELECT:
 				return getSelect();
+			case GraphPackage.ITEM__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -530,6 +540,10 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case GraphPackage.ITEM__SELECT:
 				setSelect((ItemState)newValue);
 				return;
+			case GraphPackage.ITEM__VALUE:
+				getValue().clear();
+				getValue().addAll((Collection<? extends Double>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -575,6 +589,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case GraphPackage.ITEM__SELECT:
 				setSelect((ItemState)null);
 				return;
+			case GraphPackage.ITEM__VALUE:
+				getValue().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -609,6 +626,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 				return getBlur() != null;
 			case GraphPackage.ITEM__SELECT:
 				return getSelect() != null;
+			case GraphPackage.ITEM__VALUE:
+				return !getValue().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

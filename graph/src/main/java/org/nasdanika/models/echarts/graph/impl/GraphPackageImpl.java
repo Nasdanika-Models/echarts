@@ -374,18 +374,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNode_Value() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getNode_Draggable() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -856,6 +846,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	@Override
 	public EReference getItem_Select() {
 		return (EReference)itemEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getItem_Value() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -1664,6 +1664,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(itemEClass, ITEM__EMPHASIS);
 		createEReference(itemEClass, ITEM__BLUR);
 		createEReference(itemEClass, ITEM__SELECT);
+		createEAttribute(itemEClass, ITEM__VALUE);
 		createEOperation(itemEClass, ITEM___CREATE_GRAPH_CATEGORY_ITEM);
 
 		nodeEClass = createEClass(NODE);
@@ -1674,7 +1675,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(nodeEClass, NODE__INCOMING_LINKS);
 		createEReference(nodeEClass, NODE__CATEGORY);
 		createEAttribute(nodeEClass, NODE__FIXED);
-		createEAttribute(nodeEClass, NODE__VALUE);
 		createEAttribute(nodeEClass, NODE__DRAGGABLE);
 		createEOperation(nodeEClass, NODE___CREATE_GRAPH_NODE_ITEM);
 
@@ -1854,6 +1854,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getItem_Emphasis(), this.getItemState(), null, "emphasis", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getItem_Blur(), this.getItemState(), null, "blur", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getItem_Select(), this.getItemState(), null, "select", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getItem__CreateGraphCategoryItem(), this.getGraphCategoryItem(), "createGraphCategoryItem", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1865,7 +1866,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getNode_IncomingLinks(), this.getLink(), this.getLink_Target(), "incomingLinks", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Category(), this.getItem(), null, "category", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Fixed(), ecorePackage.getEBoolean(), "fixed", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Draggable(), ecorePackage.getEBooleanObject(), "draggable", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getNode__CreateGraphNodeItem(), this.getGraphNodeItem(), "createGraphNodeItem", 0, 1, IS_UNIQUE, IS_ORDERED);

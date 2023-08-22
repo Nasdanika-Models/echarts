@@ -26,6 +26,7 @@ import org.icepear.echarts.charts.graph.GraphCategoryItem;
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getEmphasis <em>Emphasis</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getBlur <em>Blur</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Item#getSelect <em>Select</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Item#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getItem()
@@ -263,6 +264,18 @@ public interface Item extends EObject {
 	 * @generated
 	 */
 	void setSelect(ItemState value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Double}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute list.
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getItem_Value()
+	 * @model
+	 * @generated
+	 */
+	EList<Double> getValue();
 
 	/**
 	 * <!-- begin-user-doc -->

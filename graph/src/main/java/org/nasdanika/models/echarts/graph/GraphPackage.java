@@ -274,13 +274,22 @@ public interface GraphPackage extends EPackage {
 	int ITEM__SELECT = 10;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__VALUE = 11;
+
+	/**
 	 * The number of structural features of the '<em>Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_FEATURE_COUNT = 11;
+	int ITEM_FEATURE_COUNT = 12;
 
 	/**
 	 * The operation id for the '<em>Create Graph Category Item</em>' operation.
@@ -400,6 +409,15 @@ public interface GraphPackage extends EPackage {
 	int NODE__SELECT = ITEM__SELECT;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__VALUE = ITEM__VALUE;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -463,22 +481,13 @@ public interface GraphPackage extends EPackage {
 	int NODE__FIXED = ITEM_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__VALUE = ITEM_FEATURE_COUNT + 7;
-
-	/**
 	 * The feature id for the '<em><b>Draggable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__DRAGGABLE = ITEM_FEATURE_COUNT + 8;
+	int NODE__DRAGGABLE = ITEM_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -487,7 +496,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = ITEM_FEATURE_COUNT + 9;
+	int NODE_FEATURE_COUNT = ITEM_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Create Graph Category Item</em>' operation.
@@ -2038,17 +2047,6 @@ public interface GraphPackage extends EPackage {
 	EAttribute getNode_Fixed();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.echarts.graph.Node#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Value</em>'.
-	 * @see org.nasdanika.models.echarts.graph.Node#getValue()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EAttribute getNode_Value();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Node#getDraggable <em>Draggable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2566,6 +2564,17 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getItem_Select();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.echarts.graph.Item#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Item#getValue()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Value();
 
 	/**
 	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Item#createGraphCategoryItem() <em>Create Graph Category Item</em>}' operation.
@@ -3464,13 +3473,6 @@ public interface GraphPackage extends EPackage {
 		 */
 		EAttribute NODE__FIXED = eINSTANCE.getNode_Fixed();
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODE__VALUE = eINSTANCE.getNode_Value();
-		/**
 		 * The meta object literal for the '<em><b>Draggable</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3818,6 +3820,13 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ITEM__SELECT = eINSTANCE.getItem_Select();
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__VALUE = eINSTANCE.getItem_Value();
 		/**
 		 * The meta object literal for the '<em><b>Create Graph Category Item</b></em>' operation.
 		 * <!-- begin-user-doc -->

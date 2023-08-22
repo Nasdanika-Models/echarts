@@ -64,6 +64,7 @@ import org.nasdanika.html.model.app.graph.emf.EObjectReflectiveProcessorFactoryP
 import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphFactory;
 import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Node;
 import org.nasdanika.models.echarts.graph.processors.EcoreGenEchartsGraphProcessorsFactory;
 import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
@@ -225,13 +226,31 @@ public class TestEchartsModelDocGen {
 		ModuleLayer moduleLayer = thisModule.getLayer();
 		
 		Graph graph = GraphFactory.eINSTANCE.createGraph();
-		moduleToNode(thisModule, moduleLayer, graph);
+		
+		Item nsdCategory = GraphFactory.eINSTANCE.createItem();
+		nsdCategory.setName("Nasdanika");
+		graph.getCategories().add(nsdCategory);
+		
+		Item eclipseCategory = GraphFactory.eINSTANCE.createItem();
+		eclipseCategory.setName("Eclipse");
+		graph.getCategories().add(eclipseCategory);
+		
+		Item javaCategory = GraphFactory.eINSTANCE.createItem();
+		javaCategory.setName("Java");
+		graph.getCategories().add(javaCategory);
+		
+		Item otherCategory = GraphFactory.eINSTANCE.createItem();
+		otherCategory.setName("Other");
+		graph.getCategories().add(otherCategory);
+		
+		moduleToNode(thisModule, moduleLayer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
 		
 		GraphSeries graphSeries = new org.icepear.echarts.charts.graph.GraphSeries().setSymbolSize(50)
 				.setLayout("force")
-				.setForce(new GraphForce().setRepulsion(1000));
-//                .setLabel(new SeriesLabel().setShow(true))
-//                .setEdgeSymbol(new String[] { "circle", "arrow" })
+				.setForce(new GraphForce().setRepulsion(2000).setGravity(0.01))
+                .setLabel(new SeriesLabel().setShow(true))
+                .setDraggable(true)
+                .setEdgeSymbol(new String[] { "none", "arrow" });
 //                .setLineStyle(new GraphEdgeLineStyle().setOpacity(0.9).setWidth(2).setCurveness(0));
 		
 		graph.configureGraphSeries(graphSeries);
@@ -247,13 +266,29 @@ public class TestEchartsModelDocGen {
 	    engine.render("target/charts/module-graph.html", echartsGraph, "90%", "2000px", false);		
 	}
 	
-	private Node moduleToNode(Module module, ModuleLayer layer, Graph graph) {
+	private Node moduleToNode(
+			Module module, 
+			ModuleLayer layer, 
+			Graph graph,
+			Item nsdCategory,
+			Item eclipseCategory,
+			Item javaCategory,
+			Item otherCategory) {
 		ModuleDescriptor moduleDescriptor = module.getDescriptor();		
 		Node moduleNode = getModuleNode(module, layer, graph);
 		for (Requires req: moduleDescriptor.requires()) {
 			Optional<Module> rmo = layer.findModule(req.name());
 			if (rmo.isPresent()) {
-				Node reqNode = moduleToNode(rmo.get(), layer, graph);
+				Node reqNode = moduleToNode(rmo.get(), layer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
+				if (reqNode.getName().startsWith("org.nasdanika.")) {
+					reqNode.setCategory(nsdCategory);
+				} else if (reqNode.getName().startsWith("org.eclipse.")) {
+					reqNode.setCategory(eclipseCategory);
+				} else if (reqNode.getName().startsWith("java.")) {
+					reqNode.setCategory(javaCategory);
+				} else {
+					reqNode.setCategory(otherCategory);
+				}
 				org.nasdanika.models.echarts.graph.Link reqLink = GraphFactory.eINSTANCE.createLink();
 				reqLink.setTarget(reqNode);
 				moduleNode.getOutgoingLinks().add(reqLink);
