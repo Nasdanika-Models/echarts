@@ -26,7 +26,7 @@ public enum FontStyle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NORMAL(0, "NORMAL", "NORMAL"),
+	NORMAL(0, "NORMAL", "normal"),
 
 	/**
 	 * The '<em><b>ITALIC</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum FontStyle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ITALIC(1, "ITALIC", "ITALIC"),
+	ITALIC(1, "ITALIC", "italic"),
 
 	/**
 	 * The '<em><b>OBLIQUE</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum FontStyle implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OBLIQUE(2, "OBLIQUE", "OBLIQUE");
+	OBLIQUE(2, "OBLIQUE", "oblique");
 
 	/**
 	 * The '<em><b>NORMAL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NORMAL
-	 * @model
+	 * @model literal="normal"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum FontStyle implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ITALIC
-	 * @model
+	 * @model literal="italic"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum FontStyle implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #OBLIQUE
-	 * @model
+	 * @model literal="oblique"
 	 * @generated
 	 * @ordered
 	 */

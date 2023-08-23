@@ -44,7 +44,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SHADOW_BLUR_EDEFAULT = 0;
+	protected static final Double SHADOW_BLUR_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getShadowColor() <em>Shadow Color</em>}' attribute.
@@ -84,7 +84,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double OPACITY_EDEFAULT = 0.0;
+	protected static final Double OPACITY_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,8 +141,8 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	 * @generated
 	 */
 	@Override
-	public int getShadowBlur() {
-		return (Integer)eDynamicGet(GraphPackage.STYLE__SHADOW_BLUR, GraphPackage.Literals.STYLE__SHADOW_BLUR, true, true);
+	public Double getShadowBlur() {
+		return (Double)eDynamicGet(GraphPackage.STYLE__SHADOW_BLUR, GraphPackage.Literals.STYLE__SHADOW_BLUR, true, true);
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	 * @generated
 	 */
 	@Override
-	public void setShadowBlur(int newShadowBlur) {
+	public void setShadowBlur(Double newShadowBlur) {
 		eDynamicSet(GraphPackage.STYLE__SHADOW_BLUR, GraphPackage.Literals.STYLE__SHADOW_BLUR, newShadowBlur);
 	}
 
@@ -221,7 +221,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	 * @generated
 	 */
 	@Override
-	public double getOpacity() {
+	public Double getOpacity() {
 		return (Double)eDynamicGet(GraphPackage.STYLE__OPACITY, GraphPackage.Literals.STYLE__OPACITY, true, true);
 	}
 
@@ -231,7 +231,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 	 * @generated
 	 */
 	@Override
-	public void setOpacity(double newOpacity) {
+	public void setOpacity(Double newOpacity) {
 		eDynamicSet(GraphPackage.STYLE__OPACITY, GraphPackage.Literals.STYLE__OPACITY, newOpacity);
 	}
 
@@ -271,7 +271,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 				setColor((String)newValue);
 				return;
 			case GraphPackage.STYLE__SHADOW_BLUR:
-				setShadowBlur((Integer)newValue);
+				setShadowBlur((Double)newValue);
 				return;
 			case GraphPackage.STYLE__SHADOW_COLOR:
 				setShadowColor((String)newValue);
@@ -330,7 +330,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 			case GraphPackage.STYLE__COLOR:
 				return COLOR_EDEFAULT == null ? getColor() != null : !COLOR_EDEFAULT.equals(getColor());
 			case GraphPackage.STYLE__SHADOW_BLUR:
-				return getShadowBlur() != SHADOW_BLUR_EDEFAULT;
+				return SHADOW_BLUR_EDEFAULT == null ? getShadowBlur() != null : !SHADOW_BLUR_EDEFAULT.equals(getShadowBlur());
 			case GraphPackage.STYLE__SHADOW_COLOR:
 				return SHADOW_COLOR_EDEFAULT == null ? getShadowColor() != null : !SHADOW_COLOR_EDEFAULT.equals(getShadowColor());
 			case GraphPackage.STYLE__SHADOW_OFFSET_X:
@@ -338,7 +338,7 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style {
 			case GraphPackage.STYLE__SHADOW_OFFSET_Y:
 				return SHADOW_OFFSET_Y_EDEFAULT == null ? getShadowOffsetY() != null : !SHADOW_OFFSET_Y_EDEFAULT.equals(getShadowOffsetY());
 			case GraphPackage.STYLE__OPACITY:
-				return getOpacity() != OPACITY_EDEFAULT;
+				return OPACITY_EDEFAULT == null ? getOpacity() != null : !OPACITY_EDEFAULT.equals(getOpacity());
 		}
 		return super.eIsSet(featureID);
 	}

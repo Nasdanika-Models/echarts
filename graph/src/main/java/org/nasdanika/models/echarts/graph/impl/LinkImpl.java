@@ -373,8 +373,13 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			ret.setIgnoreForceLayout(getIgnoreForceLayout());
 		}			
 
-//	    GraphEdgeStateOption setLineStyle(GraphEdgeLineStyleOption lineStyle);
+		LineStyle lineStyle = getLineStyle();
+		if (lineStyle != null) {
+			ret.setLineStyle(lineStyle.createGraphEdgeLineStyleOption());
+		}
+		
 //	    GraphEdgeStateOption setLabel(SeriesLineLabelOption label);
+		
 //	    StatesOptionMixin setEmphasis(Object emphasis);
 //	    StatesOptionMixin setSelect(Object select);
 //	    StatesOptionMixin setBlur(Object blur);

@@ -26,7 +26,7 @@ public enum BorderType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SOLID(0, "SOLID", "SOLID"),
+	SOLID(0, "SOLID", "solid"),
 
 	/**
 	 * The '<em><b>DASHED</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum BorderType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DASHED(1, "DASHED", "DASHED"),
+	DASHED(1, "DASHED", "dashed"),
 
 	/**
 	 * The '<em><b>DOTTED</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum BorderType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DOTTED(2, "DOTTED", "DOTTED");
+	DOTTED(2, "DOTTED", "dotted");
 
 	/**
 	 * The '<em><b>SOLID</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #SOLID
-	 * @model
+	 * @model literal="solid"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum BorderType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DASHED
-	 * @model
+	 * @model literal="dashed"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum BorderType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DOTTED
-	 * @model
+	 * @model literal="dotted"
 	 * @generated
 	 * @ordered
 	 */

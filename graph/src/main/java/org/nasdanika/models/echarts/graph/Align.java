@@ -26,7 +26,7 @@ public enum Align implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LEFT(0, "LEFT", "LEFT"),
+	LEFT(0, "LEFT", "left"),
 
 	/**
 	 * The '<em><b>CENTER</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum Align implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CENTER(1, "CENTER", "CENTER"),
+	CENTER(1, "CENTER", "center"),
 
 	/**
 	 * The '<em><b>RIGHT</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum Align implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RIGHT(2, "RIGHT", "RIGHT");
+	RIGHT(2, "RIGHT", "right");
 
 	/**
 	 * The '<em><b>LEFT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LEFT
-	 * @model
+	 * @model literal="left"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum Align implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #CENTER
-	 * @model
+	 * @model literal="center"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum Align implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT
-	 * @model
+	 * @model literal="right"
 	 * @generated
 	 * @ordered
 	 */

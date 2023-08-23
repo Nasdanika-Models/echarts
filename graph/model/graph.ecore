@@ -5,6 +5,9 @@
   <eClassifiers xsi:type="ecore:EDataType" name="GraphNodeItem" instanceClassName="org.icepear.echarts.charts.graph.GraphNodeItem"/>
   <eClassifiers xsi:type="ecore:EDataType" name="GraphEdgeItem" instanceClassName="org.icepear.echarts.charts.graph.GraphEdgeItem"/>
   <eClassifiers xsi:type="ecore:EDataType" name="GraphCategoryItem" instanceClassName="org.icepear.echarts.charts.graph.GraphCategoryItem"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ItemStyleOption" instanceClassName="org.icepear.echarts.origin.util.ItemStyleOption"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="GraphEdgeLineStyleOption" instanceClassName="org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="SeriesLabelOption" instanceClassName="org.icepear.echarts.origin.util.SeriesLabelOption"/>
   <eClassifiers xsi:type="ecore:EClass" name="Graph">
     <eOperations name="configureGraphSeries">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -66,29 +69,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="draggable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BorderType">
-    <eLiterals name="SOLID"/>
-    <eLiterals name="DASHED" value="1"/>
-    <eLiterals name="DOTTED" value="2"/>
+    <eLiterals name="SOLID" literal="solid"/>
+    <eLiterals name="DASHED" value="1" literal="dashed"/>
+    <eLiterals name="DOTTED" value="2" literal="dotted"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BorderCap">
-    <eLiterals name="BUTT"/>
-    <eLiterals name="ROUND" value="1"/>
-    <eLiterals name="SQUARE" value="2"/>
+    <eLiterals name="BUTT" literal="butt"/>
+    <eLiterals name="ROUND" value="1" literal="round"/>
+    <eLiterals name="SQUARE" value="2" literal="square"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BorderJoin">
-    <eLiterals name="BEVEL"/>
-    <eLiterals name="ROUND" value="1"/>
-    <eLiterals name="MITER" value="2"/>
+    <eLiterals name="BEVEL" literal="bevel"/>
+    <eLiterals name="ROUND" value="1" literal="round"/>
+    <eLiterals name="MITER" value="2" literal="miter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowBlur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowBlur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowOffsetX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowOffsetY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LineStyle" eSuperTypes="#//Style">
+    <eOperations name="createGraphEdgeLineStyleOption" eType="#//GraphEdgeLineStyleOption"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//BorderType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dashOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -98,8 +102,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="curveness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemStyle" eSuperTypes="#//Style">
+    <eOperations name="createItemStyleOption" eType="#//ItemStyleOption"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="borderStyle" eType="#//LineStyle"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eOperations name="createGraphEdgeItem" eType="#//GraphEdgeItem"/>
@@ -146,12 +152,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextStyle">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Text color. If set as 'inherit', the color will assigned as visual color, such as series color."/>
-      </eAnnotations>
-    </eStructuralFeatures>
+  <eClassifiers xsi:type="ecore:EClass" name="TextStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontStyle" eType="#//FontStyle">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Font style"/>
@@ -172,9 +173,56 @@
         <details key="documentation" value="Font size"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="#//Align">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Horizontal alignment of text, automatic by default."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verticalAlign" eType="#//VerticalAlign">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vertical alignment of text, automatic by default."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineHeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Line height of the text fragment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Background color of the text fragment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Border color of the text fragment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderWidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Border width of the text fragment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderType" eType="#//BorderType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The text fragment border type."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderDashOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="To set the line dash offset. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderRadius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Border radius of the text fragment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding" upperBound="4"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Padding of the text fragment."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
@@ -227,19 +275,16 @@
         <details key="documentation" value="Shadow Y offset of the text itself."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overflow" eType="#//Overflow">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Determine how to display the text when it's overflow. "/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ellipsis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Ellipsis to be displayed when overflow is set to truncate."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//TextStyle">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="show" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+    <eOperations name="createSeriesLabelOption" eType="#//SeriesLabelOption"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="show" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Whether to show label"/>
@@ -266,73 +311,34 @@
         <details key="documentation" value="Whether to move text slightly. For example: [30, 40] means move 30 horizontally and move 40 vertically."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="#//Align">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minMargin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Horizontal alignment of text, automatic by default."/>
+        <details key="documentation" value="Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verticalAlign" eType="#//VerticalAlign">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overflow" eType="#//Overflow">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Vertical alignment of text, automatic by default."/>
+        <details key="documentation" value="Determine how to display the text when it's overflow. "/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="silent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Background color of the text fragment."/>
+        <details key="documentation" value="Whether to show label"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Border color of the text fragment."/>
+        <details key="documentation" value="Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderWidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueAnimation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Border width of the text fragment."/>
+        <details key="documentation" value="Whether to show label"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderType" eType="#//BorderType">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The text fragment border type."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderDashOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="To set the line dash offset. "/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderRadius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Border radius of the text fragment."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding" upperBound="4"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Padding of the text fragment."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Shadow color of the text block."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowBlur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Show blur of the text block."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowOffsetX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Shadow X offset of the text block."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shadowOffsetY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Shadow Y offset of the text block."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rich" upperBound="-1" eType="#//StyleEntry"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rich" upperBound="-1" eType="#//TextStyleEntry"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Whether to show label"/>
@@ -340,54 +346,50 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LabelPosition">
-    <eLiterals name="TOP"/>
-    <eLiterals name="LEFT" value="1"/>
-    <eLiterals name="RIGHT" value="2"/>
-    <eLiterals name="BOTTOM" value="3"/>
-    <eLiterals name="INSIDE" value="4"/>
-    <eLiterals name="INSIDE_lEFT" value="5"/>
-    <eLiterals name="INSIDE_RIGHT" value="6"/>
-    <eLiterals name="INSIDE_TOP" value="7"/>
-    <eLiterals name="INSIDE_BOTTOM" value="8"/>
-    <eLiterals name="INSIDE_TOP_LEFT" value="9"/>
-    <eLiterals name="INSIDE_BOTTOM_LEFT" value="10"/>
-    <eLiterals name="INSIDE_TOP_RIGHT" value="11"/>
-    <eLiterals name="INSIDE_BOTTOM_RIGHT" value="12"/>
+    <eLiterals name="TOP" literal="top"/>
+    <eLiterals name="LEFT" value="1" literal="left"/>
+    <eLiterals name="RIGHT" value="2" literal="right"/>
+    <eLiterals name="BOTTOM" value="3" literal="bottom"/>
+    <eLiterals name="INSIDE" value="4" literal="inside"/>
+    <eLiterals name="INSIDE_lEFT" value="5" literal="insideLeft"/>
+    <eLiterals name="INSIDE_RIGHT" value="6" literal="insideRight"/>
+    <eLiterals name="INSIDE_TOP" value="7" literal="insideTop"/>
+    <eLiterals name="INSIDE_BOTTOM" value="8" literal="insideBottom"/>
+    <eLiterals name="INSIDE_TOP_LEFT" value="9" literal="insideTopLeft"/>
+    <eLiterals name="INSIDE_BOTTOM_LEFT" value="10" literal="insideBottomLeft"/>
+    <eLiterals name="INSIDE_TOP_RIGHT" value="11" literal="insideTopRight"/>
+    <eLiterals name="INSIDE_BOTTOM_RIGHT" value="12" literal="insideBottomRight"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FontStyle">
-    <eLiterals name="NORMAL"/>
-    <eLiterals name="ITALIC" value="1"/>
-    <eLiterals name="OBLIQUE" value="2"/>
+    <eLiterals name="NORMAL" literal="normal"/>
+    <eLiterals name="ITALIC" value="1" literal="italic"/>
+    <eLiterals name="OBLIQUE" value="2" literal="oblique"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FontWeight">
-    <eLiterals name="NORMAL"/>
-    <eLiterals name="BOLD" value="1"/>
-    <eLiterals name="BOLDER" value="2"/>
-    <eLiterals name="LIGHTER" value="3"/>
+    <eLiterals name="NORMAL" literal="normal"/>
+    <eLiterals name="BOLD" value="1" literal="bold"/>
+    <eLiterals name="BOLDER" value="2" literal="bolder"/>
+    <eLiterals name="LIGHTER" value="3" literal="lighter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Align">
-    <eLiterals name="LEFT"/>
-    <eLiterals name="CENTER" value="1"/>
-    <eLiterals name="RIGHT" value="2"/>
+    <eLiterals name="LEFT" literal="left"/>
+    <eLiterals name="CENTER" value="1" literal="center"/>
+    <eLiterals name="RIGHT" value="2" literal="right"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VerticalAlign">
-    <eLiterals name="TOP"/>
-    <eLiterals name="MIDDLE" value="1"/>
-    <eLiterals name="BOTTOM" value="2"/>
+    <eLiterals name="TOP" literal="top"/>
+    <eLiterals name="MIDDLE" value="1" literal="middle"/>
+    <eLiterals name="BOTTOM" value="2" literal="bottom"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Overflow">
-    <eLiterals name="TRUNCATE"/>
-    <eLiterals name="BREAK" value="1"/>
-    <eLiterals name="BREAK_ALL" value="2"/>
+    <eLiterals name="TRUNCATE" literal="truncate"/>
+    <eLiterals name="BREAK" value="1" literal="break"/>
+    <eLiterals name="BREAK_ALL" value="2" literal="breakAll"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StyleEntry" instanceClassName="java.util.Map$Entry">
+  <eClassifiers xsi:type="ecore:EClass" name="TextStyleEntry" instanceClassName="java.util.Map$Entry">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
-        eType="#//StringEntry" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringEntry" instanceClassName="java.util.Map$Entry">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//TextStyle"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="disabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">

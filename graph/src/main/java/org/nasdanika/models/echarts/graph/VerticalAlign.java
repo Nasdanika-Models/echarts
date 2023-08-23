@@ -26,7 +26,7 @@ public enum VerticalAlign implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TOP(0, "TOP", "TOP"),
+	TOP(0, "TOP", "top"),
 
 	/**
 	 * The '<em><b>MIDDLE</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum VerticalAlign implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MIDDLE(1, "MIDDLE", "MIDDLE"),
+	MIDDLE(1, "MIDDLE", "middle"),
 
 	/**
 	 * The '<em><b>BOTTOM</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum VerticalAlign implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOTTOM(2, "BOTTOM", "BOTTOM");
+	BOTTOM(2, "BOTTOM", "bottom");
 
 	/**
 	 * The '<em><b>TOP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #TOP
-	 * @model
+	 * @model literal="top"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum VerticalAlign implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #MIDDLE
-	 * @model
+	 * @model literal="middle"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum VerticalAlign implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BOTTOM
-	 * @model
+	 * @model literal="bottom"
 	 * @generated
 	 * @ordered
 	 */

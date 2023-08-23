@@ -4,7 +4,7 @@ package org.nasdanika.models.echarts.graph;
 
 import java.math.BigDecimal;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,12 +15,21 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getColor <em>Color</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getFontStyle <em>Font Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getFontWeight <em>Font Weight</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getFontFamily <em>Font Family</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getFontSize <em>Font Size</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getAlign <em>Align</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getVerticalAlign <em>Vertical Align</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBaseline <em>Baseline</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getLineHeight <em>Line Height</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBackgroundColor <em>Background Color</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderColor <em>Border Color</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderWidth <em>Border Width</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderType <em>Border Type</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderDashOffset <em>Border Dash Offset</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderRadius <em>Border Radius</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getPadding <em>Padding</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getWidth <em>Width</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getHeight <em>Height</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getTextBorderColor <em>Text Border Color</em>}</li>
@@ -31,40 +40,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowBlur <em>Text Shadow Blur</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowOffsetX <em>Text Shadow Offset X</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getTextShadowOffsetY <em>Text Shadow Offset Y</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getOverflow <em>Overflow</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getEllipsis <em>Ellipsis</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.TextStyle#getTag <em>Tag</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle()
  * @model
  * @generated
  */
-public interface TextStyle extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Text color. If set as 'inherit', the color will assigned as visual color, such as series color.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Color</em>' attribute.
-	 * @see #setColor(String)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Color()
-	 * @model
-	 * @generated
-	 */
-	String getColor();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getColor <em>Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Color</em>' attribute.
-	 * @see #getColor()
-	 * @generated
-	 */
-	void setColor(String value);
-
+public interface TextStyle extends Style {
 	/**
 	 * Returns the value of the '<em><b>Font Style</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.FontStyle}.
@@ -450,56 +433,274 @@ public interface TextStyle extends EObject {
 	void setTextShadowOffsetY(Integer value);
 
 	/**
-	 * Returns the value of the '<em><b>Overflow</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.Overflow}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Determine how to display the text when it's overflow. 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Overflow</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.Overflow
-	 * @see #setOverflow(Overflow)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Overflow()
-	 * @model
-	 * @generated
-	 */
-	Overflow getOverflow();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getOverflow <em>Overflow</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Overflow</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.Overflow
-	 * @see #getOverflow()
-	 * @generated
-	 */
-	void setOverflow(Overflow value);
-
-	/**
-	 * Returns the value of the '<em><b>Ellipsis</b></em>' attribute.
+	 * Returns the value of the '<em><b>Tag</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Ellipsis to be displayed when overflow is set to truncate.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ellipsis</em>' attribute.
-	 * @see #setEllipsis(String)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Ellipsis()
+	 * @return the value of the '<em>Tag</em>' attribute.
+	 * @see #setTag(String)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Tag()
 	 * @model
 	 * @generated
 	 */
-	String getEllipsis();
+	String getTag();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getEllipsis <em>Ellipsis</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getTag <em>Tag</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ellipsis</em>' attribute.
-	 * @see #getEllipsis()
+	 * @param value the new value of the '<em>Tag</em>' attribute.
+	 * @see #getTag()
 	 * @generated
 	 */
-	void setEllipsis(String value);
+	void setTag(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Align</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.Align}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Horizontal alignment of text, automatic by default.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Align</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.Align
+	 * @see #setAlign(Align)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Align()
+	 * @model
+	 * @generated
+	 */
+	Align getAlign();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getAlign <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Align</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.Align
+	 * @see #getAlign()
+	 * @generated
+	 */
+	void setAlign(Align value);
+
+	/**
+	 * Returns the value of the '<em><b>Vertical Align</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.VerticalAlign}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Vertical alignment of text, automatic by default.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Vertical Align</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.VerticalAlign
+	 * @see #setVerticalAlign(VerticalAlign)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_VerticalAlign()
+	 * @model
+	 * @generated
+	 */
+	VerticalAlign getVerticalAlign();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getVerticalAlign <em>Vertical Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Vertical Align</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.VerticalAlign
+	 * @see #getVerticalAlign()
+	 * @generated
+	 */
+	void setVerticalAlign(VerticalAlign value);
+
+	/**
+	 * Returns the value of the '<em><b>Baseline</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Baseline</em>' attribute.
+	 * @see #setBaseline(String)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Baseline()
+	 * @model
+	 * @generated
+	 */
+	String getBaseline();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBaseline <em>Baseline</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Baseline</em>' attribute.
+	 * @see #getBaseline()
+	 * @generated
+	 */
+	void setBaseline(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Background color of the text fragment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Background Color</em>' attribute.
+	 * @see #setBackgroundColor(String)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_BackgroundColor()
+	 * @model
+	 * @generated
+	 */
+	String getBackgroundColor();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBackgroundColor <em>Background Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Background Color</em>' attribute.
+	 * @see #getBackgroundColor()
+	 * @generated
+	 */
+	void setBackgroundColor(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Border Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Border color of the text fragment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Border Color</em>' attribute.
+	 * @see #setBorderColor(String)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_BorderColor()
+	 * @model
+	 * @generated
+	 */
+	String getBorderColor();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderColor <em>Border Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Border Color</em>' attribute.
+	 * @see #getBorderColor()
+	 * @generated
+	 */
+	void setBorderColor(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Border Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Border width of the text fragment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Border Width</em>' attribute.
+	 * @see #setBorderWidth(Integer)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_BorderWidth()
+	 * @model
+	 * @generated
+	 */
+	Integer getBorderWidth();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderWidth <em>Border Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Border Width</em>' attribute.
+	 * @see #getBorderWidth()
+	 * @generated
+	 */
+	void setBorderWidth(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Border Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.BorderType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The text fragment border type.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Border Type</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.BorderType
+	 * @see #setBorderType(BorderType)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_BorderType()
+	 * @model
+	 * @generated
+	 */
+	BorderType getBorderType();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderType <em>Border Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Border Type</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.BorderType
+	 * @see #getBorderType()
+	 * @generated
+	 */
+	void setBorderType(BorderType value);
+
+	/**
+	 * Returns the value of the '<em><b>Border Dash Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * To set the line dash offset. 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Border Dash Offset</em>' attribute.
+	 * @see #setBorderDashOffset(Integer)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_BorderDashOffset()
+	 * @model
+	 * @generated
+	 */
+	Integer getBorderDashOffset();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderDashOffset <em>Border Dash Offset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Border Dash Offset</em>' attribute.
+	 * @see #getBorderDashOffset()
+	 * @generated
+	 */
+	void setBorderDashOffset(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Border Radius</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Border radius of the text fragment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Border Radius</em>' attribute.
+	 * @see #setBorderRadius(Integer)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_BorderRadius()
+	 * @model
+	 * @generated
+	 */
+	Integer getBorderRadius();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.TextStyle#getBorderRadius <em>Border Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Border Radius</em>' attribute.
+	 * @see #getBorderRadius()
+	 * @generated
+	 */
+	void setBorderRadius(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Padding</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Integer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Padding of the text fragment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Padding</em>' attribute list.
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getTextStyle_Padding()
+	 * @model upper="4"
+	 * @generated
+	 */
+	EList<Integer> getPadding();
 
 } // TextStyle

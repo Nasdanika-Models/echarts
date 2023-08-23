@@ -7,7 +7,6 @@ import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.models.echarts.graph.*;
 import org.nasdanika.models.echarts.graph.Graph;
@@ -118,12 +117,8 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 				return createLabelAdapter();
 			}
 			@Override
-			public Adapter caseStyleEntry(Map.Entry<String, EMap<String, String>> object) {
-				return createStyleEntryAdapter();
-			}
-			@Override
-			public Adapter caseStringEntry(Map.Entry<String, String> object) {
-				return createStringEntryAdapter();
+			public Adapter caseTextStyleEntry(Map.Entry<String, TextStyle> object) {
+				return createTextStyleEntryAdapter();
 			}
 			@Override
 			public Adapter caseState(State object) {
@@ -288,7 +283,7 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Style Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Text Style Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
@@ -297,21 +292,7 @@ public class GraphAdapterFactory extends AdapterFactoryImpl {
 	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createStyleEntryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String Entry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see java.util.Map.Entry
-	 * @generated
-	 */
-	public Adapter createStringEntryAdapter() {
+	public Adapter createTextStyleEntryAdapter() {
 		return null;
 	}
 

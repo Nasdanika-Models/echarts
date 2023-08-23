@@ -26,7 +26,7 @@ public enum BorderCap implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BUTT(0, "BUTT", "BUTT"),
+	BUTT(0, "BUTT", "butt"),
 
 	/**
 	 * The '<em><b>ROUND</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum BorderCap implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ROUND(1, "ROUND", "ROUND"),
+	ROUND(1, "ROUND", "round"),
 
 	/**
 	 * The '<em><b>SQUARE</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum BorderCap implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SQUARE(2, "SQUARE", "SQUARE");
+	SQUARE(2, "SQUARE", "square");
 
 	/**
 	 * The '<em><b>BUTT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BUTT
-	 * @model
+	 * @model literal="butt"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum BorderCap implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ROUND
-	 * @model
+	 * @model literal="round"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum BorderCap implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #SQUARE
-	 * @model
+	 * @model literal="square"
 	 * @generated
 	 * @ordered
 	 */

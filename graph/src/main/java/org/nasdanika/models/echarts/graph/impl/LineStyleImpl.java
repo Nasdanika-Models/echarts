@@ -2,7 +2,12 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.icepear.echarts.charts.graph.GraphEdgeLineStyle;
+import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
 import org.nasdanika.models.echarts.graph.BorderCap;
 import org.nasdanika.models.echarts.graph.BorderJoin;
 import org.nasdanika.models.echarts.graph.BorderType;
@@ -261,6 +266,43 @@ public class LineStyleImpl extends StyleImpl implements LineStyle {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public GraphEdgeLineStyleOption createGraphEdgeLineStyleOption() {
+		GraphEdgeLineStyleOption lineStyle = new GraphEdgeLineStyle();
+
+		lineStyle.setCurveness(getCurveness());
+		
+		lineStyle.setShadowBlur(getShadowBlur());
+		lineStyle.setShadowColor(getShadowColor());
+		lineStyle.setShadowOffsetX(getShadowOffsetX());
+		lineStyle.setShadowOffsetY(getShadowOffsetY());
+		
+		lineStyle.setOpacity(getOpacity());
+		lineStyle.setColor(getColor());
+		lineStyle.setWidth(getWidth());
+		BorderType borderType = getType();
+		if (borderType != null) {
+			lineStyle.setType(borderType.getLiteral());
+		}
+		BorderCap cap = getCap();
+		if (cap != null) {
+			lineStyle.setCap(cap.getLiteral());
+		}
+		BorderJoin join = getJoin();
+		if (join != null) {
+			lineStyle.setJoin(join.getLiteral());
+		}
+		lineStyle.setDashOffset(getDashOffset());
+		lineStyle.setMiterLimit(getMiterLimit());		
+		
+		return lineStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -374,6 +416,20 @@ public class LineStyleImpl extends StyleImpl implements LineStyle {
 				return CURVENESS_EDEFAULT == null ? getCurveness() != null : !CURVENESS_EDEFAULT.equals(getCurveness());
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.LINE_STYLE___CREATE_GRAPH_EDGE_LINE_STYLE_OPTION:
+				return createGraphEdgeLineStyleOption();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //LineStyleImpl

@@ -53,12 +53,12 @@ public interface Style extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Shadow Blur</em>' attribute.
-	 * @see #setShadowBlur(int)
+	 * @see #setShadowBlur(Double)
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getStyle_ShadowBlur()
 	 * @model
 	 * @generated
 	 */
-	int getShadowBlur();
+	Double getShadowBlur();
 
 	/**
 	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Style#getShadowBlur <em>Shadow Blur</em>}' attribute.
@@ -68,7 +68,7 @@ public interface Style extends EObject {
 	 * @see #getShadowBlur()
 	 * @generated
 	 */
-	void setShadowBlur(int value);
+	void setShadowBlur(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Shadow Color</b></em>' attribute.
@@ -141,12 +141,12 @@ public interface Style extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Opacity</em>' attribute.
-	 * @see #setOpacity(double)
+	 * @see #setOpacity(Double)
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getStyle_Opacity()
 	 * @model
 	 * @generated
 	 */
-	double getOpacity();
+	Double getOpacity();
 
 	/**
 	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Style#getOpacity <em>Opacity</em>}' attribute.
@@ -156,6 +156,6 @@ public interface Style extends EObject {
 	 * @see #getOpacity()
 	 * @generated
 	 */
-	void setOpacity(double value);
+	void setOpacity(Double value);
 
 } // Style

@@ -26,7 +26,7 @@ public enum FontWeight implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NORMAL(0, "NORMAL", "NORMAL"),
+	NORMAL(0, "NORMAL", "normal"),
 
 	/**
 	 * The '<em><b>BOLD</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum FontWeight implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOLD(1, "BOLD", "BOLD"),
+	BOLD(1, "BOLD", "bold"),
 
 	/**
 	 * The '<em><b>BOLDER</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum FontWeight implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOLDER(2, "BOLDER", "BOLDER"),
+	BOLDER(2, "BOLDER", "bolder"),
 
 	/**
 	 * The '<em><b>LIGHTER</b></em>' literal object.
@@ -56,14 +56,14 @@ public enum FontWeight implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LIGHTER(3, "LIGHTER", "LIGHTER");
+	LIGHTER(3, "LIGHTER", "lighter");
 
 	/**
 	 * The '<em><b>NORMAL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NORMAL
-	 * @model
+	 * @model literal="normal"
 	 * @generated
 	 * @ordered
 	 */
@@ -74,7 +74,7 @@ public enum FontWeight implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BOLD
-	 * @model
+	 * @model literal="bold"
 	 * @generated
 	 * @ordered
 	 */
@@ -85,7 +85,7 @@ public enum FontWeight implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BOLDER
-	 * @model
+	 * @model literal="bolder"
 	 * @generated
 	 * @ordered
 	 */
@@ -96,7 +96,7 @@ public enum FontWeight implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LIGHTER
-	 * @model
+	 * @model literal="lighter"
 	 * @generated
 	 * @ordered
 	 */

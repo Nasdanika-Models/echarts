@@ -3,8 +3,6 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.util.Map;
-
-import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -15,6 +13,9 @@ import org.icepear.echarts.charts.graph.GraphCategoryItem;
 import org.icepear.echarts.charts.graph.GraphEdgeItem;
 import org.icepear.echarts.charts.graph.GraphNodeItem;
 import org.icepear.echarts.charts.graph.GraphSeries;
+import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
+import org.icepear.echarts.origin.util.ItemStyleOption;
+import org.icepear.echarts.origin.util.SeriesLabelOption;
 import org.nasdanika.models.echarts.graph.*;
 import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderCap;
@@ -93,8 +94,7 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 			case GraphPackage.LINK: return createLink();
 			case GraphPackage.TEXT_STYLE: return createTextStyle();
 			case GraphPackage.LABEL: return createLabel();
-			case GraphPackage.STYLE_ENTRY: return (EObject)createStyleEntry();
-			case GraphPackage.STRING_ENTRY: return (EObject)createStringEntry();
+			case GraphPackage.TEXT_STYLE_ENTRY: return (EObject)createTextStyleEntry();
 			case GraphPackage.ITEM_STATE: return createItemState();
 			case GraphPackage.LINE_STATE: return createLineState();
 			case GraphPackage.TOOLTIP: return createTooltip();
@@ -137,6 +137,12 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return createGraphEdgeItemFromString(eDataType, initialValue);
 			case GraphPackage.GRAPH_CATEGORY_ITEM:
 				return createGraphCategoryItemFromString(eDataType, initialValue);
+			case GraphPackage.ITEM_STYLE_OPTION:
+				return createItemStyleOptionFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_EDGE_LINE_STYLE_OPTION:
+				return createGraphEdgeLineStyleOptionFromString(eDataType, initialValue);
+			case GraphPackage.SERIES_LABEL_OPTION:
+				return createSeriesLabelOptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -176,6 +182,12 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return convertGraphEdgeItemToString(eDataType, instanceValue);
 			case GraphPackage.GRAPH_CATEGORY_ITEM:
 				return convertGraphCategoryItemToString(eDataType, instanceValue);
+			case GraphPackage.ITEM_STYLE_OPTION:
+				return convertItemStyleOptionToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_EDGE_LINE_STYLE_OPTION:
+				return convertGraphEdgeLineStyleOptionToString(eDataType, instanceValue);
+			case GraphPackage.SERIES_LABEL_OPTION:
+				return convertSeriesLabelOptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -285,19 +297,9 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, EMap<String, String>> createStyleEntry() {
-		StyleEntryImpl styleEntry = new StyleEntryImpl();
-		return styleEntry;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map.Entry<String, String> createStringEntry() {
-		StringEntryImpl stringEntry = new StringEntryImpl();
-		return stringEntry;
+	public Map.Entry<String, TextStyle> createTextStyleEntry() {
+		TextStyleEntryImpl textStyleEntry = new TextStyleEntryImpl();
+		return textStyleEntry;
 	}
 
 	/**
@@ -582,6 +584,60 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	public String convertGraphCategoryItemToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ItemStyleOption createItemStyleOptionFromString(EDataType eDataType, String initialValue) {
+		return (ItemStyleOption)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertItemStyleOptionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GraphEdgeLineStyleOption createGraphEdgeLineStyleOptionFromString(EDataType eDataType, String initialValue) {
+		return (GraphEdgeLineStyleOption)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGraphEdgeLineStyleOptionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SeriesLabelOption createSeriesLabelOptionFromString(EDataType eDataType, String initialValue) {
+		return (SeriesLabelOption)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSeriesLabelOptionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

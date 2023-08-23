@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.echarts.graph;
 
+import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -188,5 +190,13 @@ public interface LineStyle extends Style {
 	 * @generated
 	 */
 	void setCurveness(Double value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.GraphEdgeLineStyleOption"
+	 * @generated
+	 */
+	GraphEdgeLineStyleOption createGraphEdgeLineStyleOption();
 
 } // LineStyle

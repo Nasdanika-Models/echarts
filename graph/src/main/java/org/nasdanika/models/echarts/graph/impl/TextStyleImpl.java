@@ -4,14 +4,17 @@ package org.nasdanika.models.echarts.graph.impl;
 
 import java.math.BigDecimal;
 
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.icepear.echarts.origin.util.TextCommonOption;
+import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderType;
 import org.nasdanika.models.echarts.graph.FontStyle;
 import org.nasdanika.models.echarts.graph.FontWeight;
 import org.nasdanika.models.echarts.graph.GraphPackage;
-import org.nasdanika.models.echarts.graph.Overflow;
 import org.nasdanika.models.echarts.graph.TextStyle;
+import org.nasdanika.models.echarts.graph.VerticalAlign;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +24,21 @@ import org.nasdanika.models.echarts.graph.TextStyle;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getColor <em>Color</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getFontStyle <em>Font Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getFontWeight <em>Font Weight</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getFontFamily <em>Font Family</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getFontSize <em>Font Size</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getAlign <em>Align</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getVerticalAlign <em>Vertical Align</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBaseline <em>Baseline</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getLineHeight <em>Line Height</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBackgroundColor <em>Background Color</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBorderColor <em>Border Color</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBorderWidth <em>Border Width</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBorderType <em>Border Type</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBorderDashOffset <em>Border Dash Offset</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getBorderRadius <em>Border Radius</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getPadding <em>Padding</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getTextBorderColor <em>Text Border Color</em>}</li>
@@ -37,23 +49,12 @@ import org.nasdanika.models.echarts.graph.TextStyle;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getTextShadowBlur <em>Text Shadow Blur</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getTextShadowOffsetX <em>Text Shadow Offset X</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getTextShadowOffsetY <em>Text Shadow Offset Y</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getOverflow <em>Overflow</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getEllipsis <em>Ellipsis</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.TextStyleImpl#getTag <em>Tag</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextStyle {
-	/**
-	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getColor()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COLOR_EDEFAULT = null;
-
+public class TextStyleImpl extends StyleImpl implements TextStyle {
 	/**
 	 * The default value of the '{@link #getFontStyle() <em>Font Style</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -95,6 +96,36 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	protected static final Integer FONT_SIZE_EDEFAULT = null;
 
 	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Align ALIGN_EDEFAULT = Align.LEFT;
+
+	/**
+	 * The default value of the '{@link #getVerticalAlign() <em>Vertical Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVerticalAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final VerticalAlign VERTICAL_ALIGN_EDEFAULT = VerticalAlign.TOP;
+
+	/**
+	 * The default value of the '{@link #getBaseline() <em>Baseline</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaseline()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BASELINE_EDEFAULT = null;
+
+	/**
 	 * The default value of the '{@link #getLineHeight() <em>Line Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,6 +134,66 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	 * @ordered
 	 */
 	protected static final Integer LINE_HEIGHT_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBackgroundColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BACKGROUND_COLOR_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getBorderColor() <em>Border Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorderColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BORDER_COLOR_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getBorderWidth() <em>Border Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorderWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer BORDER_WIDTH_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getBorderType() <em>Border Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorderType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final BorderType BORDER_TYPE_EDEFAULT = BorderType.SOLID;
+
+	/**
+	 * The default value of the '{@link #getBorderDashOffset() <em>Border Dash Offset</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorderDashOffset()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer BORDER_DASH_OFFSET_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getBorderRadius() <em>Border Radius</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBorderRadius()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer BORDER_RADIUS_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -205,24 +296,14 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	protected static final Integer TEXT_SHADOW_OFFSET_Y_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getOverflow() <em>Overflow</em>}' attribute.
+	 * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOverflow()
+	 * @see #getTag()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Overflow OVERFLOW_EDEFAULT = Overflow.TRUNCATE;
-
-	/**
-	 * The default value of the '{@link #getEllipsis() <em>Ellipsis</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEllipsis()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ELLIPSIS_EDEFAULT = null;
+	protected static final String TAG_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,36 +322,6 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	@Override
 	protected EClass eStaticClass() {
 		return GraphPackage.Literals.TEXT_STYLE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getColor() {
-		return (String)eDynamicGet(GraphPackage.TEXT_STYLE__COLOR, GraphPackage.Literals.TEXT_STYLE__COLOR, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setColor(String newColor) {
-		eDynamicSet(GraphPackage.TEXT_STYLE__COLOR, GraphPackage.Literals.TEXT_STYLE__COLOR, newColor);
 	}
 
 	/**
@@ -579,8 +630,8 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	 * @generated
 	 */
 	@Override
-	public Overflow getOverflow() {
-		return (Overflow)eDynamicGet(GraphPackage.TEXT_STYLE__OVERFLOW, GraphPackage.Literals.TEXT_STYLE__OVERFLOW, true, true);
+	public String getTag() {
+		return (String)eDynamicGet(GraphPackage.TEXT_STYLE__TAG, GraphPackage.Literals.TEXT_STYLE__TAG, true, true);
 	}
 
 	/**
@@ -589,8 +640,8 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	 * @generated
 	 */
 	@Override
-	public void setOverflow(Overflow newOverflow) {
-		eDynamicSet(GraphPackage.TEXT_STYLE__OVERFLOW, GraphPackage.Literals.TEXT_STYLE__OVERFLOW, newOverflow);
+	public void setTag(String newTag) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__TAG, GraphPackage.Literals.TEXT_STYLE__TAG, newTag);
 	}
 
 	/**
@@ -599,8 +650,8 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	 * @generated
 	 */
 	@Override
-	public String getEllipsis() {
-		return (String)eDynamicGet(GraphPackage.TEXT_STYLE__ELLIPSIS, GraphPackage.Literals.TEXT_STYLE__ELLIPSIS, true, true);
+	public Align getAlign() {
+		return (Align)eDynamicGet(GraphPackage.TEXT_STYLE__ALIGN, GraphPackage.Literals.TEXT_STYLE__ALIGN, true, true);
 	}
 
 	/**
@@ -609,8 +660,179 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	 * @generated
 	 */
 	@Override
-	public void setEllipsis(String newEllipsis) {
-		eDynamicSet(GraphPackage.TEXT_STYLE__ELLIPSIS, GraphPackage.Literals.TEXT_STYLE__ELLIPSIS, newEllipsis);
+	public void setAlign(Align newAlign) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__ALIGN, GraphPackage.Literals.TEXT_STYLE__ALIGN, newAlign);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VerticalAlign getVerticalAlign() {
+		return (VerticalAlign)eDynamicGet(GraphPackage.TEXT_STYLE__VERTICAL_ALIGN, GraphPackage.Literals.TEXT_STYLE__VERTICAL_ALIGN, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setVerticalAlign(VerticalAlign newVerticalAlign) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__VERTICAL_ALIGN, GraphPackage.Literals.TEXT_STYLE__VERTICAL_ALIGN, newVerticalAlign);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getBaseline() {
+		return (String)eDynamicGet(GraphPackage.TEXT_STYLE__BASELINE, GraphPackage.Literals.TEXT_STYLE__BASELINE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBaseline(String newBaseline) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BASELINE, GraphPackage.Literals.TEXT_STYLE__BASELINE, newBaseline);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getBackgroundColor() {
+		return (String)eDynamicGet(GraphPackage.TEXT_STYLE__BACKGROUND_COLOR, GraphPackage.Literals.TEXT_STYLE__BACKGROUND_COLOR, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBackgroundColor(String newBackgroundColor) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BACKGROUND_COLOR, GraphPackage.Literals.TEXT_STYLE__BACKGROUND_COLOR, newBackgroundColor);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getBorderColor() {
+		return (String)eDynamicGet(GraphPackage.TEXT_STYLE__BORDER_COLOR, GraphPackage.Literals.TEXT_STYLE__BORDER_COLOR, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBorderColor(String newBorderColor) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BORDER_COLOR, GraphPackage.Literals.TEXT_STYLE__BORDER_COLOR, newBorderColor);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Integer getBorderWidth() {
+		return (Integer)eDynamicGet(GraphPackage.TEXT_STYLE__BORDER_WIDTH, GraphPackage.Literals.TEXT_STYLE__BORDER_WIDTH, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBorderWidth(Integer newBorderWidth) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BORDER_WIDTH, GraphPackage.Literals.TEXT_STYLE__BORDER_WIDTH, newBorderWidth);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BorderType getBorderType() {
+		return (BorderType)eDynamicGet(GraphPackage.TEXT_STYLE__BORDER_TYPE, GraphPackage.Literals.TEXT_STYLE__BORDER_TYPE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBorderType(BorderType newBorderType) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BORDER_TYPE, GraphPackage.Literals.TEXT_STYLE__BORDER_TYPE, newBorderType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Integer getBorderDashOffset() {
+		return (Integer)eDynamicGet(GraphPackage.TEXT_STYLE__BORDER_DASH_OFFSET, GraphPackage.Literals.TEXT_STYLE__BORDER_DASH_OFFSET, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBorderDashOffset(Integer newBorderDashOffset) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BORDER_DASH_OFFSET, GraphPackage.Literals.TEXT_STYLE__BORDER_DASH_OFFSET, newBorderDashOffset);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Integer getBorderRadius() {
+		return (Integer)eDynamicGet(GraphPackage.TEXT_STYLE__BORDER_RADIUS, GraphPackage.Literals.TEXT_STYLE__BORDER_RADIUS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBorderRadius(Integer newBorderRadius) {
+		eDynamicSet(GraphPackage.TEXT_STYLE__BORDER_RADIUS, GraphPackage.Literals.TEXT_STYLE__BORDER_RADIUS, newBorderRadius);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Integer> getPadding() {
+		return (EList<Integer>)eDynamicGet(GraphPackage.TEXT_STYLE__PADDING, GraphPackage.Literals.TEXT_STYLE__PADDING, true, true);
 	}
 
 	/**
@@ -621,8 +843,6 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphPackage.TEXT_STYLE__COLOR:
-				return getColor();
 			case GraphPackage.TEXT_STYLE__FONT_STYLE:
 				return getFontStyle();
 			case GraphPackage.TEXT_STYLE__FONT_WEIGHT:
@@ -631,8 +851,28 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 				return getFontFamily();
 			case GraphPackage.TEXT_STYLE__FONT_SIZE:
 				return getFontSize();
+			case GraphPackage.TEXT_STYLE__ALIGN:
+				return getAlign();
+			case GraphPackage.TEXT_STYLE__VERTICAL_ALIGN:
+				return getVerticalAlign();
+			case GraphPackage.TEXT_STYLE__BASELINE:
+				return getBaseline();
 			case GraphPackage.TEXT_STYLE__LINE_HEIGHT:
 				return getLineHeight();
+			case GraphPackage.TEXT_STYLE__BACKGROUND_COLOR:
+				return getBackgroundColor();
+			case GraphPackage.TEXT_STYLE__BORDER_COLOR:
+				return getBorderColor();
+			case GraphPackage.TEXT_STYLE__BORDER_WIDTH:
+				return getBorderWidth();
+			case GraphPackage.TEXT_STYLE__BORDER_TYPE:
+				return getBorderType();
+			case GraphPackage.TEXT_STYLE__BORDER_DASH_OFFSET:
+				return getBorderDashOffset();
+			case GraphPackage.TEXT_STYLE__BORDER_RADIUS:
+				return getBorderRadius();
+			case GraphPackage.TEXT_STYLE__PADDING:
+				return getPadding();
 			case GraphPackage.TEXT_STYLE__WIDTH:
 				return getWidth();
 			case GraphPackage.TEXT_STYLE__HEIGHT:
@@ -653,10 +893,8 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 				return getTextShadowOffsetX();
 			case GraphPackage.TEXT_STYLE__TEXT_SHADOW_OFFSET_Y:
 				return getTextShadowOffsetY();
-			case GraphPackage.TEXT_STYLE__OVERFLOW:
-				return getOverflow();
-			case GraphPackage.TEXT_STYLE__ELLIPSIS:
-				return getEllipsis();
+			case GraphPackage.TEXT_STYLE__TAG:
+				return getTag();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -666,12 +904,10 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphPackage.TEXT_STYLE__COLOR:
-				setColor((String)newValue);
-				return;
 			case GraphPackage.TEXT_STYLE__FONT_STYLE:
 				setFontStyle((FontStyle)newValue);
 				return;
@@ -684,8 +920,39 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 			case GraphPackage.TEXT_STYLE__FONT_SIZE:
 				setFontSize((Integer)newValue);
 				return;
+			case GraphPackage.TEXT_STYLE__ALIGN:
+				setAlign((Align)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__VERTICAL_ALIGN:
+				setVerticalAlign((VerticalAlign)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BASELINE:
+				setBaseline((String)newValue);
+				return;
 			case GraphPackage.TEXT_STYLE__LINE_HEIGHT:
 				setLineHeight((Integer)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BACKGROUND_COLOR:
+				setBackgroundColor((String)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_COLOR:
+				setBorderColor((String)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_WIDTH:
+				setBorderWidth((Integer)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_TYPE:
+				setBorderType((BorderType)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_DASH_OFFSET:
+				setBorderDashOffset((Integer)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_RADIUS:
+				setBorderRadius((Integer)newValue);
+				return;
+			case GraphPackage.TEXT_STYLE__PADDING:
+				getPadding().clear();
+				getPadding().addAll((Collection<? extends Integer>)newValue);
 				return;
 			case GraphPackage.TEXT_STYLE__WIDTH:
 				setWidth((Integer)newValue);
@@ -717,11 +984,8 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 			case GraphPackage.TEXT_STYLE__TEXT_SHADOW_OFFSET_Y:
 				setTextShadowOffsetY((Integer)newValue);
 				return;
-			case GraphPackage.TEXT_STYLE__OVERFLOW:
-				setOverflow((Overflow)newValue);
-				return;
-			case GraphPackage.TEXT_STYLE__ELLIPSIS:
-				setEllipsis((String)newValue);
+			case GraphPackage.TEXT_STYLE__TAG:
+				setTag((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -735,9 +999,6 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphPackage.TEXT_STYLE__COLOR:
-				setColor(COLOR_EDEFAULT);
-				return;
 			case GraphPackage.TEXT_STYLE__FONT_STYLE:
 				setFontStyle(FONT_STYLE_EDEFAULT);
 				return;
@@ -750,8 +1011,38 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 			case GraphPackage.TEXT_STYLE__FONT_SIZE:
 				setFontSize(FONT_SIZE_EDEFAULT);
 				return;
+			case GraphPackage.TEXT_STYLE__ALIGN:
+				setAlign(ALIGN_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__VERTICAL_ALIGN:
+				setVerticalAlign(VERTICAL_ALIGN_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BASELINE:
+				setBaseline(BASELINE_EDEFAULT);
+				return;
 			case GraphPackage.TEXT_STYLE__LINE_HEIGHT:
 				setLineHeight(LINE_HEIGHT_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BACKGROUND_COLOR:
+				setBackgroundColor(BACKGROUND_COLOR_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_COLOR:
+				setBorderColor(BORDER_COLOR_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_WIDTH:
+				setBorderWidth(BORDER_WIDTH_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_TYPE:
+				setBorderType(BORDER_TYPE_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_DASH_OFFSET:
+				setBorderDashOffset(BORDER_DASH_OFFSET_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__BORDER_RADIUS:
+				setBorderRadius(BORDER_RADIUS_EDEFAULT);
+				return;
+			case GraphPackage.TEXT_STYLE__PADDING:
+				getPadding().clear();
 				return;
 			case GraphPackage.TEXT_STYLE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
@@ -783,11 +1074,8 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 			case GraphPackage.TEXT_STYLE__TEXT_SHADOW_OFFSET_Y:
 				setTextShadowOffsetY(TEXT_SHADOW_OFFSET_Y_EDEFAULT);
 				return;
-			case GraphPackage.TEXT_STYLE__OVERFLOW:
-				setOverflow(OVERFLOW_EDEFAULT);
-				return;
-			case GraphPackage.TEXT_STYLE__ELLIPSIS:
-				setEllipsis(ELLIPSIS_EDEFAULT);
+			case GraphPackage.TEXT_STYLE__TAG:
+				setTag(TAG_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -801,8 +1089,6 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphPackage.TEXT_STYLE__COLOR:
-				return COLOR_EDEFAULT == null ? getColor() != null : !COLOR_EDEFAULT.equals(getColor());
 			case GraphPackage.TEXT_STYLE__FONT_STYLE:
 				return getFontStyle() != FONT_STYLE_EDEFAULT;
 			case GraphPackage.TEXT_STYLE__FONT_WEIGHT:
@@ -811,8 +1097,28 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 				return FONT_FAMILY_EDEFAULT == null ? getFontFamily() != null : !FONT_FAMILY_EDEFAULT.equals(getFontFamily());
 			case GraphPackage.TEXT_STYLE__FONT_SIZE:
 				return FONT_SIZE_EDEFAULT == null ? getFontSize() != null : !FONT_SIZE_EDEFAULT.equals(getFontSize());
+			case GraphPackage.TEXT_STYLE__ALIGN:
+				return getAlign() != ALIGN_EDEFAULT;
+			case GraphPackage.TEXT_STYLE__VERTICAL_ALIGN:
+				return getVerticalAlign() != VERTICAL_ALIGN_EDEFAULT;
+			case GraphPackage.TEXT_STYLE__BASELINE:
+				return BASELINE_EDEFAULT == null ? getBaseline() != null : !BASELINE_EDEFAULT.equals(getBaseline());
 			case GraphPackage.TEXT_STYLE__LINE_HEIGHT:
 				return LINE_HEIGHT_EDEFAULT == null ? getLineHeight() != null : !LINE_HEIGHT_EDEFAULT.equals(getLineHeight());
+			case GraphPackage.TEXT_STYLE__BACKGROUND_COLOR:
+				return BACKGROUND_COLOR_EDEFAULT == null ? getBackgroundColor() != null : !BACKGROUND_COLOR_EDEFAULT.equals(getBackgroundColor());
+			case GraphPackage.TEXT_STYLE__BORDER_COLOR:
+				return BORDER_COLOR_EDEFAULT == null ? getBorderColor() != null : !BORDER_COLOR_EDEFAULT.equals(getBorderColor());
+			case GraphPackage.TEXT_STYLE__BORDER_WIDTH:
+				return BORDER_WIDTH_EDEFAULT == null ? getBorderWidth() != null : !BORDER_WIDTH_EDEFAULT.equals(getBorderWidth());
+			case GraphPackage.TEXT_STYLE__BORDER_TYPE:
+				return getBorderType() != BORDER_TYPE_EDEFAULT;
+			case GraphPackage.TEXT_STYLE__BORDER_DASH_OFFSET:
+				return BORDER_DASH_OFFSET_EDEFAULT == null ? getBorderDashOffset() != null : !BORDER_DASH_OFFSET_EDEFAULT.equals(getBorderDashOffset());
+			case GraphPackage.TEXT_STYLE__BORDER_RADIUS:
+				return BORDER_RADIUS_EDEFAULT == null ? getBorderRadius() != null : !BORDER_RADIUS_EDEFAULT.equals(getBorderRadius());
+			case GraphPackage.TEXT_STYLE__PADDING:
+				return !getPadding().isEmpty();
 			case GraphPackage.TEXT_STYLE__WIDTH:
 				return WIDTH_EDEFAULT == null ? getWidth() != null : !WIDTH_EDEFAULT.equals(getWidth());
 			case GraphPackage.TEXT_STYLE__HEIGHT:
@@ -833,12 +1139,80 @@ public class TextStyleImpl extends MinimalEObjectImpl.Container implements TextS
 				return TEXT_SHADOW_OFFSET_X_EDEFAULT == null ? getTextShadowOffsetX() != null : !TEXT_SHADOW_OFFSET_X_EDEFAULT.equals(getTextShadowOffsetX());
 			case GraphPackage.TEXT_STYLE__TEXT_SHADOW_OFFSET_Y:
 				return TEXT_SHADOW_OFFSET_Y_EDEFAULT == null ? getTextShadowOffsetY() != null : !TEXT_SHADOW_OFFSET_Y_EDEFAULT.equals(getTextShadowOffsetY());
-			case GraphPackage.TEXT_STYLE__OVERFLOW:
-				return getOverflow() != OVERFLOW_EDEFAULT;
-			case GraphPackage.TEXT_STYLE__ELLIPSIS:
-				return ELLIPSIS_EDEFAULT == null ? getEllipsis() != null : !ELLIPSIS_EDEFAULT.equals(getEllipsis());
+			case GraphPackage.TEXT_STYLE__TAG:
+				return TAG_EDEFAULT == null ? getTag() != null : !TAG_EDEFAULT.equals(getTag());
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	protected void configureTextCommonOption(TextCommonOption textCommonOption) {
+		textCommonOption.setColor(getColor());
+		
+		FontStyle fontStyle = getFontStyle();
+		if (fontStyle != null) {
+			textCommonOption.setFontStyle(fontStyle.getLiteral());
+		}
+		
+		FontWeight fontWeight = getFontWeight();
+		if (fontWeight != null) {
+			textCommonOption.setFontWeight(fontWeight.getLiteral());
+		}
+		
+		textCommonOption.setFontFamily(getFontFamily());
+		textCommonOption.setFontSize(getFontSize());		
+		
+		Align align = getAlign();
+		if (align != null) {
+			textCommonOption.setAlign(align.getLiteral());
+		}
+		
+		VerticalAlign vAlign = getVerticalAlign();
+		if (vAlign != null) {
+			textCommonOption.setVerticalAlign(vAlign.getLiteral());
+		}
+		
+		textCommonOption.setBaseline(getBaseline());		
+		textCommonOption.setLineHeight(getLineHeight());
+		textCommonOption.setBackgroundColor(getBackgroundColor());
+		textCommonOption.setBorderColor(getBorderColor());
+		textCommonOption.setBorderWidth(getBorderWidth());
+		
+		BorderType borderType = getBorderType();
+		if (borderType != null) {
+			textCommonOption.setBorderType(borderType.getLiteral());
+		}
+		
+		textCommonOption.setBorderDashOffset(getBorderDashOffset());
+		textCommonOption.setBorderRadius(getBorderRadius());
+		EList<Integer> padding = getPadding();
+		if (padding.size() == 1) {
+			textCommonOption.setPadding(getPadding().get(0));			
+		} else if (!padding.isEmpty()) {
+			textCommonOption.setPadding(padding.toArray(new Integer[padding.size()]));			
+		}
+		textCommonOption.setWidth(getWidth());
+		textCommonOption.setHeight(getHeight());
+		
+		textCommonOption.setTextBorderColor(getTextBorderColor());
+		textCommonOption.setTextBorderWidth(getTextBorderWidth());
+		
+		BorderType textBorderType = getTextBorderType();
+		if (textBorderType != null) {
+			textCommonOption.setTextBorderType(textBorderType.getLiteral());
+		}
+		
+		textCommonOption.setTextBorderDashOffset(getTextBorderDashOffset());
+		textCommonOption.setTextShadowBlur(getTextShadowBlur());
+		textCommonOption.setTextShadowColor(getTextShadowColor());
+		textCommonOption.setTextShadowOffsetX(getTextShadowOffsetX());
+		textCommonOption.setTextShadowOffsetY(getTextShadowOffsetY());
+		textCommonOption.setTag(getTag());
+
+		textCommonOption.setOpacity(getOpacity());		
+		textCommonOption.setShadowBlur(getShadowBlur());
+		textCommonOption.setShadowColor(getShadowColor());
+		textCommonOption.setShadowOffsetX(getShadowOffsetX());
+		textCommonOption.setShadowOffsetY(getShadowOffsetY());
 	}
 
 } //TextStyleImpl

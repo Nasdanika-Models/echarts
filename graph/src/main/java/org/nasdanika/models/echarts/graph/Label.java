@@ -2,10 +2,9 @@
  */
 package org.nasdanika.models.echarts.graph;
 
-import java.math.BigDecimal;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
+import org.icepear.echarts.origin.util.SeriesLabelOption;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,24 +15,17 @@ import org.eclipse.emf.common.util.EMap;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#isShow <em>Show</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getFormatter <em>Formatter</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getShow <em>Show</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Label#getPosition <em>Position</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Label#getDistance <em>Distance</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Label#getRotate <em>Rotate</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Label#getOffset <em>Offset</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getAlign <em>Align</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getVerticalAlign <em>Vertical Align</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getBackgroundColor <em>Background Color</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getBorderColor <em>Border Color</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getBorderWidth <em>Border Width</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getBorderType <em>Border Type</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getBorderDashOffset <em>Border Dash Offset</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getBorderRadius <em>Border Radius</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getPadding <em>Padding</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getShadowColor <em>Shadow Color</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getShadowBlur <em>Shadow Blur</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getShadowOffsetX <em>Shadow Offset X</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Label#getShadowOffsetY <em>Shadow Offset Y</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getMinMargin <em>Min Margin</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getOverflow <em>Overflow</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getSilent <em>Silent</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getPrecision <em>Precision</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Label#getValueAnimation <em>Value Animation</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Label#getRich <em>Rich</em>}</li>
  * </ul>
  *
@@ -44,6 +36,28 @@ import org.eclipse.emf.common.util.EMap;
 public interface Label extends TextStyle {
 
 	/**
+	 * Returns the value of the '<em><b>Formatter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Formatter</em>' attribute.
+	 * @see #setFormatter(String)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Formatter()
+	 * @model
+	 * @generated
+	 */
+	String getFormatter();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getFormatter <em>Formatter</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Formatter</em>' attribute.
+	 * @see #getFormatter()
+	 * @generated
+	 */
+	void setFormatter(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Show</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
@@ -52,22 +66,22 @@ public interface Label extends TextStyle {
 	 * Whether to show label
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show</em>' attribute.
-	 * @see #setShow(boolean)
+	 * @see #setShow(Boolean)
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Show()
 	 * @model default="true"
 	 * @generated
 	 */
-	boolean isShow();
+	Boolean getShow();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#isShow <em>Show</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getShow <em>Show</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Show</em>' attribute.
-	 * @see #isShow()
+	 * @see #getShow()
 	 * @generated
 	 */
-	void setShow(boolean value);
+	void setShow(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Position</b></em>' attribute.
@@ -163,333 +177,139 @@ public interface Label extends TextStyle {
 	EList<Integer> getOffset();
 
 	/**
-	 * Returns the value of the '<em><b>Align</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.Align}.
+	 * Returns the value of the '<em><b>Min Margin</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Horizontal alignment of text, automatic by default.
+	 * Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Align</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.Align
-	 * @see #setAlign(Align)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Align()
+	 * @return the value of the '<em>Min Margin</em>' attribute.
+	 * @see #setMinMargin(Double)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_MinMargin()
 	 * @model
 	 * @generated
 	 */
-	Align getAlign();
+	Double getMinMargin();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getAlign <em>Align</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getMinMargin <em>Min Margin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Align</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.Align
-	 * @see #getAlign()
+	 * @param value the new value of the '<em>Min Margin</em>' attribute.
+	 * @see #getMinMargin()
 	 * @generated
 	 */
-	void setAlign(Align value);
+	void setMinMargin(Double value);
 
 	/**
-	 * Returns the value of the '<em><b>Vertical Align</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.VerticalAlign}.
+	 * Returns the value of the '<em><b>Overflow</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.Overflow}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Vertical alignment of text, automatic by default.
+	 * Determine how to display the text when it's overflow. 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Vertical Align</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.VerticalAlign
-	 * @see #setVerticalAlign(VerticalAlign)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_VerticalAlign()
+	 * @return the value of the '<em>Overflow</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.Overflow
+	 * @see #setOverflow(Overflow)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Overflow()
 	 * @model
 	 * @generated
 	 */
-	VerticalAlign getVerticalAlign();
+	Overflow getOverflow();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getVerticalAlign <em>Vertical Align</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getOverflow <em>Overflow</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Vertical Align</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.VerticalAlign
-	 * @see #getVerticalAlign()
+	 * @param value the new value of the '<em>Overflow</em>' attribute.
+	 * @see org.nasdanika.models.echarts.graph.Overflow
+	 * @see #getOverflow()
 	 * @generated
 	 */
-	void setVerticalAlign(VerticalAlign value);
+	void setOverflow(Overflow value);
 
 	/**
-	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
+	 * Returns the value of the '<em><b>Silent</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Background color of the text fragment.
+	 * Whether to show label
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Background Color</em>' attribute.
-	 * @see #setBackgroundColor(String)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_BackgroundColor()
+	 * @return the value of the '<em>Silent</em>' attribute.
+	 * @see #setSilent(Boolean)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Silent()
+	 * @model default="true"
+	 * @generated
+	 */
+	Boolean getSilent();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getSilent <em>Silent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Silent</em>' attribute.
+	 * @see #getSilent()
+	 * @generated
+	 */
+	void setSilent(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Precision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Precision</em>' attribute.
+	 * @see #setPrecision(Double)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Precision()
 	 * @model
 	 * @generated
 	 */
-	String getBackgroundColor();
+	Double getPrecision();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getBackgroundColor <em>Background Color</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getPrecision <em>Precision</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Background Color</em>' attribute.
-	 * @see #getBackgroundColor()
+	 * @param value the new value of the '<em>Precision</em>' attribute.
+	 * @see #getPrecision()
 	 * @generated
 	 */
-	void setBackgroundColor(String value);
+	void setPrecision(Double value);
 
 	/**
-	 * Returns the value of the '<em><b>Border Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Border color of the text fragment.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Border Color</em>' attribute.
-	 * @see #setBorderColor(String)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_BorderColor()
-	 * @model
-	 * @generated
-	 */
-	String getBorderColor();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getBorderColor <em>Border Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Border Color</em>' attribute.
-	 * @see #getBorderColor()
-	 * @generated
-	 */
-	void setBorderColor(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Border Width</b></em>' attribute.
+	 * Returns the value of the '<em><b>Value Animation</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Border width of the text fragment.
+	 * Whether to show label
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Border Width</em>' attribute.
-	 * @see #setBorderWidth(Integer)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_BorderWidth()
-	 * @model
+	 * @return the value of the '<em>Value Animation</em>' attribute.
+	 * @see #setValueAnimation(Boolean)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_ValueAnimation()
+	 * @model default="true"
 	 * @generated
 	 */
-	Integer getBorderWidth();
+	Boolean getValueAnimation();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getBorderWidth <em>Border Width</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getValueAnimation <em>Value Animation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Border Width</em>' attribute.
-	 * @see #getBorderWidth()
+	 * @param value the new value of the '<em>Value Animation</em>' attribute.
+	 * @see #getValueAnimation()
 	 * @generated
 	 */
-	void setBorderWidth(Integer value);
-
-	/**
-	 * Returns the value of the '<em><b>Border Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.nasdanika.models.echarts.graph.BorderType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The text fragment border type.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Border Type</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.BorderType
-	 * @see #setBorderType(BorderType)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_BorderType()
-	 * @model
-	 * @generated
-	 */
-	BorderType getBorderType();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getBorderType <em>Border Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Border Type</em>' attribute.
-	 * @see org.nasdanika.models.echarts.graph.BorderType
-	 * @see #getBorderType()
-	 * @generated
-	 */
-	void setBorderType(BorderType value);
-
-	/**
-	 * Returns the value of the '<em><b>Border Dash Offset</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * To set the line dash offset. 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Border Dash Offset</em>' attribute.
-	 * @see #setBorderDashOffset(Integer)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_BorderDashOffset()
-	 * @model
-	 * @generated
-	 */
-	Integer getBorderDashOffset();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getBorderDashOffset <em>Border Dash Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Border Dash Offset</em>' attribute.
-	 * @see #getBorderDashOffset()
-	 * @generated
-	 */
-	void setBorderDashOffset(Integer value);
-
-	/**
-	 * Returns the value of the '<em><b>Border Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Border radius of the text fragment.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Border Radius</em>' attribute.
-	 * @see #setBorderRadius(Integer)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_BorderRadius()
-	 * @model
-	 * @generated
-	 */
-	Integer getBorderRadius();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getBorderRadius <em>Border Radius</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Border Radius</em>' attribute.
-	 * @see #getBorderRadius()
-	 * @generated
-	 */
-	void setBorderRadius(Integer value);
-
-	/**
-	 * Returns the value of the '<em><b>Padding</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Padding of the text fragment.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Padding</em>' attribute list.
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Padding()
-	 * @model upper="4"
-	 * @generated
-	 */
-	EList<Integer> getPadding();
-
-	/**
-	 * Returns the value of the '<em><b>Shadow Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Shadow color of the text block.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Shadow Color</em>' attribute.
-	 * @see #setShadowColor(String)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_ShadowColor()
-	 * @model
-	 * @generated
-	 */
-	String getShadowColor();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getShadowColor <em>Shadow Color</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shadow Color</em>' attribute.
-	 * @see #getShadowColor()
-	 * @generated
-	 */
-	void setShadowColor(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Shadow Blur</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Show blur of the text block.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Shadow Blur</em>' attribute.
-	 * @see #setShadowBlur(BigDecimal)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_ShadowBlur()
-	 * @model
-	 * @generated
-	 */
-	BigDecimal getShadowBlur();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getShadowBlur <em>Shadow Blur</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shadow Blur</em>' attribute.
-	 * @see #getShadowBlur()
-	 * @generated
-	 */
-	void setShadowBlur(BigDecimal value);
-
-	/**
-	 * Returns the value of the '<em><b>Shadow Offset X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Shadow X offset of the text block.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Shadow Offset X</em>' attribute.
-	 * @see #setShadowOffsetX(Integer)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_ShadowOffsetX()
-	 * @model
-	 * @generated
-	 */
-	Integer getShadowOffsetX();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getShadowOffsetX <em>Shadow Offset X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shadow Offset X</em>' attribute.
-	 * @see #getShadowOffsetX()
-	 * @generated
-	 */
-	void setShadowOffsetX(Integer value);
-
-	/**
-	 * Returns the value of the '<em><b>Shadow Offset Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Shadow Y offset of the text block.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Shadow Offset Y</em>' attribute.
-	 * @see #setShadowOffsetY(Integer)
-	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_ShadowOffsetY()
-	 * @model
-	 * @generated
-	 */
-	Integer getShadowOffsetY();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Label#getShadowOffsetY <em>Shadow Offset Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shadow Offset Y</em>' attribute.
-	 * @see #getShadowOffsetY()
-	 * @generated
-	 */
-	void setShadowOffsetY(Integer value);
+	void setValueAnimation(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Rich</b></em>' map.
 	 * The key is of type {@link java.lang.String},
-	 * and the value is of type list of {@link java.util.Map.Entry<java.lang.String, java.lang.String>},
+	 * and the value is of type {@link org.nasdanika.models.echarts.graph.TextStyle},
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -497,8 +317,16 @@ public interface Label extends TextStyle {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Rich</em>' map.
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLabel_Rich()
-	 * @model mapType="org.nasdanika.models.echarts.graph.StyleEntry&lt;org.eclipse.emf.ecore.EString, org.nasdanika.models.echarts.graph.StringEntry&gt;"
+	 * @model mapType="org.nasdanika.models.echarts.graph.TextStyleEntry&lt;org.eclipse.emf.ecore.EString, org.nasdanika.models.echarts.graph.TextStyle&gt;"
 	 * @generated
 	 */
-	EMap<String, EMap<String, String>> getRich();
+	EMap<String, TextStyle> getRich();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.SeriesLabelOption"
+	 * @generated
+	 */
+	SeriesLabelOption createSeriesLabelOption();
 } // Label

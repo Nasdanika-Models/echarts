@@ -3,8 +3,6 @@
 package org.nasdanika.models.echarts.graph.util;
 
 import java.util.Map;
-
-import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -129,6 +127,7 @@ public class GraphSwitch<T> extends Switch<T> {
 			case GraphPackage.TEXT_STYLE: {
 				TextStyle textStyle = (TextStyle)theEObject;
 				T result = caseTextStyle(textStyle);
+				if (result == null) result = caseStyle(textStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -136,18 +135,13 @@ public class GraphSwitch<T> extends Switch<T> {
 				Label label = (Label)theEObject;
 				T result = caseLabel(label);
 				if (result == null) result = caseTextStyle(label);
+				if (result == null) result = caseStyle(label);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GraphPackage.STYLE_ENTRY: {
-				@SuppressWarnings("unchecked") Map.Entry<String, EMap<String, String>> styleEntry = (Map.Entry<String, EMap<String, String>>)theEObject;
-				T result = caseStyleEntry(styleEntry);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GraphPackage.STRING_ENTRY: {
-				@SuppressWarnings("unchecked") Map.Entry<String, String> stringEntry = (Map.Entry<String, String>)theEObject;
-				T result = caseStringEntry(stringEntry);
+			case GraphPackage.TEXT_STYLE_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, TextStyle> textStyleEntry = (Map.Entry<String, TextStyle>)theEObject;
+				T result = caseTextStyleEntry(textStyleEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -317,32 +311,17 @@ public class GraphSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Style Entry</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Text Style Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Style Entry</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Text Style Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStyleEntry(Map.Entry<String, EMap<String, String>> object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String Entry</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String Entry</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStringEntry(Map.Entry<String, String> object) {
+	public T caseTextStyleEntry(Map.Entry<String, TextStyle> object) {
 		return null;
 	}
 

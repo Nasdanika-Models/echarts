@@ -26,7 +26,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TOP(0, "TOP", "TOP"),
+	TOP(0, "TOP", "top"),
 
 	/**
 	 * The '<em><b>LEFT</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LEFT(1, "LEFT", "LEFT"),
+	LEFT(1, "LEFT", "left"),
 
 	/**
 	 * The '<em><b>RIGHT</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RIGHT(2, "RIGHT", "RIGHT"),
+	RIGHT(2, "RIGHT", "right"),
 
 	/**
 	 * The '<em><b>BOTTOM</b></em>' literal object.
@@ -56,7 +56,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOTTOM(3, "BOTTOM", "BOTTOM"),
+	BOTTOM(3, "BOTTOM", "bottom"),
 
 	/**
 	 * The '<em><b>INSIDE</b></em>' literal object.
@@ -66,7 +66,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE(4, "INSIDE", "INSIDE"),
+	INSIDE(4, "INSIDE", "inside"),
 
 	/**
 	 * The '<em><b>INSIDE lEFT</b></em>' literal object.
@@ -76,7 +76,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_LEFT(5, "INSIDE_lEFT", "INSIDE_lEFT"),
+	INSIDE_LEFT(5, "INSIDE_lEFT", "insideLeft"),
 
 	/**
 	 * The '<em><b>INSIDE RIGHT</b></em>' literal object.
@@ -86,7 +86,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_RIGHT(6, "INSIDE_RIGHT", "INSIDE_RIGHT"),
+	INSIDE_RIGHT(6, "INSIDE_RIGHT", "insideRight"),
 
 	/**
 	 * The '<em><b>INSIDE TOP</b></em>' literal object.
@@ -96,7 +96,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_TOP(7, "INSIDE_TOP", "INSIDE_TOP"),
+	INSIDE_TOP(7, "INSIDE_TOP", "insideTop"),
 
 	/**
 	 * The '<em><b>INSIDE BOTTOM</b></em>' literal object.
@@ -106,7 +106,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_BOTTOM(8, "INSIDE_BOTTOM", "INSIDE_BOTTOM"),
+	INSIDE_BOTTOM(8, "INSIDE_BOTTOM", "insideBottom"),
 
 	/**
 	 * The '<em><b>INSIDE TOP LEFT</b></em>' literal object.
@@ -116,7 +116,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_TOP_LEFT(9, "INSIDE_TOP_LEFT", "INSIDE_TOP_LEFT"),
+	INSIDE_TOP_LEFT(9, "INSIDE_TOP_LEFT", "insideTopLeft"),
 
 	/**
 	 * The '<em><b>INSIDE BOTTOM LEFT</b></em>' literal object.
@@ -126,7 +126,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_BOTTOM_LEFT(10, "INSIDE_BOTTOM_LEFT", "INSIDE_BOTTOM_LEFT"),
+	INSIDE_BOTTOM_LEFT(10, "INSIDE_BOTTOM_LEFT", "insideBottomLeft"),
 
 	/**
 	 * The '<em><b>INSIDE TOP RIGHT</b></em>' literal object.
@@ -136,7 +136,7 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_TOP_RIGHT(11, "INSIDE_TOP_RIGHT", "INSIDE_TOP_RIGHT"),
+	INSIDE_TOP_RIGHT(11, "INSIDE_TOP_RIGHT", "insideTopRight"),
 
 	/**
 	 * The '<em><b>INSIDE BOTTOM RIGHT</b></em>' literal object.
@@ -146,14 +146,14 @@ public enum LabelPosition implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSIDE_BOTTOM_RIGHT(12, "INSIDE_BOTTOM_RIGHT", "INSIDE_BOTTOM_RIGHT");
+	INSIDE_BOTTOM_RIGHT(12, "INSIDE_BOTTOM_RIGHT", "insideBottomRight");
 
 	/**
 	 * The '<em><b>TOP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #TOP
-	 * @model
+	 * @model literal="top"
 	 * @generated
 	 * @ordered
 	 */
@@ -164,7 +164,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LEFT
-	 * @model
+	 * @model literal="left"
 	 * @generated
 	 * @ordered
 	 */
@@ -175,7 +175,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT
-	 * @model
+	 * @model literal="right"
 	 * @generated
 	 * @ordered
 	 */
@@ -186,7 +186,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BOTTOM
-	 * @model
+	 * @model literal="bottom"
 	 * @generated
 	 * @ordered
 	 */
@@ -197,7 +197,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE
-	 * @model
+	 * @model literal="inside"
 	 * @generated
 	 * @ordered
 	 */
@@ -208,7 +208,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_LEFT
-	 * @model name="INSIDE_lEFT"
+	 * @model name="INSIDE_lEFT" literal="insideLeft"
 	 * @generated
 	 * @ordered
 	 */
@@ -219,7 +219,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_RIGHT
-	 * @model
+	 * @model literal="insideRight"
 	 * @generated
 	 * @ordered
 	 */
@@ -230,7 +230,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_TOP
-	 * @model
+	 * @model literal="insideTop"
 	 * @generated
 	 * @ordered
 	 */
@@ -241,7 +241,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_BOTTOM
-	 * @model
+	 * @model literal="insideBottom"
 	 * @generated
 	 * @ordered
 	 */
@@ -252,7 +252,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_TOP_LEFT
-	 * @model
+	 * @model literal="insideTopLeft"
 	 * @generated
 	 * @ordered
 	 */
@@ -263,7 +263,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_BOTTOM_LEFT
-	 * @model
+	 * @model literal="insideBottomLeft"
 	 * @generated
 	 * @ordered
 	 */
@@ -274,7 +274,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_TOP_RIGHT
-	 * @model
+	 * @model literal="insideTopRight"
 	 * @generated
 	 * @ordered
 	 */
@@ -285,7 +285,7 @@ public enum LabelPosition implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INSIDE_BOTTOM_RIGHT
-	 * @model
+	 * @model literal="insideBottomRight"
 	 * @generated
 	 * @ordered
 	 */

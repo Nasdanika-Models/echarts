@@ -26,7 +26,7 @@ public enum Overflow implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TRUNCATE(0, "TRUNCATE", "TRUNCATE"),
+	TRUNCATE(0, "TRUNCATE", "truncate"),
 
 	/**
 	 * The '<em><b>BREAK</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum Overflow implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BREAK(1, "BREAK", "BREAK"),
+	BREAK(1, "BREAK", "break"),
 
 	/**
 	 * The '<em><b>BREAK ALL</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum Overflow implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BREAK_ALL(2, "BREAK_ALL", "BREAK_ALL");
+	BREAK_ALL(2, "BREAK_ALL", "breakAll");
 
 	/**
 	 * The '<em><b>TRUNCATE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #TRUNCATE
-	 * @model
+	 * @model literal="truncate"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum Overflow implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BREAK
-	 * @model
+	 * @model literal="break"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum Overflow implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BREAK_ALL
-	 * @model
+	 * @model literal="breakAll"
 	 * @generated
 	 * @ordered
 	 */

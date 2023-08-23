@@ -26,7 +26,7 @@ public enum BorderJoin implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BEVEL(0, "BEVEL", "BEVEL"),
+	BEVEL(0, "BEVEL", "bevel"),
 
 	/**
 	 * The '<em><b>ROUND</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum BorderJoin implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ROUND(1, "ROUND", "ROUND"),
+	ROUND(1, "ROUND", "round"),
 
 	/**
 	 * The '<em><b>MITER</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum BorderJoin implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MITER(2, "MITER", "MITER");
+	MITER(2, "MITER", "miter");
 
 	/**
 	 * The '<em><b>BEVEL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BEVEL
-	 * @model
+	 * @model literal="bevel"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum BorderJoin implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ROUND
-	 * @model
+	 * @model literal="round"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum BorderJoin implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #MITER
-	 * @model
+	 * @model literal="miter"
 	 * @generated
 	 * @ordered
 	 */

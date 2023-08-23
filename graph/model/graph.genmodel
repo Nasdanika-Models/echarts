@@ -69,6 +69,9 @@
     <genDataTypes ecoreDataType="graph.ecore#//GraphNodeItem"/>
     <genDataTypes ecoreDataType="graph.ecore#//GraphEdgeItem"/>
     <genDataTypes ecoreDataType="graph.ecore#//GraphCategoryItem"/>
+    <genDataTypes ecoreDataType="graph.ecore#//ItemStyleOption"/>
+    <genDataTypes ecoreDataType="graph.ecore#//GraphEdgeLineStyleOption"/>
+    <genDataTypes ecoreDataType="graph.ecore#//SeriesLabelOption"/>
     <genClasses ecoreClass="graph.ecore#//Graph">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/categories"/>
@@ -118,9 +121,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//LineStyle/join"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//LineStyle/miterLimit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//LineStyle/curveness"/>
+      <genOperations ecoreOperation="graph.ecore#//LineStyle/createGraphEdgeLineStyleOption"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//ItemStyle">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//ItemStyle/borderStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//ItemStyle/decal"/>
+      <genOperations ecoreOperation="graph.ecore#//ItemStyle/createItemStyleOption"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference graph.ecore#//Link/target"/>
@@ -136,12 +142,21 @@
       <genOperations ecoreOperation="graph.ecore#//Link/createGraphEdgeItem"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//TextStyle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/color"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/fontStyle"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/fontWeight"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/fontFamily"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/fontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/verticalAlign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/baseline"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/lineHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/backgroundColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/borderColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/borderWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/borderType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/borderDashOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/borderRadius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/padding"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/height"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/textBorderColor"/>
@@ -152,37 +167,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/textShadowBlur"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/textShadowOffsetX"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/textShadowOffsetY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/overflow"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/ellipsis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyle/tag"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/formatter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/show"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/position"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/distance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/rotate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/offset"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/align"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/verticalAlign"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/backgroundColor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/borderColor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/borderWidth"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/borderType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/borderDashOffset"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/borderRadius"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/padding"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/shadowColor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/shadowBlur"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/shadowOffsetX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/shadowOffsetY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/minMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/overflow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/silent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/valueAnimation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Label/rich"/>
+      <genOperations ecoreOperation="graph.ecore#//Label/createSeriesLabelOption"/>
     </genClasses>
-    <genClasses ecoreClass="graph.ecore#//StyleEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//StyleEntry/key"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//StyleEntry/value"/>
-    </genClasses>
-    <genClasses ecoreClass="graph.ecore#//StringEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//StringEntry/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//StringEntry/value"/>
+    <genClasses ecoreClass="graph.ecore#//TextStyleEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyleEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//TextStyleEntry/value"/>
     </genClasses>
     <genClasses image="false" ecoreClass="graph.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//State/disabled"/>

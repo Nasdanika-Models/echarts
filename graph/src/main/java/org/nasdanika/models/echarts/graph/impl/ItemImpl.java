@@ -430,8 +430,15 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	}
 		
 	protected void configureGraphNodeStateOption(GraphNodeStateOption graphNodeStateOption) {
-//	    GraphNodeStateOption setItemStyle(ItemStyleOption itemStyle);
-//	    GraphNodeStateOption setLabel(SeriesLabelOption label);		
+		ItemStyle itemStyle = getItemStyle();
+		if (itemStyle != null) {
+			graphNodeStateOption.setItemStyle(itemStyle.createItemStyleOption());
+		}
+		
+		Label label = getLabel();
+		if (label != null) {
+			graphNodeStateOption.setLabel(label.createSeriesLabelOption());
+		}
 	}
 		
 	protected void configureStatesOptionMixin(StatesOptionMixin statesOptionMixin) {
