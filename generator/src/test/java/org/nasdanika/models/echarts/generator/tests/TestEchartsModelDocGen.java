@@ -124,7 +124,7 @@ public class TestEchartsModelDocGen {
 		URI baseActionURI = URI.createURI("https://echarts.models.nasdanika.org/");
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
-			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.nasdanika.org/")),			
+			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
 			Map.entry(GraphPackage.eINSTANCE, URI.createURI("graph/").resolve(baseActionURI))	
 		);
 		
