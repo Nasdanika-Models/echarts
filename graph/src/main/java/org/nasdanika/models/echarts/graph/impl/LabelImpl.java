@@ -16,7 +16,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.icepear.echarts.components.series.SeriesLabel;
+import org.icepear.echarts.components.series.SeriesLineLabel;
+import org.icepear.echarts.origin.util.LabelOption;
 import org.icepear.echarts.origin.util.SeriesLabelOption;
+import org.icepear.echarts.origin.util.SeriesLineLabelOption;
 import org.icepear.echarts.origin.util.TextCommonOption;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Label;
@@ -387,9 +390,13 @@ public class LabelImpl extends TextStyleImpl implements Label {
 	 */
 	@Override
 	public SeriesLabelOption createSeriesLabelOption() {
-		SeriesLabelOption label = new SeriesLabel();
-		
+		SeriesLabelOption label = new SeriesLabel();		
 		label.setFormatter(getFormatter());
+		configureLabelOption(label);		
+		return label;
+	}
+
+	protected void configureLabelOption(LabelOption label) {
 		label.setShow(getShow());
 		
 		LabelPosition position = getPosition();
@@ -428,7 +435,18 @@ public class LabelImpl extends TextStyleImpl implements Label {
 		}
 		
 		configureTextCommonOption(label);
-		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public SeriesLineLabelOption createSeriesLineLabelOption() {
+		SeriesLineLabelOption label = new SeriesLineLabel();		
+		label.setFormatter(getFormatter());
+		configureLabelOption(label);		
 		return label;
 	}
 
@@ -627,6 +645,8 @@ public class LabelImpl extends TextStyleImpl implements Label {
 		switch (operationID) {
 			case GraphPackage.LABEL___CREATE_SERIES_LABEL_OPTION:
 				return createSeriesLabelOption();
+			case GraphPackage.LABEL___CREATE_SERIES_LINE_LABEL_OPTION:
+				return createSeriesLineLabelOption();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

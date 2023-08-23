@@ -314,7 +314,11 @@ public class TestEchartsModelDocGen {
 			ret.setCategory(otherCategory);
 		}
 		
-		ret.getSymbolSize().add(10.0 + module.getDescriptor().exports().size());
+		ret.getSymbolSize().add(10.0 + Math.log(1 + module.getDescriptor().exports().size()));
+		
+//		org.nasdanika.models.echarts.graph.Label label = GraphFactory.eINSTANCE.createLabel();
+//		label.setColor("red");
+//		ret.setLabel(label);
 		
 		graph.getNodes().add(ret);
 		return ret;

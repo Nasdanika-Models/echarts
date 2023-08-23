@@ -1698,13 +1698,22 @@ public interface GraphPackage extends EPackage {
 	int LABEL___CREATE_SERIES_LABEL_OPTION = TEXT_STYLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Create Series Line Label Option</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL___CREATE_SERIES_LINE_LABEL_OPTION = TEXT_STYLE_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Label</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_OPERATION_COUNT = TEXT_STYLE_OPERATION_COUNT + 1;
+	int LABEL_OPERATION_COUNT = TEXT_STYLE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.TextStyleEntryImpl <em>Text Style Entry</em>}' class.
@@ -2178,6 +2187,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	int SERIES_LABEL_OPTION = 29;
+
+	/**
+	 * The meta object id for the '<em>Series Line Label Option</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.icepear.echarts.origin.util.SeriesLineLabelOption
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getSeriesLineLabelOption()
+	 * @generated
+	 */
+	int SERIES_LINE_LABEL_OPTION = 30;
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Node <em>Node</em>}'.
@@ -3275,6 +3294,16 @@ public interface GraphPackage extends EPackage {
 	EOperation getLabel__CreateSeriesLabelOption();
 
 	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Label#createSeriesLineLabelOption() <em>Create Series Line Label Option</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Series Line Label Option</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.Label#createSeriesLineLabelOption()
+	 * @generated
+	 */
+	EOperation getLabel__CreateSeriesLineLabelOption();
+
+	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Text Style Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3657,6 +3686,17 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getSeriesLabelOption();
+
+	/**
+	 * Returns the meta object for data type '{@link org.icepear.echarts.origin.util.SeriesLineLabelOption <em>Series Line Label Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Series Line Label Option</em>'.
+	 * @see org.icepear.echarts.origin.util.SeriesLineLabelOption
+	 * @model instanceClass="org.icepear.echarts.origin.util.SeriesLineLabelOption"
+	 * @generated
+	 */
+	EDataType getSeriesLineLabelOption();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4407,6 +4447,13 @@ public interface GraphPackage extends EPackage {
 		 */
 		EOperation LABEL___CREATE_SERIES_LABEL_OPTION = eINSTANCE.getLabel__CreateSeriesLabelOption();
 		/**
+		 * The meta object literal for the '<em><b>Create Series Line Label Option</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LABEL___CREATE_SERIES_LINE_LABEL_OPTION = eINSTANCE.getLabel__CreateSeriesLineLabelOption();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.TextStyleEntryImpl <em>Text Style Entry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4700,6 +4747,15 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SERIES_LABEL_OPTION = eINSTANCE.getSeriesLabelOption();
+		/**
+		 * The meta object literal for the '<em>Series Line Label Option</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.icepear.echarts.origin.util.SeriesLineLabelOption
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getSeriesLineLabelOption()
+		 * @generated
+		 */
+		EDataType SERIES_LINE_LABEL_OPTION = eINSTANCE.getSeriesLineLabelOption();
 
 	}
 

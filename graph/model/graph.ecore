@@ -8,6 +8,7 @@
   <eClassifiers xsi:type="ecore:EDataType" name="ItemStyleOption" instanceClassName="org.icepear.echarts.origin.util.ItemStyleOption"/>
   <eClassifiers xsi:type="ecore:EDataType" name="GraphEdgeLineStyleOption" instanceClassName="org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption"/>
   <eClassifiers xsi:type="ecore:EDataType" name="SeriesLabelOption" instanceClassName="org.icepear.echarts.origin.util.SeriesLabelOption"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="SeriesLineLabelOption" instanceClassName="org.icepear.echarts.origin.util.SeriesLineLabelOption"/>
   <eClassifiers xsi:type="ecore:EClass" name="Graph">
     <eOperations name="configureGraphSeries">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -283,6 +284,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//TextStyle">
     <eOperations name="createSeriesLabelOption" eType="#//SeriesLabelOption"/>
+    <eOperations name="createSeriesLineLabelOption" eType="#//SeriesLineLabelOption"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="show" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true">

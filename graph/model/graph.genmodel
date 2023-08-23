@@ -72,6 +72,7 @@
     <genDataTypes ecoreDataType="graph.ecore#//ItemStyleOption"/>
     <genDataTypes ecoreDataType="graph.ecore#//GraphEdgeLineStyleOption"/>
     <genDataTypes ecoreDataType="graph.ecore#//SeriesLabelOption"/>
+    <genDataTypes ecoreDataType="graph.ecore#//SeriesLineLabelOption"/>
     <genClasses ecoreClass="graph.ecore#//Graph">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/categories"/>
@@ -183,6 +184,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Label/valueAnimation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Label/rich"/>
       <genOperations ecoreOperation="graph.ecore#//Label/createSeriesLabelOption"/>
+      <genOperations ecoreOperation="graph.ecore#//Label/createSeriesLineLabelOption"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//TextStyleEntry">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//TextStyleEntry/key"/>

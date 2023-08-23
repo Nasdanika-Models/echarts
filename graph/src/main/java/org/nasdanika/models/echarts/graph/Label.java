@@ -5,6 +5,7 @@ package org.nasdanika.models.echarts.graph;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.icepear.echarts.origin.util.SeriesLabelOption;
+import org.icepear.echarts.origin.util.SeriesLineLabelOption;
 
 /**
  * <!-- begin-user-doc -->
@@ -329,4 +330,12 @@ public interface Label extends TextStyle {
 	 * @generated
 	 */
 	SeriesLabelOption createSeriesLabelOption();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.SeriesLineLabelOption"
+	 * @generated
+	 */
+	SeriesLineLabelOption createSeriesLineLabelOption();
 } // Label

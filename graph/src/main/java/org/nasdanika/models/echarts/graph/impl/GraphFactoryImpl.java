@@ -16,6 +16,7 @@ import org.icepear.echarts.charts.graph.GraphSeries;
 import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
 import org.icepear.echarts.origin.util.ItemStyleOption;
 import org.icepear.echarts.origin.util.SeriesLabelOption;
+import org.icepear.echarts.origin.util.SeriesLineLabelOption;
 import org.nasdanika.models.echarts.graph.*;
 import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderCap;
@@ -143,6 +144,8 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return createGraphEdgeLineStyleOptionFromString(eDataType, initialValue);
 			case GraphPackage.SERIES_LABEL_OPTION:
 				return createSeriesLabelOptionFromString(eDataType, initialValue);
+			case GraphPackage.SERIES_LINE_LABEL_OPTION:
+				return createSeriesLineLabelOptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -188,6 +191,8 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return convertGraphEdgeLineStyleOptionToString(eDataType, instanceValue);
 			case GraphPackage.SERIES_LABEL_OPTION:
 				return convertSeriesLabelOptionToString(eDataType, instanceValue);
+			case GraphPackage.SERIES_LINE_LABEL_OPTION:
+				return convertSeriesLineLabelOptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -638,6 +643,24 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	public String convertSeriesLabelOptionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SeriesLineLabelOption createSeriesLineLabelOptionFromString(EDataType eDataType, String initialValue) {
+		return (SeriesLineLabelOption)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSeriesLineLabelOptionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

@@ -19,6 +19,7 @@ import org.icepear.echarts.charts.graph.GraphSeries;
 import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
 import org.icepear.echarts.origin.util.ItemStyleOption;
 import org.icepear.echarts.origin.util.SeriesLabelOption;
+import org.icepear.echarts.origin.util.SeriesLineLabelOption;
 import org.nasdanika.models.echarts.graph.Align;
 import org.nasdanika.models.echarts.graph.BorderCap;
 import org.nasdanika.models.echarts.graph.BorderJoin;
@@ -254,6 +255,13 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	private EDataType seriesLabelOptionEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType seriesLineLabelOptionEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1331,6 +1339,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getLabel__CreateSeriesLineLabelOption() {
+		return labelEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getTextStyleEntry() {
 		return textStyleEntryEClass;
 	}
@@ -1691,6 +1709,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getSeriesLineLabelOption() {
+		return seriesLineLabelOptionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public GraphFactory getGraphFactory() {
 		return (GraphFactory)getEFactoryInstance();
 	}
@@ -1823,6 +1851,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEAttribute(labelEClass, LABEL__VALUE_ANIMATION);
 		createEReference(labelEClass, LABEL__RICH);
 		createEOperation(labelEClass, LABEL___CREATE_SERIES_LABEL_OPTION);
+		createEOperation(labelEClass, LABEL___CREATE_SERIES_LINE_LABEL_OPTION);
 
 		textStyleEntryEClass = createEClass(TEXT_STYLE_ENTRY);
 		createEAttribute(textStyleEntryEClass, TEXT_STYLE_ENTRY__KEY);
@@ -1868,6 +1897,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		itemStyleOptionEDataType = createEDataType(ITEM_STYLE_OPTION);
 		graphEdgeLineStyleOptionEDataType = createEDataType(GRAPH_EDGE_LINE_STYLE_OPTION);
 		seriesLabelOptionEDataType = createEDataType(SERIES_LABEL_OPTION);
+		seriesLineLabelOptionEDataType = createEDataType(SERIES_LINE_LABEL_OPTION);
 	}
 
 	/**
@@ -2025,6 +2055,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 
 		initEOperation(getLabel__CreateSeriesLabelOption(), this.getSeriesLabelOption(), "createSeriesLabelOption", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getLabel__CreateSeriesLineLabelOption(), this.getSeriesLineLabelOption(), "createSeriesLineLabelOption", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(textStyleEntryEClass, Map.Entry.class, "TextStyleEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextStyleEntry_Key(), ecorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTextStyleEntry_Value(), this.getTextStyle(), null, "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2115,6 +2147,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEDataType(itemStyleOptionEDataType, ItemStyleOption.class, "ItemStyleOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(graphEdgeLineStyleOptionEDataType, GraphEdgeLineStyleOption.class, "GraphEdgeLineStyleOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(seriesLabelOptionEDataType, SeriesLabelOption.class, "SeriesLabelOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(seriesLineLabelOptionEDataType, SeriesLineLabelOption.class, "SeriesLineLabelOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
