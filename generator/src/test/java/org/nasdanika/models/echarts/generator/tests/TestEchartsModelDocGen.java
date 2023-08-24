@@ -98,6 +98,7 @@ public class TestEchartsModelDocGen {
 		
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
 		context.register(DiagramGenerator.class, new PlantUMLDiagramGenerator());
+		
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);
 		List<Function<URI,Action>> actionProviders = new ArrayList<>();		
 		EcoreGenEchartsGraphProcessorsFactory ecoreGenEchartsGraphProcessorFactory = new EcoreGenEchartsGraphProcessorsFactory(context);		
@@ -121,7 +122,7 @@ public class TestEchartsModelDocGen {
 		
 		WidgetFactory testProcessor = null;
 		Collection<Throwable> resolveFailures = new ArrayList<>();		
-		URI baseActionURI = URI.createURI("https://echarts.models.nasdanika.org/");
+		URI baseActionURI = URI.createURI("local://echarts.models.nasdanika.org/"); // Using local to avoid relative links to external sites
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
