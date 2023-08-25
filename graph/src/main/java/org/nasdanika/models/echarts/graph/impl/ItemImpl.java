@@ -442,9 +442,20 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	}
 		
 	protected void configureStatesOptionMixin(StatesOptionMixin statesOptionMixin) {
-//	    StatesOptionMixin setEmphasis(Object emphasis);
-//	    StatesOptionMixin setSelect(Object select);
-//	    StatesOptionMixin setBlur(Object blur);		
+		ItemState emphasis = getEmphasis();
+		if (emphasis != null) {
+			statesOptionMixin.setEmphasis(emphasis.createGraphNodeStateOption());
+		}
+		
+		ItemState select = getSelect();
+		if (select != null) {
+			statesOptionMixin.setSelect(select.createGraphNodeStateOption());
+		}
+		
+		ItemState blur = getBlur();
+		if (blur != null) {
+			statesOptionMixin.setBlur(blur.createGraphNodeStateOption());
+		}
 	}
 
 	/**

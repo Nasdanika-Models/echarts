@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.echarts.graph;
 
+import org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Line State</b></em>'.
@@ -40,5 +42,13 @@ public interface LineState extends State {
 	 * @generated
 	 */
 	void setLineStyle(LineStyle value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.GraphEdgeStateOption"
+	 * @generated
+	 */
+	GraphEdgeStateOption createGraphEdgeStateOption();
 
 } // LineState

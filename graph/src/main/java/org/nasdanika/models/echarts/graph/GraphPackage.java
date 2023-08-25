@@ -1854,13 +1854,22 @@ public interface GraphPackage extends EPackage {
 	int ITEM_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Create Graph Node State Option</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_STATE___CREATE_GRAPH_NODE_STATE_OPTION = STATE_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Item State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
+	int ITEM_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.LineStateImpl <em>Line State</em>}' class.
@@ -1909,13 +1918,22 @@ public interface GraphPackage extends EPackage {
 	int LINE_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Create Graph Edge State Option</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_STATE___CREATE_GRAPH_EDGE_STATE_OPTION = STATE_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Line State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
+	int LINE_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.echarts.graph.impl.TooltipImpl <em>Tooltip</em>}' class.
@@ -2197,6 +2215,26 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	int SERIES_LINE_LABEL_OPTION = 30;
+
+	/**
+	 * The meta object id for the '<em>Node State Option</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.icepear.echarts.origin.chart.graph.GraphNodeStateOption
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphNodeStateOption()
+	 * @generated
+	 */
+	int GRAPH_NODE_STATE_OPTION = 31;
+
+	/**
+	 * The meta object id for the '<em>Edge State Option</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption
+	 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphEdgeStateOption()
+	 * @generated
+	 */
+	int GRAPH_EDGE_STATE_OPTION = 32;
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Node <em>Node</em>}'.
@@ -3391,6 +3429,16 @@ public interface GraphPackage extends EPackage {
 	EReference getItemState_ItemStyle();
 
 	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.ItemState#createGraphNodeStateOption() <em>Create Graph Node State Option</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Graph Node State Option</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.ItemState#createGraphNodeStateOption()
+	 * @generated
+	 */
+	EOperation getItemState__CreateGraphNodeStateOption();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.LineState <em>Line State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3410,6 +3458,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLineState_LineStyle();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.LineState#createGraphEdgeStateOption() <em>Create Graph Edge State Option</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Graph Edge State Option</em>' operation.
+	 * @see org.nasdanika.models.echarts.graph.LineState#createGraphEdgeStateOption()
+	 * @generated
+	 */
+	EOperation getLineState__CreateGraphEdgeStateOption();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.echarts.graph.Tooltip <em>Tooltip</em>}'.
@@ -3697,6 +3755,28 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getSeriesLineLabelOption();
+
+	/**
+	 * Returns the meta object for data type '{@link org.icepear.echarts.origin.chart.graph.GraphNodeStateOption <em>Node State Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Node State Option</em>'.
+	 * @see org.icepear.echarts.origin.chart.graph.GraphNodeStateOption
+	 * @model instanceClass="org.icepear.echarts.origin.chart.graph.GraphNodeStateOption"
+	 * @generated
+	 */
+	EDataType getGraphNodeStateOption();
+
+	/**
+	 * Returns the meta object for data type '{@link org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption <em>Edge State Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Edge State Option</em>'.
+	 * @see org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption
+	 * @model instanceClass="org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption"
+	 * @generated
+	 */
+	EDataType getGraphEdgeStateOption();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4516,6 +4596,13 @@ public interface GraphPackage extends EPackage {
 		 */
 		EReference ITEM_STATE__ITEM_STYLE = eINSTANCE.getItemState_ItemStyle();
 		/**
+		 * The meta object literal for the '<em><b>Create Graph Node State Option</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ITEM_STATE___CREATE_GRAPH_NODE_STATE_OPTION = eINSTANCE.getItemState__CreateGraphNodeStateOption();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.LineStateImpl <em>Line State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4531,6 +4618,13 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINE_STATE__LINE_STYLE = eINSTANCE.getLineState_LineStyle();
+		/**
+		 * The meta object literal for the '<em><b>Create Graph Edge State Option</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINE_STATE___CREATE_GRAPH_EDGE_STATE_OPTION = eINSTANCE.getLineState__CreateGraphEdgeStateOption();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.echarts.graph.impl.TooltipImpl <em>Tooltip</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -4756,6 +4850,24 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SERIES_LINE_LABEL_OPTION = eINSTANCE.getSeriesLineLabelOption();
+		/**
+		 * The meta object literal for the '<em>Node State Option</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.icepear.echarts.origin.chart.graph.GraphNodeStateOption
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphNodeStateOption()
+		 * @generated
+		 */
+		EDataType GRAPH_NODE_STATE_OPTION = eINSTANCE.getGraphNodeStateOption();
+		/**
+		 * The meta object literal for the '<em>Edge State Option</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption
+		 * @see org.nasdanika.models.echarts.graph.impl.GraphPackageImpl#getGraphEdgeStateOption()
+		 * @generated
+		 */
+		EDataType GRAPH_EDGE_STATE_OPTION = eINSTANCE.getGraphEdgeStateOption();
 
 	}
 

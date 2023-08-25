@@ -14,6 +14,8 @@ import org.icepear.echarts.charts.graph.GraphEdgeItem;
 import org.icepear.echarts.charts.graph.GraphNodeItem;
 import org.icepear.echarts.charts.graph.GraphSeries;
 import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
+import org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption;
+import org.icepear.echarts.origin.chart.graph.GraphNodeStateOption;
 import org.icepear.echarts.origin.util.ItemStyleOption;
 import org.icepear.echarts.origin.util.SeriesLabelOption;
 import org.icepear.echarts.origin.util.SeriesLineLabelOption;
@@ -146,6 +148,10 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return createSeriesLabelOptionFromString(eDataType, initialValue);
 			case GraphPackage.SERIES_LINE_LABEL_OPTION:
 				return createSeriesLineLabelOptionFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_NODE_STATE_OPTION:
+				return createGraphNodeStateOptionFromString(eDataType, initialValue);
+			case GraphPackage.GRAPH_EDGE_STATE_OPTION:
+				return createGraphEdgeStateOptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -193,6 +199,10 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 				return convertSeriesLabelOptionToString(eDataType, instanceValue);
 			case GraphPackage.SERIES_LINE_LABEL_OPTION:
 				return convertSeriesLineLabelOptionToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_NODE_STATE_OPTION:
+				return convertGraphNodeStateOptionToString(eDataType, instanceValue);
+			case GraphPackage.GRAPH_EDGE_STATE_OPTION:
+				return convertGraphEdgeStateOptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -661,6 +671,42 @@ public class GraphFactoryImpl extends EFactoryImpl implements GraphFactory {
 	 * @generated
 	 */
 	public String convertSeriesLineLabelOptionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GraphNodeStateOption createGraphNodeStateOptionFromString(EDataType eDataType, String initialValue) {
+		return (GraphNodeStateOption)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGraphNodeStateOptionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GraphEdgeStateOption createGraphEdgeStateOptionFromString(EDataType eDataType, String initialValue) {
+		return (GraphEdgeStateOption)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGraphEdgeStateOptionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

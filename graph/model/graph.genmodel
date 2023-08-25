@@ -73,6 +73,8 @@
     <genDataTypes ecoreDataType="graph.ecore#//GraphEdgeLineStyleOption"/>
     <genDataTypes ecoreDataType="graph.ecore#//SeriesLabelOption"/>
     <genDataTypes ecoreDataType="graph.ecore#//SeriesLineLabelOption"/>
+    <genDataTypes ecoreDataType="graph.ecore#//GraphNodeStateOption"/>
+    <genDataTypes ecoreDataType="graph.ecore#//GraphEdgeStateOption"/>
     <genClasses ecoreClass="graph.ecore#//Graph">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//Graph/categories"/>
@@ -196,9 +198,11 @@
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//ItemState">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//ItemState/itemStyle"/>
+      <genOperations ecoreOperation="graph.ecore#//ItemState/createGraphNodeStateOption"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//LineState">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference graph.ecore#//LineState/lineStyle"/>
+      <genOperations ecoreOperation="graph.ecore#//LineState/createGraphEdgeStateOption"/>
     </genClasses>
     <genClasses ecoreClass="graph.ecore#//Tooltip">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graph.ecore#//Tooltip/position"/>

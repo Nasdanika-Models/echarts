@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.echarts.graph;
 
+import org.icepear.echarts.origin.chart.graph.GraphNodeStateOption;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Item State</b></em>'.
@@ -40,5 +42,13 @@ public interface ItemState extends State {
 	 * @generated
 	 */
 	void setItemStyle(ItemStyle value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.echarts.graph.GraphNodeStateOption"
+	 * @generated
+	 */
+	GraphNodeStateOption createGraphNodeStateOption();
 
 } // ItemState

@@ -2,10 +2,16 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.icepear.echarts.charts.graph.GraphEdgeItem;
+import org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption;
 import org.nasdanika.models.echarts.graph.GraphPackage;
+import org.nasdanika.models.echarts.graph.Label;
 import org.nasdanika.models.echarts.graph.LineState;
 import org.nasdanika.models.echarts.graph.LineStyle;
 
@@ -70,6 +76,25 @@ public class LineStateImpl extends StateImpl implements LineState {
 	@Override
 	public void setLineStyle(LineStyle newLineStyle) {
 		eDynamicSet(GraphPackage.LINE_STATE__LINE_STYLE, GraphPackage.Literals.LINE_STATE__LINE_STYLE, newLineStyle);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public GraphEdgeStateOption createGraphEdgeStateOption() {
+		GraphEdgeStateOption ret = new GraphEdgeItem(); 
+		LineStyle lineStyle = getLineStyle();
+		if (lineStyle != null) {
+			ret.setLineStyle(lineStyle.createGraphEdgeLineStyleOption());
+		}
+		Label label = getLabel();
+		if (label != null) {
+			ret.setLabel(label.createSeriesLineLabelOption());
+		}				
+		return ret;
 	}
 
 	/**
@@ -142,6 +167,20 @@ public class LineStateImpl extends StateImpl implements LineState {
 				return getLineStyle() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.LINE_STATE___CREATE_GRAPH_EDGE_STATE_OPTION:
+				return createGraphEdgeStateOption();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //LineStateImpl

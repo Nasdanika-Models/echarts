@@ -383,9 +383,20 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			ret.setLabel(label.createSeriesLineLabelOption());
 		}
 		
-//	    StatesOptionMixin setEmphasis(Object emphasis);
-//	    StatesOptionMixin setSelect(Object select);
-//	    StatesOptionMixin setBlur(Object blur);
+		LineState emphasis = getEmphasis();
+		if (emphasis != null) {
+			ret.setEmphasis(emphasis.createGraphEdgeStateOption());
+		}
+		
+		LineState select = getSelect();
+		if (select != null) {
+			ret.setSelect(select.createGraphEdgeStateOption());
+		}
+		
+		LineState blur = getBlur();
+		if (blur != null) {
+			ret.setBlur(blur.createGraphEdgeStateOption());
+		}
 		
 		EList<Node> graphNodes = ((Graph) eContainer().eContainer()).getNodes();
 		ret.setSource(graphNodes.indexOf(eContainer()));

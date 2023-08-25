@@ -9,6 +9,8 @@
   <eClassifiers xsi:type="ecore:EDataType" name="GraphEdgeLineStyleOption" instanceClassName="org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption"/>
   <eClassifiers xsi:type="ecore:EDataType" name="SeriesLabelOption" instanceClassName="org.icepear.echarts.origin.util.SeriesLabelOption"/>
   <eClassifiers xsi:type="ecore:EDataType" name="SeriesLineLabelOption" instanceClassName="org.icepear.echarts.origin.util.SeriesLineLabelOption"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="GraphNodeStateOption" instanceClassName="org.icepear.echarts.origin.chart.graph.GraphNodeStateOption"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="GraphEdgeStateOption" instanceClassName="org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption"/>
   <eClassifiers xsi:type="ecore:EClass" name="Graph">
     <eOperations name="configureGraphSeries">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -403,10 +405,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemState" eSuperTypes="#//State">
+    <eOperations name="createGraphNodeStateOption" eType="#//GraphNodeStateOption"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="itemStyle" eType="#//ItemStyle"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LineState" eSuperTypes="#//State">
+    <eOperations name="createGraphEdgeStateOption" eType="#//GraphEdgeStateOption"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lineStyle" eType="#//LineStyle"
         containment="true"/>
   </eClassifiers>

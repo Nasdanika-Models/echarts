@@ -17,6 +17,8 @@ import org.icepear.echarts.charts.graph.GraphEdgeItem;
 import org.icepear.echarts.charts.graph.GraphNodeItem;
 import org.icepear.echarts.charts.graph.GraphSeries;
 import org.icepear.echarts.origin.chart.graph.GraphEdgeLineStyleOption;
+import org.icepear.echarts.origin.chart.graph.GraphEdgeStateOption;
+import org.icepear.echarts.origin.chart.graph.GraphNodeStateOption;
 import org.icepear.echarts.origin.util.ItemStyleOption;
 import org.icepear.echarts.origin.util.SeriesLabelOption;
 import org.icepear.echarts.origin.util.SeriesLineLabelOption;
@@ -262,6 +264,20 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	private EDataType seriesLineLabelOptionEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType graphNodeStateOptionEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType graphEdgeStateOptionEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1429,6 +1445,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getItemState__CreateGraphNodeStateOption() {
+		return itemStateEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLineState() {
 		return lineStateEClass;
 	}
@@ -1441,6 +1467,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	@Override
 	public EReference getLineState_LineStyle() {
 		return (EReference)lineStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getLineState__CreateGraphEdgeStateOption() {
+		return lineStateEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1719,6 +1755,26 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getGraphNodeStateOption() {
+		return graphNodeStateOptionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getGraphEdgeStateOption() {
+		return graphEdgeStateOptionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public GraphFactory getGraphFactory() {
 		return (GraphFactory)getEFactoryInstance();
 	}
@@ -1863,9 +1919,11 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 
 		itemStateEClass = createEClass(ITEM_STATE);
 		createEReference(itemStateEClass, ITEM_STATE__ITEM_STYLE);
+		createEOperation(itemStateEClass, ITEM_STATE___CREATE_GRAPH_NODE_STATE_OPTION);
 
 		lineStateEClass = createEClass(LINE_STATE);
 		createEReference(lineStateEClass, LINE_STATE__LINE_STYLE);
+		createEOperation(lineStateEClass, LINE_STATE___CREATE_GRAPH_EDGE_STATE_OPTION);
 
 		tooltipEClass = createEClass(TOOLTIP);
 		createEAttribute(tooltipEClass, TOOLTIP__POSITION);
@@ -1898,6 +1956,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		graphEdgeLineStyleOptionEDataType = createEDataType(GRAPH_EDGE_LINE_STYLE_OPTION);
 		seriesLabelOptionEDataType = createEDataType(SERIES_LABEL_OPTION);
 		seriesLineLabelOptionEDataType = createEDataType(SERIES_LINE_LABEL_OPTION);
+		graphNodeStateOptionEDataType = createEDataType(GRAPH_NODE_STATE_OPTION);
+		graphEdgeStateOptionEDataType = createEDataType(GRAPH_EDGE_STATE_OPTION);
 	}
 
 	/**
@@ -2068,8 +2128,12 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEClass(itemStateEClass, ItemState.class, "ItemState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getItemState_ItemStyle(), this.getItemStyle(), null, "itemStyle", null, 0, 1, ItemState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getItemState__CreateGraphNodeStateOption(), this.getGraphNodeStateOption(), "createGraphNodeStateOption", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(lineStateEClass, LineState.class, "LineState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLineState_LineStyle(), this.getLineStyle(), null, "lineStyle", null, 0, 1, LineState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getLineState__CreateGraphEdgeStateOption(), this.getGraphEdgeStateOption(), "createGraphEdgeStateOption", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tooltipEClass, Tooltip.class, "Tooltip", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTooltip_Position(), ecorePackage.getEString(), "position", null, 0, 1, Tooltip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2148,6 +2212,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEDataType(graphEdgeLineStyleOptionEDataType, GraphEdgeLineStyleOption.class, "GraphEdgeLineStyleOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(seriesLabelOptionEDataType, SeriesLabelOption.class, "SeriesLabelOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(seriesLineLabelOptionEDataType, SeriesLineLabelOption.class, "SeriesLineLabelOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(graphNodeStateOptionEDataType, GraphNodeStateOption.class, "GraphNodeStateOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(graphEdgeStateOptionEDataType, GraphEdgeStateOption.class, "GraphEdgeStateOption", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -2,12 +2,17 @@
  */
 package org.nasdanika.models.echarts.graph.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.icepear.echarts.charts.graph.GraphCategoryItem;
+import org.icepear.echarts.origin.chart.graph.GraphNodeStateOption;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.ItemState;
 import org.nasdanika.models.echarts.graph.ItemStyle;
+import org.nasdanika.models.echarts.graph.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,6 +75,25 @@ public class ItemStateImpl extends StateImpl implements ItemState {
 	@Override
 	public void setItemStyle(ItemStyle newItemStyle) {
 		eDynamicSet(GraphPackage.ITEM_STATE__ITEM_STYLE, GraphPackage.Literals.ITEM_STATE__ITEM_STYLE, newItemStyle);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public GraphNodeStateOption createGraphNodeStateOption() {
+		GraphNodeStateOption ret = new GraphCategoryItem(); // Closest implementation
+		ItemStyle itemStyle = getItemStyle();
+		if (itemStyle != null) {
+			ret.setItemStyle(itemStyle.createItemStyleOption());
+		}
+		Label label = getLabel();
+		if (label != null) {
+			ret.setLabel(label.createSeriesLabelOption());
+		}				
+		return ret;
 	}
 
 	/**
@@ -142,6 +166,20 @@ public class ItemStateImpl extends StateImpl implements ItemState {
 				return getItemStyle() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case GraphPackage.ITEM_STATE___CREATE_GRAPH_NODE_STATE_OPTION:
+				return createGraphNodeStateOption();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ItemStateImpl
