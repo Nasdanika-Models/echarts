@@ -665,8 +665,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLink_Value() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
+	public EReference getLink_Value() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -676,7 +676,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_LineStyle() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(2);
+		return (EReference)linkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -686,7 +686,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Label() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(3);
+		return (EReference)linkEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -696,7 +696,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Emphasis() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(4);
+		return (EReference)linkEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -706,7 +706,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Blur() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(5);
+		return (EReference)linkEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -716,7 +716,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EReference getLink_Select() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(6);
+		return (EReference)linkEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -726,7 +726,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getLink_Symbol() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -736,7 +736,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getLink_SymbolSize() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -746,7 +746,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 */
 	@Override
 	public EAttribute getLink_IgnoreForceLayout() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -925,8 +925,8 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getItem_Value() {
-		return (EAttribute)itemEClass.getEStructuralFeatures().get(11);
+	public EReference getItem_Value() {
+		return (EReference)itemEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -1815,7 +1815,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(itemEClass, ITEM__EMPHASIS);
 		createEReference(itemEClass, ITEM__BLUR);
 		createEReference(itemEClass, ITEM__SELECT);
-		createEAttribute(itemEClass, ITEM__VALUE);
+		createEReference(itemEClass, ITEM__VALUE);
 		createEOperation(itemEClass, ITEM___CREATE_GRAPH_CATEGORY_ITEM);
 
 		nodeEClass = createEClass(NODE);
@@ -1854,7 +1854,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 
 		linkEClass = createEClass(LINK);
 		createEReference(linkEClass, LINK__TARGET);
-		createEAttribute(linkEClass, LINK__VALUE);
 		createEReference(linkEClass, LINK__LINE_STYLE);
 		createEReference(linkEClass, LINK__LABEL);
 		createEReference(linkEClass, LINK__EMPHASIS);
@@ -1863,6 +1862,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEAttribute(linkEClass, LINK__SYMBOL);
 		createEAttribute(linkEClass, LINK__SYMBOL_SIZE);
 		createEAttribute(linkEClass, LINK__IGNORE_FORCE_LAYOUT);
+		createEReference(linkEClass, LINK__VALUE);
 		createEOperation(linkEClass, LINK___CREATE_GRAPH_EDGE_ITEM);
 
 		textStyleEClass = createEClass(TEXT_STYLE);
@@ -2016,7 +2016,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getItem_Emphasis(), this.getItemState(), null, "emphasis", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getItem_Blur(), this.getItemState(), null, "blur", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getItem_Select(), this.getItemState(), null, "select", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItem_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getItem_Value(), ecorePackage.getEObject(), null, "value", null, 0, -1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getItem__CreateGraphCategoryItem(), this.getGraphCategoryItem(), "createGraphCategoryItem", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -2059,7 +2059,6 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLink_Target(), this.getNode(), this.getNode_IncomingLinks(), "target", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLink_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_LineStyle(), this.getLineStyle(), null, "lineStyle", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Label(), this.getLabel(), null, "label", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Emphasis(), this.getLineState(), null, "emphasis", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2068,6 +2067,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEAttribute(getLink_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_SymbolSize(), ecorePackage.getEDouble(), "symbolSize", null, 0, 2, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_IgnoreForceLayout(), ecorePackage.getEBooleanObject(), "ignoreForceLayout", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Value(), ecorePackage.getEObject(), null, "value", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getLink__CreateGraphEdgeItem(), this.getGraphEdgeItem(), "createGraphEdgeItem", 0, 1, IS_UNIQUE, IS_ORDERED);
 

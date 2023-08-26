@@ -3,11 +3,15 @@
 package org.nasdanika.models.echarts.graph.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.icepear.echarts.charts.graph.GraphCategoryItem;
@@ -19,6 +23,7 @@ import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.ItemState;
 import org.nasdanika.models.echarts.graph.ItemStyle;
 import org.nasdanika.models.echarts.graph.Label;
+import org.nasdanika.ncore.ValueObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -373,8 +378,33 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Double> getValue() {
-		return (EList<Double>)eDynamicGet(GraphPackage.ITEM__VALUE, GraphPackage.Literals.ITEM__VALUE, true, true);
+	public EList<EObject> getValue() {
+		return (EList<EObject>)eDynamicGet(GraphPackage.ITEM__VALUE, GraphPackage.Literals.ITEM__VALUE, true, true);
+	}
+	
+	static Object valueToObject(Collection<EObject> values) {
+		if (values == null || values.isEmpty() ) {
+			return null;
+		}
+		if (values.size() == 1) {
+			for (EObject e: values) {
+				if (e instanceof org.nasdanika.ncore.List) {
+					return ((org.nasdanika.ncore.List) e).toList();
+				} 
+				if (e instanceof org.nasdanika.ncore.Map) {
+					return (((org.nasdanika.ncore.Map) e).toMap());
+				} 
+				if (e instanceof ValueObject) {
+					return ((ValueObject<?>) e).getValue();
+				}
+				return e;
+			}
+		}
+		List<Object> ret = new ArrayList<>();
+		for (EObject value: values) {
+			ret.add(valueToObject(Collections.singleton(value)));
+		}
+		return ret;
 	}
 
 	/**
@@ -388,7 +418,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 		if (getName() != null) {
 			ret.setName(getName());
 		}		
-		EList<Double> value = getValue();
+		
+		EList<EObject> value = getValue();
 		if (value.size() == 1) {
 			ret.setValue(value.get(0));			
 		} else if (!value.isEmpty()) {			
@@ -562,7 +593,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 				return;
 			case GraphPackage.ITEM__VALUE:
 				getValue().clear();
-				getValue().addAll((Collection<? extends Double>)newValue);
+				getValue().addAll((Collection<? extends EObject>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

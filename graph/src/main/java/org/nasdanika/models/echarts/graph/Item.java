@@ -266,16 +266,16 @@ public interface Item extends EObject {
 	void setSelect(ItemState value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Double}.
+	 * Returns the value of the '<em><b>Value</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute list.
+	 * @return the value of the '<em>Value</em>' reference list.
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getItem_Value()
 	 * @model
 	 * @generated
 	 */
-	EList<Double> getValue();
+	EList<EObject> getValue();
 
 	/**
 	 * <!-- begin-user-doc -->

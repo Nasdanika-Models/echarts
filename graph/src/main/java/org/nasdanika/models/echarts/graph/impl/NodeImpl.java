@@ -4,10 +4,12 @@ package org.nasdanika.models.echarts.graph.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.Collections;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.icepear.echarts.charts.graph.GraphNodeItem;
@@ -267,12 +269,8 @@ public class NodeImpl extends ItemImpl implements Node {
 		if (getName() != null) {
 			ret.setName(getName());
 		}		
-		EList<Double> value = getValue();
-		if (value.size() == 1) {
-			ret.setValue(value.get(0));			
-		} else if (!value.isEmpty()) {			
-			ret.setValue(value.toArray(new Number[value.size()]));			
-		}
+		ret.setValue(valueToObject(getValue()));
+		
 		if (ret.getX() != null) {
 			ret.setX(getX());
 		}

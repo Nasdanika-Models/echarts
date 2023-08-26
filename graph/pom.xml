@@ -64,6 +64,11 @@
 		    <version>2.34.0</version>
 		</dependency> 		
 		<dependency>
+		    <groupId>org.nasdanika.core</groupId>
+		    <artifactId>ncore</artifactId>
+		    <version>${core.version}</version>
+		</dependency> 		
+		<dependency>
 			<groupId>org.icepear.echarts</groupId>
 			<artifactId>echarts-java</artifactId>
 			<version>1.0.7</version>

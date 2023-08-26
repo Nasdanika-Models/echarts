@@ -69,6 +69,7 @@ import org.nasdanika.models.echarts.graph.Node;
 import org.nasdanika.models.echarts.graph.processors.EcoreGenEchartsGraphProcessorsFactory;
 import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * Tests Ecore -> Graph -> Processor -> actions generation
@@ -79,7 +80,7 @@ public class TestEchartsModelDocGen {
 	
 	@Test
 	public void testGenerateEchartsModelDoc() throws IOException, DiagnosticException {
-		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, GraphPackage.eINSTANCE);
+		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, NcorePackage.eINSTANCE, GraphPackage.eINSTANCE);
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();
 		Transformer<EObject,Element> graphFactory = new Transformer<>(new EcoreGraphFactory());
 		Map<EObject, Element> graph = graphFactory.transform(ePackages, false, progressMonitor);
@@ -126,6 +127,7 @@ public class TestEchartsModelDocGen {
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
+			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/")),			
 			Map.entry(GraphPackage.eINSTANCE, URI.createURI("graph/").resolve(baseActionURI))	
 		);
 		

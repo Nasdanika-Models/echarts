@@ -274,7 +274,7 @@ public interface GraphPackage extends EPackage {
 	int ITEM__SELECT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * The feature id for the '<em><b>Value</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -409,7 +409,7 @@ public interface GraphPackage extends EPackage {
 	int NODE__SELECT = ITEM__SELECT;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * The feature id for the '<em><b>Value</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -850,22 +850,13 @@ public interface GraphPackage extends EPackage {
 	int LINK__TARGET = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__VALUE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Line Style</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__LINE_STYLE = 2;
+	int LINK__LINE_STYLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -874,7 +865,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__LABEL = 3;
+	int LINK__LABEL = 2;
 
 	/**
 	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference.
@@ -883,7 +874,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__EMPHASIS = 4;
+	int LINK__EMPHASIS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Blur</b></em>' containment reference.
@@ -892,7 +883,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__BLUR = 5;
+	int LINK__BLUR = 4;
 
 	/**
 	 * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -901,7 +892,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__SELECT = 6;
+	int LINK__SELECT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Symbol</b></em>' attribute.
@@ -910,7 +901,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__SYMBOL = 7;
+	int LINK__SYMBOL = 6;
 
 	/**
 	 * The feature id for the '<em><b>Symbol Size</b></em>' attribute list.
@@ -919,7 +910,7 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__SYMBOL_SIZE = 8;
+	int LINK__SYMBOL_SIZE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Ignore Force Layout</b></em>' attribute.
@@ -928,7 +919,16 @@ public interface GraphPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__IGNORE_FORCE_LAYOUT = 9;
+	int LINK__IGNORE_FORCE_LAYOUT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__VALUE = 9;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -2581,15 +2581,15 @@ public interface GraphPackage extends EPackage {
 	EReference getLink_Target();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.echarts.graph.Link#getValue <em>Value</em>}'.
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.echarts.graph.Link#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @return the meta object for the reference list '<em>Value</em>'.
 	 * @see org.nasdanika.models.echarts.graph.Link#getValue()
 	 * @see #getLink()
 	 * @generated
 	 */
-	EAttribute getLink_Value();
+	EReference getLink_Value();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.nasdanika.models.echarts.graph.Link#getLineStyle <em>Line Style</em>}'.
@@ -2863,15 +2863,15 @@ public interface GraphPackage extends EPackage {
 	EReference getItem_Select();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.echarts.graph.Item#getValue <em>Value</em>}'.
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.echarts.graph.Item#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @return the meta object for the reference list '<em>Value</em>'.
 	 * @see org.nasdanika.models.echarts.graph.Item#getValue()
 	 * @see #getItem()
 	 * @generated
 	 */
-	EAttribute getItem_Value();
+	EReference getItem_Value();
 
 	/**
 	 * Returns the meta object for the '{@link org.nasdanika.models.echarts.graph.Item#createGraphCategoryItem() <em>Create Graph Category Item</em>}' operation.
@@ -4036,12 +4036,12 @@ public interface GraphPackage extends EPackage {
 		 */
 		EReference LINK__TARGET = eINSTANCE.getLink_Target();
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LINK__VALUE = eINSTANCE.getLink_Value();
+		EReference LINK__VALUE = eINSTANCE.getLink_Value();
 		/**
 		 * The meta object literal for the '<em><b>Line Style</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -4222,12 +4222,12 @@ public interface GraphPackage extends EPackage {
 		 */
 		EReference ITEM__SELECT = eINSTANCE.getItem_Select();
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ITEM__VALUE = eINSTANCE.getItem_Value();
+		EReference ITEM__VALUE = eINSTANCE.getItem_Value();
 		/**
 		 * The meta object literal for the '<em><b>Create Graph Category Item</b></em>' operation.
 		 * <!-- begin-user-doc -->

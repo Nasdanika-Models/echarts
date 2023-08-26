@@ -55,8 +55,8 @@
         <details key="documentation" value="Select state of specified node."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//Item">
     <eOperations name="createGraphNodeItem" eType="#//GraphNodeItem"/>
@@ -114,8 +114,6 @@
     <eOperations name="createGraphEdgeItem" eType="#//GraphEdgeItem"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Node"
         eOpposite="#//Node/incomingLinks"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lineStyle" eType="#//LineStyle"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Label"
@@ -154,6 +152,8 @@
         <details key="documentation" value="Prevent this edge from force layout calculating."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextStyle" eSuperTypes="#//Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontStyle" eType="#//FontStyle">

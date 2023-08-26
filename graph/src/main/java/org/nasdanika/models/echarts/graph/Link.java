@@ -16,7 +16,6 @@ import org.icepear.echarts.charts.graph.GraphEdgeItem;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getTarget <em>Target</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.Link#getValue <em>Value</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getLineStyle <em>Line Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getLabel <em>Label</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getEmphasis <em>Emphasis</em>}</li>
@@ -25,6 +24,7 @@ import org.icepear.echarts.charts.graph.GraphEdgeItem;
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getSymbolSize <em>Symbol Size</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Link#getIgnoreForceLayout <em>Ignore Force Layout</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Link#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getLink()
@@ -57,16 +57,16 @@ public interface Link extends EObject {
 	void setTarget(Node value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Double}.
+	 * Returns the value of the '<em><b>Value</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute list.
+	 * @return the value of the '<em>Value</em>' reference list.
 	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getLink_Value()
 	 * @model
 	 * @generated
 	 */
-	EList<Double> getValue();
+	EList<EObject> getValue();
 
 	/**
 	 * Returns the value of the '<em><b>Line Style</b></em>' containment reference.

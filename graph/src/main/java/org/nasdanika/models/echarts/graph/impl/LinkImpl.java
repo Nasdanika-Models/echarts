@@ -8,6 +8,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.icepear.echarts.charts.graph.GraphEdgeItem;
@@ -28,7 +29,6 @@ import org.nasdanika.models.echarts.graph.Node;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getLineStyle <em>Line Style</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getEmphasis <em>Emphasis</em>}</li>
@@ -37,6 +37,7 @@ import org.nasdanika.models.echarts.graph.Node;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getSymbolSize <em>Symbol Size</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getIgnoreForceLayout <em>Ignore Force Layout</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.LinkImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,8 +137,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Double> getValue() {
-		return (EList<Double>)eDynamicGet(GraphPackage.LINK__VALUE, GraphPackage.Literals.LINK__VALUE, true, true);
+	public EList<EObject> getValue() {
+		return (EList<EObject>)eDynamicGet(GraphPackage.LINK__VALUE, GraphPackage.Literals.LINK__VALUE, true, true);
 	}
 
 	/**
@@ -350,12 +351,21 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	@Override
 	public GraphEdgeItem createGraphEdgeItem() {
 		GraphEdgeItem ret = new GraphEdgeItem();
-		
-		EList<Double> value = getValue();
-		if (value.size() == 1) {
-			ret.setValue(value.get(0));			
-		} else if (!value.isEmpty()) {			
-			ret.setValue(value.toArray(new Number[value.size()]));			
+		EList<EObject> value = getValue();
+		Object vObj = ItemImpl.valueToObject(value);		
+		if (vObj instanceof Number) {
+			ret.setValue((Number) vObj);			
+		} else if (vObj instanceof String) {
+			ret.setValue((String) vObj);			
+		} else if (vObj instanceof Collection && !((Collection<?>) vObj).isEmpty()) {
+			Collection<?> vCol = (Collection<?>) vObj;
+			if (vCol.iterator().next() instanceof Number) {
+				ret.setValue(vCol.toArray(new Number[vCol.size()]));
+			} else {
+				ret.setValue(vCol.toArray(new String[vCol.size()]));				
+			}
+		} else if (vObj != null) {
+			throw new IllegalArgumentException("Unsupported value type: " + vObj);
 		}
 		
 		if (getSymbol() != null) {
@@ -456,8 +466,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			case GraphPackage.LINK__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case GraphPackage.LINK__VALUE:
-				return getValue();
 			case GraphPackage.LINK__LINE_STYLE:
 				return getLineStyle();
 			case GraphPackage.LINK__LABEL:
@@ -474,6 +482,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 				return getSymbolSize();
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
 				return getIgnoreForceLayout();
+			case GraphPackage.LINK__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -489,10 +499,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 		switch (featureID) {
 			case GraphPackage.LINK__TARGET:
 				setTarget((Node)newValue);
-				return;
-			case GraphPackage.LINK__VALUE:
-				getValue().clear();
-				getValue().addAll((Collection<? extends Double>)newValue);
 				return;
 			case GraphPackage.LINK__LINE_STYLE:
 				setLineStyle((LineStyle)newValue);
@@ -519,6 +525,10 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
 				setIgnoreForceLayout((Boolean)newValue);
 				return;
+			case GraphPackage.LINK__VALUE:
+				getValue().clear();
+				getValue().addAll((Collection<? extends EObject>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -533,9 +543,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 		switch (featureID) {
 			case GraphPackage.LINK__TARGET:
 				setTarget((Node)null);
-				return;
-			case GraphPackage.LINK__VALUE:
-				getValue().clear();
 				return;
 			case GraphPackage.LINK__LINE_STYLE:
 				setLineStyle((LineStyle)null);
@@ -561,6 +568,9 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
 				setIgnoreForceLayout(IGNORE_FORCE_LAYOUT_EDEFAULT);
 				return;
+			case GraphPackage.LINK__VALUE:
+				getValue().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -575,8 +585,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 		switch (featureID) {
 			case GraphPackage.LINK__TARGET:
 				return basicGetTarget() != null;
-			case GraphPackage.LINK__VALUE:
-				return !getValue().isEmpty();
 			case GraphPackage.LINK__LINE_STYLE:
 				return getLineStyle() != null;
 			case GraphPackage.LINK__LABEL:
@@ -593,6 +601,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 				return !getSymbolSize().isEmpty();
 			case GraphPackage.LINK__IGNORE_FORCE_LAYOUT:
 				return IGNORE_FORCE_LAYOUT_EDEFAULT == null ? getIgnoreForceLayout() != null : !IGNORE_FORCE_LAYOUT_EDEFAULT.equals(getIgnoreForceLayout());
+			case GraphPackage.LINK__VALUE:
+				return !getValue().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
