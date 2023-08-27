@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>org.nasdanika</groupId>
 			<artifactId>plantuml-diagram-generator</artifactId>
-			<version>2023.4.1</version>
+			<version>2023.8.0</version>
 		</dependency>
 	</dependencies>
 </project>
