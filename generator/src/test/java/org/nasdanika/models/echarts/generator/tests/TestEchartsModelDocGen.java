@@ -37,6 +37,11 @@ import org.icepear.echarts.charts.sunburst.SunburstSeries;
 import org.icepear.echarts.components.series.SeriesLabel;
 import org.icepear.echarts.origin.chart.graph.GraphCategoryItemOption;
 import org.icepear.echarts.render.Engine;
+import org.jgrapht.alg.drawing.FRLayoutAlgorithm2D;
+import org.jgrapht.alg.drawing.model.Box2D;
+import org.jgrapht.alg.drawing.model.MapLayoutModel2D;
+import org.jgrapht.alg.drawing.model.Point2D;
+import org.jgrapht.graph.DefaultDirectedGraph;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.Diagnostic;
@@ -224,7 +229,7 @@ public class TestEchartsModelDocGen {
 	 * Generates Graph JSON from a model
 	 */
 	@Test
-	public void testModuleGraph() {
+	public void testModuleGraphForce() {
 		Module thisModule = getClass().getModule();
 		ModuleLayer moduleLayer = thisModule.getLayer();
 		
@@ -266,8 +271,128 @@ public class TestEchartsModelDocGen {
     	
 	    Engine engine = new Engine();
 	    new File("target/charts").mkdirs();
-	    engine.render("target/charts/module-graph.html", echartsGraph, "90%", "2000px", false);		
+	    engine.render("target/charts/module-graph-force.html", echartsGraph, "90%", "2000px", false);		
 	}
+	
+	/**
+	 * Generates Graph JSON from a model
+	 */
+	@Test
+	public void testModuleGraphNone() {
+		Module thisModule = getClass().getModule();
+		ModuleLayer moduleLayer = thisModule.getLayer();
+		
+		Graph graph = GraphFactory.eINSTANCE.createGraph();
+		
+		Item nsdCategory = GraphFactory.eINSTANCE.createItem();
+		nsdCategory.setName("Nasdanika");
+		graph.getCategories().add(nsdCategory);
+		
+		Item eclipseCategory = GraphFactory.eINSTANCE.createItem();
+		eclipseCategory.setName("Eclipse");
+		graph.getCategories().add(eclipseCategory);
+		
+		Item javaCategory = GraphFactory.eINSTANCE.createItem();
+		javaCategory.setName("Java");
+		graph.getCategories().add(javaCategory);
+		
+		Item otherCategory = GraphFactory.eINSTANCE.createItem();
+		otherCategory.setName("Other");
+		graph.getCategories().add(otherCategory);
+		
+		moduleToNode(thisModule, moduleLayer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
+		
+		// Using JGraphT for force layout
+		DefaultDirectedGraph<Node, org.nasdanika.models.echarts.graph.Link> dGraph = new DefaultDirectedGraph<>(org.nasdanika.models.echarts.graph.Link.class);
+		
+		// Populating
+		for (Node node: graph.getNodes()) {
+			dGraph.addVertex(node);
+		}		
+		for (Node node: graph.getNodes()) {
+			for (org.nasdanika.models.echarts.graph.Link link: node.getOutgoingLinks()) {
+				dGraph.addEdge(node, link.getTarget(), link);
+			}
+		}		
+		
+		FRLayoutAlgorithm2D<Node, org.nasdanika.models.echarts.graph.Link> forceLayout = new FRLayoutAlgorithm2D<>();
+		MapLayoutModel2D<Node> model = new MapLayoutModel2D<>(new Box2D(1000.0, 800.0));
+		forceLayout.layout(dGraph, model);
+		model.forEach(ne -> {
+			Node node = ne.getKey();
+			Point2D point = ne.getValue();
+			node.setX(point.getX());
+			node.setY(point.getY());
+		});
+		
+		GraphSeries graphSeries = new org.icepear.echarts.charts.graph.GraphSeries().setSymbolSize(50)
+				.setLayout("none")
+                .setLabel(new SeriesLabel().setShow(true))
+                .setDraggable(true)
+                .setEdgeSymbol(new String[] { "none", "arrow" });
+//                .setLineStyle(new GraphEdgeLineStyle().setOpacity(0.9).setWidth(2).setCurveness(0));
+		
+		graph.configureGraphSeries(graphSeries);
+		
+    	org.icepear.echarts.Graph echartsGraph = new org.icepear.echarts.Graph()
+                .setTitle("Module Dependencies")
+//                .setTooltip("item")
+                .setLegend()
+                .addSeries(graphSeries);
+    	
+	    Engine engine = new Engine();
+	    new File("target/charts").mkdirs();
+	    engine.render("target/charts/module-graph-none.html", echartsGraph, "90%", "2000px", false);		
+	}
+		
+	/**
+	 * Generates Graph JSON from a model
+	 */
+	@Test
+	public void testModuleGraphCircular() {
+		Module thisModule = getClass().getModule();
+		ModuleLayer moduleLayer = thisModule.getLayer();
+		
+		Graph graph = GraphFactory.eINSTANCE.createGraph();
+		
+		Item nsdCategory = GraphFactory.eINSTANCE.createItem();
+		nsdCategory.setName("Nasdanika");
+		graph.getCategories().add(nsdCategory);
+		
+		Item eclipseCategory = GraphFactory.eINSTANCE.createItem();
+		eclipseCategory.setName("Eclipse");
+		graph.getCategories().add(eclipseCategory);
+		
+		Item javaCategory = GraphFactory.eINSTANCE.createItem();
+		javaCategory.setName("Java");
+		graph.getCategories().add(javaCategory);
+		
+		Item otherCategory = GraphFactory.eINSTANCE.createItem();
+		otherCategory.setName("Other");
+		graph.getCategories().add(otherCategory);
+		
+		moduleToNode(thisModule, moduleLayer, graph, nsdCategory, eclipseCategory, javaCategory, otherCategory);
+		
+		GraphSeries graphSeries = new org.icepear.echarts.charts.graph.GraphSeries().setSymbolSize(50)
+				.setLayout("circular")
+                .setLabel(new SeriesLabel().setShow(true))
+                .setDraggable(true)
+                .setEdgeSymbol(new String[] { "none", "arrow" });
+//                .setLineStyle(new GraphEdgeLineStyle().setOpacity(0.9).setWidth(2).setCurveness(0));
+		
+		graph.configureGraphSeries(graphSeries);
+		
+    	org.icepear.echarts.Graph echartsGraph = new org.icepear.echarts.Graph()
+                .setTitle("Module Dependencies")
+//                .setTooltip("item")
+                .setLegend()
+                .addSeries(graphSeries);
+    	
+	    Engine engine = new Engine();
+	    new File("target/charts").mkdirs();
+	    engine.render("target/charts/module-graph-circular.html", echartsGraph, "90%", "2000px", false);		
+	}
+	
 	
 	private Node moduleToNode(
 			Module module, 
