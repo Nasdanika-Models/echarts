@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Circular Graph</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css">
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+
+<script src="../../../../search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
+</head>
+  <body>
+    <div tabindex="-1" id="nsd_2ba" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">Hover mouse over nodes elements to display tooltips.
+Double-click on nodes to navigate go documentation.
+Drag to rearrange.
+</div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="0d930736-883e-49d7-91b9-2eb1e8dabe47" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item">
+              <a href="../../../../search.html" data-nsd-label-uuid="1f0eb8bf-6ce1-4fe3-9546-98c4f8fea042" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+            </li>
+            <li class="nav-item">
+              <a href="../../../../glossary.html" data-nsd-label-uuid="aa3e69cd-c7b2-402a-906f-91e753355505" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="../../../../index.html" data-nsd-label-uuid="0f7a7648-724b-440b-acdc-07dab3c1c20b" class="navbar-brand"><span class="fa fa-book nsd-app-label-icon"></span>Echarts Models Documentation</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_2ab" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_2ab" class="collapse navbar-collapse"></div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="card">
+            <div class="card-header">
+              <a href="../../../index.html">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">graph</a>
+            </div>
+            <div class="list-group list-group-flush">
+              <a href="../Align/index.html" data-nsd-label-uuid="45206894-0cee-445d-ae7c-898e047c0848" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">Align</a>
+              <a href="../BorderCap/index.html" data-nsd-label-uuid="29f0ef66-cd4e-499b-a377-3e07c1c0053c" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">BorderCap</a>
+              <a href="../BorderJoin/index.html" data-nsd-label-uuid="f6931f0e-9ef0-46c7-ad63-0fbeab71a76a" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">BorderJoin</a>
+              <a href="../BorderType/index.html" data-nsd-label-uuid="486299eb-5f81-46a5-aea6-d0176ea7cd3e" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">BorderType</a>
+              <a href="../FontStyle/index.html" data-nsd-label-uuid="cdd1289d-72c5-46e3-8215-ef5c9e85d659" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">FontStyle</a>
+              <a href="../FontWeight/index.html" data-nsd-label-uuid="622b7ed0-d7ad-48e9-8892-43ef5202855f" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">FontWeight</a>
+              <a href="../Graph/index.html" data-nsd-label-uuid="5450bc05-91fe-4631-87cf-a3210c4f7ad0" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Graph</a>
+              <a href="../GraphCategoryItem/index.html" data-nsd-label-uuid="adba599c-bbef-4dac-8a42-a21575c177b2" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphCategoryItem</a>
+              <a href="../GraphEdgeItem/index.html" data-nsd-label-uuid="b3df6fa4-6009-4798-bb35-72dda9c9e1f3" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphEdgeItem</a>
+              <a href="../GraphEdgeLineStyleOption/index.html" data-nsd-label-uuid="fa2df242-a9b9-438c-b622-617fe3fd8ebb" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphEdgeLineStyleOption</a>
+              <a href="../GraphEdgeStateOption/index.html" data-nsd-label-uuid="fa4a04a8-091a-4416-a677-6614a9a708eb" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphEdgeStateOption</a>
+              <a href="../GraphNodeItem/index.html" data-nsd-label-uuid="243eaa95-c1ff-4772-8716-0d179eec80f2" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphNodeItem</a>
+              <a href="../GraphNodeStateOption/index.html" data-nsd-label-uuid="cfd88150-ee5e-4113-9f1a-4cdb54aa230a" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphNodeStateOption</a>
+              <a href="../GraphSeries/index.html" data-nsd-label-uuid="24f17b43-680c-4460-b526-7d03ac179b7a" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">GraphSeries</a>
+              <a href="../Item/index.html" data-nsd-label-uuid="1d007b05-b2b8-411a-b417-4cb202568bca" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Item</a>
+              <a href="../ItemState/index.html" data-nsd-label-uuid="b8e441b7-e56c-46e9-9074-6dbeaf20eb9d" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">ItemState</a>
+              <a href="../ItemStyle/index.html" data-nsd-label-uuid="3b7cda2d-7ec3-425b-a16b-170b472cc2ce" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">ItemStyle</a>
+              <a href="../ItemStyleOption/index.html" data-nsd-label-uuid="e21bf7f6-ff15-4d2a-a85f-a8334cf97e13" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">ItemStyleOption</a>
+              <a href="../Label/index.html" data-nsd-label-uuid="5470b9da-72e3-4d55-b5ae-4c7a8eff7640" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Label</a>
+              <a href="../LabelPosition/index.html" data-nsd-label-uuid="4d6f07f8-892e-4e81-8e3c-73f46c48a7bd" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">LabelPosition</a>
+              <a href="../LineState/index.html" data-nsd-label-uuid="c20c100e-bad6-4e89-bfe6-1586cdd8b127" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">LineState</a>
+              <a href="../LineStyle/index.html" data-nsd-label-uuid="25c36b29-5b87-4f38-8daa-a377f240fcd4" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">LineStyle</a>
+              <a href="../Link/index.html" data-nsd-label-uuid="f0b94461-98cb-46f2-af42-6f8c3c9695ec" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Link</a>
+              <a href="../Node/index.html" data-nsd-label-uuid="5ce156a3-3918-4890-b9e3-d3aa3c0b7717" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Node</a>
+              <a href="../Overflow/index.html" data-nsd-label-uuid="1c32f175-5617-4650-bad9-89ef4e895903" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">Overflow</a>
+              <a href="../SeriesLabelOption/index.html" data-nsd-label-uuid="9c78e0e5-844d-477b-96ab-456f0819f995" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">SeriesLabelOption</a>
+              <a href="../SeriesLineLabelOption/index.html" data-nsd-label-uuid="edc54cf5-b0f0-460c-9edd-f94bb300c349" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif" class="nsd-app-label-icon">SeriesLineLabelOption</a>
+              <a href="../State/index.html" data-nsd-label-uuid="cd8fbe5c-9a69-418b-a36d-467d428da675" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"><i>State</i></a>
+              <a href="../Style/index.html" data-nsd-label-uuid="4f9fb85e-a4c0-4c15-9f67-a77ea25b9d9e" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Style</a>
+              <a href="../TextStyle/index.html" data-nsd-label-uuid="7a085098-89dc-4e8b-a1e7-5d3e978229af" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">TextStyle</a>
+              <a href="../TextStyleEntry/index.html" data-nsd-label-uuid="9076a65f-bee2-4105-9ed2-daa063113387" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">TextStyleEntry</a>
+              <a href="index.html" data-nsd-label-uuid="ceda06c7-1288-4886-ac8c-4f8dbf20ae00" class="list-group-item list-group-action active">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Tooltip</a>
+              <a href="../VerticalAlign/index.html" data-nsd-label-uuid="1e16950a-71d4-46d5-8d22-bb251f89480d" class="list-group-item list-group-action">
+                <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EEnum.gif" class="nsd-app-label-icon">VerticalAlign</a>
+            </div>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="d4ebb039-e07e-4a0b-b144-bba2ffa871f0" data-nsd-action-uris="uuid:d4ebb039-e07e-4a0b-b144-bba2ffa871f0" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-breadcrumb-row">
+              <div class="col">
+                <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="../../../index.html" data-nsd-label-uuid="9b05f67d-43ce-45be-a793-38649a7af287">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">graph</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="index.html" data-nsd-label-uuid="ceda06c7-1288-4886-ac8c-4f8dbf20ae00">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Tooltip</a>
+                    </li>
+                    <li class="breadcrumb-item"><span data-nsd-label-uuid="75c3521c-addb-4177-81d1-2aa76ffec6ee"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</span>
+                    </li>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="d4ebb039-e07e-4a0b-b144-bba2ffa871f0">Circular Graph</span>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <h1><span data-nsd-label-uuid="d4ebb039-e07e-4a0b-b144-bba2ffa871f0" class="nsd-app-content-panel-title">Circular Graph<a data-toggle="modal" data-target="#nsd_2ba" href="#" title="A circular layout graph of this classifier and related classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
+                </h1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col"><div id="graph-container-29" class="row" style="height:80vh;width:100%">
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var dom = document.getElementById("graph-container-29");
+		var myChart = echarts.init(dom, null, {
+			render: "canvas",
+			useDirtyRect: false
+		});
+		var option = {"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif","name":"EString","value":{"externalLink":"https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html"},"x":810.4281049776437,"y":438.3615065385402,"category":0},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Tooltip","value":{"externalLink":""},"x":607.557711328263,"y":312.4474716420673,"category":1},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"TextStyle","value":{"externalLink":"../TextStyle/index.html"},"x":565.0598776605457,"y":499.2112754499213,"category":1},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif","name":"EIntegerObject","value":{"externalLink":"https://ecore.models.nasdanika.org/references/eClassifiers/EIntegerObject/index.html"},"x":382.7962960751792,"y":314.04620995547367,"category":0}],"symbolSize":16,"roam":true,"layout":"circular","links":[{"source":1,"target":0},{"source":1,"target":2},{"source":1,"target":3},{"source":2,"target":0},{"source":2,"target":3}],"categories":[{"name":"ecore"},{"name":"graph"}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0.3},"circular":{"rotateLabel":true}}]};
+		option.tooltip = {};
+		option.series[0].tooltip = {
+			formatter: function(arg) {
+				return arg.value ? arg.value.description : null;
+			}
+		};
+		myChart.setOption(option);
+		myChart.on("dblclick", function(params) {
+			if (params.value) {
+				if (params.value.link) {
+					window.open(params.value.link, "_self");
+				} else if (params.value.externalLink) {
+					window.open(params.value.externalLink);
+				}
+			}
+		});
+		window.addEventListener("resize", myChart.resize);
+	});
+
+</script>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
