@@ -2,1072 +2,1072 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
     <loc>https://echarts.models.nasdanika.org/glossary.html</loc>
-    <lastmod>2023-12-03T20:41:20.080-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.965-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/circular-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-12-03T20:41:20.056-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.943-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:20.031-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.933-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/classifiers.html</loc>
-    <lastmod>2023-12-03T20:41:19.995-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.915-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/default-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-12-03T20:41:20.051-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.939-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:20.027-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.930-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:20.023-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.927-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/force-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-12-03T20:41:20.060-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.946-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:20.037-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.935-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.258-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.348-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Align/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.261-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.356-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/BorderCap/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.263-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.382-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/BorderJoin/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.265-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.385-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/BorderType/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.281-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.387-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/FontStyle/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.284-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.391-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/FontWeight/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.291-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.394-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.320-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.426-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.317-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.423-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.314-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.420-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.331-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.429-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.294-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.402-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.333-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.432-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.297-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.407-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/references/eOperations/configureGraphSeries-0/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.304-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.412-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/references/eOperations/configureGraphSeries-0/parameters.html</loc>
-    <lastmod>2023-12-03T20:41:19.306-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.415-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Graph/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.309-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.417-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphCategoryItem/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.336-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.436-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphEdgeItem/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.338-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.442-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphEdgeLineStyleOption/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.341-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.446-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphEdgeStateOption/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.344-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.450-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphNodeItem/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.347-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.455-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphNodeStateOption/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.350-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.459-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/GraphSeries/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.352-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.464-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.357-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.473-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.390-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.502-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.386-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.500-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.382-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.498-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.394-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.504-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.355-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.469-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.370-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.493-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.398-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.506-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.358-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.476-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/references/eStructuralFeatures/blur/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.365-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.486-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/references/eStructuralFeatures/emphasis/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.369-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.488-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/references/eStructuralFeatures/select/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.367-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.491-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Item/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.360-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.480-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.405-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.511-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.425-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.522-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.422-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.520-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.420-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.519-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.427-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.524-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.403-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.509-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.408-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.512-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.430-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.526-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.412-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.515-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemState/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.415-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.516-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.436-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.531-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.456-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.542-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.454-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.540-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.451-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.538-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.459-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.544-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.434-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.529-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.439-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.532-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.461-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.546-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.442-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.534-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyle/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.444-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.535-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/ItemStyleOption/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.465-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.549-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.474-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.555-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.545-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.602-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.538-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.600-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.529-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.598-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.548-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.604-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.469-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.552-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.509-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.590-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.552-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.607-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.512-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.592-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/distance/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.490-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.564-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/minMargin/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.500-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.568-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/offset/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.494-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.586-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/overflow/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.497-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.573-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/position/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.485-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.581-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/precision/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.481-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.559-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/rich/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.505-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.588-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/rotate/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.492-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.575-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/show/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.488-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.570-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/silent/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.483-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.561-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references/eStructuralFeatures/valueAnimation/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.479-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.577-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Label/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.516-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.594-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LabelPosition/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.557-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.610-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.568-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.615-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.593-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.628-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.589-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.625-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.585-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.623-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.596-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.630-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.565-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.614-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.571-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.617-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.598-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.632-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.576-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.619-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineState/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.580-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.621-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.605-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.637-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.620-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.646-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.618-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.645-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.615-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.643-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.623-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.648-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.603-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.635-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.607-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.638-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.626-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.650-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/LineStyle/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.610-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.640-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.633-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.655-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.672-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.682-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.670-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.680-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.668-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.678-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.674-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.684-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.630-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.654-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.676-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.685-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.656-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.671-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references/eStructuralFeatures/blur/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.648-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.670-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references/eStructuralFeatures/emphasis/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.654-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.666-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references/eStructuralFeatures/ignoreForceLayout/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.644-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.664-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references/eStructuralFeatures/select/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.651-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.668-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references/eStructuralFeatures/symbol/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.641-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.662-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references/eStructuralFeatures/symbolSize/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.638-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.660-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Link/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.658-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.673-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.682-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.691-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.697-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.703-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.695-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.701-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.693-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.699-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.699-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.705-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.680-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.689-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.684-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.693-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.702-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.707-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/operations.html</loc>
-    <lastmod>2023-12-03T20:41:19.686-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.695-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Node/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.688-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.697-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Overflow/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.705-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.710-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/SeriesLabelOption/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.709-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.714-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/SeriesLineLabelOption/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.714-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.717-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.720-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.722-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.737-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.736-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.735-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.734-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.733-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.733-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.739-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.738-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.718-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.721-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.728-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.730-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/references/eStructuralFeatures/disabled/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.724-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.727-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/State/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.726-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.728-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.745-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.744-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.759-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.752-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.757-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.750-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.755-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.749-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.761-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.754-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.743-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.742-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.747-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.745-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Style/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.763-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.756-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.769-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.762-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.876-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.845-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.874-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.842-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.871-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.840-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.879-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.848-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.767-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.760-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/inheritance.html</loc>
-    <lastmod>2023-12-03T20:41:19.864-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.836-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.882-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.850-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/align/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.848-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.772-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/backgroundColor/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.844-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.834-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/borderColor/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.812-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.814-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/borderDashOffset/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.859-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.783-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/borderRadius/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.818-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.766-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/borderType/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.841-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.768-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/borderWidth/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.809-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.770-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/fontFamily/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.825-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.792-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/fontSize/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.786-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.828-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/fontStyle/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.834-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.789-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/fontWeight/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.815-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.818-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/height/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.851-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.821-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/lineHeight/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.777-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.779-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/padding/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.807-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.800-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/tag/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.790-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.776-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderColor/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.829-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.794-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderDashOffset/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.774-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.781-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderType/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.863-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.831-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderWidth/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.856-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.797-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowBlur/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.797-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.774-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowColor/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.821-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.802-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowOffsetX/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.802-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.786-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowOffsetY/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.804-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.825-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/verticalAlign/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.794-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.811-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyle/references/eStructuralFeatures/width/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.838-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.805-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.888-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.855-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.902-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.864-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.899-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.862-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.896-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.861-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.904-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.865-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.886-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.854-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.906-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.867-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/TextStyleEntry/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.891-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.857-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/attributes.html</loc>
-    <lastmod>2023-12-03T20:41:19.913-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.872-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/circular-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.953-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.904-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/default-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.951-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.902-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/diagram.html</loc>
-    <lastmod>2023-12-03T20:41:19.949-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.901-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/force-layout-graph.html</loc>
-    <lastmod>2023-12-03T20:41:19.956-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.906-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.911-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.871-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/load-specification.html</loc>
-    <lastmod>2023-12-03T20:41:19.985-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.908-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/backgroundColor/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.938-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.880-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/borderColor/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.932-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.889-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/borderWidth/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.929-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.894-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/extraCssText/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.941-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.876-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/formatter/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.922-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.883-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/padding/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.935-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.887-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/position/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.920-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.885-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/textStyle/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.943-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.896-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references/eStructuralFeatures/valueFormatter/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.926-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.891-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/Tooltip/references.html</loc>
-    <lastmod>2023-12-03T20:41:19.945-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.897-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/graph/references/eClassifiers/VerticalAlign/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.991-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.912-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/index.html</loc>
-    <lastmod>2023-12-03T20:41:19.256-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.344-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://echarts.models.nasdanika.org/search.html</loc>
-    <lastmod>2023-12-03T20:41:20.068-05:00</lastmod>
+    <lastmod>2023-12-20T19:59:10.955-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

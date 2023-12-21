@@ -393,7 +393,6 @@ public class TestEchartsModelDocGen {
 	    engine.render("target/charts/module-graph-circular.html", echartsGraph, "90%", "2000px", false);		
 	}
 	
-	
 	private Node moduleToNode(
 			Module module, 
 			ModuleLayer layer, 
