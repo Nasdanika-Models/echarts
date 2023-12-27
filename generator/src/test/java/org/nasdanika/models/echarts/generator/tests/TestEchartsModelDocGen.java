@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.lang.module.ModuleDescriptor;
 import java.lang.module.ModuleDescriptor.Requires;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -16,13 +15,8 @@ import java.util.function.Function;
 
 import org.eclipse.emf.common.util.DiagnosticException;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.icepear.echarts.Bar;
 import org.icepear.echarts.Sunburst;
 import org.icepear.echarts.charts.graph.GraphCategoryItem;
@@ -48,31 +42,18 @@ import org.nasdanika.common.Diagnostic;
 import org.nasdanika.common.DiagramGenerator;
 import org.nasdanika.common.ExecutionException;
 import org.nasdanika.common.MutableContext;
-import org.nasdanika.common.NasdanikaException;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.common.Transformer;
 import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
-import org.nasdanika.graph.Connection;
-import org.nasdanika.graph.Element;
-import org.nasdanika.graph.emf.EObjectNode;
-import org.nasdanika.graph.processor.NopEndpointProcessorConfigFactory;
-import org.nasdanika.graph.processor.ProcessorConfig;
-import org.nasdanika.graph.processor.ProcessorInfo;
-import org.nasdanika.graph.processor.emf.EObjectNodeProcessorReflectiveFactory;
 import org.nasdanika.html.model.app.Action;
-import org.nasdanika.html.model.app.Label;
-import org.nasdanika.html.model.app.Link;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
-import org.nasdanika.html.model.app.graph.WidgetFactory;
-import org.nasdanika.html.model.app.graph.emf.EObjectReflectiveProcessorFactoryProvider;
 import org.nasdanika.models.echarts.graph.Graph;
 import org.nasdanika.models.echarts.graph.GraphFactory;
 import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.echarts.graph.Item;
 import org.nasdanika.models.echarts.graph.Node;
 import org.nasdanika.models.echarts.graph.processors.EcoreGenEchartsGraphProcessorsFactory;
-import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
+import org.nasdanika.models.ecore.graph.processors.EcoreActionGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
 import org.nasdanika.ncore.NcorePackage;
 
@@ -85,27 +66,11 @@ public class TestEchartsModelDocGen {
 	
 	@Test
 	public void testGenerateEchartsModelDoc() throws IOException, DiagnosticException {
-		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, NcorePackage.eINSTANCE, GraphPackage.eINSTANCE);
-		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();
-		Transformer<EObject,Element> graphFactory = new Transformer<>(new EcoreGraphFactory());
-		Map<EObject, Element> graph = graphFactory.transform(ePackages, false, progressMonitor);
-
-		NopEndpointProcessorConfigFactory<WidgetFactory> configFactory = new NopEndpointProcessorConfigFactory<>() {
-			
-			@Override
-			protected boolean isPassThrough(Connection connection) {
-				return false;
-			}
-			
-		};
-		
-		Transformer<Element,ProcessorConfig> processorConfigTransformer = new Transformer<>(configFactory);				
-		Map<Element, ProcessorConfig> configs = processorConfigTransformer.transform(graph.values(), false, progressMonitor);
-		
+		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();		
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
 		context.register(DiagramGenerator.class, new PlantUMLDiagramGenerator());
-		
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);
+
 		List<Function<URI,Action>> actionProviders = new ArrayList<>();		
 		EcoreGenEchartsGraphProcessorsFactory ecoreGenEchartsGraphProcessorFactory = new EcoreGenEchartsGraphProcessorsFactory(context);		
 		EcoreNodeProcessorFactory ecoreNodeProcessorFactory = new EcoreNodeProcessorFactory(
@@ -121,75 +86,22 @@ public class TestEchartsModelDocGen {
 				},
 				diagnosticConsumer,
 				ecoreGenEchartsGraphProcessorFactory);
-		
-		EObjectNodeProcessorReflectiveFactory<WidgetFactory, WidgetFactory> eObjectNodeProcessorReflectiveFactory = new EObjectNodeProcessorReflectiveFactory<>(ecoreNodeProcessorFactory);
-		EObjectReflectiveProcessorFactoryProvider eObjectReflectiveProcessorFactoryProvider = new EObjectReflectiveProcessorFactoryProvider(eObjectNodeProcessorReflectiveFactory);
-		Map<Element, ProcessorInfo<Object>> registry = eObjectReflectiveProcessorFactoryProvider.getFactory().createProcessors(configs.values(), false, progressMonitor);
-		
-		WidgetFactory testProcessor = null;
-		Collection<Throwable> resolveFailures = new ArrayList<>();		
-		URI baseActionURI = URI.createURI("local://echarts.models.nasdanika.org/"); // Using local to avoid relative links to external sites
-		
+
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
-			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
-			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/")),			
-			Map.entry(GraphPackage.eINSTANCE, URI.createURI("graph/").resolve(baseActionURI))	
-		);
+				Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
+				Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/"))
+			);		
 		
-		for (EPackage topLevelPackage: ePackages) {
-			for (Entry<Element, ProcessorInfo<Object>> re: registry.entrySet()) {
-				Element element = re.getKey();
-				if (element instanceof EObjectNode) {
-					EObjectNode eObjNode = (EObjectNode) element;
-					EObject target = eObjNode.get();
-					if (target == topLevelPackage) {
-						ProcessorInfo<Object> info = re.getValue();
-						Object processor = info.getProcessor();
-						if (processor instanceof WidgetFactory) {
-							WidgetFactory widgetFactoryNodeProcessor = (WidgetFactory) processor;
-							widgetFactoryNodeProcessor.resolve(packageURIMap.get(topLevelPackage), progressMonitor);
-							
-							if (topLevelPackage == GraphPackage.eINSTANCE) { 							
-								testProcessor = widgetFactoryNodeProcessor;
-							}
-						}
-					}
-				}
-			}			
-		}
-		
-		if (!resolveFailures.isEmpty()) {
-			NasdanikaException ne = new NasdanikaException("Theres's been " + resolveFailures.size() +  " failures during URI resolution: " + resolveFailures);
-			for (Throwable failure: resolveFailures) {
-				ne.addSuppressed(failure);
-			}
-			throw ne;
-		}								
-		
-		ResourceSet actionModelsResourceSet = new ResourceSetImpl();
-		actionModelsResourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
+		EcoreActionGenerator eCoreActionGenerator = new EcoreActionGenerator(
+				GraphPackage.eINSTANCE, 
+				packageURIMap, 
+				ecoreNodeProcessorFactory);
 		
 		File actionModelsDir = new File("target\\action-models\\");
-		actionModelsDir.mkdirs();
-		
+		actionModelsDir.mkdirs();		
 		File output = new File(actionModelsDir, "graph.xmi");
-		Resource actionModelResource = actionModelsResourceSet.createResource(URI.createFileURI(output.getAbsolutePath()));
-		Collection<Label> labels = testProcessor.createLabelsSupplier().call(progressMonitor, diagnosticConsumer);
-		for (Label label: labels) {
-			if (label instanceof Link) {
-				Link link = (Link) label;
-				String location = link.getLocation();
-				if (!org.nasdanika.common.Util.isBlank(location)) {
-					URI uri = URI.createURI(location);
-					if (!uri.isRelative()) {
-						link.setLocation("${base-uri}" + uri.deresolve(baseActionURI, true, true, true).toString());
-					}
-				}
-			}
-		}
-						
-		actionModelResource.getContents().addAll(labels);
-		actionModelResource.save(null);
+		
+		eCoreActionGenerator.generateActionModel(diagnosticConsumer, output, progressMonitor);
 				
 		String rootActionResource = "actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
@@ -207,7 +119,12 @@ public class TestEchartsModelDocGen {
 			
 		};
 		
-		Map<String, Collection<String>> errors = actionSiteGenerator.generate(rootActionURI, pageTemplateURI, siteMapDomain, new File("../docs"), new File("target/doc-site-work-dir"), true);
+		Map<String, Collection<String>> errors = actionSiteGenerator.generate(
+				rootActionURI, 
+				pageTemplateURI, 
+				siteMapDomain, 
+				new File("../docs/graph"), 
+				new File("target/doc-site-work-dir"), true);
 				
 		int errorCount = 0;
 		for (Entry<String, Collection<String>> ee: errors.entrySet()) {

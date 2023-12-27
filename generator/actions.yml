@@ -1,16 +1,9 @@
 app-action:
   icon: https://docs.nasdanika.org/images/nasdanika-logo.png
-  text: Nasdanika Models
-  location: https://github.com/Nasdanika-Models
+  text: Nasdanika ECharts Models
+  location: https://github.com/Nasdanika-Models/echarts
   children:
-    - app-action:
-        icon: fa fa-book
-        text: Echarts Models Documentation
-        location: ${base-uri}index.html 
-        content:
-          content-text: TODO  
-        children:
-          - app-action-reference: "target/action-models/graph.xmi#/"
+    - app-action-reference: "target/action-models/graph.xmi#/"
     - app-action:
         location: ${base-uri}search.html
         icon: fas fa-search
