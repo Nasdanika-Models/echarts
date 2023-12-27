@@ -99,8 +99,7 @@ public class TestEchartsModelDocGen {
 		
 		File actionModelsDir = new File("target\\action-models\\");
 		actionModelsDir.mkdirs();		
-		File output = new File(actionModelsDir, "graph.xmi");
-		
+		File output = new File(actionModelsDir, "graph.xmi");		
 		eCoreActionGenerator.generateActionModel(diagnosticConsumer, output, progressMonitor);
 				
 		String rootActionResource = "actions.yml";
