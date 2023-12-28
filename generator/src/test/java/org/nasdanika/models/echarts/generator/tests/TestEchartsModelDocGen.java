@@ -86,7 +86,11 @@ public class TestEchartsModelDocGen {
 				},
 				diagnosticConsumer,
 				ecoreGenEchartsGraphProcessorFactory);
-
+		
+		File actionModelsDir = new File("target\\action-models\\");
+		actionModelsDir.mkdirs();		
+		File output = new File(actionModelsDir, "graph.xmi");
+		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 				Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
 				Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/"))
@@ -97,9 +101,6 @@ public class TestEchartsModelDocGen {
 				packageURIMap, 
 				ecoreNodeProcessorFactory);
 		
-		File actionModelsDir = new File("target\\action-models\\");
-		actionModelsDir.mkdirs();		
-		File output = new File(actionModelsDir, "graph.xmi");		
 		eCoreActionGenerator.generateActionModel(diagnosticConsumer, output, progressMonitor);
 				
 		String rootActionResource = "actions.yml";
