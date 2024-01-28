@@ -39,12 +39,10 @@ import org.jgrapht.graph.DefaultDirectedGraph;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.Diagnostic;
-import org.nasdanika.common.DiagramGenerator;
 import org.nasdanika.common.ExecutionException;
 import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.diagramgenerator.plantuml.PlantUMLDiagramGenerator;
 import org.nasdanika.html.model.app.Action;
 import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.models.echarts.graph.Graph;
@@ -68,7 +66,6 @@ public class TestEchartsModelDocGen {
 	public void testGenerateEchartsModelDoc() throws IOException, DiagnosticException {
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();		
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
-		context.register(DiagramGenerator.class, new PlantUMLDiagramGenerator());
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);
 
 		List<Function<URI,Action>> actionProviders = new ArrayList<>();		
