@@ -7,5 +7,6 @@ module org.nasdanika.models.echarts.graph {
 	requires transitive org.eclipse.emf.common;
 	requires transitive echarts.java;
 	requires transitive org.nasdanika.ncore;
+	requires org.jgrapht.core;
 	
 }
