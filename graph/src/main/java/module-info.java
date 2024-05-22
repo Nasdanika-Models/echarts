@@ -1,3 +1,6 @@
+import org.nasdanika.capability.CapabilityFactory;
+import org.nasdanika.models.echarts.graph.util.GraphEPackageResourceSetCapabilityFactory;
+
 module org.nasdanika.models.echarts.graph {
 	exports org.nasdanika.models.echarts.graph;
 	exports org.nasdanika.models.echarts.graph.impl;
@@ -8,5 +11,7 @@ module org.nasdanika.models.echarts.graph {
 	requires transitive echarts.java;
 	requires transitive org.nasdanika.ncore;
 	requires org.jgrapht.core;
+	
+	provides CapabilityFactory with GraphEPackageResourceSetCapabilityFactory;
 	
 }
