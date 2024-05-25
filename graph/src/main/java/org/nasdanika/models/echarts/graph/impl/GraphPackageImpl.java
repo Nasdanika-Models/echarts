@@ -2219,8 +2219,26 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createResource(eNS_URI);
 
 		// Create annotations
+		// urn:org.nasdankia
+		createUrnorgAnnotations();
 		// http://www.eclipse.org/emf/2002/GenModel
 		createGenModelAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>urn:org.nasdankia</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUrnorgAnnotations() {
+		String source = "urn:org.nasdankia";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "load-key", "echarts-graph"
+		   });
 	}
 
 	/**

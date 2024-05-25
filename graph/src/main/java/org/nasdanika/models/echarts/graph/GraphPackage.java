@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.nasdanika.models.echarts.graph.GraphFactory
  * @model kind="package"
+ *        annotation="urn:org.nasdankia load-key='echarts-graph'"
  * @generated
  */
 public interface GraphPackage extends EPackage {
