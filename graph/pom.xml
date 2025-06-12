@@ -73,6 +73,11 @@
 		    <artifactId>ncore</artifactId>
 		    <version>${core.version}</version>
 		</dependency> 		
+        <dependency>
+            <groupId>org.nasdanika.html</groupId>
+            <artifactId>3d-force-graph</artifactId>
+            <version>${html.version}</version>
+        </dependency>       
 		<dependency>
 			<groupId>org.icepear.echarts</groupId>
 			<artifactId>echarts-java</artifactId>

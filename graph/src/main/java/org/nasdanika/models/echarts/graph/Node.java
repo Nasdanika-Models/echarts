@@ -22,6 +22,7 @@ import org.icepear.echarts.charts.graph.GraphNodeItem;
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#isFixed <em>Fixed</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.Node#getDraggable <em>Draggable</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.Node#getZ <em>Z</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode()
@@ -165,6 +166,28 @@ public interface Node extends Item {
 	 * @generated
 	 */
 	void setDraggable(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Z</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Z</em>' attribute.
+	 * @see #setZ(Double)
+	 * @see org.nasdanika.models.echarts.graph.GraphPackage#getNode_Z()
+	 * @model
+	 * @generated
+	 */
+	Double getZ();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.models.echarts.graph.Node#getZ <em>Z</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Z</em>' attribute.
+	 * @see #getZ()
+	 * @generated
+	 */
+	void setZ(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

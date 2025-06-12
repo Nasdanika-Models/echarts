@@ -491,13 +491,22 @@ public interface GraphPackage extends EPackage {
 	int NODE__DRAGGABLE = ITEM_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Z</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__Z = ITEM_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = ITEM_FEATURE_COUNT + 8;
+	int NODE_FEATURE_COUNT = ITEM_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Create Graph Category Item</em>' operation.
@@ -2325,6 +2334,17 @@ public interface GraphPackage extends EPackage {
 	EAttribute getNode_Draggable();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Node#getZ <em>Z</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Z</em>'.
+	 * @see org.nasdanika.models.echarts.graph.Node#getZ()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_Z();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.echarts.graph.Node#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3860,6 +3880,13 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE__DRAGGABLE = eINSTANCE.getNode_Draggable();
+		/**
+		 * The meta object literal for the '<em><b>Z</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__Z = eINSTANCE.getNode_Z();
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->

@@ -33,6 +33,7 @@ import org.nasdanika.models.echarts.graph.Node;
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#isFixed <em>Fixed</em>}</li>
  *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getDraggable <em>Draggable</em>}</li>
+ *   <li>{@link org.nasdanika.models.echarts.graph.impl.NodeImpl#getZ <em>Z</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,6 +84,15 @@ public class NodeImpl extends ItemImpl implements Node {
 	 * @ordered
 	 */
 	protected static final Boolean DRAGGABLE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getZ() <em>Z</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZ()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Double Z_EDEFAULT = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +249,26 @@ public class NodeImpl extends ItemImpl implements Node {
 	 * @generated
 	 */
 	@Override
+	public Double getZ() {
+		return (Double)eDynamicGet(GraphPackage.NODE__Z, GraphPackage.Literals.NODE__Z, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setZ(Double newZ) {
+		eDynamicSet(GraphPackage.NODE__Z, GraphPackage.Literals.NODE__Z, newZ);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getId() {
 		return (String)eDynamicGet(GraphPackage.NODE__ID, GraphPackage.Literals.NODE__ID, true, true);
 	}
@@ -349,6 +379,8 @@ public class NodeImpl extends ItemImpl implements Node {
 				return isFixed();
 			case GraphPackage.NODE__DRAGGABLE:
 				return getDraggable();
+			case GraphPackage.NODE__Z:
+				return getZ();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -388,6 +420,9 @@ public class NodeImpl extends ItemImpl implements Node {
 			case GraphPackage.NODE__DRAGGABLE:
 				setDraggable((Boolean)newValue);
 				return;
+			case GraphPackage.NODE__Z:
+				setZ((Double)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -424,6 +459,9 @@ public class NodeImpl extends ItemImpl implements Node {
 			case GraphPackage.NODE__DRAGGABLE:
 				setDraggable(DRAGGABLE_EDEFAULT);
 				return;
+			case GraphPackage.NODE__Z:
+				setZ(Z_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -452,6 +490,8 @@ public class NodeImpl extends ItemImpl implements Node {
 				return isFixed() != FIXED_EDEFAULT;
 			case GraphPackage.NODE__DRAGGABLE:
 				return DRAGGABLE_EDEFAULT == null ? getDraggable() != null : !DRAGGABLE_EDEFAULT.equals(getDraggable());
+			case GraphPackage.NODE__Z:
+				return Z_EDEFAULT == null ? getZ() != null : !Z_EDEFAULT.equals(getZ());
 		}
 		return super.eIsSet(featureID);
 	}

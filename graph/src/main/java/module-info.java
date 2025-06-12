@@ -11,6 +11,7 @@ module org.nasdanika.models.echarts.graph {
 	requires transitive echarts.java;
 	requires transitive org.nasdanika.ncore;
 	requires org.jgrapht.core;
+	requires transitive org.nasdanika.html.forcegraph3d;
 	
 	provides CapabilityFactory with GraphEPackageResourceSetCapabilityFactory;
 	

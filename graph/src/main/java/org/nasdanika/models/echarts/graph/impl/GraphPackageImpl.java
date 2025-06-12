@@ -425,6 +425,16 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getNode_Z() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getNode_Id() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1827,6 +1837,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		createEReference(nodeEClass, NODE__CATEGORY);
 		createEAttribute(nodeEClass, NODE__FIXED);
 		createEAttribute(nodeEClass, NODE__DRAGGABLE);
+		createEAttribute(nodeEClass, NODE__Z);
 		createEOperation(nodeEClass, NODE___CREATE_GRAPH_NODE_ITEM);
 
 		styleEClass = createEClass(STYLE);
@@ -2029,6 +2040,7 @@ public class GraphPackageImpl extends EPackageImpl implements GraphPackage {
 		initEReference(getNode_Category(), this.getItem(), null, "category", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Fixed(), ecorePackage.getEBoolean(), "fixed", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Draggable(), ecorePackage.getEBooleanObject(), "draggable", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Z(), ecorePackage.getEDoubleObject(), "z", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getNode__CreateGraphNodeItem(), this.getGraphNodeItem(), "createGraphNodeItem", 0, 1, IS_UNIQUE, IS_ORDERED);
 
