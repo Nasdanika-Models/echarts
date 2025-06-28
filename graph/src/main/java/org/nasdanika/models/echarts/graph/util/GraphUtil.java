@@ -1,6 +1,7 @@
 package org.nasdanika.models.echarts.graph.util;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -138,6 +139,24 @@ public class GraphUtil {
 		jLink.put("source", node.getId());
 		jLink.put("target", link.getTarget().getId());
 		setValue(jLink, link.getValue());
+		List<Link> targetOutgoingLinks = node
+				.getOutgoingLinks()
+				.stream()
+				.filter(ol -> ol.getTarget() == link.getTarget())
+				.toList();
+		List<Link> sourceIncomingLinks = node
+				.getIncomingLinks()
+				.stream()
+				.filter(il -> il.eContainer() == link.getTarget())
+				.toList();
+		if (targetOutgoingLinks.size() > 1 || sourceIncomingLinks.size() > 1) {
+			// Curvature and rotation
+			jLink.put("curvature", 0.2);
+			jLink.put("rotation", Math.PI * 2 * targetOutgoingLinks.indexOf(link) / (targetOutgoingLinks.size() + sourceIncomingLinks.size()));
+		} else {
+			jLink.put("curvature", 0.0);
+			jLink.put("rotation", 0.0);			
+		}
 		return jLink;
 	}		
 	
