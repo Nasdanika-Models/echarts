@@ -24,6 +24,11 @@ import org.nasdanika.models.echarts.graph.Node;
 
 public class GraphUtil {
 	
+	private static final String ROTATION_KEY = "rotation";
+	private static final String CURVATURE_KEY = "curvature";
+	private static final String TARGET_KEY = "target";
+	private static final String SOURCE_KEY = "source";
+
 	private GraphUtil() {
 		// Utility
 	}
@@ -136,8 +141,8 @@ public class GraphUtil {
 	 */
 	public static JSONObject createForceGraph3DLink(Node node, Link link) {
 		JSONObject jLink = new JSONObject();
-		jLink.put("source", node.getId());
-		jLink.put("target", link.getTarget().getId());
+		jLink.put(SOURCE_KEY, node.getId());
+		jLink.put(TARGET_KEY, link.getTarget().getId());
 		setValue(jLink, link.getValue());
 		List<Link> targetOutgoingLinks = node
 				.getOutgoingLinks()
@@ -151,11 +156,11 @@ public class GraphUtil {
 				.toList();
 		if (targetOutgoingLinks.size() > 1 || sourceIncomingLinks.size() > 1) {
 			// Curvature and rotation
-			jLink.put("curvature", 0.2);
-			jLink.put("rotation", Math.PI * 2 * targetOutgoingLinks.indexOf(link) / (targetOutgoingLinks.size() + sourceIncomingLinks.size()));
+			jLink.put(CURVATURE_KEY, 0.2);
+			jLink.put(ROTATION_KEY, Math.PI * 2 * targetOutgoingLinks.indexOf(link) / (targetOutgoingLinks.size() + sourceIncomingLinks.size()));
 		} else {
-			jLink.put("curvature", 0.0);
-			jLink.put("rotation", 0.0);			
+			jLink.put(CURVATURE_KEY, 0.0);
+			jLink.put(ROTATION_KEY, 0.0);			
 		}
 		return jLink;
 	}		
