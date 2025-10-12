@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>parent</artifactId>
 		<groupId>org.nasdanika.models.echarts</groupId>
-		<version>2025.7.0</version>
+		<version>2025.10.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>graph</artifactId>
@@ -61,7 +61,7 @@
 		<dependency>
 		    <groupId>org.eclipse.emf</groupId>
 		    <artifactId>org.eclipse.emf.ecore</artifactId>
-		    <version>2.39.0</version>
+		    <version>2.40.0</version>
 		</dependency> 		
 		<dependency>
 		    <groupId>org.jgrapht</groupId>
@@ -81,7 +81,7 @@
 		<dependency>
 			<groupId>org.icepear.echarts</groupId>
 			<artifactId>echarts-java</artifactId>
-			<version>1.0.7</version>
+			<version>1.1.0</version>
 		</dependency>
 	</dependencies>
 </project>
