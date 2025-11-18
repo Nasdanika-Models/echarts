@@ -81,7 +81,6 @@ public class GraphUtil {
 		layout(graph, forceLayout, model);
 	}
 	
-
 	/**
 	 * Default factory method
 	 * @param node
