@@ -1,862 +1,862 @@
 {
   "references/eClassifiers/Link/references/eStructuralFeatures/symbolSize/index.html": {
     "path": "Link/Attributes/symbolSize",
-    "link-uuid": "52514a4e-56e6-45a0-92cf-5d8c15a34866",
+    "link-uuid": "f8339528-844f-4174-a157-9836837f4778",
     "title": "symbolSize",
     "content": "Type EDouble Multiplicity 0..2 Symbol size of edge ends. Can be an array with two item to specify two ends, or a string specifies both ends.",
-    "timestamp": 1749930945092
+    "timestamp": 1765403721946
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/symbol/index.html": {
     "path": "Item/Attributes/symbol",
-    "link-uuid": "420416be-9e22-4f5f-843e-ab68d029c23c",
+    "link-uuid": "622abf86-e982-4b12-b9d4-2164615292b8",
     "title": "symbol",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930944885
+    "timestamp": 1765403721687
   },
   "references/eClassifiers/Graph/references/eOperations/configureGraphSeries-0/index.html": {
     "path": "Graph/Operations/configureGraphSeries",
-    "link-uuid": "42a43db9-cbbf-443e-83c1-deed57b2c829",
+    "link-uuid": "5635a80a-6870-4f6f-9d90-0adfc0573451",
     "title": "configureGraphSeries",
     "content": "Sets data, links, and categories",
-    "timestamp": 1749930944830
+    "timestamp": 1765403721602
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/join/index.html": {
     "path": "LineStyle/Attributes/join",
-    "link-uuid": "c4112bcb-35e3-4f6d-aa25-cf0f63bfa948",
+    "link-uuid": "da76afe5-c491-4fc0-b404-e7082ab44a5a",
     "title": "join",
     "content": "Type BorderJoin Multiplicity 0..1",
-    "timestamp": 1749930945051
+    "timestamp": 1765403721899
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/silent/index.html": {
     "path": "Label/Attributes/silent",
-    "link-uuid": "7ffb9d82-71ee-47ec-9a17-6b6eb1c8791c",
+    "link-uuid": "db793f93-e247-42f6-9e62-9a5822a183d3",
     "title": "silent",
     "content": "Type EBooleanObject Multiplicity 0..1 Whether to show label",
-    "timestamp": 1749930944996
+    "timestamp": 1765403721831
   },
   "references/eClassifiers/Label/references/eOperations/createSeriesLineLabelOption-1/index.html": {
     "path": "Label/Operations/createSeriesLineLabelOption",
-    "link-uuid": "95daf02e-a76b-4cc9-90a0-cfcb21931692",
+    "link-uuid": "2b51d840-58b6-4597-84b9-bb4e9f6807a2",
     "title": "createSeriesLineLabelOption",
     "content": "Type SeriesLineLabelOption Multiplicity 0..1",
-    "timestamp": 1749930944978
+    "timestamp": 1765403721806
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/offset/index.html": {
     "path": "Label/Attributes/offset",
-    "link-uuid": "a8ef2191-0f77-41df-816c-d442de4fec1e",
+    "link-uuid": "e0d8eb4a-b8d0-4b7c-b1fe-e7721185c654",
     "title": "offset",
     "content": "Type EInt Multiplicity 0..2 Whether to move text slightly. For example: [30, 40] means move 30 horizontally and move 40 vertically.",
-    "timestamp": 1749930944985
+    "timestamp": 1765403721814
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/id/index.html": {
     "path": "Node/Attributes/id",
-    "link-uuid": "e57c3119-330f-4768-b293-ef9d262aef9a",
+    "link-uuid": "03b4d27c-1bb3-48f0-a89f-ee4237f868d1",
     "title": "id",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930945123
+    "timestamp": 1765403721980
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/width/index.html": {
     "path": "LineStyle/Attributes/width",
-    "link-uuid": "54a1aaef-643d-4875-a05e-5e69b87184e3",
+    "link-uuid": "647127da-f00a-4b14-a99e-18ee49e8e79a",
     "title": "width",
     "content": "Type EInt Multiplicity 0..1",
-    "timestamp": 1749930945057
+    "timestamp": 1765403721905
   },
   "references/eClassifiers/Style/references/eStructuralFeatures/shadowOffsetX/index.html": {
     "path": "Style/Attributes/shadowOffsetX",
-    "link-uuid": "1cc53e7b-76bb-4399-9710-80f2ae7b3c9b",
+    "link-uuid": "a435e2d1-bb75-4a30-9384-809b9d1b18a5",
     "title": "shadowOffsetX",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945182
+    "timestamp": 1765403722042
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/fontSize/index.html": {
     "path": "TextStyle/Attributes/fontSize",
-    "link-uuid": "86a285f5-2a09-46ec-af12-a3aeb0d03caf",
+    "link-uuid": "7f270127-aa4a-46b1-b468-600697d3bea7",
     "title": "fontSize",
     "content": "Type EIntegerObject Multiplicity 0..1 Font size",
-    "timestamp": 1749930945222
+    "timestamp": 1765403722085
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/show/index.html": {
     "path": "Label/Attributes/show",
-    "link-uuid": "5e270b40-fdad-41b1-a58e-906d9b449e75",
+    "link-uuid": "88e65a9b-97b7-4839-ada6-21f089cafe4e",
     "title": "show",
     "content": "Type EBooleanObject Multiplicity 0..1 Whether to show label",
-    "timestamp": 1749930944994
+    "timestamp": 1765403721829
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/itemStyle/index.html": {
     "path": "Item/References/itemStyle",
-    "link-uuid": "ccb8e40f-bac1-4b18-8625-5cd25e6866c0",
+    "link-uuid": "d1361470-6bc1-4d12-9dcd-e3217b5105db",
     "title": "itemStyle",
     "content": "Type ItemStyle Multiplicity 0..1",
-    "timestamp": 1749930944879
+    "timestamp": 1765403721678
   },
   "references/eClassifiers/LineState/inheritance.html": {
     "path": "LineState/Inheritance",
-    "link-uuid": "75448a68-20d2-4378-9f7f-9f6c51f618d7",
+    "link-uuid": "4a04b528-eb77-4268-8c73-84e8257f29d8",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1749930945015
+    "timestamp": 1765403721855
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/extraCssText/index.html": {
     "path": "Tooltip/Attributes/extraCssText",
-    "link-uuid": "fac218f4-874d-48f7-8bb3-5023d9aee556",
+    "link-uuid": "640ca37d-21d2-42d1-9305-1a88a840f440",
     "title": "extraCssText",
     "content": "Type EString Multiplicity 0..1 Extra CSS style for floating layer.",
-    "timestamp": 1749930945287
+    "timestamp": 1765403722159
   },
   "references/eClassifiers/Style/references/eStructuralFeatures/opacity/index.html": {
     "path": "Style/Attributes/opacity",
-    "link-uuid": "82b2e5d5-298c-4a9a-abe1-b83f4c3ce9db",
+    "link-uuid": "099bcbc0-262b-4b67-9b04-f7440c8a38c2",
     "title": "opacity",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945178
+    "timestamp": 1765403722037
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/z/index.html": {
     "path": "Node/Attributes/z",
-    "link-uuid": "612a20fc-dc12-4d4f-b641-25ed2b481b9f",
+    "link-uuid": "1c58069e-b7cd-412f-8c8d-ae715c20789b",
     "title": "z",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945131
+    "timestamp": 1765403721988
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/borderDashOffset/index.html": {
     "path": "TextStyle/Attributes/borderDashOffset",
-    "link-uuid": "a3def841-dc66-4a88-991b-48e5b2fa46b1",
+    "link-uuid": "a7d2d3a2-bce8-449b-ae76-fe47ab847087",
     "title": "borderDashOffset",
     "content": "Type EIntegerObject Multiplicity 0..1 To set the line dash offset.",
-    "timestamp": 1749930945215
+    "timestamp": 1765403722078
   },
   "references/eClassifiers/LineState/references/eStructuralFeatures/lineStyle/index.html": {
     "path": "LineState/References/lineStyle",
-    "link-uuid": "c4810e84-735f-441a-94e2-2c716df11c99",
+    "link-uuid": "23f5b060-3adb-4e41-ade5-c18c8c7a9d36",
     "title": "lineStyle",
     "content": "Type LineStyle Multiplicity 0..1",
-    "timestamp": 1749930945021
+    "timestamp": 1765403721865
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/draggable/index.html": {
     "path": "Node/Attributes/draggable",
-    "link-uuid": "f713633f-ae49-48bd-a78c-4dca7f9f0b47",
+    "link-uuid": "e3aa7a72-b2fb-437d-95a8-e0b1d514f860",
     "title": "draggable",
     "content": "Type EBooleanObject Multiplicity 0..1",
-    "timestamp": 1749930945120
+    "timestamp": 1765403721977
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/valueAnimation/index.html": {
     "path": "Label/Attributes/valueAnimation",
-    "link-uuid": "77cd530b-df43-424e-9372-cbfec92df012",
+    "link-uuid": "3ca4fd22-0ca9-4bda-a04a-66c920587593",
     "title": "valueAnimation",
     "content": "Type EBooleanObject Multiplicity 0..1 Whether to show label",
-    "timestamp": 1749930944998
+    "timestamp": 1765403721833
   },
   "references/eClassifiers/ItemState/inheritance.html": {
     "path": "ItemState/Inheritance",
-    "link-uuid": "7d7091bc-b72b-40d0-b12b-4a40583eac68",
+    "link-uuid": "7861ba14-d5a5-4019-a7a4-7a97a3ff942f",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1749930944910
+    "timestamp": 1765403721721
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/position/index.html": {
     "path": "Label/Attributes/position",
-    "link-uuid": "6342bfa1-c0f0-4855-bb8b-d751d1bb7aca",
+    "link-uuid": "b3ff3584-9e16-4ef6-a58b-029027812f00",
     "title": "position",
     "content": "Type LabelPosition Multiplicity 0..1 Label position",
-    "timestamp": 1749930944988
+    "timestamp": 1765403721820
   },
   "references/eClassifiers/Item/inheritance.html": {
     "path": "Item/Inheritance",
-    "link-uuid": "ff77c3a2-4695-4658-a55c-ad8916e31bbd",
+    "link-uuid": "59746ffa-4024-4660-a2a4-8b662104c64a",
     "title": "Inheritance",
     "content": "Subtypes ",
-    "timestamp": 1749930944869
+    "timestamp": 1765403721664
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderWidth/index.html": {
     "path": "TextStyle/Attributes/textBorderWidth",
-    "link-uuid": "6a62af74-e485-405e-a99b-4db8186446b0",
+    "link-uuid": "a85a2b41-61c9-4abb-a0f3-92108101c194",
     "title": "textBorderWidth",
     "content": "Type EIntegerObject Multiplicity 0..1 Stroke line width of the text.",
-    "timestamp": 1749930945237
+    "timestamp": 1765403722103
   },
   "references/eClassifiers/Style/references/eStructuralFeatures/color/index.html": {
     "path": "Style/Attributes/color",
-    "link-uuid": "f4e3febc-90ca-4231-8908-6428c1b1c02e",
+    "link-uuid": "47e34977-1d4d-4b76-ae1c-d4c605811d60",
     "title": "color",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930945176
+    "timestamp": 1765403722036
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/borderWidth/index.html": {
     "path": "TextStyle/Attributes/borderWidth",
-    "link-uuid": "0db2e88c-35e0-4825-9323-60d24bca946d",
+    "link-uuid": "7d461c03-f694-48e8-bb25-8d9248cf398f",
     "title": "borderWidth",
     "content": "Type EIntegerObject Multiplicity 0..1 Border width of the text fragment.",
-    "timestamp": 1749930945219
+    "timestamp": 1765403722082
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/category/index.html": {
     "path": "Node/References/category",
-    "link-uuid": "2aa90796-0824-4dc9-ad27-a8634710752a",
+    "link-uuid": "8d025e9d-06d9-4911-beb7-b78fc7fa52c5",
     "title": "category",
     "content": "Type Item Multiplicity 0..1",
-    "timestamp": 1749930945119
+    "timestamp": 1765403721976
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/lineHeight/index.html": {
     "path": "TextStyle/Attributes/lineHeight",
-    "link-uuid": "92c2aad9-c0ef-41d3-b643-27590fc867f8",
+    "link-uuid": "22e47a42-c6ae-4579-ae30-c9cc0cd8f851",
     "title": "lineHeight",
     "content": "Type EIntegerObject Multiplicity 0..1 Line height of the text fragment.",
-    "timestamp": 1749930945228
+    "timestamp": 1765403722093
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/label/index.html": {
     "path": "Item/References/label",
-    "link-uuid": "31241204-c9f3-4124-b919-ca10d8313401",
+    "link-uuid": "eee34e39-d29b-4908-afc9-7543e428de05",
     "title": "label",
     "content": "Type Label Multiplicity 0..1",
-    "timestamp": 1749930944881
+    "timestamp": 1765403721680
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/distance/index.html": {
     "path": "Label/Attributes/distance",
-    "link-uuid": "71058dc4-692a-4e5a-b5a8-354316a533f4",
+    "link-uuid": "5f93ec75-c126-495f-9f1a-5ce5ecb99881",
     "title": "distance",
     "content": "Type EIntegerObject Multiplicity 0..1 Distance to the host praphic element",
-    "timestamp": 1749930944980
+    "timestamp": 1765403721808
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/align/index.html": {
     "path": "TextStyle/Attributes/align",
-    "link-uuid": "4ce8e32c-e4ae-440f-8d69-d52bc5bd0c27",
+    "link-uuid": "0fc99ef2-afa4-4f53-9cf7-625ecd0f2c1a",
     "title": "align",
     "content": "Type Align Multiplicity 0..1 Horizontal alignment of text, automatic by default.",
-    "timestamp": 1749930945208
+    "timestamp": 1765403722070
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/borderWidth/index.html": {
     "path": "Tooltip/Attributes/borderWidth",
-    "link-uuid": "036e17f2-d55e-46b4-b9bd-41f69874c423",
+    "link-uuid": "4ef6f858-d726-4f15-836b-a671528d7155",
     "title": "borderWidth",
     "content": "Type EIntegerObject Multiplicity 0..1 The border width of tooltip&rsquo;s floating layer.",
-    "timestamp": 1749930945286
+    "timestamp": 1765403722157
   },
   "references/eClassifiers/Style/references/eStructuralFeatures/shadowColor/index.html": {
     "path": "Style/Attributes/shadowColor",
-    "link-uuid": "9fc5e3ad-db29-4cb4-8f0c-16d88e79a74f",
+    "link-uuid": "2663076a-cc2e-4fd4-8a86-b3031e1c2a11",
     "title": "shadowColor",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930945181
+    "timestamp": 1765403722041
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/lineStyle/index.html": {
     "path": "Link/References/lineStyle",
-    "link-uuid": "053ef01f-b725-4a48-9586-942359784110",
+    "link-uuid": "6a768fa1-7195-447e-862d-6e8e373c795e",
     "title": "lineStyle",
     "content": "Type LineStyle Multiplicity 0..1",
-    "timestamp": 1749930945087
+    "timestamp": 1765403721940
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/fontStyle/index.html": {
     "path": "TextStyle/Attributes/fontStyle",
-    "link-uuid": "68680850-b53e-4d2f-8386-75b2b37ce2ed",
+    "link-uuid": "bde47e7d-32cb-475e-bbeb-f7e8abefa1eb",
     "title": "fontStyle",
     "content": "Type FontStyle Multiplicity 0..1 Font style",
-    "timestamp": 1749930945223
+    "timestamp": 1765403722087
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/minMargin/index.html": {
     "path": "Label/Attributes/minMargin",
-    "link-uuid": "38503cd1-28a8-4936-a603-1f98c2c72908",
+    "link-uuid": "ab3316ea-d448-468e-a32d-b54b0b1efb8a",
     "title": "minMargin",
     "content": "Type EDoubleObject Multiplicity 0..1 Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise.",
-    "timestamp": 1749930944983
+    "timestamp": 1765403721812
   },
   "references/eClassifiers/State/references/eStructuralFeatures/disabled/index.html": {
     "path": "State/Attributes/disabled",
-    "link-uuid": "4a3382ad-8cb9-4130-bb1c-3b6575d67ae1",
+    "link-uuid": "2a4a6e6e-7393-4030-ad81-34f8326a872e",
     "title": "disabled",
     "content": "Type EBooleanObject Multiplicity 0..1 Whether to disable the state.",
-    "timestamp": 1749930945153
+    "timestamp": 1765403722010
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/emphasis/index.html": {
     "path": "Link/References/emphasis",
-    "link-uuid": "7cc5cfd5-d17d-404d-b023-84712687cb9d",
+    "link-uuid": "bd769fc2-2746-4fab-8089-c87a9ffd12ae",
     "title": "emphasis",
     "content": "Type LineState Multiplicity 0..1 Emphasis state of specified node.",
-    "timestamp": 1749930945083
+    "timestamp": 1765403721935
   },
   "references/eClassifiers/TextStyleEntry/references/eStructuralFeatures/value/index.html": {
     "path": "TextStyleEntry/References/value",
-    "link-uuid": "6790e0fd-d10f-44e9-8184-26b11623956e",
+    "link-uuid": "bde225aa-6ac3-4b18-90cd-fcb178e1f71a",
     "title": "value",
     "content": "Type TextStyle Multiplicity 0..1",
-    "timestamp": 1749930945265
+    "timestamp": 1765403722135
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/symbolSize/index.html": {
     "path": "Item/Attributes/symbolSize",
-    "link-uuid": "9e738915-fb7c-44db-83ce-100b4d546ad5",
+    "link-uuid": "dbf013e0-a0d2-47dc-9e77-b2ae19d121ed",
     "title": "symbolSize",
     "content": "Type EDouble Multiplicity 0..2",
-    "timestamp": 1749930944892
+    "timestamp": 1765403721696
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/fixed/index.html": {
     "path": "Node/Attributes/fixed",
-    "link-uuid": "1438d07b-7874-4507-a44a-ed5bd8c6a482",
+    "link-uuid": "b767db50-a15b-433e-b1cc-5d03e31eaa4a",
     "title": "fixed",
     "content": "Type EBoolean Multiplicity 0..1",
-    "timestamp": 1749930945122
+    "timestamp": 1765403721978
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/symbolRotate/index.html": {
     "path": "Item/Attributes/symbolRotate",
-    "link-uuid": "c25958bc-9ad0-4a56-8797-3b2dfeea6cad",
+    "link-uuid": "331ccbda-e16b-4788-9872-f6f681f6906d",
     "title": "symbolRotate",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930944890
+    "timestamp": 1765403721694
   },
   "references/eClassifiers/ItemState/references/eOperations/createGraphNodeStateOption-0/index.html": {
     "path": "ItemState/Operations/createGraphNodeStateOption",
-    "link-uuid": "8e0b8df0-ebb4-4a08-9916-9f12e94a2247",
+    "link-uuid": "d788fd3b-a810-47c7-89aa-eeebd2e7cf94",
     "title": "createGraphNodeStateOption",
     "content": "Type GraphNodeStateOption Multiplicity 0..1",
-    "timestamp": 1749930944916
+    "timestamp": 1765403721727
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/select/index.html": {
     "path": "Item/References/select",
-    "link-uuid": "d4d30bc8-a30a-4e63-89f2-8959d0144679",
+    "link-uuid": "afdd4108-dde7-4776-9905-453b17429832",
     "title": "select",
     "content": "Type ItemState Multiplicity 0..1 Select state of specified node.",
-    "timestamp": 1749930944884
+    "timestamp": 1765403721686
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/precision/index.html": {
     "path": "Label/Attributes/precision",
-    "link-uuid": "07c09bf1-b898-42f3-988f-7a2bf87da2ec",
+    "link-uuid": "b49b3901-10e4-4150-8533-3478d008d400",
     "title": "precision",
     "content": "Type EDoubleObject Multiplicity 0..1 Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise.",
-    "timestamp": 1749930944989
+    "timestamp": 1765403721823
   },
   "references/eClassifiers/TextStyle/inheritance.html": {
     "path": "TextStyle/Inheritance",
-    "link-uuid": "f3fdc4e7-168c-4f5c-8400-8159fdbb764a",
+    "link-uuid": "5d53118e-b7b6-4df3-b540-4a25a2b98c1e",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1749930945204
+    "timestamp": 1765403722066
   },
   "references/eClassifiers/ItemState/references/eStructuralFeatures/itemStyle/index.html": {
     "path": "ItemState/References/itemStyle",
-    "link-uuid": "65d367df-bbf7-415e-a85a-0ffc4b8580bc",
+    "link-uuid": "46c43feb-bf48-456b-b60e-3a3d5121c8ce",
     "title": "itemStyle",
     "content": "Type ItemStyle Multiplicity 0..1",
-    "timestamp": 1749930944918
+    "timestamp": 1765403721730
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/rotate/index.html": {
     "path": "Label/Attributes/rotate",
-    "link-uuid": "74dc4920-7e1a-4462-a85a-db5b96e36b0b",
+    "link-uuid": "8993b19d-0bc2-4e9b-b57f-c157b0654999",
     "title": "rotate",
     "content": "Type EDoubleObject Multiplicity 0..1 Rotate label, from -90 degree to 90, positive value represents rotate anti-clockwise.",
-    "timestamp": 1749930944993
+    "timestamp": 1765403721827
   },
   "references/eClassifiers/Label/inheritance.html": {
     "path": "Label/Inheritance",
-    "link-uuid": "0b24bedd-137f-45f5-b01c-cb952af938c0",
+    "link-uuid": "adf34e81-1ec1-4f76-b0df-846e33ec3d92",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1749930944970
+    "timestamp": 1765403721797
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/emphasis/index.html": {
     "path": "Item/References/emphasis",
-    "link-uuid": "622eaff3-0f55-4b94-b26c-f6b4eb442527",
+    "link-uuid": "a82553cd-10c8-4aa5-b862-3d35a05f94f4",
     "title": "emphasis",
     "content": "Type ItemState Multiplicity 0..1 Emphasis state of specified node.",
-    "timestamp": 1749930944878
+    "timestamp": 1765403721676
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/valueFormatter/index.html": {
     "path": "Tooltip/Attributes/valueFormatter",
-    "link-uuid": "a09c3ff5-f48d-405d-9fcd-f53a64338af0",
+    "link-uuid": "cfba87c1-dfc5-49bf-b218-58066cf09672",
     "title": "valueFormatter",
     "content": "Type EString Multiplicity 0..1 Callback function for formatting the value section in tooltip.",
-    "timestamp": 1749930945295
+    "timestamp": 1765403722167
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/symbolOffset/index.html": {
     "path": "Item/Attributes/symbolOffset",
-    "link-uuid": "c1b71de1-b45c-492c-a01a-683173bef0e9",
+    "link-uuid": "3d1cb761-69cb-47b7-af30-735e69922435",
     "title": "symbolOffset",
     "content": "Type EString Multiplicity 0..2",
-    "timestamp": 1749930944889
+    "timestamp": 1765403721692
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/value/index.html": {
     "path": "Item/References/value",
-    "link-uuid": "b43903bb-b324-4c57-8a4e-3b01733efcbf",
+    "link-uuid": "12f2cd14-d6e0-48c1-9a43-ddefbdbe6468",
     "title": "value",
     "content": "Type EObject Multiplicity 0..*",
-    "timestamp": 1749930944893
+    "timestamp": 1765403721698
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/position/index.html": {
     "path": "Tooltip/Attributes/position",
-    "link-uuid": "eb90ee5f-3bc1-4b16-adc9-e6b09a373f70",
+    "link-uuid": "5c6077fc-2082-47c8-9e0d-58c8bac9727a",
     "title": "position",
     "content": "Type EString Multiplicity 0..1 The position of the tooltip&rsquo;s floating layer, which would follow the position of mouse by default.",
-    "timestamp": 1749930945292
+    "timestamp": 1765403722164
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/symbol/index.html": {
     "path": "Link/Attributes/symbol",
-    "link-uuid": "79e14e3d-ca34-4899-85a3-289b22ba68db",
+    "link-uuid": "16a0e7d6-fe43-41ca-b6f6-65f067051468",
     "title": "symbol",
     "content": "Type EString Multiplicity 0..1 Symbol of edge ends. Can be an array with two item to specify two ends, or a string specifies both ends.",
-    "timestamp": 1749930945090
+    "timestamp": 1765403721944
   },
   "references/eClassifiers/Node/references/eOperations/createGraphNodeItem-1/index.html": {
     "path": "Node/Operations/createGraphNodeItem",
-    "link-uuid": "dd8bcf3a-40e1-4067-90d9-59ab587e0513",
+    "link-uuid": "dc9767ad-485d-41e0-b4c4-ed228538aafa",
     "title": "createGraphNodeItem",
     "content": "Type GraphNodeItem Multiplicity 0..1",
-    "timestamp": 1749930945117
+    "timestamp": 1765403721974
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/miterLimit/index.html": {
     "path": "LineStyle/Attributes/miterLimit",
-    "link-uuid": "6ec6bbf8-75dc-4c66-bf48-00991dc04a78",
+    "link-uuid": "16ebe2fa-29f0-4de2-8d0d-529530f779d2",
     "title": "miterLimit",
     "content": "Type EInt Multiplicity 0..1",
-    "timestamp": 1749930945052
+    "timestamp": 1765403721901
   },
   "references/eClassifiers/Style/inheritance.html": {
     "path": "Style/Inheritance",
-    "link-uuid": "f289c079-acdf-4049-b87a-0e9620093356",
+    "link-uuid": "383a14d7-c27c-48ef-887c-01b5f74578d1",
     "title": "Inheritance",
     "content": "Subtypes ",
-    "timestamp": 1749930945173
+    "timestamp": 1765403722032
   },
   "references/eClassifiers/Style/references/eStructuralFeatures/shadowBlur/index.html": {
     "path": "Style/Attributes/shadowBlur",
-    "link-uuid": "e6af2484-f27c-419a-baea-b7842af327bc",
+    "link-uuid": "db14bfe0-861a-468b-b608-9314e2608c7e",
     "title": "shadowBlur",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945179
+    "timestamp": 1765403722039
   },
   "references/eClassifiers/ItemStyle/references/eStructuralFeatures/decal/index.html": {
     "path": "ItemStyle/Attributes/decal",
-    "link-uuid": "c67f1f85-1598-4681-b32c-609f1986cbb2",
+    "link-uuid": "3c11b9a9-c04b-4005-aff6-718ee4a292c8",
     "title": "decal",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930944946
+    "timestamp": 1765403721764
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/borderColor/index.html": {
     "path": "Tooltip/Attributes/borderColor",
-    "link-uuid": "61398aaa-f9a0-4d68-a5ef-34da2a8e0127",
+    "link-uuid": "c0940014-a4a9-4929-a11b-870621f9b4d9",
     "title": "borderColor",
     "content": "Type EString Multiplicity 0..1 The border color of tooltip&rsquo;s floating layer.",
-    "timestamp": 1749930945284
+    "timestamp": 1765403722155
   },
   "index.html": {
-    "link-uuid": "1b135d57-2198-4a98-93ea-4a4ab4a22a83",
+    "link-uuid": "d23e8403-635b-4ece-87a1-cc65cb169111",
     "title": "ECharts Graph Model",
     "content": "Nasdanika ECharts Graph model can be used to generate ECharts graphs such as this Maven dependency graph. The below snippet shows how to use the model. Graph graph = GraphFactory.eINSTANCE.createGraph();\n\nItem coreCategory = GraphFactory.eINSTANCE.createItem();\ncoreCategory.setName(&quot;Core&quot;);\ngraph.getCategories().add(coreCategory);\n\n// More categories...\n\n// Add nodes and links\n\nGraphUtil.forceLayout(graph, 2000, 1600);\nGraphSeries graphSeries = new org.icepear.echarts.charts.graph.GraphSeries()\n\t.setSymbolSize(24)\n\t.setDraggable(true)\n\t.setLayout(&quot;none&quot;)\n    .setLabel(new SeriesLabel().setShow(true).setPosition(&quot;right&quot;))\n    .setLineStyle(new GraphEdgeLineStyle().setColor(&quot;source&quot;).setCurveness(0))\n    .setRoam(true)\n    .setEdgeSymbol(new String[] { &quot;none&quot;, &quot;arrow&quot; })\n    .setEmphasis(new GraphEmphasis().setFocus(&quot;adjacency&quot;)); // Line style width 10?\n\ngraph.configureGraphSeries(graphSeries);\n\norg.icepear.echarts.Graph echartsGraph = new org.icepear.echarts.Graph()\n        .setTitle(&quot;Maven Dependencies&quot;)\n        .setLegend()\n        .addSeries(graphSeries);\n\nEngine engine = new Engine();\nString chartJSON = engine.renderJsonOption(echartsGraph);\n\nSystem.out.println(chartJSON);\n\nString chartHTML = Context\n\t\t.singleton(&quot;chart&quot;, chartJSON)\n\t\t.compose(Context.singleton(&quot;graphContainerId&quot;, &quot;graph-container&quot;))\n\t\t.interpolateToString(GRAPH_TEMPLATE);\n\nFiles.writeString(new File(&quot;docs/index.html&quot;).toPath(), chartHTML);\n Graph template: &lt;html&gt;\n\t&lt;head&gt;\n\t    &lt;title&gt;Module dependency&lt;/title&gt;\n\t    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js&quot;&gt;&lt;/script&gt;\n\t&lt;/head&gt;\n\t&lt;body&gt;\n\t\t&lt;div class=&quot;container-fluid&quot;&gt;\n\t\t\t&lt;div id=&quot;graph-container-${graphContainerId}&quot; class=&quot;row&quot; style=&quot;height:80vh;width:100%&quot;&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t\t&lt;script type=&quot;text/javascript&quot;&gt;\n\t\t\t$(document).ready(function() {\n\t\t\t\tvar dom = document.getElementById(&quot;graph-container-${graphContainerId}&quot;);\n\t\t\t\tvar myChart = echarts.init(dom, null, {\n\t\t\t\t\trender: &quot;canvas&quot;,\n\t\t\t\t\tuseDirtyRect: false\n\t\t\t\t});\n\t\t\t\tvar option = ${chart};\n\t\t\t\toption.tooltip = {};\n\t\t\t\toption.series[0].tooltip = {\n\t\t\t\t\tformatter: function(arg) {\n\t\t\t\t\t\treturn arg.value ? arg.value.description : null;\n\t\t\t\t\t}\n\t\t\t\t};\n\t\t\t\tmyChart.setOption(option);\n\t\t\t\tmyChart.on(&quot;dblclick&quot;, function(params) {\n\t\t\t\t\tif (params.value) {\n\t\t\t\t\t\tif (params.value.link) {\n\t\t\t\t\t\t\twindow.open(params.value.link, &quot;_self&quot;);\n\t\t\t\t\t\t} else if (params.value.externalLink) {\n\t\t\t\t\t\t\twindow.open(params.value.externalLink);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t\twindow.addEventListener(&quot;resize&quot;, myChart.resize);\n\t\t\t});\n\t\t&lt;/script&gt;\n\t&lt;/body&gt;\n&lt;/html&gt;\n 3D force graphs You can also generate 3D Force Graphs from the graph model leveraging Nasdanika 3D Force Graph Java Bindings. The below code generated this Maven dependency graph: HTMLPage page = HTMLFactory.INSTANCE.page();\nForceGraph3D forceGraph3D = GraphUtil.asForceGraph3D(graph);\nforceGraph3D.getFactory().cdn(page);\nString forceGraphContainerId = &quot;force-graph&quot;;\nforceGraph3D\n\t.elementId(forceGraphContainerId)\n\t.nodeAutoColorBy(&quot;'group'&quot;)\n\t.nodeVal(&quot;'size'&quot;)\n\t.linkDirectionalArrowLength(3.5)\n\t.linkDirectionalArrowRelPos(1)\n\t.addExtraRederer(&quot;new CSS2DRenderer()&quot;)\n\t.nodeThreeObject(\n\t\t\t&quot;&quot;&quot;\n\t\t\tnode =&gt; {\n\t\t\t        const nodeEl = document.createElement('div');\n\t\t\t        nodeEl.textContent = node.name;\n\t\t\t        nodeEl.style.color = node.color;\n\t\t\t        nodeEl.className = 'node-label';\n\t\t\t        return new CSS2DObject(nodeEl);\n\t\t\t      }\n\t\t\t&quot;&quot;&quot;)\n\t.nodeThreeObjectExtend(true)\n\t.onNodeDragEnd(\n\t\t\t&quot;&quot;&quot;\n\t\t\tnode =&gt; {\n\t\t\t          node.fx = node.x;\n\t\t\t          node.fy = node.y;\n\t\t\t          node.fz = node.z;\n\t\t\t        }\n\t\t\t&quot;&quot;&quot;);\n\npage.body(HTMLFactory.INSTANCE.div().id(forceGraphContainerId));\nTag scriptTag = TagName.script.create(\n\t\tSystem.lineSeparator(),\n\t\t&quot;import { CSS2DRenderer, CSS2DObject } from 'https://esm.sh/three/examples/jsm/renderers/CSS2DRenderer.js';&quot;,\n\t\tSystem.lineSeparator(),\n\t\tforceGraph3D).attribute(&quot;type&quot;, &quot;module&quot;);\npage.body(scriptTag);\npage.head(TagName.style.create(\n\t\t&quot;&quot;&quot;\n\t\t.node-label {\n\t\t      font-size: 12px;\n\t\t      padding: 1px 4px;\n\t\t      border-radius: 4px;\n\t\t      background-color: rgba(0,0,0,0.5);\n\t\t      user-select: none;\n\t\t    }\n\t\t&quot;&quot;&quot;));\nFiles.writeString(new File(&quot;docs/force-graph-3d-util.html&quot;).toPath(), page.toString());\n Handling double-clicks: (node, event) =&gt; {\n    if (node.lastClick) {\n        if (event.timeStamp - node.lastClick &lt; 500) {\n\t\t\tif (Array.isArray(node.value) &amp;&amp; node.value.length &gt; 0) {\n\t\t\t\tif (node.value[0].link) {\n\t\t\t\t\twindow.open(node.value[0].link, &quot;_self&quot;);\n\t\t\t\t} else if (node.value[0].externalLink) {\n\t\t\t\t\twindow.open(node.value[0].externalLink);\n\t\t\t\t}\n\t\t\t}\n\t\t\tdelete node.lastClick;\n\t\t} else {\n\t\t\tnode.lastClick = event.timeStamp;\n\t\t}\n\t} else {\n\t\tnode.lastClick = event.timeStamp;\n\t}\n}",
-    "timestamp": 1749930944803
+    "timestamp": 1765403721560
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/padding/index.html": {
     "path": "Tooltip/Attributes/padding",
-    "link-uuid": "edb2574e-f43e-4658-90ac-48f51459f434",
+    "link-uuid": "10c9cc9b-233a-4f13-b59c-c7c8d084e166",
     "title": "padding",
     "content": "Type EIntegerObject Multiplicity 0..1 The floating layer of tooltip space around content. The unit is px. Default values for each position are 5. And they can be set to different values with left, right, top, and bottom.",
-    "timestamp": 1749930945290
+    "timestamp": 1765403722162
   },
   "references/eClassifiers/State/inheritance.html": {
     "path": "State/Inheritance",
-    "link-uuid": "0e4330bc-62e9-4eaf-a818-448c9aa97c02",
+    "link-uuid": "ba828604-7539-480a-8c17-3fb05a69a36c",
     "title": "Inheritance",
     "content": "Subtypes ",
-    "timestamp": 1749930945151
+    "timestamp": 1765403722009
   },
   "references/eClassifiers/LineState/references/eOperations/createGraphEdgeStateOption-0/index.html": {
     "path": "LineState/Operations/createGraphEdgeStateOption",
-    "link-uuid": "f6529834-8446-4589-a4d6-f81e1ee68aef",
+    "link-uuid": "0ec06146-def5-4742-bef9-a18674c71213",
     "title": "createGraphEdgeStateOption",
     "content": "Type GraphEdgeStateOption Multiplicity 0..1",
-    "timestamp": 1749930945020
+    "timestamp": 1765403721863
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/value/index.html": {
     "path": "Link/References/value",
-    "link-uuid": "798d83c6-9708-4a59-935c-ef3f43bb908f",
+    "link-uuid": "4b91acbf-4b10-4e9e-b515-d182ce055421",
     "title": "value",
     "content": "Type EObject Multiplicity 0..*",
-    "timestamp": 1749930945095
+    "timestamp": 1765403721949
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/select/index.html": {
     "path": "Link/References/select",
-    "link-uuid": "c368b8cc-b30f-4661-9ead-93ad5339a49f",
+    "link-uuid": "0e3d51ba-d9f0-48f3-90d0-24910fef2de9",
     "title": "select",
     "content": "Type LineState Multiplicity 0..1 Select state of specified node.",
-    "timestamp": 1749930945088
+    "timestamp": 1765403721942
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/ignoreForceLayout/index.html": {
     "path": "Link/Attributes/ignoreForceLayout",
-    "link-uuid": "6d93dc8f-a4ed-416d-a61a-b95a73c2caee",
+    "link-uuid": "b0ce6d3c-634b-456f-ab0d-6cf4c04278b8",
     "title": "ignoreForceLayout",
     "content": "Type EBooleanObject Multiplicity 0..1 Prevent this edge from force layout calculating.",
-    "timestamp": 1749930945084
+    "timestamp": 1765403721937
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/overflow/index.html": {
     "path": "Label/Attributes/overflow",
-    "link-uuid": "55484193-ef57-4cf4-a514-c53ddd9b2663",
+    "link-uuid": "2c10bdb0-d9d4-4258-8529-008f5b7fda0d",
     "title": "overflow",
     "content": "Type Overflow Multiplicity 0..1 Determine how to display the text when it&rsquo;s overflow.",
-    "timestamp": 1749930944986
+    "timestamp": 1765403721818
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/tag/index.html": {
     "path": "TextStyle/Attributes/tag",
-    "link-uuid": "5505842c-738f-4ebc-9c19-d7af8deaff9f",
+    "link-uuid": "0eaf3532-e03b-42f5-9aeb-1b2b0d022f10",
     "title": "tag",
     "content": "Type EString Multiplicity 0..1 Ellipsis to be displayed when overflow is set to truncate.",
-    "timestamp": 1749930945231
+    "timestamp": 1765403722096
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowOffsetX/index.html": {
     "path": "TextStyle/Attributes/textShadowOffsetX",
-    "link-uuid": "afeb8e11-cc51-4539-ba31-81544159e625",
+    "link-uuid": "7029c27a-5838-43ed-86df-91947a5cb810",
     "title": "textShadowOffsetX",
     "content": "Type EIntegerObject Multiplicity 0..1 Shadow X offset of the text itself.",
-    "timestamp": 1749930945243
+    "timestamp": 1765403722109
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/verticalAlign/index.html": {
     "path": "TextStyle/Attributes/verticalAlign",
-    "link-uuid": "f46d4eb0-c344-40a2-9ed5-96cfdb5e2fe3",
+    "link-uuid": "dcaa481c-41e2-4653-91a7-71b78b073d0d",
     "title": "verticalAlign",
     "content": "Type VerticalAlign Multiplicity 0..1 Vertical alignment of text, automatic by default.",
-    "timestamp": 1749930945245
+    "timestamp": 1765403722112
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/label/index.html": {
     "path": "Link/References/label",
-    "link-uuid": "c0b85f81-715c-4883-84b3-f08ceabb3445",
+    "link-uuid": "f4586bbc-f546-486b-b9a4-efa5bed1a138",
     "title": "label",
     "content": "Type Label Multiplicity 0..1",
-    "timestamp": 1749930945085
+    "timestamp": 1765403721939
   },
   "references/eClassifiers/Graph/references/eStructuralFeatures/categories/index.html": {
     "path": "Graph/References/categories",
-    "link-uuid": "7bb70396-6604-4698-ab66-504a6388125c",
+    "link-uuid": "1abc038f-fa61-45fb-889f-6ffb2c99851d",
     "title": "categories",
     "content": "Type Item Multiplicity 0..*",
-    "timestamp": 1749930944835
+    "timestamp": 1765403721617
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/dashOffset/index.html": {
     "path": "LineStyle/Attributes/dashOffset",
-    "link-uuid": "f00ec9ae-51db-4d0d-80a8-c898e6ad2067",
+    "link-uuid": "833e3fc4-965d-457f-902c-b008db53cad3",
     "title": "dashOffset",
     "content": "Type EInt Multiplicity 0..1",
-    "timestamp": 1749930945049
+    "timestamp": 1765403721897
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/fontFamily/index.html": {
     "path": "TextStyle/Attributes/fontFamily",
-    "link-uuid": "a02f74ac-9d3d-4e0a-b75c-47c6d8dcc6ac",
+    "link-uuid": "79dac3b0-3943-461e-bf85-d50d0cb552a9",
     "title": "fontFamily",
     "content": "Type EString Multiplicity 0..1 Whether to show label",
-    "timestamp": 1749930945220
+    "timestamp": 1765403722083
   },
   "references/eClassifiers/Node/inheritance.html": {
     "path": "Node/Inheritance",
-    "link-uuid": "a081e9b1-7491-4d3b-a8db-0e3a060a4468",
+    "link-uuid": "bbd57c27-7a71-4613-8d5a-5fc34d368c04",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1749930945112
+    "timestamp": 1765403721968
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowOffsetY/index.html": {
     "path": "TextStyle/Attributes/textShadowOffsetY",
-    "link-uuid": "0f61df2b-924a-4154-8fb6-b60eb00b6e21",
+    "link-uuid": "25ba3471-845c-4484-90fc-29dbcaf1f1d4",
     "title": "textShadowOffsetY",
     "content": "Type EIntegerObject Multiplicity 0..1 Shadow Y offset of the text itself.",
-    "timestamp": 1749930945244
+    "timestamp": 1765403722110
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderDashOffset/index.html": {
     "path": "TextStyle/Attributes/textBorderDashOffset",
-    "link-uuid": "0be38bf7-2f63-4b37-8355-8899dd8d2bd6",
+    "link-uuid": "edb0859c-186d-4f01-9cd8-2822eb796d7b",
     "title": "textBorderDashOffset",
     "content": "Type EIntegerObject Multiplicity 0..1 To set the line dash offset.",
-    "timestamp": 1749930945234
+    "timestamp": 1765403722099
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/width/index.html": {
     "path": "TextStyle/Attributes/width",
-    "link-uuid": "9ab0bdfd-ee0a-4dbc-8713-6a019eb0bcc0",
+    "link-uuid": "f46bbcd1-34ef-45fe-b6a6-49fe9fd1da00",
     "title": "width",
     "content": "Type EIntegerObject Multiplicity 0..1 Width of text block.",
-    "timestamp": 1749930945247
+    "timestamp": 1765403722114
   },
   "references/eClassifiers/Item/references/eOperations/createGraphCategoryItem-0/index.html": {
     "path": "Item/Operations/createGraphCategoryItem",
-    "link-uuid": "8c0a6c07-1ee5-4548-b763-20830c5718cb",
+    "link-uuid": "3c2d9565-9845-4892-a385-6161341e9b00",
     "title": "createGraphCategoryItem",
     "content": "Type GraphCategoryItem Multiplicity 0..1",
-    "timestamp": 1749930944875
+    "timestamp": 1765403721671
   },
   "references/eClassifiers/TextStyleEntry/references/eStructuralFeatures/key/index.html": {
     "path": "TextStyleEntry/Attributes/key",
-    "link-uuid": "b5c868cd-ab79-4586-b3da-6b9967a0e92b",
+    "link-uuid": "06faa63c-4d01-4890-8e12-b09c00ae79db",
     "title": "key",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930945263
+    "timestamp": 1765403722133
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/y/index.html": {
     "path": "Node/Attributes/y",
-    "link-uuid": "65313c32-fa90-45af-ae75-1c5eeafe23b5",
+    "link-uuid": "3eff7769-a723-4772-a395-d3d4560a444e",
     "title": "y",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945129
+    "timestamp": 1765403721986
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/baseline/index.html": {
     "path": "TextStyle/Attributes/baseline",
-    "link-uuid": "2ce68495-afa5-4118-b97f-2d2b27022d7a",
+    "link-uuid": "2668b1b5-73ee-4730-9f7a-e9abf16e576f",
     "title": "baseline",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930945211
+    "timestamp": 1765403722074
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/incomingLinks/index.html": {
     "path": "Node/References/incomingLinks",
-    "link-uuid": "559a195c-7775-4221-9878-750ae0bde6ee",
+    "link-uuid": "f053fc52-a29b-4e4c-bdd1-93145e7557e1",
     "title": "incomingLinks",
     "content": "Type Link Multiplicity 0..*",
-    "timestamp": 1749930945125
+    "timestamp": 1765403721982
   },
   "references/eClassifiers/LineStyle/references/eOperations/createGraphEdgeLineStyleOption-0/index.html": {
     "path": "LineStyle/Operations/createGraphEdgeLineStyleOption",
-    "link-uuid": "72d3fd0c-6096-4857-8f70-8e7dcf85e2be",
+    "link-uuid": "4919c897-7639-4661-ad86-041ccb06ae10",
     "title": "createGraphEdgeLineStyleOption",
     "content": "Type GraphEdgeLineStyleOption Multiplicity 0..1",
-    "timestamp": 1749930945045
+    "timestamp": 1765403721892
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/blur/index.html": {
     "path": "Link/References/blur",
-    "link-uuid": "17a4dd38-5256-460b-89d7-8967614af363",
+    "link-uuid": "b41863f4-7322-4e67-b159-1f86def3e18e",
     "title": "blur",
     "content": "Type LineState Multiplicity 0..1 Blur state of specified node.",
-    "timestamp": 1749930945081
+    "timestamp": 1765403721933
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/borderType/index.html": {
     "path": "TextStyle/Attributes/borderType",
-    "link-uuid": "801b1db1-a792-4ac5-99f0-3e4f633bf144",
+    "link-uuid": "229ba05e-18b3-4ecd-ba6c-a3885812064a",
     "title": "borderType",
     "content": "Type BorderType Multiplicity 0..1 The text fragment border type.",
-    "timestamp": 1749930945217
+    "timestamp": 1765403722080
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/outgoingLinks/index.html": {
     "path": "Node/References/outgoingLinks",
-    "link-uuid": "2ae9b2d2-6c8b-40ae-8e8d-7a51490ed2ed",
+    "link-uuid": "c634e08f-28ea-4909-95e8-c9cb4d8901a6",
     "title": "outgoingLinks",
     "content": "Type Link Multiplicity 0..*",
-    "timestamp": 1749930945126
+    "timestamp": 1765403721983
   },
   "references/eClassifiers/Link/references/eOperations/createGraphEdgeItem-0/index.html": {
     "path": "Link/Operations/createGraphEdgeItem",
-    "link-uuid": "69916e68-92bb-4c06-ba73-7c704a123f1e",
+    "link-uuid": "321b0a6e-83b3-4b08-bcfa-49a53116ab80",
     "title": "createGraphEdgeItem",
     "content": "Type GraphEdgeItem Multiplicity 0..1",
-    "timestamp": 1749930945080
+    "timestamp": 1765403721932
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/formatter/index.html": {
     "path": "Tooltip/Attributes/formatter",
-    "link-uuid": "031e015a-8304-447d-8898-d2c68953ea4f",
+    "link-uuid": "e849f674-a83d-4c9b-a9e4-42620bdc09c1",
     "title": "formatter",
     "content": "Type EString Multiplicity 0..1 The content formatter of tooltip&rsquo;s floating layer which supports string template and callback function.",
-    "timestamp": 1749930945289
+    "timestamp": 1765403722161
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/rich/index.html": {
     "path": "Label/References/rich",
-    "link-uuid": "19be8bb1-ad3f-4618-91cf-7e31b19eaeac",
+    "link-uuid": "d061524e-fe32-40d8-87ef-4c7b3444c68c",
     "title": "rich",
     "content": "Type TextStyleEntry Multiplicity 0..* Whether to show label",
-    "timestamp": 1749930944991
+    "timestamp": 1765403721825
   },
   "references/eClassifiers/Graph/references/eOperations/configureGraphSeries-0/references/eParameters/graphSeries/index.html": {
     "path": "Graph/Operations/configureGraphSeries/Parameters/graphSeries",
-    "link-uuid": "b958db5b-45b7-40ea-b53b-ead49d4ffdc2",
+    "link-uuid": "acb976b9-124c-4161-b075-edadc37bb0da",
     "title": "graphSeries",
     "content": "Type GraphSeries Multiplicity 0..1",
-    "timestamp": 1749930944834
+    "timestamp": 1765403721614
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/textStyle/index.html": {
     "path": "Tooltip/References/textStyle",
-    "link-uuid": "fd8b013d-8aea-4ebc-becb-94b8eddbe48f",
+    "link-uuid": "b117a9e1-d90b-453f-9fa5-28283b8567e5",
     "title": "textStyle",
     "content": "Type TextStyle Multiplicity 0..1 The text style of tooltip&rsquo;s floating layer.",
-    "timestamp": 1749930945293
+    "timestamp": 1765403722166
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/cap/index.html": {
     "path": "LineStyle/Attributes/cap",
-    "link-uuid": "2c6c4cd4-0398-41c5-8871-8393635b0f11",
+    "link-uuid": "0232ff11-e605-4dd4-8622-5e41e2d49432",
     "title": "cap",
     "content": "Type BorderCap Multiplicity 0..1",
-    "timestamp": 1749930945046
+    "timestamp": 1765403721894
   },
   "references/eClassifiers/State/references/eStructuralFeatures/label/index.html": {
     "path": "State/References/label",
-    "link-uuid": "89022a2f-3014-4198-a6ea-8667b5dd6321",
+    "link-uuid": "61850904-d197-4a81-861d-ff7b91dd3da5",
     "title": "label",
     "content": "Type Label Multiplicity 0..1",
-    "timestamp": 1749930945154
+    "timestamp": 1765403722012
   },
   "references/eClassifiers/Style/references/eStructuralFeatures/shadowOffsetY/index.html": {
     "path": "Style/Attributes/shadowOffsetY",
-    "link-uuid": "7b34bac9-6568-45d6-938c-342bd13f6732",
+    "link-uuid": "1bd3c6b2-1188-473c-bb5e-6ca8ca5a7201",
     "title": "shadowOffsetY",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945184
+    "timestamp": 1765403722044
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/padding/index.html": {
     "path": "TextStyle/Attributes/padding",
-    "link-uuid": "34c115f8-8dbe-4e62-883d-66cf94a4fcb0",
+    "link-uuid": "6d56636a-3bcc-497b-8fae-855f8759906d",
     "title": "padding",
     "content": "Type EInt Multiplicity 0..4 Padding of the text fragment.",
-    "timestamp": 1749930945230
+    "timestamp": 1765403722094
   },
   "references/eClassifiers/ItemStyle/references/eStructuralFeatures/borderStyle/index.html": {
     "path": "ItemStyle/References/borderStyle",
-    "link-uuid": "9b4de4c6-9539-43fa-86c1-0112c2c49e14",
+    "link-uuid": "2b228799-b357-40c9-b0b1-a75966650b86",
     "title": "borderStyle",
     "content": "Type LineStyle Multiplicity 0..1",
-    "timestamp": 1749930944944
+    "timestamp": 1765403721762
   },
   "references/eClassifiers/LineStyle/inheritance.html": {
     "path": "LineStyle/Inheritance",
-    "link-uuid": "3ecf0343-a7a4-4ce1-97fd-a9f4de61896d",
+    "link-uuid": "15059c35-6592-4c5b-ad2d-effd028dfe4e",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1749930945040
+    "timestamp": 1765403721887
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/type/index.html": {
     "path": "LineStyle/Attributes/type",
-    "link-uuid": "a5eb1c79-cbbb-4afe-81aa-fdc8912d5bbe",
+    "link-uuid": "eec923c3-a6ea-4d6e-bbaf-4c13a0afb693",
     "title": "type",
     "content": "Type BorderType Multiplicity 0..1",
-    "timestamp": 1749930945055
+    "timestamp": 1765403721903
   },
   "references/eClassifiers/Label/references/eStructuralFeatures/formatter/index.html": {
     "path": "Label/Attributes/formatter",
-    "link-uuid": "0fe1b6a5-f150-4372-80cf-379fccd9264b",
+    "link-uuid": "25796bb4-b04a-4226-91d9-8a04626b4042",
     "title": "formatter",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930944982
+    "timestamp": 1765403721810
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/height/index.html": {
     "path": "TextStyle/Attributes/height",
-    "link-uuid": "61d4a14c-2a52-4074-89d2-125c1ee4957d",
+    "link-uuid": "04a71838-314d-4673-8207-f0a00c91bb7c",
     "title": "height",
     "content": "Type EIntegerObject Multiplicity 0..1 Height of text block.",
-    "timestamp": 1749930945227
+    "timestamp": 1765403722091
   },
   "references/eClassifiers/Label/references/eOperations/createSeriesLabelOption-0/index.html": {
     "path": "Label/Operations/createSeriesLabelOption",
-    "link-uuid": "6d7e2b26-a62f-4484-95f6-bb24d974e38e",
+    "link-uuid": "135f64a8-55ed-4d6d-9529-499c44c02426",
     "title": "createSeriesLabelOption",
     "content": "Type SeriesLabelOption Multiplicity 0..1",
-    "timestamp": 1749930944977
+    "timestamp": 1765403721804
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/borderRadius/index.html": {
     "path": "TextStyle/Attributes/borderRadius",
-    "link-uuid": "dffb0e6a-6f7b-41e0-b784-68f8f4e7f2a5",
+    "link-uuid": "865b1f93-a48a-45f7-b400-6abe8be872b7",
     "title": "borderRadius",
     "content": "Type EIntegerObject Multiplicity 0..1 Border radius of the text fragment.",
-    "timestamp": 1749930945216
+    "timestamp": 1765403722079
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderColor/index.html": {
     "path": "TextStyle/Attributes/textBorderColor",
-    "link-uuid": "3ee572be-1796-45c4-ac6a-a38e830d990e",
+    "link-uuid": "a2f5f9ca-ff5c-4afa-9f23-ada0a68671af",
     "title": "textBorderColor",
     "content": "Type EString Multiplicity 0..1 Stroke color of the text.",
-    "timestamp": 1749930945233
+    "timestamp": 1765403722097
   },
   "references/eClassifiers/Tooltip/references/eStructuralFeatures/backgroundColor/index.html": {
     "path": "Tooltip/Attributes/backgroundColor",
-    "link-uuid": "2a229e07-6839-4fab-919f-eb51e411ca27",
+    "link-uuid": "7ebf1de6-b676-4eae-b0b7-c2cb46d943ab",
     "title": "backgroundColor",
     "content": "Type EString Multiplicity 0..1 The background color of tooltip&rsquo;s floating layer.",
-    "timestamp": 1749930945283
+    "timestamp": 1765403722153
   },
   "references/eClassifiers/Link/references/eStructuralFeatures/target/index.html": {
     "path": "Link/References/target",
-    "link-uuid": "e7a905a3-b774-45d5-bfab-ae8074dae9a7",
+    "link-uuid": "a64390c9-1d48-40d2-b6d0-5971c68774a1",
     "title": "target",
     "content": "Type Node Multiplicity 0..1",
-    "timestamp": 1749930945093
+    "timestamp": 1765403721947
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/borderColor/index.html": {
     "path": "TextStyle/Attributes/borderColor",
-    "link-uuid": "cdec5c32-625c-435a-a7bd-df9716ff754d",
+    "link-uuid": "44aa2380-6d50-4637-b826-1305d8dfd7e4",
     "title": "borderColor",
     "content": "Type EString Multiplicity 0..1 Border color of the text fragment.",
-    "timestamp": 1749930945213
+    "timestamp": 1765403722076
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/blur/index.html": {
     "path": "Item/References/blur",
-    "link-uuid": "e8fda3fd-a043-4296-b283-2183ff78840d",
+    "link-uuid": "f9ba4525-fd4f-4f24-8586-704b29c88997",
     "title": "blur",
     "content": "Type ItemState Multiplicity 0..1 Blur state of specified node.",
-    "timestamp": 1749930944876
+    "timestamp": 1765403721673
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textBorderType/index.html": {
     "path": "TextStyle/Attributes/textBorderType",
-    "link-uuid": "0711459e-9d8a-4bf7-8631-2a5358daff85",
+    "link-uuid": "a8d8c1c5-9762-410e-93f8-f6c662c86b71",
     "title": "textBorderType",
     "content": "Type BorderType Multiplicity 0..1 Stroke line type of the text.",
-    "timestamp": 1749930945236
+    "timestamp": 1765403722101
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/fontWeight/index.html": {
     "path": "TextStyle/Attributes/fontWeight",
-    "link-uuid": "b5195b2a-5e0b-49ab-a547-59a9f53a4af6",
+    "link-uuid": "0bed4b7b-0dc0-4aa2-9237-5507ae7ad203",
     "title": "fontWeight",
     "content": "Type FontWeight Multiplicity 0..1 Font weight",
-    "timestamp": 1749930945225
+    "timestamp": 1765403722088
   },
   "references/eClassifiers/ItemStyle/inheritance.html": {
     "path": "ItemStyle/Inheritance",
-    "link-uuid": "712895a0-68c4-4a88-aea8-731dfb6d977e",
+    "link-uuid": "40b64b2f-8a4f-46a8-9c97-4150d50ed083",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1749930944937
+    "timestamp": 1765403721753
   },
   "references/eClassifiers/Node/references/eStructuralFeatures/x/index.html": {
     "path": "Node/Attributes/x",
-    "link-uuid": "06131d8b-16b8-454f-9bd5-82a664d92358",
+    "link-uuid": "2debd70c-3fbf-482c-83cc-f84fcda4988c",
     "title": "x",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945128
+    "timestamp": 1765403721985
   },
   "references/eClassifiers/LineStyle/references/eStructuralFeatures/curveness/index.html": {
     "path": "LineStyle/Attributes/curveness",
-    "link-uuid": "fef59d2e-be6b-4c70-b557-22272d895e29",
+    "link-uuid": "b2cf59ac-e7a4-47fb-baad-532ece4f36f9",
     "title": "curveness",
     "content": "Type EDoubleObject Multiplicity 0..1",
-    "timestamp": 1749930945048
+    "timestamp": 1765403721896
   },
   "references/eClassifiers/Graph/references/eStructuralFeatures/nodes/index.html": {
     "path": "Graph/References/nodes",
-    "link-uuid": "167b23ea-9e8c-4538-913b-0a9c78bc9c2d",
+    "link-uuid": "353c444c-1707-4d96-b28d-ff02ba8551a0",
     "title": "nodes",
     "content": "Type Node Multiplicity 0..*",
-    "timestamp": 1749930944837
+    "timestamp": 1765403721620
   },
   "references/eClassifiers/ItemStyle/references/eOperations/createItemStyleOption-0/index.html": {
     "path": "ItemStyle/Operations/createItemStyleOption",
-    "link-uuid": "89adb57b-cfc7-4302-9a68-2f9f6c827e00",
+    "link-uuid": "ae8e6ca1-d317-4b19-9902-276094486007",
     "title": "createItemStyleOption",
     "content": "Type ItemStyleOption Multiplicity 0..1",
-    "timestamp": 1749930944943
+    "timestamp": 1765403721760
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/backgroundColor/index.html": {
     "path": "TextStyle/Attributes/backgroundColor",
-    "link-uuid": "8f19cc8d-84f3-4c29-b07b-a7032cf5b941",
+    "link-uuid": "bd8959b7-4289-4a57-afa6-f7afde0ab043",
     "title": "backgroundColor",
     "content": "Type EString Multiplicity 0..1 Background color of the text fragment.",
-    "timestamp": 1749930945210
+    "timestamp": 1765403722072
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowBlur/index.html": {
     "path": "TextStyle/Attributes/textShadowBlur",
-    "link-uuid": "8f4691d6-2dbf-45eb-aaf5-b6987ee28a92",
+    "link-uuid": "516bb211-7f79-48b6-a644-5aaa526969bd",
     "title": "textShadowBlur",
     "content": "Type EBigDecimal Multiplicity 0..1 Shadow blue of the text itself.",
-    "timestamp": 1749930945239
+    "timestamp": 1765403722104
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/name/index.html": {
     "path": "Item/Attributes/name",
-    "link-uuid": "823bd0b8-ab3f-4858-b394-7a423487631b",
+    "link-uuid": "88faf340-2452-4c38-8abf-7b5d6b249d15",
     "title": "name",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1749930944882
+    "timestamp": 1765403721683
   },
   "references/eClassifiers/Item/references/eStructuralFeatures/symbolKeepAspect/index.html": {
     "path": "Item/Attributes/symbolKeepAspect",
-    "link-uuid": "5b024604-8302-4cf6-b937-736563050e4f",
+    "link-uuid": "9db6ab28-a82f-40dd-bddc-04fef0f05d3f",
     "title": "symbolKeepAspect",
     "content": "Type EBooleanObject Multiplicity 0..1",
-    "timestamp": 1749930944887
+    "timestamp": 1765403721690
   },
   "references/eClassifiers/TextStyle/references/eStructuralFeatures/textShadowColor/index.html": {
     "path": "TextStyle/Attributes/textShadowColor",
-    "link-uuid": "76244632-ef0b-4ab8-9d3a-2743ccab3b90",
+    "link-uuid": "4d464a2f-0182-47cd-a709-f0fa4f837f24",
     "title": "textShadowColor",
     "content": "Type EString Multiplicity 0..1 Shadow color of the text itself.",
-    "timestamp": 1749930945241
+    "timestamp": 1765403722107
   }
 }
